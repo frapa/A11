@@ -1,5 +1,6 @@
 \documentclass[12pt, twoside, a4paper]{article}
 \usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{fullpage}
 
@@ -27,12 +28,20 @@ Procediamo ora con la descrizione della procedura operativa con cui abbiamo misu
 \subsubsection{Metro a nastro}
 Abbiamo misurato i 25 cilindretti con un metro a nastro la cui risoluzione di misura è 1 millietro, in quanto abbiamo ritenuto di non poter distinguere un intervallo di mezzo millimetro. Quindi abbiamo approssimato le misure alla tacca da un millimetro più vicina. Poichè la lunghezza dei cilindretti era di circa 15 mm abbiamo incontrato delle difficoltà nell'allineare i cilindri con lo 0 dello strumento. Per questo motivo abbiamo allineato un'estremità di ogni cilindro con la tacca dei 10 cm del metro e abbiamo sottratto questa quantità al valore della misurà così ottenuta. In questa operazione abbiamo riscontrato una difficoltà nell'allineare correttamente i cilindri con la tacca dei 10 cm. Abbiamo tentato di evitare eventuali errori di parallasse durante la lettura dello stumento. 
 
+\begin{equation}
+\tilde{D} = \frac{1}{N - 1} \sum_{i=1}^{N} (x_i - m^*[x])^2
+\end{equation}
+
+\begin{equation}
+\tilde{\sigma} = \sqrt{\frac{1}{N - 1} \sum_{i=1}^{N} (x_i - m^*[x])^2}
+\end{equation}
+
 \subsubsection{Calibro ventesimale}
-Il calibro che abbiamo utillizzato ha risoluzione di misura di 0.05 millimetri. La misura con il calibro ventesimale è stata effettuata avendo cura di disporre i cilindri in modo perpendicolare ai becchi del calibro. A tal fine abbiamo sfruttato le scanalature presenti sul calibro [fidandoci in maniera cieca ed irragionevole del produttore di tale perverso strumento]; tuttavia non abbiamo potuto evitare nella maniera più assoluta errori di questo tipo.
+Il calibro che abbiamo utillizzato ha risoluzione di misura di 0.05 millimetri. La misura con il calibro ventesimale è stata effettuata avendo cura di disporre i cilindri in modo perpendicolare ai becchi del calibro. A tal fine abbiamo sfruttato le scanalature presenti sullo strumento [fidandoci in maniera cieca ed irragionevole del produttore di tale perverso strumento]; tuttavia non abbiamo potuto evitare nella maniera più assoluta errori di questo tipo.
 La lettura dei ventesimi di millimetro è stata effettuata cercando quale tacca dei ventesimi di millimetro si allineasse meglio con le tacce sovrastanti della scala millimetrata, e questa operazione è stata eseguita da tutti i membri del gruppo.
 
 \subsubsection{Micrometro}
-Il micrometro è uno strumento con una risoluzione di misura di 0.01 millimetro. Anche in questo caso la misura dei cilindri è stata effettuata prestando attenzione che i campioni fossero perpendicolari alle aste di misurazione. Come nel caso del calibro non possiamo essere sicuri del perfetto allineamento dei cilindri, ma abbiamo tentato di ridurre al minimo questo "hanicap".
+Il micrometro è uno strumento con una risoluzione di misura di 0.01 millimetro. Anche in questo caso la misura dei cilindri è stata effettuata prestando attenzione che i campioni fossero perpendicolari alle aste di misurazione. Come nel caso del calibro non possiamo essere sicuri del perfetto allineamento dei cilindri, ma abbiamo tentato di ridurre al minimo questo "handicap".
 
 \subsection{Analisi dei dati}
 
@@ -40,10 +49,13 @@ Il micrometro è uno strumento con una risoluzione di misura di 0.01 millimetro.
 
 \subsection{Descrizione della procedura di misura}
 \subsubsection{Apparato sperimentale}
-Il pendolo è stato realizzato con un cavo inestensibile [] fissato con un morsetto sul supporto del tavolo da laboratorio. All'altra estremità del cavo è stato appeso, attraverso un gancio, un corpo cilindrico di metallo di massa 205 grammi. Il pendolo si può modellizzare, in maniera abbastanza fedele alla realtà, come un cavo di lunghezza 55.8 cm unito ad un cilindro omogeneo di altezza 5.1 cm. Abbiamo utilizzato il modello del pendolo semplice [oscillazione] secondo il quale la massa del filo è trascurabile  e la massa del cilindro è approssimata ad un punto materiale posto nel suo baricentro.
+Il pendolo è stato realizzato con un cavo inestensibile [materiale] fissato con un morsetto sul supporto del tavolo da laboratorio. All'altra estremità del cavo è stato appeso, attraverso un gancio, un corpo cilindrico di metallo di massa 205 grammi. Il pendolo si può schematizzare, in maniera abbastanza fedele alla realtà, come un cavo di lunghezza 55.8 [$\pm$] cm unito ad un cilindro omogeneo di altezza 5.1 [$\pm$] cm. Abbiamo utilizzato il modello del pendolo semplice [piano di oscillazione] secondo il quale la massa del filo è trascurabile e la massa del cilindro è approssimata ad un punto materiale posto nel suo baricentro.
+
+Per approssimare il nostro apparato sperimentale al modello del pendolo semplice abbiamo tentato di contenere le oscillazioni in un unico piano e abbiamo mantenuto, durante le operazioni di misura, il numero di massime oscillazioni entro il valore di 20 affinché l'attrito con l'aria non influisse sul periodo del pendolo. Ci siamo inoltre accertati che il pendolo non superasse i 10$^\circ$ dalla verticale tramite il disegno dell'angolo massimo su un foglio di carta appositamente posizionato vicino al punto di sospensione del filo.
  
 \subsection{Analisi dei dati}
 
 \section{Conclusioni}
+[i cilindretti fanno cacare]
 
 \end{document}
