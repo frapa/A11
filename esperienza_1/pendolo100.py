@@ -39,7 +39,7 @@ n, r_bins, patches = plt.hist(xs, bins, (x_min, x_max),
 
 t = plt.title('Periodo del pendolo', fontsize=16)
 t.set_y(1.15) 
-plt.suptitle('100 measures by a single operator', x=0.52, y=0.91)
+plt.suptitle('100 misure di un singolo sperimentatore', x=0.54, y=0.91)
 plt.xlabel('Periodo [s]', fontsize=14)
 plt.ylabel(u'Probabilità', fontsize=14)
 plt.grid(True)
@@ -52,8 +52,10 @@ plt.vlines(m, 0, 100, linestyles='dashed', linewidth=2, color=(0, 0, 1))
 plt.axvspan(m - sigma, m + sigma, color=(0.7, 0.7, 0.7), alpha=0.5, zorder=-5)
 
 plt.text(m - 0.003, 15.4, "m")
+plt.vlines(m - sigma - 0.0003, 0, 100, linestyles='dashed', linewidth=1, color=(0.55, 0.55, 0.55), zorder=-4)
+plt.vlines(m + sigma - 0.0003, 0, 100, linestyles='dashed', linewidth=1, color=(0.55, 0.55, 0.55), zorder=-4)
 plt.text(m - sigma - 0.01, 15.4, u"m - σ")
-plt.text(m + sigma - 0.01, 15.4, u"m + σ")
+plt.text(m + sigma - 0.012, 15.4, u"m + σ")
 
 # make sure nothing goes outside the screen
 plt.tight_layout()

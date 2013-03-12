@@ -39,17 +39,29 @@ function hist_cil(data1, data2, data3)
     fig = figure();
 
     % istogramma
+    
     %ist_metro = bar(bins1, counts1, 0.8, 'histc');
     %hold on
     %ist2 = bar(bins2, [counts2 counts3], 1, 'grouped');
     %hold on
     %ist_micrometro = bar(bins3, counts3, 0.6, 'grouped');
-    ist = plotyy(bins1, counts1, bins2, [counts2 counts3], 'bar')
-
+   
+    % ist = plotyy(bins1, counts1, bins2, [counts2 counts3], 'bar')
+    
+    subplot(1,2,1);
+    H1 = bar(bins1,counts1);
+    subplot(1,2,2);
+    H2 = bar(bins2, counts2);
+    set(H2, 'FaceColor', [1 0 0]);
+    set(H2, 'FaceAlpha', 0.5);    
+    hold on
+    H3 = bar(bins3, counts3);
+    
     % Personalizziamo
-    %set(ist_metro, 'FaceColor', [1 0 0]);
-    %set(ist_metro, 'FaceAlpha', 0.5);
-
+%    set(H2, 'FaceColor', [1 0 0]);
+%    set(H2, 'FaceAlpha', 0.5);
+    set(H3, 'FaceColor', [0 1 0]);
+    set(H3, 'FaceAlpha', 0.5);
 
     % Asse y
     ly = ylabel('Conteggi');
@@ -64,4 +76,3 @@ function hist_cil(data1, data2, data3)
     set(t, 'FontSize', 24);
 
 end
-
