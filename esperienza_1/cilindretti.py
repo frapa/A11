@@ -64,46 +64,55 @@ x_min_cm = 13.675
 x_max_cm = 13.975
 bins_cm = [x_min_cm + i * delta_cm for i in range(int(round((x_max_cm - x_min_cm) / delta_cm)) + 1)]
 
-# istogramma
-f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+f1 = plt.figure()
+f2 = plt.figure(figsize=(6, 8))
 
-plt.subplot(1, 2, 1)
-n_metro, r_bins_metro, patches_metro = plt.hist(xs_metro, bins_metro,
+ax = f1.add_subplot(1, 1, 1)
+n_metro, r_bins_metro, patches_metro = ax.hist(xs_metro, bins_metro,
     normed=True, color=(0, 0.65, 1), alpha=0.7)
 
-plt.locator_params(axis='x', nbins=4)
+prob = ax.twinx()
+prob.set_ylabel(ur"Frequenza campionaria", fontsize=14)
 
-ax1.set_xlim(left=12, right=15)
-t = plt.title("Metro a nastro", fontsize=15)
+ax.locator_params(axis='x', nbins=4)
+
+ax.set_xlim(left=12, right=15)
+t = ax.set_title("Metro a nastro", fontsize=15)
 t.set_y(1.05)
-plt.xlabel(u'Lunghezza [mm]')
-plt.ylabel(u'Probabilità')
-ax1.set_yticklabels(("0", "0.2", "0.4", "0.6", "0.8", "1"))
-plt.grid(True)
+ax.set_xlabel(u'Lunghezza [mm]', fontsize=14)
+ax.set_ylabel(ur'Densità campionaria $[\frac{1}{mm}]$', fontsize=14)
+ax.grid(True)
 
-plt.subplot(1, 2, 2)
-n_calibro, r_bins_calibro, patches_calibro = plt.hist(xs_calibro, bins_cm,
+f1.suptitle('Lunghezza dei cilindretti', y=0.95, fontsize=16)
+f1.subplots_adjust(left=0.12, right=0.88, top=0.8, bottom=0.15, wspace=0.35)
+
+# istogramma
+ax1 = f2.add_subplot(2, 1, 1)
+ax2 = f2.add_subplot(2, 1, 2)
+
+n_calibro, r_bins_calibro, patches_calibro = ax1.hist(xs_calibro, bins_cm,
     normed=True, color=(0, 0.65, 1), alpha=0.5)
 
-plt.locator_params(axis='x', nbins=5)
+ax1.set_xlim(left=13.65, right=14)
+ax1.set_ylim(bottom=0, top=8)
+t = ax1.set_title("Calibro", fontsize=15)
+t.set_y(1.05)
+ax1.set_xlabel(u'Lunghezza [mm]')
+ax1.set_ylabel(ur'Densità campionaria')
+ax1.grid(True)
 
-n_micro, r_bins_micro, patches_micro = plt.hist(xs_micro, bins_cm,
+n_micro, r_bins_micro, patches_micro = ax2.hist(xs_micro, bins_cm,
     normed=True, color=(0.4, 0.8, 0), alpha=0.5)
 
-ax2.set_xlim(left=13.6, right=14.05)
-t = plt.title("Calibro e micrometro", fontsize=15)
+ax2.set_xlim(left=13.65, right=14)
+ax2.set_ylim(bottom=0, top=8)
+t = ax2.set_title("Micrometro", fontsize=15)
 t.set_y(1.05)
-plt.xlabel(u'Lunghezza [mm]')
-plt.xticks(rotation=30)
-ax2.set_yticklabels(("0", "0.2", "0.4", "0.6", "0.8", "1"))
-plt.ylabel(u'Probabilità')
-plt.grid(True)
+ax2.set_xlabel(u'Lunghezza [mm]')
+ax2.set_ylabel(u'Densità campionaria')
+ax2.grid(True)
 
-# personalize ticks
-ax2.set_xticklabels(("13.7"))
-ax2.set_xticks([13.7, 13.8])
-
-plt.suptitle('Lunghezza dei cilindretti', y=0.95, fontsize=16)
-plt.subplots_adjust(left=0.11, right=0.89, top=0.8, bottom=0.15, wspace=0.35)
+f2.suptitle('Lunghezza dei cilindretti', y=0.95, fontsize=16)
+f2.subplots_adjust(left=0.11, right=0.89, top=0.86, bottom=0.1, hspace=0.4)
 
 plt.show()
