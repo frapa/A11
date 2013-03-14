@@ -38,7 +38,8 @@ with open('pendolo/pendolo.csv') as csvfile:
                 tab[i].append(value.strip())
 
     tex += "\\begin{{table}}\n\t\\begin{{tabular}} {{{}}}\n\t\t\\toprule\n".format(" | ".join(["c c c c"] * 3))
-    tex += "\t\t" + " & ".join(map(lambda x: "\\multicolumn{4}{c}{" + x + " s}", meas.keys())) + " \\\\\n\t\t\midrule\n"
+    tex += "\t\t\\multicolumn{12}{c}{Periodo del pendolo [s]} \\\\\n"
+    tex += "\t\t" + " & ".join(map(lambda x: "\\multicolumn{4}{c}{" + x + "}", meas.keys())) + " \\\\\n\t\t\midrule\n"
 
     for i in range(5):
         t = []
@@ -89,6 +90,9 @@ if mpl:
     prob.set_ylim((0, 100))
     prob.set_ylabel(u"Frequenza campionaria", fontsize=14)
     prob.set_yticklabels(["0", "0.06", "0.12", "0.18", "0.24", "0.30"])
+
+    plt.gca().set_xticks([1.485, 1.490, 1.495, 1.5, 1.505, 1.510])
+    plt.gca().set_xlim((1.480, 1.515))
 
     plt.text(m - 0.0003, 102, "m")
     plt.text(m - sigma - 0.0013, 102, u"m - σ")

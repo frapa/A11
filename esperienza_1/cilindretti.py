@@ -40,7 +40,8 @@ with open('cilindretti/misure_cilindretti.csv') as csvfile:
 
     tex += "{{ {} }}\n".format(" | ".join(["c c c c c"] * 3))
 
-    tex += "\t\t\\toprule\n\t\t\multicolumn{5}{c}{Metro [mm]} & \multicolumn{5}{c}{Calibro [mm]} & \multicolumn{5}{c}{Micrometro [mm]} \\\\\n"
+    tex += "\t\t\\toprule\n\t\t\\multicolumn{15}{c}{Lunghezza dei cilindretti} \\\\\n"
+    tex += "\t\t\multicolumn{5}{c}{Metro [mm]} & \multicolumn{5}{c}{Calibro [mm]} & \multicolumn{5}{c}{Micrometro [mm]} \\\\\n"
     tex += "\t\t\midrule\n"
     
     for i in range(5):
