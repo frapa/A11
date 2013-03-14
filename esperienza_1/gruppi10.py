@@ -33,4 +33,4 @@ print "m_x = {}\nm_mk = {}".format(m_x, m_mk)
 
 sigma_x = sqrt(sum([(x - m_x)**2 for x in meas]) / (len(meas) - 1))
 sigma_mk = sqrt(sum([(x - m_mk)**2 for x in means]) / (len(means) - 1))
-print "σ_x = {}\nσ_mk = {}\n1/sqrt(N)*σ_x = {}".format(sigma_x, sigma_mk, 1/sqrt(10)*sigma_x)
+print "σ_x = {}\nσ_mk = {}\n\n1/sqrt(N)*σ_x = {}\n1/sqrt(10) = {}\nσ_mk/σ_x = {}".format(sigma_x, sigma_mk, 1/sqrt(10)*sigma_x, 1/sqrt(10), sigma_mk / sigma_x)
