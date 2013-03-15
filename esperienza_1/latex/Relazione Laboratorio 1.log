@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  14 MAR 2013 16:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  15 MAR 2013 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -487,87 +487,93 @@ Package pdftex.def Info: Cilindretti_calibro_micrometro.pdf used on input line
  [4]
 Underfull \vbox (badness 1226) has occurred while \output is active []
 
- [5 <./Cilindretti_metro.pdf>] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+ [5 <./Cilindretti_metro.pdf>] <pendolo3.pdf, id=83, 659.46375pt x 442.65375pt>
+File: pendolo3.pdf Graphic file (type pdf)
+
+<use pendolo3.pdf>
+Package pdftex.def Info: pendolo3.pdf used on input line 120.
+(pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Overfull \hbox (12.19543pt too wide) in paragraph at lines 131--143
+Overfull \hbox (12.19543pt too wide) in paragraph at lines 137--149
 [][] 
  []
 
-<Pendolo.pdf, id=86, 587.19376pt x 442.65375pt>
+<Pendolo.pdf, id=87, 587.19376pt x 442.65375pt>
 File: Pendolo.pdf Graphic file (type pdf)
  <use Pendolo.pdf>
-Package pdftex.def Info: Pendolo.pdf used on input line 148.
+Package pdftex.def Info: Pendolo.pdf used on input line 154.
 (pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--174
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[9] <Pendolo100.pdf, id=97, 587.19376pt x 442.65375pt>
+[9] <Pendolo100.pdf, id=98, 587.19376pt x 442.65375pt>
 File: Pendolo100.pdf Graphic file (type pdf)
  <use Pendolo100.pdf>
-Package pdftex.def Info: Pendolo100.pdf used on input line 241.
+Package pdftex.def Info: Pendolo100.pdf used on input line 247.
 (pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--248
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
-[10] [11] [12] [13 <./Cilindretti_calibro_micrometro.pdf>] [14 <./Pendolo.pdf> 
-<./Pendolo100.pdf
+[10] [11] [12] [13 <./Cilindretti_calibro_micrometro.pdf>] [14 <./pendolo3.pdf>
+ <./Pendolo.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./Pendolo100.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->] (./Relazione Laboratorio 1.aux) ) 
+pdfTeX warning: /usr/bin/pdflatex (file ./Pendolo.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [15 <./Pendolo100.pdf>] (./Relazione Laboratorio 1.aux) ) 
 Here is how much of TeX's memory you used:
- 2806 strings out of 495048
- 37664 string characters out of 3181555
+ 2811 strings out of 495048
+ 37743 string characters out of 3181555
  102149 words of memory out of 3000000
- 5939 multiletter control sequences out of 15000+200000
+ 5943 multiletter control sequences out of 15000+200000
  10232 words of font info for 37 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,16n,24p,924b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Relazione Laboratorio 1.pdf" (14 pages, 216537 bytes).
+</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "Relazione Laboratorio 1.pdf" (15 pages, 231202 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
+ 386 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
