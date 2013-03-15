@@ -19,7 +19,7 @@ tex = r""
 
 # leggi i dati
 header = []
-meas = {}
+meas = []
 with open('pendolo/pendolo.csv') as csvfile:
     data = csv.reader(csvfile)
     tab = [[], [], []]
@@ -31,15 +31,15 @@ with open('pendolo/pendolo.csv') as csvfile:
         if n == 0:
             for i, name in enumerate(row):
                 header.append(name.strip())
-                meas[name.strip()] = []
+                meas.append([])
         else:
             for i, value in enumerate(row):
-                meas[header[i]].append(float(value) / 10.0)
+                meas[i].append(float(value) / 10.0)
                 tab[i].append(value.strip())
 
     tex += "\\begin{{table}}\n\t\\begin{{tabular}} {{{}}}\n\t\t\\toprule\n".format(" | ".join(["c c c c"] * 3))
     tex += "\t\t\\multicolumn{12}{c}{Periodo del pendolo [s]} \\\\\n"
-    tex += "\t\t" + " & ".join(map(lambda x: "\\multicolumn{4}{c}{" + x + "}", meas.keys())) + " \\\\\n\t\t\midrule\n"
+    tex += "\t\t" + " & ".join(map(lambda x: "\\multicolumn{4}{c}{" + x + "}", header)) + " \\\\\n\t\t\midrule\n"
 
     for i in range(5):
         t = []
@@ -53,20 +53,20 @@ tex += '\t\t\\bottomrule\n\t\\end{tabular}\n\\end{table}'
 print tex
 print
 
-xs_single = tuple(itertools.chain(*meas.values()))
+xs_single = tuple(itertools.chain(*meas))
 N = len(xs_single)
 m = mean(xs_single)
 D = sum([(x - m)**2 for x in xs_single]) / (N - 1)
 sigma = sqrt(D)
 
-xs = meas.values()
+xs = meas
 xs1, xs2, xs3 = xs
 N1, N2, N3 = map(len, xs)
 m1, m2, m3 = map(mean, xs)
 D1, D2, D3 = map(lambda xxs: sum([(x - mean(xxs))**2 for x in xxs]) / (len(xxs) - 1), xs)
 sigma1, sigma2, sigma3 = map(sqrt, (D1, D2, D3))
 
-#print "N = {}\nm = {}\nD = {}\nσ = {}".format(N, m, D, sigma)
+print "N = {}\nm = {}\nD = {}\nσ = {}".format(str((N1, N2, N3)), str((m1, m2, m3)), str((D1, D2, D3)), str((sigma1, sigma2, sigma3)))
 
 # bins 
 delta = 0.003

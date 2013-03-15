@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  15 MAR 2013 20:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  15 MAR 2013 22:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9,8 +9,8 @@ Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, mo
 nogreek, greek, ibycus, ancientgreek, italian, loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -720,42 +720,63 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count104
 \@thisrulewidth=\dimen127
 )
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen128
+\WF@size=\dimen129
+\c@WF@wrappedlines=\count105
+\WF@box=\box28
+\WF@everypar=\toks22
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/sidecap/sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\SC@BOXWD=\dimen130
+\SC@CAPWD=\dimen131
+\SC@tempdima=\dimen132
+\SC@tempdimb=\dimen133
+\c@SC@C=\count106
+\SC@BOX=\box29
+)
 (./Relazione_Laboratorio_1.aux)
 \openout1 = `Relazione_Laboratorio_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 9.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 11.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen128
-\scratchbox=\box28
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen129
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count107
+\scratchdimen=\dimen134
+\scratchbox=\box30
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen135
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -804,126 +825,150 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-[1
+(/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./Relazione_Laboratorio_1.toc)
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip47
+\RaggedLeftLeftskip=\skip48
+\RaggedRightLeftskip=\skip49
+\CenteringRightskip=\skip50
+\RaggedLeftRightskip=\skip51
+\RaggedRightRightskip=\skip52
+\CenteringParfillskip=\skip53
+\RaggedLeftParfillskip=\skip54
+\RaggedRightParfillskip=\skip55
+\JustifyingParfillskip=\skip56
+\CenteringParindent=\skip57
+\RaggedLeftParindent=\skip58
+\RaggedRightParindent=\skip59
+\JustifyingParindent=\skip60
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Relazione_Laboratorio_1
+.toc)
 \tf@toc=\write3
 \openout3 = `Relazione_Laboratorio_1.toc'.
 
  [2] [3]
-Overfull \hbox (4.81073pt too wide) in paragraph at lines 57--69
- [][] 
- []
-
 <Cilindretti_metro.pdf, id=17, 587.19376pt x 442.65375pt>
 File: Cilindretti_metro.pdf Graphic file (type pdf)
 
 <use Cilindretti_metro.pdf>
-Package pdftex.def Info: Cilindretti_metro.pdf used on input line 76.
-(pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
+Package pdftex.def Info: Cilindretti_metro.pdf used on input line 131.
+(pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 141.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
- []
-
-<Cilindretti_calibro_micrometro.pdf, id=18, 478.78876pt x 617.00514pt>
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
+ [4 <./Cilindretti_metro.pdf>] <Cilindretti_calibro_micrometro.pdf, id=80, 478.
+78876pt x 617.00514pt>
 File: Cilindretti_calibro_micrometro.pdf Graphic file (type pdf)
 
 <use Cilindretti_calibro_micrometro.pdf>
 Package pdftex.def Info: Cilindretti_calibro_micrometro.pdf used on input line 
-99.
-(pdftex.def)             Requested size: 369.88582pt x 476.66768pt.
- [4]
-Underfull \vbox (badness 1226) has occurred while \output is active []
+163.
+(pdftex.def)             Requested size: 284.52756pt x 366.666pt.
 
- [5 <./Cilindretti_metro.pdf>] <pendolo3.pdf, id=83, 659.46375pt x 442.65375pt>
-File: pendolo3.pdf Graphic file (type pdf)
+<cilindri_tutti.pdf, id=81, 587.19376pt x 442.65375pt>
+File: cilindri_tutti.pdf Graphic file (type pdf)
 
-<use pendolo3.pdf>
-Package pdftex.def Info: pendolo3.pdf used on input line 120.
-(pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+<use cilindri_tutti.pdf>
+Package pdftex.def Info: cilindri_tutti.pdf used on input line 202.
+(pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
 
- []
+<cilindri_tutti_2.pdf, id=82, 514.92375pt x 617.00514pt>
+File: cilindri_tutti_2.pdf Graphic file (type pdf)
+
+<use cilindri_tutti_2.pdf>
+Package pdftex.def Info: cilindri_tutti_2.pdf used on input line 210.
+(pdftex.def)             Requested size: 284.52756pt x 340.93555pt.
 
 
-Overfull \hbox (12.19543pt too wide) in paragraph at lines 137--149
-[][] 
- []
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 21
+7.
 
-<Pendolo.pdf, id=87, 587.19376pt x 442.65375pt>
+[5 <./Cilindretti_calibro_micrometro.pdf>] [6 <./cilindri_tutti.pdf> <./cilindr
+i_tutti_2.pdf
+
+pdfTeX warning: pdflatex (file ./cilindri_tutti_2.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] <Pendolo.pdf, id=256, 587.19376pt x 442.65375pt>
 File: Pendolo.pdf Graphic file (type pdf)
  <use Pendolo.pdf>
-Package pdftex.def Info: Pendolo.pdf used on input line 154.
+Package pdftex.def Info: Pendolo.pdf used on input line 286.
 (pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
+
+<pendolo3.pdf, id=257, 659.46375pt x 442.65375pt>
+File: pendolo3.pdf Graphic file (type pdf)
+ <use pendolo3.pdf>
+Package pdftex.def Info: pendolo3.pdf used on input line 292.
+(pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+[8 <./Pendolo.pdf> <./pendolo3.pdf
+
+pdfTeX warning: pdflatex (file ./pendolo3.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--184
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[9] <Pendolo100.pdf, id=98, 587.19376pt x 442.65375pt>
+[10] <Pendolo100.pdf, id=384, 587.19376pt x 442.65375pt>
 File: Pendolo100.pdf Graphic file (type pdf)
  <use Pendolo100.pdf>
-Package pdftex.def Info: Pendolo100.pdf used on input line 247.
+Package pdftex.def Info: Pendolo100.pdf used on input line 401.
 (pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
-
- []
-
-[10] [11] [12] [13 <./Cilindretti_calibro_micrometro.pdf>] [14 <./pendolo3.pdf>
- <./Pendolo.pdf
-
-pdfTeX warning: pdflatex (file ./Pendolo.pdf): PDF inclusion: multiple pdfs wit
-h page group included in a single page
->] [15 <./Pendolo100.pdf>] (./Relazione_Laboratorio_1.aux) ) 
+[11 <./Pendolo100.pdf>] [12] [13] (./Relazione_Laboratorio_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3217 strings out of 494975
- 40410 string characters out of 3180013
- 104917 words of memory out of 3000000
- 6353 multiletter control sequences out of 15000+200000
- 10232 words of font info for 37 fonts, out of 3000000 for 9000
+ 3530 strings out of 494975
+ 45079 string characters out of 3180013
+ 109622 words of memory out of 3000000
+ 6641 multiletter control sequences out of 15000+200000
+ 10845 words of font info for 39 fonts, out of 3000000 for 9000
  59 hyphenation exceptions out of 8191
- 38i,16n,24p,922b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione_Laboratorio_1.pdf (15 pages, 231202 bytes).
+ 38i,16n,24p,508b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relazione_Laboratorio_1.pdf (13 pages, 277112 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 496 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
