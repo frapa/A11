@@ -219,10 +219,32 @@ ogni singolo sperimentatore sono:
 	\end{split}
 \end{equation*}\\
 
-[Le misure sono COMPATIBILI ?????????]\\
 
-Le misure ripetute del periodo di un pendolo mostrano che le fluttuazioni
-delle misure sono dovute principalmente ad errori casuali, poichè il periodo
+[COMPATIBILI ???]
+Nonostante risulti evidente che le medie campionarie relative ai tre sperimentatori siano differenti le une dalle altre, non si può però escludere che le misurazioni compiute dai componenti del gruppo siano compatibili. Per questo motivo fissando a priori un fattore di copertura k = 2 andremo a verificare che lo scarto relativo alla differenza tra le tre medie prese due a due (R) risulti essere minore della deviazione standard campionaria relativa ad R moltiplicata per k. Operativamente otteniamo che:\\
+La differenza tra le medie campionarie è:
+\begin{equation}
+\begin{split}
+	R_{1} = m_{Davide}^* - m_{Francesco}^* = 0.001\,s \\
+	R_{2} = m_{Andrea}^* - m_{Francesco}^* = 0.002\,s \\
+	R_{3} = m_{Andrea}^* - m_{Davide}^* = 0.001\,s
+\end{split}
+\end{equation}
+L'errore standard campionario relativo a queste tre differenze è (con k = 2):
+\begin{equation}
+\begin{split}
+	\sigma_{R_{1}} = k\,\sqrt{\tilde{\sigma}^2_{Davide} - \tilde{\sigma}^2_{Francesco}} = k\,0.003 = 0.006\\
+	\sigma_{R_{2}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Francesco}} = k\,0.004 = 0.008\\
+	\sigma_{R_{3}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Davide}} = k\,0.003 = 0.006
+\end{split}
+\end{equation}
+Poichè risulta che:
+\begin{equation}
+	R_{1}\leq{k\sigma_{R_{1}}}\,\,\,\,R_{2}\leq{k\sigma_{R_{2}}}\,\,\,\,R_{3}\leq{k\sigma_{R_{3}}}
+\end{equation}
+possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
+ 
+Dal momento che le misure risultano essere compatibili tra di loro le misure ripetute del periodo di un pendolo mostrano che le fluttuazioni delle misure sono dovute principalmente ad errori casuali, poichè il periodo
 $\mathcal{T}$ di oscillazione di un pendolo semplice è isocrono per ampiezze
 di oscillazioni abbastanza piccole, nel nostro caso contenute entro i dieci gradi.
 Per questo motivo è importante sottolineare che l'incertezza standard sulla
