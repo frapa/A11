@@ -93,10 +93,6 @@ Come nel caso del calibro non possiamo essere sicuri del perfetto
 allineamento dei cilindri, ma abbiamo tentato di ridurre al minimo
 questo "handicap" [questa problematica].
 
-\subsection{Analisi dei dati}
-La seguente tabella (Tabella 1) riporta tutte le 25 misure di lunghezza
-dei cilindri effettuate con i tre strumenti a nostra disposizione:
-
 \begin{table}[tb]
 	\footnotesize
 	\centering
@@ -115,6 +111,10 @@ dei cilindri effettuate con i tre strumenti a nostra disposizione:
 	\caption{Misure della lunghezza dei 25 cilindretti ottenute con i tre strumenti a nostra disposizione.
         È riportato il valore di lettura degli strumenti.}
 \end{table}
+
+\subsection{Analisi dei dati}
+La seguente tabella (Tabella 1) riporta tutte le 25 misure di lunghezza
+dei cilindri effettuate con i tre strumenti a nostra disposizione:
 
 L'istogramma (Figura 1) rappresenta la distribuzione della lunghezza della
 popolazione dei cilindretti ottenuta con il metro a nastro. Per costruire
@@ -158,7 +158,7 @@ Gli istogrammi Figura 2 rappresentano rispettivamente la distribuzione delle
 misure della lunghezza dei cilindri ottenute con il calibro ventesimale e con
 il micrometro.
 
-\begin{wrapfloat}{figure}{r}{100mm}
+\begin{wrapfloat}{figure}{r}{0pt}
 	\centering
 	\includegraphics[width=100mm]{Cilindretti_calibro_micrometro.pdf}
 	\caption{Istogrammi relativi alle misure di lunghezza dei cilindri con il calibro e con il micrometro}
@@ -205,7 +205,7 @@ la varianza campionaria é: ... e la fluttuazione standard campionaria ottenuta 
         il metro a nastro.}
 \end{SCfigure}
 
-\begin{wrapfloat}{figure}{l}{100mm}
+\begin{wrapfloat}{figure}{l}{0pt}
 	\centering
 	\includegraphics[width=100mm]{cilindri_tutti_2.pdf}
     \caption{Lunghezza dei cilindretti ottenute da tutti i gruppi (del lunedì)
@@ -221,7 +221,6 @@ a tutti i gruppi di laboratorio, si può evidenziare l'esistenza di due popolazi
 distinte di cilindri. Infatti nell'istogramma (1.3) sono ben distinguibili due picchi,
 che corrispondono alle due rispettive medie campionarie di lunghezza delle due
 popolazioni di cilindretti.
-%Inserire il grafico relativo a tutti i dati
 
 
 
@@ -229,41 +228,102 @@ popolazioni di cilindretti.
 
 \section{Pendolo}
 
+La seconda parte di questa relazione tratta l'esperienza di misura del periodo
+di un pendolo. Lo scopo dell'esperienza è imparare a trattare gli errori
+casuali, dovuti alla procedura di misurazione del periodo con un cronometro,
+che introduce inevitabilmente fluttuazioni casuali nelle misure effettuate,
+e gli errori sistematici, dovuti alla diversa prontezza di riflessi degli
+sperimentatori. In questo ultimo caso sorge il problema della 
+compatibilità delle misure effettuate dai tre diversi membri del gruppo.
+
+Ci siamo anche posti il problema di verificare sperimentalmente la
+correttezza della legge del pendolo semplice, cosa che ogni studente di
+fisica dovrebbe fare almeno una volta nella sua vita!
+
 \subsection{Descrizione della procedura di misura}
 
 \subsubsection{Apparato sperimentale}
-Il pendolo è stato realizzato con un filo da pesca "inestensibile" fissato con un
-morsetto al supporto del tavolo da laboratorio. All'altra estremità del cavo è
-stato appeso, attraverso un gancio, un corpo cilindrico di metallo di massa 205
-grammi. Il pendolo si può schematizzare, in maniera abbastanza fedele alla realtà,
-come un cavo di lunghezza 55.8 $\pm$ 0.2 cm unito ad un cilindro omogeneo di altezza
-5.1 $\pm$ 0.05 cm. Partendo dal presupposto di utilizzare il modello del pendolo
-semplice otteniamo un periodo di $\mathcal{T} = 2\pi \sqrt{\frac{l}{g}}= $.\\
-Abbiamo utilizzato il modello del pendolo semplice secondo il quale la massa del
-filo è trascurabile e la massa del cilindro è approssimata ad un punto materiale
-posto nel suo baricentro. Sempre per approssimare il nostro apparato sperimentale
-al modello del pendolo semplice abbiamo tentato di contenere le oscillazioni in un
-unico piano verticale. Durante le operazioni di misura, inoltre, abbiamo mantenuto
-il massimo numero di oscillazioni entro il valore 20 affinché l'attrito con l'aria
-non influisse sul periodo del pendolo. Ci siamo inoltre accertati che il pendolo
-non superasse i 10$^\circ$ dalla verticale tramite il disegno dell'angolo massimo
-su un foglio di carta appositamente posizionato vicino al punto di sospensione del filo.
+
+Il pendolo è stato realizzato con un filo da pesca, che si può considerare
+inestensibile, fissato con un morsetto al supporto del tavolo da laboratorio.
+All'altra estremità del cavo è stato appeso, attraverso un gancio, un corpo
+cilindrico di metallo di massa m = 205 g. Il pendolo si può schematizzare,
+trascurando il gancio, come un cavo di lunghezza $l_c = 55.8 (???) \pm 0.2 \, (???)
+cm$ unito ad un cilindro omogeneo di altezza $h = 5.1 \pm 0.05 \, cm$ (???).
+
+\subsubsection{Predizione teorica (??? spostare? ???)}
+
+Per il calcolo teorico del periodo è stato utilizzato il modello del pendolo
+semplice, che abbiamo considerato adeguato alla situazione. La massa $m_c$ del
+cavo è stata considerata trascurabile, o meglio poiché $m_c \ll m$ si è posto
+$m_c = 0$. Inoltre, dato che in realtà
+il cilindro non è puntiforme, lo abbiamo approssimato ad un punto
+materiale posizionato nel suo baricentro, che si trova ad una distanza
+$\frac{h}{2}$ dal punto di sospensione del corpo.
+Nel modello del pendolo semplice, la lunghezza del cavo è quindi
+$l = l_c + \frac{h}{2} = 55.8 \pm [] \, cm + 2.5 \pm [] \, cm = 58.3 \pm [] \, cm = 0.583 \pm [] \, m$.
+Con questo valore di l e con $g = 9.8 \frac{m}{s^2}$ si ottene un periodo:
+
+\begin{equation}
+    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.499 \, s 
+\end{equation}
+
+Questo valore è quindi il valore atteso di periodo del pendolo. Lo scopo
+dell'esperimento è quello di verificare sperimentalmente se questa predizione
+è corretta.
+
+%% da spostare più in giu??? forse sotto a "Processo di acquisizione dei dati sperimentali"?
+\subsubsection{Errori sistematici (spostare???)}
+
+Al fine di evitare errori sistematici riguardanti il modello teorico,
+cioè errori causati dal fatto che il modello teorico non rispechia l'apparato
+sperimentale usato, sono state prese le seguenti precauzioni:
+
+\begin{itemize}
+    \item{Si è tentato di contenere le oscillazioni del pendolo in un
+        unico piano verticale. Abbiamo notato che a causa delle
+        vibrazioni al momento del rilascio, il pendolo tende a seguire una
+        traiettoria ellittica, invece che compiere la sua oscillazione su di un piano.
+        Nei casi in cui la traiettoria si discostasse significativamente dal piano
+        si è quindi proceduto a ripetere da capo la misura.}
+    
+    \item{Durante le operazioni di misura abbiamo mantenuto il massimo numero
+        di oscillazioni entro il valore 20-30 affinché l'attrito con l'aria
+        non influisse in modo significativo sul periodo del pendolo.}
+
+    \item{Ci siamo accertati che l'ampiezza massima delle
+        oscillazioni non superasse i 10$^\circ$ dalla verticale, in modo che
+        l'approssimazione lineare $sin(\vartheta) \simeq \vartheta$ che viene
+        utilizzata per calcolare la legge del pendolo sia accettabile. Infatti, per un
+        angolo $\vartheta < 10^\circ = 0.175 \,\, rad$ si ha che:}
+
+    \begin{equation}
+        sin(\vartheta) = 0.174 \qquad \frac{\vartheta}{sin(\vartheta)} = 1.005
+    \end{equation}
+
+\end{itemize}
+
+Possiamo stimare l'errore sistematico commesso ...
+
+\begin{equation}
+    \delta x_{sys} = 
+\end{equation}
+
+% Non so se questo è effettivamente interessante ai fini della discussione:
+[Tramite il disegno dell'angolo massimo su un foglio di carta appositamente
+posizionato vicino al punto di sospensione del filo.]
+
+Tra gli errori sistematici segnaliamo, inoltre, il fatto che le misure sono state
+effettuate da sperimentatori diversi, che introducono degli errori sistematici
+che variano da persona a persona. Questi errori saranno trattati nella sezione
+di analisi dei dati.
+
+%% frase un po' scema???
+Le precauzioni prese dovrebbero essere sufficienti a ridurre l'errore sistematico
+entro limiti accettabili. Tuttavia è risaputo che gli errori sistematici
+sono i più difficili da scovare ed eliminare.
 	
-\subsubsection{Processo di acquisizione dei dati sperimentali}
-Ogni componente del gruppo ha cronomerato 20 cicli di oscillazione del pendolo,
-in modo che se si fossero presentati errori sistematici causati dagli operatori,
-questi sarebbero risultati visibili. Per diminuire l'incertezza sulla misura di un
-singolo periodo, ogni sperimentatore ha misurato il tempo impiegato dal pendolo per
-compiere un ciclo di 10 oscillazioni, e abbiamo poi diviso tale risultato così ottenuto
-per 10. Successivamente un componente del gruppo ha eseguito 100 misurazioni di un
-singolo periodo di oscillazione. 
-
-\subsection{Analisi dei dati}
-La Tabella 1 e la Figura 1 (l'istogramma) riguardano la distribuzione dei dati
-relativi la misura del singolo periodo del pendolo da parte di tutti e tre i
-componenti del gruppo.
-
-\begin{table}[bht]
+\begin{table}[bt]
 	\begin{tabular} {c c c c | c c c c | c c c c}
 		\toprule
 		\multicolumn{12}{c}{Periodo del pendolo [s]} \\
@@ -278,18 +338,87 @@ componenti del gruppo.
 	\end{tabular}
 
 	\caption{Tabella delle misure del periodo del pendolo ottenute dai 3 membri del gruppo.
-        Ogni sperimentatore ha raccolto 20 misure.}
+        Ogni sperimentatore ha raccolto 20 misure di 10 periodi. Sono riportati
+        i dati grezzi di lettura del cronometro, riferiti a 10 periodi. }
 \end{table}
 
-\begin{figure}
+\subsubsection{Processo di acquisizione dei dati sperimentali}
+
+Per le misurazioni è stato utilizzato un comune cronometro con risoluzione di
+misura pari a 0.01 s. [errore di risoluzione???] Ogni componente del gruppo ha
+cronomerato 20 volte il tempo impiegato dal pendolo per compiere 10 periodi.
+I valori grezzi misurati, riportati nella tabella 2, sono stati divisi per
+10 per ottenere il valore medio del periodo del pendolo. Questo ci ha permesso
+di diminuire gli errori sistematici dovuti alla prontezza di riflessi dei diversi
+operatori, che verranno trattati più approfonditamente della sezione di analisi dei
+dati, e di aumentare la risoluzione del cronometro fino a 1 millisecondo.
+
+Successivamente un componente del gruppo ha eseguito 100 misurazioni di periodi
+singoli dell'apparato, riportate nella tabella 3. L'aquisizione di dati è stata
+effettuata con la seguente procedura:
+
+% si può forse togliere l'elenco???
+\begin{enumerate}
+    \item{Il pendolo è stato fatto oscillare prestando attenzione al piano di oscillazione
+        e all'ampiezza dell'oscillazione.}
+
+    \item{Si è misurato un periodo, annotato il valore ottenuto e azzerato il cronometro.}
+
+    \item{Le misurazioni sono state intervallate da 1-2 periodi non misurati.}
+
+    \item{Ogni 10 misurazioni, che equivale a meno di 30 periodi, il pendolo è stato fermato
+        e fatto ripartire, per evitare lo smorzamento dovuto all'attrito con l'aria.}
+\end{enumerate}
+
+Non è stato utilizzata la funzione «giro» del cronometro, al fine di evitare
+di introdurre dipendenza tra le varie misure. Azzerando il cronometro ogni 
+volta le misure risultano statisticamente indipendenti.
+
+\begin{SCtable}[][bt]
 	\centering
-	\includegraphics[width=130mm]{Pendolo.pdf}
+	\begin{tabular} {c c c c c | c c c c c}
+		\toprule
+		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
+		\midrule
+		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
+		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
+		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
+		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
+		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
+		\midrule
+		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
+		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
+		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
+		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
+		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
+	\bottomrule
+	\end{tabular}
+	\caption{Misure di periodo effettuate da uno dei tre componenti del gruppo.
+        Sono riportati i valori di lettura del cronometro riferiti a singole oscillazioni
+        (periodi) dell'apparato.}
+\end{SCtable}
+
+\subsection{Analisi dei dati}
+
+La Tabella 1 e la Figura 1 (l'istogramma) riguardano la distribuzione dei dati
+relativi la misura del singolo periodo del pendolo da parte di tutti e tre i
+componenti del gruppo.
+
+\begin{figure}[][p]
+	\centering
+	\includegraphics[width=120mm]{Pendolo.pdf}
 	\caption{Istogramma relativo alle misure effettuate da tutti e tre gli sperimentatori}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[][p]
 	\centering
-	\includegraphics[width=15cm]{pendolo3.pdf}
+	\includegraphics[width=120mm]{Pendolo100.pdf}
+	\caption{Istogramma delle 100 misure singole di periodo}
+\end{figure}
+
+\begin{figure}[bt]
+	\centering
+	\includegraphics[width=150mm]{pendolo3.pdf}
 	\caption{didascalia}
 \end{figure}
 
@@ -374,33 +503,6 @@ Quindi grazie hai risultati così ottenuti possiamo dire che il periodo del pend
 
 La Tabella 2 e la Figura 2 invece sono relativi alla misura del periodo del pendolo da parte di un singolo membro del gruppo.
 
-\begin{table}[bht]
-	\centering
-	\begin{tabular} {c c c c c | c c c c c}
-		\toprule
-		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
-		\midrule
-		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
-		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
-		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
-		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
-		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
-		\midrule
-		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
-		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
-		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
-		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
-		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
-	\bottomrule
-	\end{tabular}
-	\caption{Nella seguente tabella sono riportate le 100 misure del periodo singolo}
-\end{table}
-
-\begin{figure}[bht]
-	\centering
-	\includegraphics[width=130mm]{Pendolo100.pdf}
-	\caption{Istogramma delle 100 misure singole di periodo}
-\end{figure}
 
 Procediamo ora con l'analisi dei dati relativi alle cento misurazioni del periodo:
 

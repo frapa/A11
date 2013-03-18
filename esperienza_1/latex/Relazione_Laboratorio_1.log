@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  15 MAR 2013 22:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  17 MAR 2013 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,73 +902,80 @@ i_tutti_2.pdf
 
 pdfTeX warning: pdflatex (file ./cilindri_tutti_2.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
->] <Pendolo.pdf, id=256, 587.19376pt x 442.65375pt>
+>] [7] [8]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 407.
+
+<Pendolo.pdf, id=264, 587.19376pt x 442.65375pt>
 File: Pendolo.pdf Graphic file (type pdf)
  <use Pendolo.pdf>
-Package pdftex.def Info: Pendolo.pdf used on input line 286.
-(pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
-
-<pendolo3.pdf, id=257, 659.46375pt x 442.65375pt>
-File: pendolo3.pdf Graphic file (type pdf)
- <use pendolo3.pdf>
-Package pdftex.def Info: pendolo3.pdf used on input line 292.
-(pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
-
-Underfull \vbox (badness 1400) has occurred while \output is active []
-
- [7]
-[8 <./Pendolo.pdf> <./pendolo3.pdf
-
-pdfTeX warning: pdflatex (file ./pendolo3.pdf): PDF inclusion: multiple pdfs wi
-th page group included in a single page
->]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
+Package pdftex.def Info: Pendolo.pdf used on input line 409.
+(pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 413.
 
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
-
- []
-
-[10] <Pendolo100.pdf, id=384, 587.19376pt x 442.65375pt>
+<Pendolo100.pdf, id=265, 587.19376pt x 442.65375pt>
 File: Pendolo100.pdf Graphic file (type pdf)
  <use Pendolo100.pdf>
-Package pdftex.def Info: Pendolo100.pdf used on input line 401.
-(pdftex.def)             Requested size: 369.88582pt x 278.8328pt.
+Package pdftex.def Info: Pendolo100.pdf used on input line 415.
+(pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-[11 <./Pendolo100.pdf>] [12] [13] (./Relazione_Laboratorio_1.aux) ) 
+<pendolo3.pdf, id=266, 659.46375pt x 442.65375pt>
+File: pendolo3.pdf Graphic file (type pdf)
+ <use pendolo3.pdf>
+Package pdftex.def Info: pendolo3.pdf used on input line 421.
+(pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
+ [9]
+[10 <./Pendolo.pdf> <./Pendolo100.pdf
+
+pdfTeX warning: pdflatex (file ./Pendolo100.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+
+ []
+
+[11 <./pendolo3.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+[12] [13] [14] (./Relazione_Laboratorio_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3530 strings out of 494975
- 45079 string characters out of 3180013
- 109622 words of memory out of 3000000
- 6641 multiletter control sequences out of 15000+200000
+ 3531 strings out of 494975
+ 45085 string characters out of 3180013
+ 111634 words of memory out of 3000000
+ 6642 multiletter control sequences out of 15000+200000
  10845 words of font info for 39 fonts, out of 3000000 for 9000
  59 hyphenation exceptions out of 8191
- 38i,16n,24p,508b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione_Laboratorio_1.pdf (13 pages, 277112 bytes).
+ 38i,16n,24p,508b,274s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb>
+Output written on Relazione_Laboratorio_1.pdf (14 pages, 292149 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 503 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
