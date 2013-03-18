@@ -73,6 +73,7 @@ delta = 0.003
 x_min = 1.4835
 x_max = 1.5135
 bins = [x_min + i * delta for i in range(int((x_max - x_min) / delta) + 1)]
+print bins
 
 if mpl:
     # istogramma

@@ -19,9 +19,12 @@ fisica dovrebbe fare almeno una volta nella sua vita!
 Il pendolo è stato realizzato con un filo da pesca, che si può considerare
 inestensibile, fissato con un morsetto al supporto del tavolo da laboratorio.
 All'altra estremità del cavo è stato appeso, attraverso un gancio, un corpo
-cilindrico di metallo di massa m = 205 g. Il pendolo si può schematizzare,
-trascurando il gancio, come un cavo di lunghezza $l_c = 55.8 (???) \pm 0.2 \, (???)
-cm$ unito ad un cilindro omogeneo di altezza $h = 5.1 \pm 0.05 \, cm$ (???).
+cilindrico di metallo di massa $m$ = 205 g. Il pendolo si può schematizzare,
+trascurando il gancio, come un cavo di lunghezza $l_c = 55.8 \pm 0.2$ 
+cm unito ad un cilindro omogeneo di altezza $h = 5.1 \pm 0.05$ cm.
+Le incertezze riportate nelle misure sono dovute a difficoltà incontrate nella
+misurazione e alla risoluzione del metro a nastro che abbiamo usato.
+Non abbiamo ritenuto di poter fare meglio di così.
 
 \subsubsection{Predizione teorica (??? spostare? ???)}
 
@@ -33,11 +36,13 @@ il cilindro non è puntiforme, lo abbiamo approssimato ad un punto
 materiale posizionato nel suo baricentro, che si trova ad una distanza
 $\frac{h}{2}$ dal punto di sospensione del corpo.
 Nel modello del pendolo semplice, la lunghezza del cavo è quindi
-$l = l_c + \frac{h}{2} = 55.8 \pm [] \, cm + 2.5 \pm [] \, cm = 58.3 \pm [] \, cm = 0.583 \pm [] \, m$.
-Con questo valore di l e con $g = 9.8 \frac{m}{s^2}$ si ottene un periodo:
+$l = l_c + \frac{h}{2} = (55.8 \pm 0.2 \, cm) + (2.5 \pm 0.025 \, cm) = 58.3 \pm 0.225 \, cm = 0.583 \pm 0.00225 \, m$.
+Il valore di $g$, l'accelerazione di gravità, non è stato da noi misurato,
+quindi abbiamo considerato $g = 9.8 \pm 0.02 \, \frac{m}{s^2}$, un
+valore molto prudente. Con questi valore di $l$ e $g$ si ottene un periodo:
 
 \begin{equation}
-    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.499 \, s 
+    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.003 \, s 
 \end{equation}
 
 Questo valore è quindi il valore atteso di periodo del pendolo. Lo scopo
@@ -67,18 +72,23 @@ sperimentale usato, sono state prese le seguenti precauzioni:
         oscillazioni non superasse i 10$^\circ$ dalla verticale, in modo che
         l'approssimazione lineare $sin(\vartheta) \simeq \vartheta$ che viene
         utilizzata per calcolare la legge del pendolo sia accettabile. Infatti, per un
-        angolo $\vartheta < 10^\circ = 0.175 \,\, rad$ si ha che:}
+        angolo $\vartheta = 10^\circ = 0.175 \,\, rad$ si ha che:}
 
     \begin{equation}
         sin(\vartheta) = 0.174 \qquad \frac{\vartheta}{sin(\vartheta)} = 1.005
+        \label{eq:theta_su_sintheta}
     \end{equation}
 
 \end{itemize}
 
-Possiamo stimare l'errore sistematico commesso ...
+Possiamo stimare l'errore sistematico commesso. Poichè nella (\ref{eq:theta_su_sintheta})
+abbiamo ottenuto un errore del 5 per mille l'errore sistematico dovuto a tutte le
+cause elencate sopra è sicuramente maggiore. Ci sentiamo abbastanza sicuri stimando
+l'errore ad un valore:
 
 \begin{equation}
-    \delta x_{sys} = 
+    \sigma_{sys} = 4 \cdot \frac{\vartheta}{sin(\vartheta)} = 2 \%
+    \label{eq:errore_sistematico}
 \end{equation}
 
 % Non so se questo è effettivamente interessante ai fini della discussione:
@@ -88,7 +98,7 @@ posizionato vicino al punto di sospensione del filo.]
 Tra gli errori sistematici segnaliamo, inoltre, il fatto che le misure sono state
 effettuate da sperimentatori diversi, che introducono degli errori sistematici
 che variano da persona a persona. Questi errori saranno trattati nella sezione
-di analisi dei dati.
+di analisi dei dati, e non sono stati inclusi nella (\ref{eq:errore_sistematico}).
 
 %% frase un po' scema???
 Le precauzioni prese dovrebbero essere sufficienti a ridurre l'errore sistematico
@@ -181,21 +191,35 @@ componenti del gruppo.
 \begin{figure}[][p]
 	\centering
 	\includegraphics[width=120mm]{grafici/Pendolo.pdf}
-	\caption{Istogramma relativo alle misure effettuate da tutti e tre gli sperimentatori}
+	\caption{L'istogramma mostra le misure effettuate da tutti e tre gli sperimentatori.
+        È indicato l'intervallo di incertezza tipo e la media campionaria. La larghezza
+        dei bin dell'istogramma è 0.003 s. Come si può notare la forma dell'istogramma
+        assomiglia ad una distribuzione gaussiana, come era prevedibile sapendo che gli
+        errori dominanti delle misure sono casuali.}
     \label{fig:pendolo}
 \end{figure}
 
 \begin{figure}[][p]
 	\centering
 	\includegraphics[width=120mm]{grafici/Pendolo100.pdf}
-	\caption{Istogramma delle 100 misure singole di periodo}
+	\caption{Istogramma delle 100 misure di periodo del pendolo ottenute
+        da un membro del gruppo. Sono evidenziate la media campionaria
+        e l'intervallo di incertezza tipo. Come notato nella figura \ref{fig:pendolo}
+        anche qui la distribuzione somiglia ad una distribuzione normale,
+        a causa degli errori causali.}
     \label{fig:pendolo100}
 \end{figure}
 
 \begin{figure}[bt]
 	\centering
 	\includegraphics[width=150mm]{grafici/pendolo3.pdf}
-	\caption{didascalia}
+	\caption{Il grafico illustra le misure di periodo del pendolo ottenute
+        dai 3 diversi membri del gruppo, mettendo in risalto gli errori
+        sistematici commessi. Da notare il fatto che Davide ha registrato più
+        misure nel bin centrato in 1.503 e ha media campionaria più alta, mentre gli
+        altri sperimentatori hanno picchi nel bin centrato in 1.500. In sottoimpressione
+        è disegnato l'istogramma con i dati di tutti e 3 i componenti del gruppo, riportato
+        anche in figura \ref{fig:pendolo}.}
     \label{fig:pendolo3}
 \end{figure}
 

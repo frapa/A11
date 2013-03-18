@@ -12,6 +12,6 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Apparato sperimentale}{7}
 \contentsline {subsubsection}{\numberline {3.1.2}Predizione teorica (??? spostare? ???)}{7}
 \contentsline {subsubsection}{\numberline {3.1.3}Errori sistematici (spostare???)}{8}
-\contentsline {subsubsection}{\numberline {3.1.4}Processo di acquisizione dei dati sperimentali}{9}
+\contentsline {subsubsection}{\numberline {3.1.4}Processo di acquisizione dei dati sperimentali}{8}
 \contentsline {subsection}{\numberline {3.2}Analisi dei dati}{9}
 \contentsline {section}{\numberline {4}Conclusioni}{14}
