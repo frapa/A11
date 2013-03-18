@@ -14,19 +14,21 @@ Poichè la lunghezza dei cilindretti era di circa 15 mm abbiamo incontrato
 delle difficoltà nell'allineare i cilindri con lo 0 dello strumento.
 Per questo motivo abbiamo allineato un'estremità di ogni cilindro con la
 tacca dei 10 cm del metro e abbiamo sottratto questa quantità al valore
-della misurà così ottenuta. E' importante evidenziare che in questa
-operazione abbiamo riscontrato una difficoltà nell'allineare correttamente
-i cilindri anche con la tacca dei 10 cm, inoltre abbiamo tentato di evitare
+della misurà così ottenuta. E' importante evidenziare che anche in questa
+operazione abbiamo riscontrato una certa difficoltà nell'allineare correttamente
+i cilindri anche con la tacca dello strumento, ma ci è sembrato che la
+misura così ottenuta fosse più precisa di quella riscontrata allineandoli
+con lo 0 dello strumento. Ciò nonostante abbiamo tentato di evitare
 eventuali errori di parallasse durante la lettura dello stumento.
 
 \subsubsection{Calibro ventesimale}
 Il calibro che abbiamo utillizzato ha una risoluzione di misura di 0.05
 millimetri. La misura con il calibro ventesimale è stata effettuata avendo
-cura di disporre i cilindri in modo perpendicolare ai becchi del calibro.
-[In questo modo abbiamo tentato di misurare l'asse del cilindro e non una
-sua proiezione], a tal fine abbiamo sfruttato le scanalature presenti sullo
-strumento; tuttavia non abbiamo potuto evitare nella maniera più assoluta
-errori di questo tipo.
+cura di disporre i cilindri in modo perpendicolare ai becchi del calibro,
+a tal fine abbiamo sfruttato le scanalature presenti sullo strumento.
+In questo modo abbiamo tentato di misurare l'asse del cilindro, tuttavia
+non abbiamo potuto evitare nella maniera più assoluta errori di posizione
+dei cilindri.
 La lettura dei ventesimi di millimetro è stata effettuata cercando quale
 tacca della scala mobile ventesimale si allineasse meglio con le tacce
 sovrastanti della scala millimetrata. Questa operazione è stata eseguita
@@ -40,7 +42,7 @@ prestando attenzione che i campioni fossero perpendicolari alle aste di
 misurazione, per evitare lo stesso tipo di errore descritto sopra.
 Come nel caso del calibro non possiamo essere sicuri del perfetto
 allineamento dei cilindri, ma abbiamo tentato di ridurre al minimo
-questo "handicap" [questa problematica].
+questa problematica.
 
 \begin{table}[tb]
 	\footnotesize
@@ -59,13 +61,15 @@ questo "handicap" [questa problematica].
 	\end{tabular}
 	\caption{Misure della lunghezza dei 25 cilindretti ottenute con i tre strumenti a nostra disposizione.
         È riportato il valore di lettura degli strumenti.}
+	\label{tab:cilindretti}
 \end{table}
 
 \subsection{Analisi dei dati}
-La seguente tabella (Tabella 1) riporta tutte le 25 misure di lunghezza
-dei cilindri effettuate con i tre strumenti a nostra disposizione:
+La seguente tabella \ref{tab:cilindretti} riporta tutte le 25 misure di
+lunghezza dei cilindri effettuate con ognuno dei tre strumenti a nostra
+disposizione:
 
-L'istogramma (Figura 1) rappresenta la distribuzione della lunghezza della
+L'istogramma in figura \ref{fig:metro} rappresenta la distribuzione della lunghezza della
 popolazione dei cilindretti ottenuta con il metro a nastro. Per costruire
 questo istogramma abbiamo deciso di utilizzare come binnaggio la risoluzione
 di misura dello strumento e quindi di 1 millimetro, poichè tutte le misure
@@ -79,13 +83,14 @@ apprezzare le variazioni di lunghezza da un corpo all'altro.
 	\centering
 	\includegraphics[width=100mm]{grafici/Cilindretti_metro.pdf}
 	\caption{Istogramma relativo alle misure di lunghezza dei cilindri con il metro a nastro}
+	\label{fig:metro}
 \end{SCfigure}
 
 I parametri statistici ottenuti relativi alle misure dei cilindri sono
 i seguenti:
 
 % se vuoi elenco numerato sostituisci enumerate al posto di itemize
-% ovviemente devi cambiare anche \end{itemize}
+% ovviamente devi cambiare anche \end{itemize}
 \begin{itemize}
     \item{Media campionaria:}
         \begin{equation}
@@ -103,7 +108,7 @@ i seguenti:
         \end{equation}
 \end{itemize}
 
-Gli istogrammi Figura 2 rappresentano rispettivamente la distribuzione delle
+Gli istogrammi figura \ref{fig:calmic} rappresentano rispettivamente la distribuzione delle
 misure della lunghezza dei cilindri ottenute con il calibro ventesimale e con
 il micrometro.
 
@@ -111,6 +116,7 @@ il micrometro.
 	\centering
 	\includegraphics[width=100mm]{grafici/Cilindretti_calibro_micrometro.pdf}
 	\caption{Istogrammi relativi alle misure di lunghezza dei cilindri con il calibro e con il micrometro}
+	\label{fig:calmic}
 \end{wrapfloat}
 
 Per l'istogramma relativo al calibro ventesimale la scelta del binning è legata
@@ -118,10 +124,10 @@ alla risoluzione dello strumento e quindi la larghezza di ogni singolo
 bin è di 0.05 mm. Infatti grazie a questo binnaggio abbiamo un numero
 conteggi sufficienti per ogni colonna.
 
-Per l'istogramma relativo al micrometro si è scelto di utilizzare lo stesso
-binnaggio utilizzato per il calibro poiché: se avessimo diminuito la larghezza
-dei bin avremmo ottenuto un numero di colonne troppo alto e per ognuna di
-esse un numero di conteggi insufficiente. Al contrario se avessimo scelto
+Per l'istogramma relativo al micrometro, invece, si è scelto di utilizzare lo stesso
+binnaggio utilizzato per il calibro. Abbiamo effettuato questa scelta poiché se avessimo
+diminuito la larghezza dei bin avremmo ottenuto un numero di colonne troppo alto e per
+ognuna di esse un numero di conteggi insufficiente. Al contrario se avessimo scelto
 di aumentare la larghezza dei bin allora lo scopo di misurare i 25 cilindretti
 con il micrometro sarebbe risultato vano in quanto non si sarebbe nemmeno apprezzata
 la buona risoluzione dello strumento.
@@ -130,18 +136,53 @@ Come si può notare i due istogrammi si assomigliano: infatti in entrambi i casi
 siamo riusciti ad apprezzare la presenza di un picco della popolazione in
 corrispondenza del valore 13.90 mm. Nonostante le misure risultino essere
 più accurate rispetto a quelle eseguite con il metro a nastro non ci sono
-abbastanza campioni per poter affermare l'esistenza di due popolazioni di
-cilindri differenti in quanto l'altro picco, quello riferito al valore ... ,
-non è distinguibile da una coda relativa al picco preponderante. Affermiamo
-questo perchè l'errore [sulla colonna] è $\sqrt{n_j}$ e il numero di campioni
-per questa misura risulta essere inferiore a 5.
+abbastanza campioni per poter affermare l'esistenza di più di una popolazione
+in quanto non sono distinguibili altri picchi dalle code relative al picco preponderante.
+Affermiamo questo perchè l'errore su ogni colonna è $\sqrt{n_j}$ %$\sqrt{\frac{n_j}{N \Delta x}}$
+e il numero di campioni per questa misura risulta essere inferiore a 5.
 
-Più nel dettaglio possiamo dire che la media campionaria relativa all'istogramma
-(1.2) è la seguente: ...
-la varianza campionaria risulta essere: ... e la fluttuazione standard campionaria
-ottenuta è: ...
-Per l'istogramma (1.3) abbiamo ottenuto che la media campionaria risulta essere: ...
-la varianza campionaria é: ... e la fluttuazione standard campionaria ottenuta è: ...
+\newpage
+Più nel dettaglio possiamo dire che i dati statistici riguardanti le misure con il calibro ventesimale e il micrometro (\ref{fig:calmic}) sono:
+\begin{itemize}
+    \item{Media campionaria:}
+        \begin{equation}
+        m^*_{calibro}[x] \simeq 13.xx\,\,mm \qquad
+        m^*_{micrometro}[x] \simeq 13.xx\,\,mm 
+        \end{equation}
+
+    \item{Varianza campionaria:}
+        \begin{equation}
+        \tilde{D}_{calibro} = x.xx\,\,mm^2 \qquad
+        \tilde{D}_{micrometro} = x.xx\,\,mm^2
+        \end{equation}
+
+    \item{Deviazione standard campionaria:}
+        \begin{equation}
+        \tilde{\sigma}_{calibro} = x.x\,\,mm \qquad
+        \tilde{\sigma}_{micrometro} = x.x\,\,mm
+        \end{equation}
+\end{itemize}
+Inoltre abbiamo che:
+
+\begin{itemize}
+    \item{Mediana:}
+        \begin{equation}
+        m_{calibro}[x] \simeq 13.xx\,\,mm \qquad
+        m_{micrometro}[x] \simeq 13.xx\,\,mm 
+        \end{equation}
+
+    \item{Quantile 10\%:}
+        \begin{equation}
+        q_{10\%calibro} = x.xx\,\,mm^2 \qquad
+        q_{10\%micrometro} = x.xx\,\,mm^2
+        \end{equation}
+
+    \item{Quantile 90\%:}
+        \begin{equation}
+        q_{90\%calibro} = x.x\,\,mm \qquad
+        q_{90\%micrometro} = x.x\,\,mm
+        \end{equation}
+\end{itemize}
 % Inserire oltre  a Media campionaria, Varianza campionaria, Fluttuazione standard
 % campionaria anche mediana e quantili
 % Ulteriori commenti
