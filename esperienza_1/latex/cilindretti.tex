@@ -7,7 +7,7 @@ misura a nostra disposizione:
 
 \subsubsection{Metro a nastro}
 Abbiamo misurato i 25 cilindretti con un metro a nastro la cui risoluzione
-di misura è 1 millietro, in quanto abbiamo ritenuto di non poter distinguere
+di misura è 1 millimetro, in quanto abbiamo ritenuto di non poter distinguere
 un intervallo di mezzo millimetro. Per questo motivo abbiamo approssimato
 le misure alla tacca da un millimetro più vicina al bordo del cilindretto.
 Poichè la lunghezza dei cilindretti era di circa 15 mm abbiamo incontrato
@@ -65,6 +65,9 @@ questa problematica.
 \end{table}
 
 \subsection{Analisi dei dati}
+
+\subsubsection{Dati raccolti con il metro}
+
 La seguente tabella \ref{tab:cilindretti} riporta tutte le 25 misure di
 lunghezza dei cilindri effettuate con ognuno dei tre strumenti a nostra
 disposizione:
@@ -108,6 +111,14 @@ i seguenti:
         \end{equation}
 \end{itemize}
 
+Possiamo concludere dicendo che il valore di deviazione standard trovato non ha
+senso, poiché è molto minore all'errore di risoluzione. Il metro non è
+uno strumento adatto per compiere queste misure; infatti l'errore di risoluzione domina su
+tutte le altre cause di incertezza, impedendo di ottenere risultati significativi
+dall'esperimento.
+
+\subsubsection{Dati raccolti con calibro e micrometro}
+
 Gli istogrammi figura \ref{fig:calmic} rappresentano rispettivamente la distribuzione delle
 misure della lunghezza dei cilindri ottenute con il calibro ventesimale e con
 il micrometro.
@@ -141,11 +152,12 @@ corrispondenza del valore 13.90 mm. Nonostante le misure risultino essere
 più accurate rispetto a quelle eseguite con il metro a nastro non ci sono
 abbastanza campioni per poter affermare l'esistenza di più di una popolazione
 in quanto non sono distinguibili altri picchi dalle code relative al picco preponderante.
-Affermiamo questo perchè l'errore su ogni colonna è $\sqrt{n_j}$ %$\sqrt{\frac{n_j}{N \Delta x}}$
-e il numero di campioni per questa misura risulta essere inferiore a 5.
+Affermiamo questo perchè l'errore su ogni colonna è $\sqrt{n_j}$,
+dove $n_j$ è la numero di dati che cadono nel bin $j$, e il conteggio dell'ultima colonna
+è 4. Quindi l'inceretezza sull'ultima colonna vale è $\pm 2$
 
-\newpage
 Più nel dettaglio possiamo dire che i dati statistici riguardanti le misure con il calibro ventesimale e il micrometro (\ref{fig:calmic}) sono:
+
 \begin{itemize}
     \item{Media campionaria:}
         \begin{equation}
@@ -176,8 +188,8 @@ Inoltre abbiamo che:
 
     \item{Quantile 10\%:}
         \begin{equation}
-        q_{10\%calibro} = 13.70\,\,mm^2 \qquad
-        q_{10\%micrometro} = 13.70\,\,mm^2
+        q_{10\%calibro} = 13.70\,\,mm \qquad
+        q_{10\%micrometro} = 13.70\,\,mm
         \end{equation}
 
     \item{Quantile 90\%:}
@@ -190,7 +202,7 @@ Inoltre abbiamo che:
 % campionaria anche mediana e quantili
 % Ulteriori commenti
 
-\begin{SCfigure}
+\begin{SCfigure}[][p]
 	\centering
 	\includegraphics[width=100mm]{grafici/cilindri_tutti.pdf}
 	\caption{Misure della lunghezza dei cilindretti ottenute da tutti i gruppi del
@@ -198,14 +210,14 @@ Inoltre abbiamo che:
         il metro a nastro.}
 \end{SCfigure}
 
-\begin{wrapfloat}{figure}{l}{0pt}
+\begin{SCfigure}[][p]
 	\centering
 	\includegraphics[width=100mm]{grafici/cilindri_tutti_2.pdf}
     \caption{Lunghezza dei cilindretti ottenute da tutti i gruppi (del lunedì)
         del corso di laboratorio. L'istogramma relativo alle misure con il calibro
         ha binning di 0.05 mm, mentre nell'istogramma delle misure effettuate con
         il micrometro i bin sono da 0.02 mm}
-\end{wrapfloat}
+\end{SCfigure}
 
 \subsection{Analisi dei dati a livello globale di laboratorio}
 Contrariamente a quanto abbiamo potuto osservare e ipotizzare tramite i dati
@@ -214,6 +226,4 @@ a tutti i gruppi di laboratorio, si può evidenziare l'esistenza di due popolazi
 distinte di cilindri. Infatti nell'istogramma (1.3) sono ben distinguibili due picchi,
 che corrispondono alle due rispettive medie campionarie di lunghezza delle due
 popolazioni di cilindretti.
-
-\newpage
 

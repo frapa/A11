@@ -6,14 +6,16 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Calibro ventesimale}{3}
 \contentsline {subsubsection}{\numberline {2.1.3}Micrometro}{3}
 \contentsline {subsection}{\numberline {2.2}Analisi dei dati}{4}
+\contentsline {subsubsection}{\numberline {2.2.1}Dati raccolti con il metro}{4}
+\contentsline {subsubsection}{\numberline {2.2.2}Dati raccolti con calibro e micrometro}{5}
 \contentsline {subsection}{\numberline {2.3}Analisi dei dati a livello globale di laboratorio}{6}
 \contentsline {section}{\numberline {3}Pendolo}{8}
 \contentsline {subsubsection}{\numberline {3.0.1}Predizione teorica}{8}
 \contentsline {subsection}{\numberline {3.1}Descrizione della procedura di misura}{8}
 \contentsline {subsubsection}{\numberline {3.1.1}Apparato sperimentale}{8}
-\contentsline {subsubsection}{\numberline {3.1.2}Processo di acquisizione dei dati sperimentali}{9}
+\contentsline {subsubsection}{\numberline {3.1.2}Processo di acquisizione dei dati sperimentali}{8}
 \contentsline {subsubsection}{\numberline {3.1.3}Errori sistematici}{9}
 \contentsline {subsection}{\numberline {3.2}Analisi dei dati}{10}
 \contentsline {subsubsection}{\numberline {3.2.1}Dati dei tre operatori}{10}
 \contentsline {subsubsection}{\numberline {3.2.2}Compatibilt\IeC {\`a} delle misure di diversi sperimentatori.}{10}
-\contentsline {section}{\numberline {4}Conclusioni}{16}
+\contentsline {section}{\numberline {4}Conclusioni}{15}
