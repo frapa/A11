@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 18:38
-=======
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 18:31
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.20)  21 MAR 2013 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,11 +499,7 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip59
 \JustifyingParindent=\skip60
 ) (./introduzione.tex
-<<<<<<< HEAD
 <unitn_logo.png, id=1, 192.72pt x 190.311pt>
-=======
-<unitn_logo.png, id=1, 297.0297pt x 293.1753pt>
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
 File: unitn_logo.png Graphic file (type png)
  <use unitn_logo.png>
 Package pdftex.def Info: unitn_logo.png used on input line 14.
@@ -547,56 +539,35 @@ ut line 130.
 File: grafici/cilindri_tutti.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti.pdf>
-<<<<<<< HEAD
 Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 226.
-=======
-Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 211.
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
 (pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
 
 <grafici/cilindri_tutti_2.pdf, id=144, 514.92375pt x 617.00514pt>
 File: grafici/cilindri_tutti_2.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti_2.pdf>
-<<<<<<< HEAD
 Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 236.
-=======
-Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 220.
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
 (pdftex.def)             Requested size: 284.52756pt x 340.93555pt.
  [6] [7 <./grafici/cilindri_tutti.pdf> <./grafici/cilindri_tutti_2.pdf
 
 pdfTeX warning: pdflatex (file ./grafici/cilindri_tutti_2.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
-<<<<<<< HEAD
 >]) [8] (./pendolo.tex [9] [10]
-<grafici/Pendolo.pdf, id=273, 587.19376pt x 442.65375pt>
-=======
->] (./pendolo.tex [8] [9]
-<grafici/Pendolo.pdf, id=269, 587.19376pt x 442.65375pt>
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
+<grafici/Pendolo.pdf, id=272, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo.pdf>
 Package pdftex.def Info: grafici/Pendolo.pdf used on input line 189.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<<<<<<< HEAD
-<grafici/Pendolo100.pdf, id=274, 587.19376pt x 442.65375pt>
-=======
-<grafici/Pendolo100.pdf, id=270, 587.19376pt x 442.65375pt>
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
+<grafici/Pendolo100.pdf, id=273, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo100.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo100.pdf>
 Package pdftex.def Info: grafici/Pendolo100.pdf used on input line 200.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<<<<<<< HEAD
-<grafici/pendolo3.pdf, id=275, 659.46375pt x 442.65375pt>
-=======
-<grafici/pendolo3.pdf, id=271, 659.46375pt x 442.65375pt>
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
+<grafici/pendolo3.pdf, id=274, 659.46375pt x 442.65375pt>
 File: grafici/pendolo3.pdf Graphic file (type pdf)
 
 <use grafici/pendolo3.pdf>
@@ -607,31 +578,19 @@ Package pdftex.def Info: grafici/pendolo3.pdf used on input line 211.
 pdfTeX warning: pdflatex (file ./grafici/Pendolo100.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-<<<<<<< HEAD
 [13 <./grafici/pendolo3.pdf>] [14] [15]) [16] [17] (./conclusioni.tex [18])
 [19] (./Relazione_Laboratorio_1.aux) ) 
 Here is how much of TeX's memory you used:
- 3564 strings out of 494975
- 45788 string characters out of 3180013
- 111754 words of memory out of 3000000
- 6660 multiletter control sequences out of 15000+200000
- 11146 words of font info for 40 fonts, out of 3000000 for 9000
- 59 hyphenation exceptions out of 8191
-=======
-[12 <./grafici/pendolo3.pdf>] [13] [14]) [15] [16] (./conclusioni.tex [17])
-[18] (./Relazione_Laboratorio_1.aux) ) 
-Here is how much of TeX's memory you used:
- 3156 strings out of 495048
- 43084 string characters out of 3181555
- 108980 words of memory out of 3000000
- 6248 multiletter control sequences out of 15000+200000
+ 3158 strings out of 495048
+ 43119 string characters out of 3181554
+ 108997 words of memory out of 3000000
+ 6250 multiletter control sequences out of 15000+200000
  11146 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
  38i,17n,24p,746b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
@@ -648,17 +607,10 @@ s/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb>
-<<<<<<< HEAD
-Output written on Relazione_Laboratorio_1.pdf (19 pages, 330674 bytes).
+Output written on Relazione_Laboratorio_1.pdf (19 pages, 330359 bytes).
 PDF statistics:
  521 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams
-=======
-Output written on Relazione_Laboratorio_1.pdf (18 pages, 346928 bytes).
-PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
->>>>>>> e6ffe1643ecf9d430473e02f68a03ba53663e66f
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
