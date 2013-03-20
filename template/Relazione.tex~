@@ -16,11 +16,12 @@
 \input{introduzione.tex}
 \input{paragrafo1.tex}
 %\newpage
-%\input{paragrafo1.tex}
+%\input{paragrafo2.tex}
 %\newpage
-%\input{paragrafo1.tex}
+%\input{paragrafo3.tex}
 %\newpage
-%\input{paragrafo1.tex}
+%\input{paragrafo4.tex}
 %\newpage
+%\input{conclusioni.tex}
 
 \end{document}

@@ -11,9 +11,8 @@
 
 \begin{document}
 
-\input{cover.tex}
-\newpage
 \input{introduzione.tex}
+\newpage
 \input{paragrafo1.tex}
 %\newpage
 %\input{paragrafo1.tex}
