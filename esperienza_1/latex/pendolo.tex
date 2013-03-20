@@ -1,5 +1,26 @@
 \section{Pendolo}
 
+\subsubsection{Predizione teorica}
+
+Per il calcolo teorico del periodo di un pendolo è stato utilizzato il modello del pendolo
+semplice, che abbiamo considerato adeguato alla situazione. La massa $m_c$ del
+cavo è stata considerata trascurabile poichè $m_c \ll m$ e quindi si è posto
+$m_c = 0$. Inoltre, dato che in realtà il cilindro non è puntiforme, lo abbiamo approssimato ad un punto
+materiale posizionato nel suo baricentro, che si trova ad una distanza
+$\frac{h}{2}$ dal punto di sospensione del corpo.
+Nel modello del pendolo semplice, la lunghezza del cavo è quindi
+$l = l_c + \frac{h}{2} = (55.8 \pm 0.2 \, cm) + (2.5 \pm 0.025 \, cm) = 58.3 \pm 0.225 \, cm = 0.583 \pm 0.00225 \, m$.
+Il valore di $g$, l'accelerazione di gravità, non è stato da noi misurato,
+quindi abbiamo considerato $g = 9.8 \pm 0.02 \, \frac{m}{s^2}$ che è un
+valore molto prudente. Con questi valore di $l$ e $g$ si ottene un periodo:
+
+\begin{equation}
+    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.003 \, s 
+\end{equation}
+
+Questo valore è quindi il valore atteso di periodo del pendolo. Lo scopo
+dell'esperimento è quello di verificare sperimentalmente se questa predizione
+è corretta.
 La seconda parte di questa relazione tratta l'esperienza di misura del periodo
 di un pendolo. Lo scopo dell'esperienza è imparare a trattare gli errori
 casuali, dovuti alla procedura di misurazione del periodo con un cronometro,
@@ -26,31 +47,83 @@ Le incertezze riportate nelle misure sono dovute a difficoltà incontrate nella
 misurazione e alla risoluzione del metro a nastro che abbiamo usato.
 Non abbiamo ritenuto di poter fare meglio di così.
 
-\subsubsection{Predizione teorica (??? spostare? ???)}
+\subsubsection{Processo di acquisizione dei dati sperimentali}
 
-Per il calcolo teorico del periodo è stato utilizzato il modello del pendolo
-semplice, che abbiamo considerato adeguato alla situazione. La massa $m_c$ del
-cavo è stata considerata trascurabile, o meglio poiché $m_c \ll m$ si è posto
-$m_c = 0$. Inoltre, dato che in realtà
-il cilindro non è puntiforme, lo abbiamo approssimato ad un punto
-materiale posizionato nel suo baricentro, che si trova ad una distanza
-$\frac{h}{2}$ dal punto di sospensione del corpo.
-Nel modello del pendolo semplice, la lunghezza del cavo è quindi
-$l = l_c + \frac{h}{2} = (55.8 \pm 0.2 \, cm) + (2.5 \pm 0.025 \, cm) = 58.3 \pm 0.225 \, cm = 0.583 \pm 0.00225 \, m$.
-Il valore di $g$, l'accelerazione di gravità, non è stato da noi misurato,
-quindi abbiamo considerato $g = 9.8 \pm 0.02 \, \frac{m}{s^2}$, un
-valore molto prudente. Con questi valore di $l$ e $g$ si ottene un periodo:
+Per le misurazioni è stato utilizzato un comune cronometro con risoluzione di
+misura pari a 0.01 s. [errore di risoluzione???] Ogni componente del gruppo ha
+cronomerato 20 volte il tempo impiegato dal pendolo per compiere 10 periodi.
+I valori grezzi misurati, riportati nella tabella \ref{tab:pendolo}, sono stati divisi per
+10 per ottenere il valore medio del periodo del pendolo. Questo ci ha permesso
+di diminuire gli errori sistematici dovuti alla prontezza di riflessi dei diversi
+operatori, che verranno trattati più approfonditamente della sezione di analisi dei
+dati, e di aumentare la risoluzione del cronometro fino a 1 millisecondo.
 
-\begin{equation}
-    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.003 \, s 
-\end{equation}
+Successivamente un componente del gruppo ha eseguito 100 misurazioni di periodi
+singoli dell'apparato, riportate nella tabella \ref{tab:pendolo100}. L'aquisizione di dati è stata
+effettuata con la seguente procedura:
 
-Questo valore è quindi il valore atteso di periodo del pendolo. Lo scopo
-dell'esperimento è quello di verificare sperimentalmente se questa predizione
-è corretta.
+\begin{enumerate}
+    \item{Il pendolo è stato fatto oscillare prestando attenzione al piano di oscillazione
+        e all'ampiezza dell'oscillazione.}
 
-%% da spostare più in giu??? forse sotto a "Processo di acquisizione dei dati sperimentali"?
-\subsubsection{Errori sistematici (spostare???)}
+    \item{Si è misurato un periodo, annotato il valore ottenuto e azzerato il cronometro.}
+
+    \item{Le misurazioni sono state intervallate da 1-2 periodi non misurati.}
+
+    \item{Ogni 10 misurazioni, che equivale a meno di 30 periodi, il pendolo è stato fermato
+        e fatto ripartire, per evitare lo smorzamento dovuto all'attrito con l'aria.}
+\end{enumerate}
+
+Non è stato utilizzata la funzione «giro» del cronometro, al fine di evitare
+di introdurre dipendenza tra le varie misure. Azzerando il cronometro ogni 
+volta le misure risultano statisticamente indipendenti.
+
+\begin{table}[bt]
+	\begin{tabular} {c c c c | c c c c | c c c c}
+		\toprule
+		\multicolumn{12}{c}{Periodo del pendolo [s]} \\
+		\multicolumn{4}{c}{Francesco} & \multicolumn{4}{c}{Davide} & \multicolumn{4}{c}{Andrea} \\
+		\midrule
+		15.04 & 14.99 & 14.99 & 14.97 & 14.91 & 14.97 & 15.06 & 15.04 & 14.98 & 14.98 & 15.05 & 15.01 \\
+		14.99 & 14.99 & 15.01 & 15.08 & 14.92 & 15.06 & 15.08 & 15.02 & 14.85 & 14.99 & 14.98 & 15.00 \\
+		15.04 & 15.00 & 15.06 & 14.98 & 15.06 & 15.02 & 15.04 & 15.00 & 15.04 & 14.99 & 14.99 & 14.94 \\
+		14.93 & 14.98 & 14.98 & 15.04 & 15.06 & 15.06 & 15.02 & 14.91 & 15.01 & 15.00 & 15.13 & 14.99 \\
+		14.99 & 14.91 & 15.03 & 15.03 & 15.03 & 15.02 & 15.06 & 15.02 & 14.88 & 15.01 & 15.02 & 14.96 \\
+		\bottomrule
+	\end{tabular}
+
+	\caption{Tabella delle misure del periodo del pendolo ottenute dai 3 membri del gruppo.
+        Ogni sperimentatore ha raccolto 20 misure di 10 periodi. Sono riportati
+        i dati grezzi di lettura del cronometro, riferiti a 10 periodi. }
+    \label{tab:pendolo}
+\end{table}
+
+\begin{SCtable}[][tb]
+	\centering
+	\begin{tabular} {c c c c c | c c c c c}
+		\toprule
+		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
+		\midrule
+		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
+		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
+		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
+		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
+		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
+		\midrule
+		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
+		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
+		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
+		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
+		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
+	\bottomrule
+	\end{tabular}
+	\caption{Misure di periodo effettuate da uno dei tre componenti del gruppo.
+        Sono riportati i valori di lettura del cronometro riferiti a singole oscillazioni
+        (periodi) dell'apparato.}
+    \label{tab:pendolo100}
+\end{SCtable}
+
+\subsubsection{Errori sistematici}
 
 Al fine di evitare errori sistematici riguardanti il modello teorico,
 cioè errori causati dal fatto che il modello teorico non rispechia l'apparato
@@ -104,85 +177,10 @@ di analisi dei dati, e non sono stati inclusi nella (\ref{eq:errore_sistematico}
 Le precauzioni prese dovrebbero essere sufficienti a ridurre l'errore sistematico
 entro limiti accettabili. Tuttavia è risaputo che gli errori sistematici
 sono i più difficili da scovare ed eliminare.
-	
-\begin{table}[bt]
-	\begin{tabular} {c c c c | c c c c | c c c c}
-		\toprule
-		\multicolumn{12}{c}{Periodo del pendolo [s]} \\
-		\multicolumn{4}{c}{Francesco} & \multicolumn{4}{c}{Davide} & \multicolumn{4}{c}{Andrea} \\
-		\midrule
-		15.04 & 14.99 & 14.99 & 14.97 & 14.91 & 14.97 & 15.06 & 15.04 & 14.98 & 14.98 & 15.05 & 15.01 \\
-		14.99 & 14.99 & 15.01 & 15.08 & 14.92 & 15.06 & 15.08 & 15.02 & 14.85 & 14.99 & 14.98 & 15.00 \\
-		15.04 & 15.00 & 15.06 & 14.98 & 15.06 & 15.02 & 15.04 & 15.00 & 15.04 & 14.99 & 14.99 & 14.94 \\
-		14.93 & 14.98 & 14.98 & 15.04 & 15.06 & 15.06 & 15.02 & 14.91 & 15.01 & 15.00 & 15.13 & 14.99 \\
-		14.99 & 14.91 & 15.03 & 15.03 & 15.03 & 15.02 & 15.06 & 15.02 & 14.88 & 15.01 & 15.02 & 14.96 \\
-		\bottomrule
-	\end{tabular}
-
-	\caption{Tabella delle misure del periodo del pendolo ottenute dai 3 membri del gruppo.
-        Ogni sperimentatore ha raccolto 20 misure di 10 periodi. Sono riportati
-        i dati grezzi di lettura del cronometro, riferiti a 10 periodi. }
-    \label{tab:pendolo}
-\end{table}
-
-\subsubsection{Processo di acquisizione dei dati sperimentali}
-
-Per le misurazioni è stato utilizzato un comune cronometro con risoluzione di
-misura pari a 0.01 s. [errore di risoluzione???] Ogni componente del gruppo ha
-cronomerato 20 volte il tempo impiegato dal pendolo per compiere 10 periodi.
-I valori grezzi misurati, riportati nella tabella \ref{tab:pendolo}, sono stati divisi per
-10 per ottenere il valore medio del periodo del pendolo. Questo ci ha permesso
-di diminuire gli errori sistematici dovuti alla prontezza di riflessi dei diversi
-operatori, che verranno trattati più approfonditamente della sezione di analisi dei
-dati, e di aumentare la risoluzione del cronometro fino a 1 millisecondo.
-
-Successivamente un componente del gruppo ha eseguito 100 misurazioni di periodi
-singoli dell'apparato, riportate nella tabella \ref{tab:pendolo100}. L'aquisizione di dati è stata
-effettuata con la seguente procedura:
-
-% si può forse togliere l'elenco???
-\begin{enumerate}
-    \item{Il pendolo è stato fatto oscillare prestando attenzione al piano di oscillazione
-        e all'ampiezza dell'oscillazione.}
-
-    \item{Si è misurato un periodo, annotato il valore ottenuto e azzerato il cronometro.}
-
-    \item{Le misurazioni sono state intervallate da 1-2 periodi non misurati.}
-
-    \item{Ogni 10 misurazioni, che equivale a meno di 30 periodi, il pendolo è stato fermato
-        e fatto ripartire, per evitare lo smorzamento dovuto all'attrito con l'aria.}
-\end{enumerate}
-
-Non è stato utilizzata la funzione «giro» del cronometro, al fine di evitare
-di introdurre dipendenza tra le varie misure. Azzerando il cronometro ogni 
-volta le misure risultano statisticamente indipendenti.
-
-\begin{SCtable}[][tb]
-	\centering
-	\begin{tabular} {c c c c c | c c c c c}
-		\toprule
-		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
-		\midrule
-		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
-		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
-		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
-		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
-		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
-		\midrule
-		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
-		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
-		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
-		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
-		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
-	\bottomrule
-	\end{tabular}
-	\caption{Misure di periodo effettuate da uno dei tre componenti del gruppo.
-        Sono riportati i valori di lettura del cronometro riferiti a singole oscillazioni
-        (periodi) dell'apparato.}
-    \label{tab:pendolo100}
-\end{SCtable}
 
 \subsection{Analisi dei dati}
+
+
 
 \subsubsection{Dati dei tre operatori}
 
@@ -225,7 +223,9 @@ componenti del gruppo.
     \label{fig:pendolo3}
 \end{figure}
 
-\paragraph{Compatibiltà delle misure di diversi sperimentatori.}
+
+
+\subsubsection{Compatibiltà delle misure di diversi sperimentatori.}
 
 La prima cosa che ci proponiamo di dimostrare è la compatibiltà
 tra i dati misurati da ognuno di noi. Fissiamo a priori un fattore
@@ -240,23 +240,18 @@ I dati raccolti ci permettono di esprimere tre diverse misure di periodo:
 
 \begin{equation*}
 	\begin{split}
-		m_{Francesco}^* \pm \tilde{\sigma}_{fra}  = 1.500 \pm 0.004\,s \\
-		m_{Davide}^* \pm \tilde{\sigma}_{dav} = 1.502 \pm 0.005\,s \\
-		m_{Andrea}^* \pm \tilde{\sigma}_{and} = 1.499 \pm 0.006\,s
+		m_{Francesco}^* \pm \tilde{\sigma}_{Francesco}  = 1.500 \pm 0.004\,s \\
+		m_{Davide}^* \pm \tilde{\sigma}_{Davide} = 1.502 \pm 0.005\,s \\
+		m_{Andrea}^* \pm \tilde{\sigma}_{Andrea} = 1.499 \pm 0.006\,s
 	\end{split}
 \end{equation*}
 
-(da togliere)
 \begin{equation*}
-	\begin{split}
-		\tilde{\sigma}_{Francesco} = 0.004\,s \\
-		\tilde{\sigma}_{Davide} = 0.005\,s \\
-		\tilde{\sigma}_{Andrea} = 0.006\,s \\
 		\tilde{\sigma}_{ris-std} = 0.0003\,s ()
-	\end{split}
-\end{equation*} (fine di roba da togliere)
+\end{equation*}
 
-La differenza tra le medie campionarie è:
+Da queste possiamo ottenere la differenza tra le medie campionarie:
+
 \begin{equation}
 \begin{split}
 	R_{1} = m_{Davide}^* - m_{Francesco}^* = 0.001\,s \\
@@ -264,7 +259,9 @@ La differenza tra le medie campionarie è:
 	R_{3} = m_{Andrea}^* - m_{Davide}^* = 0.001\,s
 \end{split}
 \end{equation}
+
 L'errore standard campionario relativo a queste tre differenze è (con k = 2):
+
 \begin{equation}
 \begin{split}
 	\sigma_{R_{1}} = k\,\sqrt{\tilde{\sigma}^2_{Davide} - \tilde{\sigma}^2_{Francesco}} = k\,0.003 = 0.006\\
@@ -272,11 +269,13 @@ L'errore standard campionario relativo a queste tre differenze è (con k = 2):
 	\sigma_{R_{3}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Davide}} = k\,0.003 = 0.006
 \end{split}
 \end{equation}
+
 Poichè risulta che:
+
 \begin{equation}
 	R_{1}\leq{k\sigma_{R_{1}}}\,\,\,\,R_{2}\leq{k\sigma_{R_{2}}}\,\,\,\,R_{3}\leq{k\sigma_{R_{3}}}
 \end{equation}
-e quindi possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
+possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
  
 Dal momento che le misure risultano essere compatibili tra di loro le misure
 ripetute del periodo di un pendolo mostrano che le fluttuazioni delle misure
@@ -319,11 +318,6 @@ periodo del pendolo eseguita da tutti e tre i componenti del gruppo e otteniamo 
 Pertanto, applicando le necessarie approssimazioni e gli errori relativi ad ogni misura si ottiene
 \begin{equation*}
 m^*[\mathcal{T}] = 1.500 \pm 0.005\,s
-\end{equation*}
-\begin{equation*}
-m = 1.500 \pm 0.005\,s  \quad
-q_{10\%} = 1.495 \pm 0.005\,s \quad
-q_{90\%} = 1.505 \pm 0.005\,s
 \end{equation*}
 
 Come si può notare dall'analisi fatta non abbiamo riscontrato particolari errori sistematici dovuti all'operatore, in quanto la media campionaria dei dati di ogni operatore è compatibile con la media di tutti i valori entro la deviazione standard campionaria. Inoltre se le misure di uno sperimentatore fossero state affette da un errore sistematico i suoi valori medi sarebbero risultati significativamente differenti da quelli degli altri due componenti del gruppo.
@@ -389,9 +383,9 @@ che risulta essere uguale alla media campionaria delle cento misure prese singol
 \sigma[m_k^*] = \sqrt{\frac{10}{10-1} \sum_{k=1}^{10} (m_k^* - m[m_k^*])^2} = 0.020\,s
 \end{equation}
 
-otteniamo che il rapporto tra $\frac{\tilde{\sigma}[\mathcal{T}]}{\sigma[m_k^*]}$ risulta essere circa 0.42 che è un risultato attendibile dal momento che la predizione teorica ci dice che:
+otteniamo che il rapporto tra $\frac{\sigma[m_k^*]}{\tilde{\sigma}[\mathcal{T}]}$ risulta essere circa 0.42 che è un risultato attendibile dal momento che la predizione teorica ci dice che:
 
 \begin{equation}
-\frac{\tilde{\sigma}[\mathcal{T}]}{\sigma[m_k^*]} = \frac{1}{\sqrt{10}} \simeq \, 0.32
+\frac{\sigma[m_k^*]}{\tilde{\sigma}[\mathcal{T}]} = \frac{1}{\sqrt{10}} \simeq \, 0.32
 \end{equation}
 
