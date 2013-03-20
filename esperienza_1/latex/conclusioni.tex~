@@ -19,6 +19,47 @@ di grandezza della risoluzione dello strumento e sono più affette dagli errori 
 \newpage
 
 \begin{equation}
+\tilde{D} = \frac{1}{N - 1} \sum_{i=1}^{N} (x_i - m^*[x])^2
+\end{equation}
+
+\begin{equation}
+\tilde{\sigma} = \sqrt{\frac{1}{N - 1} \sum_{i=1}^{N} (x_i - m^*[x])^2}
+\end{equation}
+
+\begin{equation}
+m^*[x] = \frac{1}{N} \sum_{i=1}^{N} (x_i) \simeq \sum_{j=1}^{\mathcal{N}} (x_j p_j^*) 
+\end{equation}
+
+\begin{equation}
+p_j^* = \frac{n_j^*}{N} 
+\end{equation}
+
+\begin{equation}
+f_j^* = \frac{n_j^*}{N\Delta x}
+\end{equation}
+
+\begin{equation}
+D^* = \langle(x - m^*)^2\rangle = \frac{1}{N} \sum_{i=1}^{N} (x_i - m^*[x])^2
+\simeq \sum_{j=1}^{\mathcal{N}} (x_j - m^*)^2 p_j^*)
+\end{equation}
+
+\begin{equation}
+m^*[\mathcal{T}] = \frac{1}{N} \sum_{i=1}^{N} \mathcal{T}_i
+\end{equation}
+
+\begin{equation}
+\sigma^*[\mathcal{T}] = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (\mathcal{T}_i - m^*)^2}
+\end{equation}
+
+\begin{equation}
+\mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T}
+\end{equation}
+
+\begin{equation}
+\mathcal{T}_0 = m^* = \frac{1}{N} \sum_{i=1}^{N} \mathcal{T}_i
+\end{equation}
+
+\begin{equation}
 \delta\mathcal{T}_{cas} = \tilde{\sigma}[m^*] = \frac{1}{\sqrt{N}} \sqrt{\frac{N}{N - 1}}\sigma^*[\mathcal{T}] = \sqrt{\frac{1}{N(N - 1)} \sum_{i=1}^{N} (\mathcal{T}_i - m^*)^2}
 \end{equation}
 
