@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 15:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,16 +867,21 @@ LaTeX Info: Redefining \selectfont on input line 126.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (./introduzione.tex [1
+ (./introduzione.tex
+<unitn_logo.png, id=1, 297.0297pt x 293.1753pt>
+File: unitn_logo.png Graphic file (type png)
+ <use unitn_logo.png>
+Package pdftex.def Info: unitn_logo.png used on input line 14.
+(pdftex.def)             Requested size: 113.81102pt x 112.33377pt.
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Relazione_Laboratorio_1
-.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./unitn_logo.png>]
+(./Relazione_Laboratorio_1.toc)
 \tf@toc=\write3
 \openout3 = `Relazione_Laboratorio_1.toc'.
 
- [2])
-(./cilindretti.tex [3]
-<grafici/Cilindretti_metro.pdf, id=17, 587.19376pt x 442.65375pt>
+ [2]) (./cilindretti.tex [3]
+<grafici/Cilindretti_metro.pdf, id=19, 587.19376pt x 442.65375pt>
 File: grafici/Cilindretti_metro.pdf Graphic file (type pdf)
 
 <use grafici/Cilindretti_metro.pdf>
@@ -890,7 +895,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
  [4 <./grafici/Cilindretti_metro.pdf>]
-<grafici/Cilindretti_calibro_micrometro.pdf, id=80, 478.78876pt x 617.00514pt>
+<grafici/Cilindretti_calibro_micrometro.pdf, id=82, 478.78876pt x 617.00514pt>
 File: grafici/Cilindretti_calibro_micrometro.pdf Graphic file (type pdf)
 
 <use grafici/Cilindretti_calibro_micrometro.pdf>
@@ -898,39 +903,39 @@ Package pdftex.def Info: grafici/Cilindretti_calibro_micrometro.pdf used on inp
 ut line 128.
 (pdftex.def)             Requested size: 284.52756pt x 366.666pt.
  [5 <./grafici/Cilindretti_calibro_micrometro.pdf>]
-<grafici/cilindri_tutti.pdf, id=141, 587.19376pt x 442.65375pt>
+<grafici/cilindri_tutti.pdf, id=143, 587.19376pt x 442.65375pt>
 File: grafici/cilindri_tutti.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti.pdf>
-Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 207.
+Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 210.
 (pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
 
-<grafici/cilindri_tutti_2.pdf, id=142, 514.92375pt x 617.00514pt>
+<grafici/cilindri_tutti_2.pdf, id=144, 514.92375pt x 617.00514pt>
 File: grafici/cilindri_tutti_2.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti_2.pdf>
-Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 215.
+Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 219.
 (pdftex.def)             Requested size: 284.52756pt x 340.93555pt.
 ) [6] [7 <./grafici/cilindri_tutti.pdf> <./grafici/cilindri_tutti_2.pdf
 
 pdfTeX warning: pdflatex (file ./grafici/cilindri_tutti_2.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >] (./pendolo.tex [8] [9]
-<grafici/Pendolo.pdf, id=268, 587.19376pt x 442.65375pt>
+<grafici/Pendolo.pdf, id=270, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo.pdf>
 Package pdftex.def Info: grafici/Pendolo.pdf used on input line 193.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<grafici/Pendolo100.pdf, id=269, 587.19376pt x 442.65375pt>
+<grafici/Pendolo100.pdf, id=271, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo100.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo100.pdf>
 Package pdftex.def Info: grafici/Pendolo100.pdf used on input line 204.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<grafici/pendolo3.pdf, id=270, 659.46375pt x 442.65375pt>
+<grafici/pendolo3.pdf, id=272, 659.46375pt x 442.65375pt>
 File: grafici/pendolo3.pdf Graphic file (type pdf)
 
 <use grafici/pendolo3.pdf>
@@ -950,37 +955,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
-[13]) [14] (./conclusioni.tex [15]) [16] (./Relazione_Laboratorio_1.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[13]) [14] (./conclusioni.tex [15]) [16] (./Relazione_Laboratorio_1.aux) ) 
 Here is how much of TeX's memory you used:
- 4534 strings out of 494975
- 63540 string characters out of 3180013
- 131868 words of memory out of 3000000
- 7626 multiletter control sequences out of 15000+200000
- 10845 words of font info for 39 fonts, out of 3000000 for 9000
+ 4541 strings out of 494975
+ 63650 string characters out of 3180013
+ 131882 words of memory out of 3000000
+ 7631 multiletter control sequences out of 15000+200000
+ 11146 words of font info for 40 fonts, out of 3000000 for 9000
  59 hyphenation exceptions out of 8191
- 38i,17n,45p,637b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione_Laboratorio_1.pdf (16 pages, 300103 bytes).
+ 38i,17n,45p,753b,416s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relazione_Laboratorio_1.pdf (16 pages, 344928 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
+ 511 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

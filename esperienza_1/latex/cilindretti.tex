@@ -149,14 +149,18 @@ confrontabili direttamente.
 Come si può notare i due istogrammi si assomigliano: infatti in entrambi i casi
 siamo riusciti ad apprezzare la presenza di un picco della popolazione in
 corrispondenza del valore 13.90 mm. Nonostante le misure risultino essere
-più accurate rispetto a quelle eseguite con il metro a nastro non ci sono
-abbastanza campioni per poter affermare l'esistenza di più di una popolazione
-in quanto non sono distinguibili altri picchi dalle code relative al picco preponderante.
-Affermiamo questo perchè l'errore su ogni colonna è $\sqrt{n_j}$,
-dove $n_j$ è la numero di dati che cadono nel bin $j$, e il conteggio dell'ultima colonna
-è 4. Quindi l'inceretezza sull'ultima colonna vale è $\pm 2$
+più accurate rispetto a quelle eseguite con il metro a nastro e la risoluzione
+degli strumenti usati sia adeguata, non ci sono abbastanza campioni per poter affermare
+l'esistenza di due popolazioni distinte di cilindretti, come sembra suggerire il bin
+centrato in (13.70 mm). Affermiamo questo perchè, considerando l'incertezza delle colonne,
+la colonna si confonde con la coda del picco principale.
 
-Più nel dettaglio possiamo dire che i dati statistici riguardanti le misure con il calibro ventesimale e il micrometro (\ref{fig:calmic}) sono:
+L'errore su ogni colonna è $\sqrt{n_j}$, dove $n_j$ è la numero di dati che cadono nel
+bin $j$, e il conteggio dell'ultima colonna (quella centrata in 13.70 mm) è 4. Quindi
+l'inceretezza sull'ultima colonna vale è $\pm 2$
+
+Più nel dettaglio possiamo dire che i dati statistici riguardanti le misure con il calibro
+ventesimale e il micrometro (\ref{fig:calmic}) sono:
 
 \begin{itemize}
     \item{Media campionaria:}
@@ -207,7 +211,8 @@ Inoltre abbiamo che:
 	\includegraphics[width=100mm]{grafici/cilindri_tutti.pdf}
 	\caption{Misure della lunghezza dei cilindretti ottenute da tutti i gruppi del
         laboratorio (gruppi del lunedì). L'istogramma riporta le misure effettuate con
-        il metro a nastro.}
+        il metro a nastro. Come si può vedere la risoluzione dello strumento è
+        insufficiente per fare una qualsiasi analisi qualitativa dei dati ottenuti.}
 \end{SCfigure}
 
 \begin{SCfigure}[][p]
@@ -216,7 +221,11 @@ Inoltre abbiamo che:
     \caption{Lunghezza dei cilindretti ottenute da tutti i gruppi (del lunedì)
         del corso di laboratorio. L'istogramma relativo alle misure con il calibro
         ha binning di 0.05 mm, mentre nell'istogramma delle misure effettuate con
-        il micrometro i bin sono da 0.02 mm}
+        il micrometro i bin sono da 0.02 mm. Si può notare con facilità, nel grafico
+        delle misure con il micrometro, che esiste una seconda popolazione di
+        cilindretti più corti che si distacca nettamente dalla coda del picco principale.
+        Questa popolazione è molto meno visibile nel grafico relativo al calibro, dove si
+        notano anche degli evidenti errori di misura.}
 \end{SCfigure}
 
 \subsection{Analisi dei dati a livello globale di laboratorio}
