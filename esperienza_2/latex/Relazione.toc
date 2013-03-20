@@ -1,0 +1,6 @@
+\select@language {italian}
+\contentsline {section}{\numberline {1}Introduzione}{3}
+\contentsline {section}{\numberline {2}Ricerca della costante elastica della molla}{3}
+\contentsline {subsection}{\numberline {2.1}Apparato sperimentale}{3}
+\contentsline {subsection}{\numberline {2.2}Procedura di aquisizione dei dati}{3}
+\contentsline {subsection}{\numberline {2.3}Elaborazione dei dati}{4}

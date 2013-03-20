@@ -1,4 +1,18 @@
+\newpage
+
 \section{Pendolo}
+
+La seconda parte di questa relazione tratta l'esperienza di misura del periodo
+di un pendolo. Lo scopo dell'esperienza è imparare a trattare gli errori
+casuali, dovuti alla procedura di misurazione del periodo con un cronometro,
+che introduce inevitabilmente fluttuazioni casuali nelle misure effettuate,
+e gli errori sistematici, dovuti alla diversa prontezza di riflessi degli
+sperimentatori. In questo ultimo caso sorge il problema della 
+compatibilità delle misure effettuate dai tre diversi membri del gruppo.
+
+Ci siamo anche posti il problema di verificare sperimentalmente la
+correttezza della legge del pendolo semplice, cosa che ogni studente di
+fisica dovrebbe fare almeno una volta nella sua vita!
 
 \subsubsection{Predizione teorica}
 
@@ -14,24 +28,13 @@ Il valore di $g$, l'accelerazione di gravità, non è stato da noi misurato,
 quindi abbiamo considerato $g = 9.8 \pm 0.02 \, \frac{m}{s^2}$ che è un
 valore molto prudente. Con questi valore di $l$ e $g$ si ottene un periodo:
 
-\begin{equation}
+\begin{equation*}
     \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.003 \, s 
-\end{equation}
+\end{equation*}
 
-Questo valore è quindi il valore atteso di periodo del pendolo. Lo scopo
-dell'esperimento è quello di verificare sperimentalmente se questa predizione
+Questo valore è quindi il valore atteso di periodo del pendolo.
+Lo scopo dell'esperimento è quello di verificare sperimentalmente se questa predizione
 è corretta.
-La seconda parte di questa relazione tratta l'esperienza di misura del periodo
-di un pendolo. Lo scopo dell'esperienza è imparare a trattare gli errori
-casuali, dovuti alla procedura di misurazione del periodo con un cronometro,
-che introduce inevitabilmente fluttuazioni casuali nelle misure effettuate,
-e gli errori sistematici, dovuti alla diversa prontezza di riflessi degli
-sperimentatori. In questo ultimo caso sorge il problema della 
-compatibilità delle misure effettuate dai tre diversi membri del gruppo.
-
-Ci siamo anche posti il problema di verificare sperimentalmente la
-correttezza della legge del pendolo semplice, cosa che ogni studente di
-fisica dovrebbe fare almeno una volta nella sua vita!
 
 \subsection{Descrizione della procedura di misura}
 
@@ -50,13 +53,13 @@ Non abbiamo ritenuto di poter fare meglio di così.
 \subsubsection{Processo di acquisizione dei dati sperimentali}
 
 Per le misurazioni è stato utilizzato un comune cronometro con risoluzione di
-misura pari a 0.01 s. [errore di risoluzione???] Ogni componente del gruppo ha
+misura pari a 0.01 s, e con un errore di risoluzione massimo pari a 0.005 s. Ogni componente del gruppo ha
 cronomerato 20 volte il tempo impiegato dal pendolo per compiere 10 periodi.
 I valori grezzi misurati, riportati nella tabella \ref{tab:pendolo}, sono stati divisi per
 10 per ottenere il valore medio del periodo del pendolo. Questo ci ha permesso
 di diminuire gli errori sistematici dovuti alla prontezza di riflessi dei diversi
 operatori, che verranno trattati più approfonditamente della sezione di analisi dei
-dati, e di aumentare la risoluzione del cronometro fino a 1 millisecondo.
+dati, e di migliorare la risoluzione del cronometro fino a 1 millisecondo.
 
 Successivamente un componente del gruppo ha eseguito 100 misurazioni di periodi
 singoli dell'apparato, riportate nella tabella \ref{tab:pendolo100}. L'aquisizione di dati è stata
@@ -147,40 +150,33 @@ sperimentale usato, sono state prese le seguenti precauzioni:
         utilizzata per calcolare la legge del pendolo sia accettabile. Infatti, per un
         angolo $\vartheta = 10^\circ = 0.175 \,\, rad$ si ha che:}
 
-    \begin{equation}
+    \begin{equation*}
         sin(\vartheta) = 0.174 \qquad \frac{\vartheta}{sin(\vartheta)} = 1.005
         \label{eq:theta_su_sintheta}
-    \end{equation}
+    \end{equation*}
 
 \end{itemize}
 
-Possiamo stimare l'errore sistematico commesso. Poichè nella (\ref{eq:theta_su_sintheta})
+Possiamo provare a stimare l'errore sistematico commesso. Poichè nella (\ref{eq:theta_su_sintheta})
 abbiamo ottenuto un errore del 5 per mille l'errore sistematico dovuto a tutte le
-cause elencate sopra è sicuramente maggiore di questo valore. Ci sentiamo abbastanza
+cause elencate sopra è sicuramente maggiore di questo valore. Ci sentiamo pertanto abbastanza
 sicuri stimando l'errore:
 
-\begin{equation}
+\begin{equation*}
     \sigma_{sys} = 4 \cdot \frac{\vartheta}{sin(\vartheta)} = 2 \%
     \label{eq:errore_sistematico}
-\end{equation}
-
-% Non so se questo è effettivamente interessante ai fini della discussione:
-[Tramite il disegno dell'angolo massimo su un foglio di carta appositamente
-posizionato vicino al punto di sospensione del filo.]
+\end{equation*}
 
 Tra gli errori sistematici segnaliamo, inoltre, il fatto che le misure sono state
 effettuate da sperimentatori diversi, che introducono degli errori sistematici
 che variano da persona a persona. Questi errori saranno trattati nella sezione
 di analisi dei dati, e non sono stati inclusi nella (\ref{eq:errore_sistematico}).
 
-%% frase un po' scema???
-Le precauzioni prese dovrebbero essere sufficienti a ridurre l'errore sistematico
+Le precauzioni prese quindi dovrebbero essere sufficienti a ridurre l'errore sistematico
 entro limiti accettabili. Tuttavia è risaputo che gli errori sistematici
 sono i più difficili da scovare ed eliminare.
 
 \subsection{Analisi dei dati}
-
-
 
 \subsubsection{Dati dei tre operatori}
 
@@ -223,8 +219,6 @@ componenti del gruppo.
     \label{fig:pendolo3}
 \end{figure}
 
-
-
 \subsubsection{Compatibiltà delle misure di diversi sperimentatori.}
 
 La prima cosa che ci proponiamo di dimostrare è la compatibiltà
@@ -232,9 +226,9 @@ tra i dati misurati da ognuno di noi. Fissiamo a priori un fattore
 di copertura $k$ = 2. Date due misure $x_a \pm \sigma_a$ e $x_b \pm \sigma_b$,
 esse verranno considerate compatibili se soddisferanno la seguente condizione:
 
-\begin{equation}
+\begin{equation*}
     |m[x_a] - m[x_b]| =: |R| \leq k\sigma_R = k\sqrt{\sigma_a^2 + \sigma_b^2}
-\end{equation}
+\end{equation*}
 
 I dati raccolti ci permettono di esprimere tre diverse misure di periodo:
 
@@ -252,29 +246,30 @@ I dati raccolti ci permettono di esprimere tre diverse misure di periodo:
 
 Da queste possiamo ottenere la differenza tra le medie campionarie:
 
-\begin{equation}
-\begin{split}
-	R_{1} = m_{Davide}^* - m_{Francesco}^* = 0.001\,s \\
-	R_{2} = m_{Andrea}^* - m_{Francesco}^* = 0.002\,s \\
-	R_{3} = m_{Andrea}^* - m_{Davide}^* = 0.001\,s
-\end{split}
-\end{equation}
+\begin{equation*}
+	\begin{split}
+		R_{1} = m_{Davide}^* - m_{Francesco}^* = 0.001\,s \\
+		R_{2} = m_{Andrea}^* - m_{Francesco}^* = 0.002\,s \\
+		R_{3} = m_{Andrea}^* - m_{Davide}^* = 0.001\,s
+	\end{split}
+\end{equation*}
 
 L'errore standard campionario relativo a queste tre differenze è (con k = 2):
 
-\begin{equation}
-\begin{split}
-	\sigma_{R_{1}} = k\,\sqrt{\tilde{\sigma}^2_{Davide} - \tilde{\sigma}^2_{Francesco}} = k\,0.003 = 0.006\\
-	\sigma_{R_{2}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Francesco}} = k\,0.004 = 0.008\\
-	\sigma_{R_{3}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Davide}} = k\,0.003 = 0.006
-\end{split}
-\end{equation}
+\begin{equation*}
+	\begin{split}
+		\sigma_{R_{1}} = k\,\sqrt{\tilde{\sigma}^2_{Davide} - \tilde{\sigma}^2_{Francesco}} = k\,0.003 = 0.006\\
+		\sigma_{R_{2}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Francesco}} = k\,0.004 = 0.008\\
+		\sigma_{R_{3}} = k\,\sqrt{\tilde{\sigma}^2_{Andrea} - \tilde{\sigma}^2_{Davide}} = k\,0.003 = 0.006
+	\end{split}
+\end{equation*}
 
 Poichè risulta che:
 
-\begin{equation}
+\begin{equation*}
 	R_{1}\leq{k\sigma_{R_{1}}}\,\,\,\,R_{2}\leq{k\sigma_{R_{2}}}\,\,\,\,R_{3}\leq{k\sigma_{R_{3}}}
-\end{equation}
+\end{equation*}
+
 possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
  
 Dal momento che le misure risultano essere compatibili tra di loro le misure
@@ -289,8 +284,6 @@ dovuta a errori di tipo A, quindi terremo conto principalmente di quest'ultima.
 Procedimo ora con l'analisi complessiva dei dati relativi alla misura del
 periodo del pendolo eseguita da tutti e tre i componenti del gruppo e otteniamo che:
 
-% se vuoi elenco numerato sostituisci enumerate al posto di itemize
-% ovviemente devi cambiare anche \end{itemize}
 \begin{itemize}
     \item{La media campionaria é:}
         \begin{equation}
