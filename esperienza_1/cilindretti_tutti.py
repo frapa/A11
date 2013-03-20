@@ -155,6 +155,7 @@ if mpl:
     # first subplot: calibro
     n_calibro, r_bins_calibro, patches_calibro = ax1.hist(xs_calibro, bins_cm,
         normed=True, color=(0, 0.65, 1), alpha=0.5)
+    print [round(x*delta_cm*N_calibro) for x in n_calibro]
     
     # properties of calibro subplot
     ax1.set_xlim(left=13.40, right=14.05)
@@ -181,6 +182,7 @@ if mpl:
     # second subplot: micrometro
     n_micro, r_bins_micro, patches_micro = ax2.hist(xs_micro, bins_micro,
         normed=True, color=(0.4, 0.8, 0), alpha=0.5)
+    print [round(x*delta_micro*N_micro) for x in n_micro]
     
     # properties of micrometro subplot
     ax2.set_xlim(left=13.60, right=14)

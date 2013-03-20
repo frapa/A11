@@ -144,6 +144,7 @@ if mpl:
     # first subplot: calibro
     n_calibro, r_bins_calibro, patches_calibro = ax1.hist(xs_calibro, bins_cm,
         normed=True, color=(0, 0.65, 1), alpha=0.5)
+    print n_calibro
     
     # properties of calibro subplot
     ax1.set_xlim(left=13.65, right=14)
