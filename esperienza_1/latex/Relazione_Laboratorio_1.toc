@@ -9,19 +9,21 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Dati raccolti con il metro}{4}
 \contentsline {subsubsection}{\numberline {2.2.2}Dati raccolti con calibro e micrometro}{5}
 \contentsline {subsection}{\numberline {2.3}Analisi dei dati a livello globale di laboratorio}{6}
-\contentsline {section}{\numberline {3}Pendolo}{8}
-\contentsline {subsubsection}{\numberline {3.0.1}Predizione teorica}{8}
-\contentsline {subsection}{\numberline {3.1}Descrizione della procedura di misura}{8}
-\contentsline {subsubsection}{\numberline {3.1.1}Apparato sperimentale}{8}
-\contentsline {subsubsection}{\numberline {3.1.2}Processo di acquisizione dei dati sperimentali}{8}
-\contentsline {subsubsection}{\numberline {3.1.3}Errori sistematici}{9}
-\contentsline {subsection}{\numberline {3.2}Analisi dei dati}{10}
-\contentsline {subsubsection}{\numberline {3.2.1}Compatibilt\IeC {\`a} delle misure di diversi sperimentatori.}{10}
-\contentsline {subsubsection}{\numberline {3.2.2}Analisi dei dati dei tre sperimentatori}{13}
-\contentsline {paragraph}{Errore sistematico:}{13}
-\contentsline {paragraph}{Errore casuale o di tipo A:}{13}
-\contentsline {paragraph}{Errore di risoluzione tipo:}{14}
-\contentsline {paragraph}{Unione dei vari errori:}{14}
-\contentsline {subsubsection}{\numberline {3.2.3}Analisi dei dati dello sperimentatore singolo}{14}
-\contentsline {subsubsection}{\numberline {3.2.4}Distribuzione dei valori medi campionari}{15}
-\contentsline {section}{\numberline {4}Conclusioni}{17}
+\contentsline {subsubsection}{\numberline {2.3.1}Dati misurati col metro}{8}
+\contentsline {subsubsection}{\numberline {2.3.2}Dati misurati con calibro e micrometro}{8}
+\contentsline {section}{\numberline {3}Pendolo}{9}
+\contentsline {subsubsection}{\numberline {3.0.3}Predizione teorica}{9}
+\contentsline {subsection}{\numberline {3.1}Descrizione della procedura di misura}{9}
+\contentsline {subsubsection}{\numberline {3.1.1}Apparato sperimentale}{9}
+\contentsline {subsubsection}{\numberline {3.1.2}Processo di acquisizione dei dati sperimentali}{9}
+\contentsline {subsubsection}{\numberline {3.1.3}Errori sistematici}{10}
+\contentsline {subsection}{\numberline {3.2}Analisi dei dati}{11}
+\contentsline {subsubsection}{\numberline {3.2.1}Compatibilt\IeC {\`a} delle misure di diversi sperimentatori.}{11}
+\contentsline {subsubsection}{\numberline {3.2.2}Analisi dei dati dei tre sperimentatori}{14}
+\contentsline {paragraph}{Errore sistematico:}{14}
+\contentsline {paragraph}{Errore casuale o di tipo A:}{14}
+\contentsline {paragraph}{Errore di risoluzione tipo:}{15}
+\contentsline {paragraph}{Unione dei vari errori:}{15}
+\contentsline {subsubsection}{\numberline {3.2.3}Analisi dei dati dello sperimentatore singolo}{15}
+\contentsline {subsubsection}{\numberline {3.2.4}Distribuzione dei valori medi campionari}{16}
+\contentsline {section}{\numberline {4}Conclusioni}{18}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 15:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.7)  20 MAR 2013 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,57 +741,41 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \c@SC@C=\count106
 \SC@BOX=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
-\captionmargin=\dimen134
-\captionmargin@=\dimen135
-\captionwidth=\dimen136
-\caption@indent=\dimen137
-\caption@parindent=\dimen138
-\caption@hangindent=\dimen139
-)
-\c@ContinuedFloat=\count107
-Package caption Info: sidecap package is loaded.
-Package caption Info: wrapfig package is loaded.
-)
 (./Relazione_Laboratorio_1.aux)
 \openout1 = `Relazione_Laboratorio_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 11.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen140
+\scratchcounter=\count107
+\scratchdimen=\dimen134
 \scratchbox=\box30
-\nofMPsegments=\count109
-\nofMParguments=\count110
+\nofMPsegments=\count108
+\nofMParguments=\count109
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen141
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen135
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -864,15 +848,12 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedLeftParindent=\skip58
 \RaggedRightParindent=\skip59
 \JustifyingParindent=\skip60
-)
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
- (./introduzione.tex
-<unitn_logo.png, id=1, 297.0297pt x 293.1753pt>
+) (./introduzione.tex
+<unitn_logo.png, id=1, 192.72pt x 190.311pt>
 File: unitn_logo.png Graphic file (type png)
  <use unitn_logo.png>
 Package pdftex.def Info: unitn_logo.png used on input line 14.
-(pdftex.def)             Requested size: 113.81102pt x 112.33377pt.
+(pdftex.def)             Requested size: 113.81102pt x 112.38704pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./unitn_logo.png>]
@@ -887,102 +868,99 @@ File: grafici/Cilindretti_metro.pdf Graphic file (type pdf)
 <use grafici/Cilindretti_metro.pdf>
 Package pdftex.def Info: grafici/Cilindretti_metro.pdf used on input line 87.
 (pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
  [4 <./grafici/Cilindretti_metro.pdf>]
 <grafici/Cilindretti_calibro_micrometro.pdf, id=82, 478.78876pt x 617.00514pt>
 File: grafici/Cilindretti_calibro_micrometro.pdf Graphic file (type pdf)
 
 <use grafici/Cilindretti_calibro_micrometro.pdf>
 Package pdftex.def Info: grafici/Cilindretti_calibro_micrometro.pdf used on inp
-ut line 128.
+ut line 130.
 (pdftex.def)             Requested size: 284.52756pt x 366.666pt.
  [5 <./grafici/Cilindretti_calibro_micrometro.pdf>]
 <grafici/cilindri_tutti.pdf, id=143, 587.19376pt x 442.65375pt>
 File: grafici/cilindri_tutti.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti.pdf>
-Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 210.
+Package pdftex.def Info: grafici/cilindri_tutti.pdf used on input line 226.
 (pdftex.def)             Requested size: 284.52756pt x 214.49092pt.
 
 <grafici/cilindri_tutti_2.pdf, id=144, 514.92375pt x 617.00514pt>
 File: grafici/cilindri_tutti_2.pdf Graphic file (type pdf)
 
 <use grafici/cilindri_tutti_2.pdf>
-Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 219.
+Package pdftex.def Info: grafici/cilindri_tutti_2.pdf used on input line 236.
 (pdftex.def)             Requested size: 284.52756pt x 340.93555pt.
-) [6] [7 <./grafici/cilindri_tutti.pdf> <./grafici/cilindri_tutti_2.pdf
+ [6] [7 <./grafici/cilindri_tutti.pdf> <./grafici/cilindri_tutti_2.pdf
 
 pdfTeX warning: pdflatex (file ./grafici/cilindri_tutti_2.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
->] (./pendolo.tex [8] [9]
-<grafici/Pendolo.pdf, id=270, 587.19376pt x 442.65375pt>
+>]) [8] (./pendolo.tex [9] [10]
+<grafici/Pendolo.pdf, id=273, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo.pdf>
-Package pdftex.def Info: grafici/Pendolo.pdf used on input line 193.
+Package pdftex.def Info: grafici/Pendolo.pdf used on input line 189.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<grafici/Pendolo100.pdf, id=271, 587.19376pt x 442.65375pt>
+<grafici/Pendolo100.pdf, id=274, 587.19376pt x 442.65375pt>
 File: grafici/Pendolo100.pdf Graphic file (type pdf)
 
 <use grafici/Pendolo100.pdf>
-Package pdftex.def Info: grafici/Pendolo100.pdf used on input line 204.
+Package pdftex.def Info: grafici/Pendolo100.pdf used on input line 200.
 (pdftex.def)             Requested size: 341.43306pt x 257.38776pt.
 
-<grafici/pendolo3.pdf, id=272, 659.46375pt x 442.65375pt>
+<grafici/pendolo3.pdf, id=275, 659.46375pt x 442.65375pt>
 File: grafici/pendolo3.pdf Graphic file (type pdf)
 
 <use grafici/pendolo3.pdf>
-Package pdftex.def Info: grafici/pendolo3.pdf used on input line 215.
+Package pdftex.def Info: grafici/pendolo3.pdf used on input line 211.
 (pdftex.def)             Requested size: 426.79134pt x 286.48547pt.
- [10] [11 <./grafici/Pendolo.pdf> <./grafici/Pendolo100.pdf
+ [11] [12 <./grafici/Pendolo.pdf> <./grafici/Pendolo100.pdf
 
 pdfTeX warning: pdflatex (file ./grafici/Pendolo100.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-[12 <./grafici/pendolo3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
-
- []
-
-[13]) [14] (./conclusioni.tex [15]) [16] (./Relazione_Laboratorio_1.aux) ) 
+[13 <./grafici/pendolo3.pdf>] [14] [15]) [16] [17] (./conclusioni.tex [18])
+[19] (./Relazione_Laboratorio_1.aux) ) 
 Here is how much of TeX's memory you used:
- 4541 strings out of 494975
- 63650 string characters out of 3180013
- 131882 words of memory out of 3000000
- 7631 multiletter control sequences out of 15000+200000
+ 3564 strings out of 494975
+ 45788 string characters out of 3180013
+ 111754 words of memory out of 3000000
+ 6660 multiletter control sequences out of 15000+200000
  11146 words of font info for 40 fonts, out of 3000000 for 9000
  59 hyphenation exceptions out of 8191
- 38i,17n,45p,753b,416s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione_Laboratorio_1.pdf (16 pages, 344928 bytes).
+ 38i,17n,24p,746b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb>
+Output written on Relazione_Laboratorio_1.pdf (19 pages, 330674 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 521 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

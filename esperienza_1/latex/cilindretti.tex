@@ -85,7 +85,9 @@ apprezzare le variazioni di lunghezza da un corpo all'altro.
 \begin{SCfigure}[0.6][bt]
 	\centering
 	\includegraphics[width=100mm]{grafici/Cilindretti_metro.pdf}
-	\caption{Istogramma relativo alle misure di lunghezza dei cilindri con il metro a nastro}
+	\caption{Istogramma relativo alle misure di lunghezza dei cilindri effrttuate con il
+        metro a nastro. Come si può vedere chiaramente i dati sono dominati dall'errore di
+        risoluzone dello strumento, che è inadatto per questo esperimento.}
 	\label{fig:metro}
 \end{SCfigure}
 
@@ -148,59 +150,72 @@ confrontabili direttamente.
 
 Come si può notare i due istogrammi si assomigliano: infatti in entrambi i casi
 siamo riusciti ad apprezzare la presenza di un picco della popolazione in
-corrispondenza del valore 13.90 mm. Nonostante le misure risultino essere
+corrispondenza del valore 13.90 mm. La distribuzione dei cilindretti è stabile
+nei due istogrammi ottenuti con strumenti diversi, a parte le ultime due colonne
+che sono leggermente diverse. C'è un buon accordo tra le misure effettuate con
+calibro e micrometro.
+
+Tuttavia, nonostante le misure risultino essere
 più accurate rispetto a quelle eseguite con il metro a nastro e la risoluzione
 degli strumenti usati sia adeguata, non ci sono abbastanza campioni per poter affermare
-l'esistenza di due popolazioni distinte di cilindretti, come sembra suggerire il bin
-centrato in (13.70 mm). Affermiamo questo perchè, considerando l'incertezza delle colonne,
+l'esistenza di due popolazioni distinte di cilindretti, come sembra suggerire la colonna
+centrata in (13.70 mm). Affermiamo questo perchè, considerando l'incertezza delle colonne,
 la colonna si confonde con la coda del picco principale.
 
-L'errore su ogni colonna è $\sqrt{n_j}$, dove $n_j$ è la numero di dati che cadono nel
-bin $j$, e il conteggio dell'ultima colonna (quella centrata in 13.70 mm) è 4. Quindi
-l'inceretezza sull'ultima colonna vale è $\pm 2$
+L'errore su ogni colonna è $\sqrt{n_j}$, dove $n_j$ è il numero di dati che cadono nel
+bin $j$-esimo. Il conteggio della prima colonna (quella centrata in 13.70 mm) è $n_1 = 4$,
+la sua incertezza è $\sqrt{4} = 2$, mentre la seconda colonna (centrata in 13.75 mm) ha un
+solo conteggio $n_2 = 1$, con errore uguale a 1. Tenendo conto di questo, gli intervalli
+di incertezza delle colonne si toccano, e quindi la prima colonna può semplicemente essere
+una fluttuazione casuale della coda.
 
 Più nel dettaglio possiamo dire che i dati statistici riguardanti le misure con il calibro
-ventesimale e il micrometro (\ref{fig:calmic}) sono:
+ventesimale e il micrometro sono:
 
 \begin{itemize}
     \item{Media campionaria:}
-        \begin{equation}
-        m^*_{calibro}[x] \simeq 13.86\,\,mm \qquad
-        m^*_{micrometro}[x] \simeq 13.86\,\,mm 
-        \end{equation}
+        \begin{equation*}
+        m^*_{cal}[x] \simeq 13.86\,\,mm \qquad
+        m^*_{mic}[x] \simeq 13.86\,\,mm 
+        \end{equation*}
 
     \item{Varianza campionaria:}
-        \begin{equation}
-        \tilde{D}_{calibro} = 0.0077\,\,mm^2 \qquad
-        \tilde{D}_{micrometro} = 0.0076\,\,mm^2
-        \end{equation}
+        \begin{equation*}
+        \tilde{D}_{cal} = 0.0077\,\,mm^2 \qquad
+        \tilde{D}_{mic} = 0.0076\,\,mm^2
+        \end{equation*}
 
     \item{Deviazione standard campionaria:}
-        \begin{equation}
-        \tilde{\sigma}_{calibro} = 0.09\,\,mm \qquad
-        \tilde{\sigma}_{micrometro} = 0.09\,\,mm
-        \end{equation}
+        \begin{equation*}
+        \tilde{\sigma}_{cal} = 0.09\,\,mm \qquad
+        \tilde{\sigma}_{mic} = 0.09\,\,mm
+        \end{equation*}
 \end{itemize}
-Inoltre abbiamo che:
+
+Come già notato sopra, le misure effettuate con calibro e micrometro sono compatibili.
+I valori medi campionari delle lunghezze e le deviazioni tipo campionarie sono
+uguali per entrambi gli strumenti.
+
+Altri parametri statistici includono:
 
 \begin{itemize}
     \item{Mediana:}
-        \begin{equation}
-        m_{calibro}[x] \simeq 13.90\,\,mm \qquad
-        m_{micrometro}[x] \simeq 13.91\,\,mm 
-        \end{equation}
+        \begin{equation*}
+        m_{cal}[x] \simeq 13.90\,\,mm \qquad
+        m_{mic}[x] \simeq 13.91\,\,mm 
+        \end{equation*}
 
     \item{Quantile 10\%:}
-        \begin{equation}
-        q_{10\%calibro} = 13.70\,\,mm \qquad
-        q_{10\%micrometro} = 13.70\,\,mm
-        \end{equation}
+        \begin{equation*}
+        q_{10\%cal} = 13.70\,\,mm \qquad
+        q_{10\%mic} = 13.70\,\,mm
+        \end{equation*}
 
     \item{Quantile 90\%:}
-        \begin{equation}
-        q_{90\%calibro} = 13.95\,\,mm \qquad
-        q_{90\%micrometro} = 13.94\,\,mm
-        \end{equation}
+        \begin{equation*}
+        q_{90\%cal} = 13.95\,\,mm \qquad
+        q_{90\%mic} = 13.94\,\,mm
+        \end{equation*}
 \end{itemize}
 % Inserire oltre  a Media campionaria, Varianza campionaria, Fluttuazione standard
 % campionaria anche mediana e quantili
@@ -213,6 +228,7 @@ Inoltre abbiamo che:
         laboratorio (gruppi del lunedì). L'istogramma riporta le misure effettuate con
         il metro a nastro. Come si può vedere la risoluzione dello strumento è
         insufficiente per fare una qualsiasi analisi qualitativa dei dati ottenuti.}
+    \label{fig:metro_tutti}
 \end{SCfigure}
 
 \begin{SCfigure}[][p]
@@ -226,13 +242,78 @@ Inoltre abbiamo che:
         cilindretti più corti che si distacca nettamente dalla coda del picco principale.
         Questa popolazione è molto meno visibile nel grafico relativo al calibro, dove si
         notano anche degli evidenti errori di misura.}
+    \label{fig:calmic_tutti}
 \end{SCfigure}
 
 \subsection{Analisi dei dati a livello globale di laboratorio}
-Contrariamente a quanto abbiamo potuto osservare e ipotizzare tramite i dati
-raccolti dal nostro singolo gruppo con i tre strumenti, unendo i dati relativi
-a tutti i gruppi di laboratorio, si può evidenziare l'esistenza di due popolazioni
-distinte di cilindri. Infatti nell'istogramma (1.3) sono ben distinguibili due picchi,
-che corrispondono alle due rispettive medie campionarie di lunghezza delle due
-popolazioni di cilindretti.
 
+Oltre all'analisi dei dati raccolti dal gruppo, abbiamo analizzato anche i dati
+ottenuti dagli altri gruppi del lunedì. Non abbiamo informazioni per quanto riguarda
+gli errori sistematici commessi in quanto le misure non sono state raccolte
+da noi e siamo ignoranti per quanto riguarda le modalità di acquisizione.
+Ci limiteremo ad un'analisi della forma dell'istogramma e al calcolo dei parametri
+statistici principali.
+
+I dati ottenuti sono mostrati negli istogrammi delle figure \ref{fig:metro_tutti} e \ref{fig:calmic_tutti}.
+Le tabelle dei dati non sono riportate per motivi di spazio; avevamo infatti 367 misure differenti.
+
+\subsubsection{Dati misurati col metro}
+
+Come sopra, i dati raccolti con il metro a nastro non ci permettono
+di affermare nulla sulla natura dei cilindri, in quanto la risoluzione dello strumento
+è ampiamente insufficiente allo scopo. Questo è evidente dal grafico e per
+questo motivo non ci dilungheremo oltre sull'argomento.
+
+\subsubsection{Dati misurati con calibro e micrometro}
+
+Contrariamente a quanto abbiamo potuto ricavare dai dati
+raccolti dal nostro singolo gruppo con i tre strumenti, i dati relativi
+a tutti i gruppi ci permettono di evidenziare l'esistenza di due popolazioni
+distinte di cilindri.
+
+Queste due popolazioni non sono distinguibili nell'istogramma riguardante il calibro
+in figura \ref{fig:calmic_tutti}. Potrebbe sembrare che la colonna centrata
+in 13.70 mm si distacchi dalla coda del picco, ma come sopra, procediamo a dimostrare
+che in realtà potrebbe essere dovuta a fluttuazioni causali.
+Nel bin centrato in 13.70 mm cadono 35 misure, mentre nel bin accanto (13.75 mm) ne cadono 25.
+Gli errori sulle colonne sono rispettivamente $\sqrt{35} \simeq 6$ e $\sqrt{25} = 5$.
+Gli intervalli di incertezza si toccano e per questo la colonna si può considerare
+una fluttuazione.
+
+Nel secondo istogramma in figura \ref{fig:calmic_tutti} invece, sono ben distinguibili due picchi,
+che corrispondono alle due diverse popolazioni di cilindretti. Anche in questo caso in realtà,
+tenendo conto delle incertezze sulle colonne, le colonne si confondono. Tuttavia
+la deviazione dalla coda è ben accentuata in diversi bin e quindi possiamo ragionevolmente 
+supporre l'esistenza di due popolazioni distinte di cilindretti.
+
+Evidentemente la risoluzione di misura è stata determinante per individuare le popolazioni.
+I parametri statistici principali sono:
+
+\begin{itemize}
+    \item{Media campionaria}
+    \begin{equation*}
+        m^*_{cal}[x] \simeq 13.86\,\,mm \qquad
+        m^*_{mic}[x] \simeq 13.85\,\,mm 
+    \end{equation*}
+
+    \item{Deviazione standard campionaria:}
+    \begin{equation*}
+        \tilde{\sigma}_{cal} = 0.10\,\,mm \qquad
+        \tilde{\sigma}_{mic} = 0.08\,\,mm
+    \end{equation*}
+\end{itemize}
+
+Come si può facilmente vedere, i dati sono tra loro compatibili poiché:
+
+\begin{equation*}
+    |R| := |m^*_{cal}[x] - m^*_{mic}[x]| = 0.01 \, mm
+\end{equation*}
+
+\begin{equation*}
+    \sigma_{R} := \sqrt{\tilde{\sigma}_{cal}^2 + \tilde{\sigma}_{mic}^2} = 0.13 \, mm \\
+\end{equation*}
+
+
+\begin{equation*}
+    |R| \leq \sigma_{R}
+\end{equation*}
