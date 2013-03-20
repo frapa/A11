@@ -1,10 +1,10 @@
-\section{Ricerca della costante elastica della molla}
+\section{Ricerca della costante elastica della molla: metodo statico}
 
 \subsection{Apparato sperimentale}
 L'apparato sperimentale utilizzato è costituito da:
 	\begin{itemize}
 		\item{una base ad A sulla quale sono installati verticalmente un supporto con gancio di sospensione delle molle e asta millimetrata scorrevole. L'asta millimetrata presentava sul lato sinistro una scala millimetrata con una risoluzione di mezzo millimetro, mentre sul lato destro una scala millimetrata con una risoluzione del millimetro.}
-		\item{quattro molle elicoidali con caratteristiche elastica differente tra di loro: in particolare una di esse è risultata essere troppo morbida per i carichi che saremmo andati ad applicare e quindi suscettibile di una probabile deformazione che avrebbe compromesso la buona riuscita dell'esperimento. Un'altra molla è stata scartata in quanto troppo poco elastica così che non ci avrebbe permesso di apprezzare una deformazione per carichi troppo leggeri. Per questi motivi la scelta è ricaduta su una delle due molle restanti.}
+		\item{quattro molle elicoidali con caratteristica elastica differente tra di loro: in particolare una particolarmente morbida, una dura e due con caratteristiche medie}
 		\item{un piattello portapesi di massa $m_{piattello} = 25.2\,\,g \pm\, 0.1\,\,g$, quattro pesi cilindrici neri rispettivamente di massa nominale 5, 10, 25 e 50 grammi e quattro pesi argentei identici a quelli neri, con stesse masse nominali.}
 		\item{una bilancia a un piattello con una risoluzione di 0.1 grammi}
 	\end{itemize}
@@ -14,13 +14,28 @@ Ritenendo essere noto che una forza F di trazione o compressione applicata, nel 
 \begin{equation}
 	F_{p} = m\,\,g
 \end{equation}
-dove g rappresenta l'accelerazione di gravità e assumiamo valga: $g = 9.806\,\,m\,s^{-2}$.
+dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore di: $g = 9.806\,\,m\,s^{-2}$.
 
-Quindi per calcolare l'allungamento di una delle due molle elicoidali mediante il metodo statico abbiamo posizionato il sistema molla e piattello lungo l'asta millimetrata, appendendo un'estremità della molla al gancio di supporto. Atteso che l'oscillazione della molla si smorzasse il più ossibile abbiamo allineato il bordo inferiore del piattello, agganciato alla molla, con la tacca dei 50 cm dell'asta graduata, cercando di evitare eventuali errori di parallasse. In questo modo la posizione di equilibrio della molla risulta essere:
+Innanzitutto abbiamo verificato il peso nominale delle otto masse cilindriche a nostra disposizione. Successivamente abbiamo raggruppato i vari pesi a nostra disposizione per formare tredici masse che variano da circa cinque grammi a centoventicinque grammi con intervalli di dieci verificando, gruppo per gruppo, i pesi.
+
+[tabella per i pesi singoli (8)]
+
+[tabella per i pesi raggruppati (13)]
+
+Completata la classificazione dei pesi, abbiamo scelto la molla di cui calcolare la
+costante elastica. A questo scopo abbiamo notato che una di esse è risultata essere troppo
+morbida per i carichi che saremmo andati ad applicare e quindi suscettibile di una
+probabile deformazione che avrebbe compromesso la buona riuscita dell'esperimento.
+Un'altra molla è stata scartata in quanto troppo poco elastica cosìcché da non permetterci
+di apprezzare una deformazione utile alla lettura per carichi troppo leggeri. \underline{Per questi motivi la scelta è ricaduta sulla molla tra le due}
+\underline{restanti che permetteva una migliore lettura della sua deformazione in relazione ai pesi che} \break
+\underline{potevamo applicare.}
+
+Al fine di calcolare l'allungamento di una delle due molle elicoidali mediante il metodo statico abbiamo posizionato il sistema molla e piattello lungo l'asta millimetrata, appendendo un'estremità della molla al gancio di supporto. Atteso che l'oscillazione della molla si smorzasse il più ossibile abbiamo allineato il bordo inferiore del piattello, agganciato alla molla, con la tacca dei 50 cm dell'asta graduata, cercando di evitare eventuali errori di parallasse. In questo modo la posizione di equilibrio della molla risulta essere:
 \begin{equation}
 	z_{eq} = z_0\,\pm\,\delta(z_0) = 50.0\,cm\,\pm\,0.1\,cm
 \end{equation}
-Di seguito abbiamo verificato il peso nominale delle otto masse cilindriche a nostra disposizione[riferimento a tabella futura]. Successivamente abbiamo accoppiato i vari pesi a nostra disposizione per formare tredici masse che variano da circa cinque grammi a centoventicinque grammi con intervalli di dieci. Infine abbiamo misurato il differente allungamento della molla man mano che  si variava il peso applicato ad essa attendendo che le oscillazioni del sistema si smorzassero il più possibile. Così facendo abbiamo ottenuto una serie di misure delle varie posizioni di equilibrio della molla:
+Infine abbiamo misurato il differente allungamento della molla man mano che variavamo il carico applicato ad essa, attendendo sempre che le oscillazioni del sistema si smorzassero il più possibile. Così facendo abbiamo ottenuto una serie di misure delle varie posizioni di equilibrio della molla:
 \begin{equation}
 	z_i = z_i\,\pm\,\delta(z_i) 
 \end{equation}
@@ -31,6 +46,7 @@ dalle quali possiamo ricavare l'allungamento della stessa:
 e quindi l’incertezza sugli allungamenti ($\delta(x_i)$) si ottiene applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
 \begin{equation}
 	\delta(x_i) = \sqrt{\delta(z_i)^2\,-\,\delta(z_0)^2}
+	\quad \underline{? = \delta(z_0)\sqrt{2}}
 \end{equation}
 
 \subsection{Elaborazione dei dati}
