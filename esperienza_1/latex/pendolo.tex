@@ -83,8 +83,8 @@ sperimentale usato, sono state prese le seguenti precauzioni:
 
 Possiamo stimare l'errore sistematico commesso. Poichè nella (\ref{eq:theta_su_sintheta})
 abbiamo ottenuto un errore del 5 per mille l'errore sistematico dovuto a tutte le
-cause elencate sopra è sicuramente maggiore. Ci sentiamo abbastanza sicuri stimando
-l'errore ad un valore:
+cause elencate sopra è sicuramente maggiore di questo valore. Ci sentiamo abbastanza
+sicuri stimando l'errore:
 
 \begin{equation}
     \sigma_{sys} = 4 \cdot \frac{\vartheta}{sin(\vartheta)} = 2 \%
@@ -184,11 +184,13 @@ volta le misure risultano statisticamente indipendenti.
 
 \subsection{Analisi dei dati}
 
-La Tabella \ref{tab:pendolo} e la Figura \ref{fig:pendolo} (l'istogramma) riguardano la distribuzione dei dati
-relativi la misura del singolo periodo del pendolo da parte di tutti e tre i
+\subsubsection{Dati dei tre operatori}
+
+La Tabella \ref{tab:pendolo} e la Figura \ref{fig:pendolo} riguardano i 60 dati
+relativi alla misura del periodo del pendolo da parte di tutti e tre i
 componenti del gruppo.
 
-\begin{figure}[][p]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=120mm]{grafici/Pendolo.pdf}
 	\caption{L'istogramma mostra le misure effettuate da tutti e tre gli sperimentatori.
@@ -199,7 +201,7 @@ componenti del gruppo.
     \label{fig:pendolo}
 \end{figure}
 
-\begin{figure}[][p]
+\begin{figure}[p]
 	\centering
 	\includegraphics[width=120mm]{grafici/Pendolo100.pdf}
 	\caption{Istogramma delle 100 misure di periodo del pendolo ottenute
@@ -223,29 +225,48 @@ componenti del gruppo.
     \label{fig:pendolo3}
 \end{figure}
 
-Analizzando parzialmete i dati sopra riportati possiamo ricavare che la media
-camponaria e gli altri parametri della distribuzione dei dati relativi a
-ogni singolo sperimentatore sono:
+\paragraph{Compatibiltà delle misure di diversi sperimentatori.}
+
+La prima cosa che ci proponiamo di dimostrare è la compatibiltà
+tra i dati misurati da ognuno di noi. Fissiamo a priori un fattore
+di copertura $k$ = 2. Date due misure $x_a \pm \sigma_a$ e $x_b \pm \sigma_b$,
+esse verranno considerate compatibili se soddisferanno la seguente condizione:
+
+\begin{equation}
+    |m[x_a] - m[x_b]| =: |R| \leq k\sigma_R = k\sqrt{\sigma_a^2 + \sigma_b^2}
+\end{equation}
+
+I dati raccolti ci permettono di esprimere tre diverse misure di periodo:
 
 \begin{equation*}
 	\begin{split}
-		m_{Francesco}^* = 1.500\,s \pm 0.004\,s \\
-		m_{Davide}^* = 1.502\,s \pm 0.005\,s \\
-		m_{Andrea}^* = 1.499\,s \pm 0.006\,s
+		m_{fra}^* \pm \tilde{\sigma}_{fra}  = 1.500 \pm 0.004\,s \\
+		m_{dav}^* \pm \tilde{\sigma}_{dav} = 1.502 \pm 0.005\,s \\
+		m_{and}^* \pm \tilde{\sigma}_{and} = 1.499 \pm 0.006\,s
 	\end{split}
 \end{equation*}
+
+(da togliere)
 \begin{equation*}
 	\begin{split}
 		\tilde{\sigma}_{Francesco} = 0.004\,s \\
 		\tilde{\sigma}_{Davide} = 0.005\,s \\
 		\tilde{\sigma}_{Andrea} = 0.006\,s \\
-		\tilde{\sigma}_{ris-std} = 0.0003\,s
+		\tilde{\sigma}_{ris-std} = 0.0003\,s ()
 	\end{split}
-\end{equation*}\\
+\end{equation*} (fine di roba da togliere)
 
 
-[COMPATIBILI ???]
-Nonostante risulti evidente che le medie campionarie relative ai tre sperimentatori siano differenti le une dalle altre, non si può però escludere che le misurazioni compiute dai componenti del gruppo siano compatibili. Per questo motivo fissando a priori un fattore di copertura k = 2 andremo a verificare che lo scarto relativo alla differenza tra le tre medie prese due a due (R) risulti essere minore della deviazione standard campionaria relativa ad R moltiplicata per k. Operativamente otteniamo che:\\
+
+
+Nonostante risulti evidente che le medie campionarie relative ai tre
+sperimentatori siano differenti le une dalle altre, non si può però
+escludere che le misurazioni compiute dai componenti del gruppo siano
+compatibili. Per questo motivo fissando a priori un fattore di copertura
+k = 2 andremo a verificare che lo scarto relativo alla differenza tra le
+tre medie prese due a due (R) risulti essere minore della deviazione
+standard campionaria relativa ad R moltiplicata per k. Operativamente
+otteniamo che:\\
 La differenza tra le medie campionarie è:
 \begin{equation}
 \begin{split}
@@ -268,7 +289,9 @@ Poichè risulta che:
 \end{equation}
 possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
  
-Dal momento che le misure risultano essere compatibili tra di loro le misure ripetute del periodo di un pendolo mostrano che le fluttuazioni delle misure sono dovute principalmente ad errori casuali, poichè il periodo
+Dal momento che le misure risultano essere compatibili tra di loro le misure
+ripetute del periodo di un pendolo mostrano che le fluttuazioni delle misure
+sono dovute principalmente ad errori casuali, poichè il periodo
 $\mathcal{T}$ di oscillazione di un pendolo semplice è isocrono per ampiezze
 di oscillazioni abbastanza piccole, nel nostro caso contenute entro i dieci gradi.
 Per questo motivo è importante sottolineare che l'incertezza standard sulla
@@ -298,7 +321,7 @@ periodo del pendolo eseguita da tutti e tre i componenti del gruppo e otteniamo 
 
     \item{la mediana, il quantile 10\% e il quantile 90\% sono relativamente:}
         \begin{equation*}
-            m = 1.501\,s \quad
+            M = 1.501\,s \quad
             q_{10\%} = 1.493\,s \quad
             q_{90\%} = 1.506\,s
         \end{equation*}
@@ -322,9 +345,7 @@ Quindi grazie hai risultati così ottenuti possiamo dire che il periodo del pend
 \mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T} = 1.500\,s \pm 0.005\,s
 \end{equation}\\
 
-\newpage
-
-La Tabella 2 e la Figura 2 invece sono relativi alla misura del periodo del pendolo da parte di un singolo membro del gruppo.
+La Tabella \ref{tab:pendolo100} e la Figura \ref{fig:pendolo100} invece sono relativi alla misura del periodo del pendolo da parte di un singolo membro del gruppo.
 
 
 Procediamo ora con l'analisi dei dati relativi alle cento misurazioni del periodo:
@@ -353,7 +374,7 @@ Procediamo ora con l'analisi dei dati relativi alle cento misurazioni del period
 
     \item{la mediana, il quantile 10\% e il quantile 90\% sono relativamente:}
         \begin{equation*}
-            m = 1.50\,s \quad
+            M = 1.50\,s \quad
             q_{10\%} = 1.44\,s \quad
             q_{90\%} = 1.55\,s
         \end{equation*}

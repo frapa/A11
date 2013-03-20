@@ -68,6 +68,20 @@ sigma1, sigma2, sigma3 = map(sqrt, (D1, D2, D3))
 
 print "N = {}\nm = {}\nD = {}\nσ = {}".format(str((N1, N2, N3)), str((m1, m2, m3)), str((D1, D2, D3)), str((sigma1, sigma2, sigma3)))
 
+Rs12 = []
+Rs23 = []
+Rs13 = []
+for i in range(N1):
+    R12 = xs1[i] - xs2[i]
+    R23 = xs2[i] - xs3[i]
+    R13 = xs1[i] - xs3[i]
+
+    Rs12.append(R12)
+    Rs23.append(R23)
+    Rs13.append(R13)
+
+print mean(Rs12), mean(Rs23), mean(Rs13)
+
 # bins 
 delta = 0.003
 x_min = 1.4835
