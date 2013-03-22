@@ -1,0 +1,10 @@
+questi dati si riferiscono a pos_molla1 e pos_molla2
+che sono stati presi da pesi_pos_stat
+
+precisione strumenti:
+bilancia	0.1g ~ 1*10^(-4)kg
+metro		1mm  ~ 1*10^(-3)m
+
+posizione iniziale:
+	(50.0 \pm 0.1) cm
+	(0 \pm 0,001) m
