@@ -28,11 +28,33 @@ Il valore di $g$, l'accelerazione di gravità, non è stato da noi misurato,
 quindi abbiamo considerato $g = 9.8 \pm 0.02 \, \frac{m}{s^2}$ che è un
 valore molto prudente. Con questi valori di $l$ e $g$ si ottene un periodo:
 
+\begin{equation}
+    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.009 \, s 
+    \label{eq:periodo_pendolo}
+\end{equation}
+
+dove l'incertezza è stata stimata propagando le incertezze su $l$ e $g$.
+
+La formula (\ref{eq:periodo_pendolo}) può essere riscritta come $\mathcal{T} = 2 \pi \cdot l^{\frac{1}{2}} \cdot g^{-\frac{1}{2}}$.
+La propagazione dell'incertezza per una funzione non lineare di più variabili, come nel nostro
+caso $\mathcal{T}(l, g)$, può essere calcolata effettuando un approssimazione lineare della funzione:
+
 \begin{equation*}
-    \mathcal{T} = 2\pi \sqrt{\frac{l}{g}} = 1.533 \pm 0.003 \, s 
+    \mathcal{T}(l, g) \simeq \mathcal{T}(l_0, g_0) + \frac{\partial\mathcal{T}}{\partial{l}}(l_0, g_0)(l - l_0)
+    + \frac{\partial\mathcal{T}}{\partial{g}}(l_0, g_0)(g - g_0)
 \end{equation*}
 
-Questo valore è quindi il valore atteso di periodo del pendolo.
+ed utilizzando la formula per la propagazione degli errori nel caso delle funzioni lineari.
+In questa formula $l_0 = 0.583 \, m$ o $g_0 = 9.8 \, m/s^2$ sono i valor medi delle misure.
+Troviamo quindi:
+
+\begin{equation*}
+    \sigma(\mathcal{T}) \simeq \sqrt{(\frac{\partial\mathcal{T}}{\partial{l}}(l_0, g_0))^2\sigma(l)^2
+    + (\frac{\partial\mathcal{T}}{\partial{g}}(l_0, g_0))^2\sigma(g)^2} =
+    \pi\sqrt{\frac{1}{l_0}\sigma(l)^2 + \frac{1}{g_0^3}\sigma(g)^2} = 0.009 \, s
+\end{equation*}
+
+Il (\ref{eq:periodo_pendolo}) è quindi il valore atteso di periodo del pendolo.
 Lo scopo dell'esperimento è quello di verificare sperimentalmente se questa predizione
 è corretta.
 
@@ -81,51 +103,6 @@ Non è stata utilizzata la funzione ``giro'' del cronometro, al fine di evitare
 di introdurre dipendenza tra le varie misure, azzerando il cronometro ogni 
 volta le misure risultano statisticamente indipendenti.
 
-\begin{table}[bt]
-	\begin{tabular} {c c c c | c c c c | c c c c}
-		\toprule
-		\multicolumn{12}{c}{Periodo del pendolo [s]} \\
-		\multicolumn{4}{c}{Francesco} & \multicolumn{4}{c}{Davide} & \multicolumn{4}{c}{Andrea} \\
-		\midrule
-		15.04 & 14.99 & 14.99 & 14.97 & 14.91 & 14.97 & 15.06 & 15.04 & 14.98 & 14.98 & 15.05 & 15.01 \\
-		14.99 & 14.99 & 15.01 & 15.08 & 14.92 & 15.06 & 15.08 & 15.02 & 14.85 & 14.99 & 14.98 & 15.00 \\
-		15.04 & 15.00 & 15.06 & 14.98 & 15.06 & 15.02 & 15.04 & 15.00 & 15.04 & 14.99 & 14.99 & 14.94 \\
-		14.93 & 14.98 & 14.98 & 15.04 & 15.06 & 15.06 & 15.02 & 14.91 & 15.01 & 15.00 & 15.13 & 14.99 \\
-		14.99 & 14.91 & 15.03 & 15.03 & 15.03 & 15.02 & 15.06 & 15.02 & 14.88 & 15.01 & 15.02 & 14.96 \\
-		\bottomrule
-	\end{tabular}
-
-	\caption{Tabella delle misure del periodo del pendolo ottenute dai 3 membri del gruppo.
-        Ogni sperimentatore ha raccolto 20 misure di 10 periodi. Sono riportati
-        i dati grezzi di lettura del cronometro, riferiti a 10 periodi. }
-    \label{tab:pendolo}
-\end{table}
-
-\begin{SCtable}[][tb]
-	\centering
-	\begin{tabular} {c c c c c | c c c c c}
-		\toprule
-		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
-		\midrule
-		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
-		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
-		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
-		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
-		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
-		\midrule
-		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
-		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
-		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
-		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
-		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
-	\bottomrule
-	\end{tabular}
-	\caption{Misure di periodo effettuate da uno dei tre componenti del gruppo.
-        Sono riportati i valori di lettura del cronometro riferiti a singole oscillazioni
-        (periodi) dell'apparato.}
-    \label{tab:pendolo100}
-\end{SCtable}
-
 \subsubsection{Errori sistematici}
 
 Al fine di evitare errori sistematici riguardanti il modello teorico,
@@ -160,7 +137,7 @@ sperimentale usato, sono state prese le seguenti precauzioni:
 Possiamo provare a stimare l'errore sistematico commesso. Poichè nella (\ref{eq:theta_su_sintheta})
 abbiamo ottenuto un errore del 5 per mille, l'errore sistematico dovuto a tutte le
 cause elencate sopra è sicuramente maggiore di questo valore. Ci sentiamo pertanto abbastanza
-sicuri stimando l'errore come due volte l'errore dovuto all'approssimazione $sin(\vartheta) \simeq \vartheta$ e otteniamo:
+sicuri stimando l'errore come il doppio dell'errore dovuto all'approssimazione $sin(\vartheta) \simeq \vartheta$ e otteniamo:
 
 \begin{equation}
     \sigma_{sys} = 2 \cdot \frac{\vartheta}{sin(\vartheta)} = 1 \%
@@ -183,6 +160,28 @@ sono i più difficili da scovare ed eliminare.
 La Tabella \ref{tab:pendolo} e la Figura \ref{fig:pendolo} riguardano i 60 dati
 relativi alla misura del periodo del pendolo da parte di tutti e tre i
 componenti del gruppo.
+
+\begin{table}[h]
+	\begin{tabular} {c c c c | c c c c | c c c c}
+		\toprule
+		\multicolumn{12}{c}{Periodo del pendolo [s]} \\
+		\multicolumn{4}{c}{Francesco} & \multicolumn{4}{c}{Davide} & \multicolumn{4}{c}{Andrea} \\
+		\midrule
+		15.04 & 14.99 & 14.99 & 14.97 & 14.91 & 14.97 & 15.06 & 15.04 & 14.98 & 14.98 & 15.05 & 15.01 \\
+		14.99 & 14.99 & 15.01 & 15.08 & 14.92 & 15.06 & 15.08 & 15.02 & 14.85 & 14.99 & 14.98 & 15.00 \\
+		15.04 & 15.00 & 15.06 & 14.98 & 15.06 & 15.02 & 15.04 & 15.00 & 15.04 & 14.99 & 14.99 & 14.94 \\
+		14.93 & 14.98 & 14.98 & 15.04 & 15.06 & 15.06 & 15.02 & 14.91 & 15.01 & 15.00 & 15.13 & 14.99 \\
+		14.99 & 14.91 & 15.03 & 15.03 & 15.03 & 15.02 & 15.06 & 15.02 & 14.88 & 15.01 & 15.02 & 14.96 \\
+		\bottomrule
+	\end{tabular}
+
+	\caption{Tabella delle misure del periodo del pendolo ottenute dai 3 membri del gruppo.
+        Ogni sperimentatore ha raccolto 20 misure di 10 periodi. Sono riportati
+        i dati grezzi di lettura del cronometro, riferiti a 10 periodi. }
+    \label{tab:pendolo}
+\end{table}
+
+
 
 \begin{figure}[p]
 	\centering
@@ -214,7 +213,8 @@ componenti del gruppo.
         sistematici commessi. Da notare il fatto che Davide ha registrato più
         misure nel bin centrato in 1.503 e ha media campionaria più alta, mentre gli
         altri sperimentatori hanno picchi nel bin centrato in 1.500. In sottoimpressione
-        è disegnato l'istogramma con i dati di tutti e 3 i componenti del gruppo, 			        riportato anche in figura \ref{fig:pendolo}.}
+        è disegnato l'istogramma con i dati di tutti e 3 i componenti del gruppo, riportato
+        anche in figura \ref{fig:pendolo}.}
     \label{fig:pendolo3}
 \end{figure}
 
@@ -265,7 +265,7 @@ Poichè risulta che:
 	R_{1}\leq{k\sigma_{R_{1}}}\,\,\,\,R_{2}\leq{k\sigma_{R_{2}}}\,\,\,\,R_{3}\leq{k\sigma_{R_{3}}}
 \end{equation*}
 
-possiamo concludere che le misure effettuate sono compatibili tra di loro.\\
+possiamo concludere che le misure effettuate sono compatibili tra di loro.
  
 Dal momento che le misure risultano essere compatibili tra di loro le misure
 ripetute del periodo di un pendolo mostrano che le fluttuazioni delle misure
@@ -280,19 +280,19 @@ periodo del pendolo eseguita da tutti e tre i componenti del gruppo e otteniamo 
 
 \begin{itemize}
     \item{La media campionaria é:}
-        \begin{equation}
+        \begin{equation*}
             m^*[\mathcal{T}] = \frac{1}{N} \sum_{i=1}^{N} \mathcal{T}_i = 1.500\,s
-        \end{equation} 
+        \end{equation*} 
 
     \item{La varianza campionaria del periodo di oscilazione del pendolo è:}
-        \begin{equation}
+        \begin{equation*}
             \tilde{D}[\mathcal{T}] = \frac{1}{N - 1} \sum_{i=1}^{N} (\mathcal{T}_i - m^*[\mathcal{T}])^2 = 0.00003\,s^2
-        \end{equation}
+        \end{equation*}
 
     \item{La deviazione standard campionaria risulta essere:}
-        \begin{equation}
+        \begin{equation*}
             \tilde{\sigma}[\mathcal{T}] = \sqrt{\frac{1}{N - 1} \sum_{i=1}^{N} (\mathcal{T}_i - m^*[\mathcal{T}])^2} = 0.005 s
-        \end{equation}
+        \end{equation*}
 
     \item{La mediana, il quantile 10\% e il quantile 90\% sono relativamente:}
         \begin{equation*}
@@ -302,21 +302,27 @@ periodo del pendolo eseguita da tutti e tre i componenti del gruppo e otteniamo 
         \end{equation*}
 \end{itemize}
 
-Pertanto, applicando le necessarie approssimazioni e gli errori relativi ad ogni misura si ottiene
+Vogliamo ora esprimere il periodo del pendolo come un unica misura del tipo $\mathcal{T}_0 \pm \delta\mathcal{T}$.
+La miglior stima del valore $\mathcal{T}_0$ è la media campionaria:
 
 \begin{equation*}
-	m^*[\mathcal{T}] = 1.500 \,s
+	\mathcal{T}_0 = m^*[\mathcal{T}] = 1.500 \,s
 \end{equation*}
 
+Per l'incertezza $\delta\mathcal{T}$ ci poniamo invece di comporre le
+diverse incertezze ricavate durante l'esporimento.
+
 \paragraph{Errore sistematico:}
-Come si può notare dall'analisi fatta non abbiamo riscontrato particolari errori sistematici dovuti all'operatore, in quanto la media campionaria dei dati di ogni operatore è compatibile con la media di tutti i valori entro la deviazione standard campionaria.
+Come si può notare dall'analisi fatta non abbiamo riscontrato particolari errori sistematici dovuti all'operatore,
+in quanto la media campionaria dei dati di ogni operatore è compatibile con la media di tutti i valori entro
+la deviazione standard campionaria. Inoltre se le misure di uno sperimentatore fossero state affette da un
+errore sistematico i suoi valori medi sarebbero risultati significativamente differenti da quelli degli altri due componenti del gruppo.
 
 Nella sezione 3.1.3 abbiamo analizzato gli altri errori sistematici e abbiamo stimato l'errore sistematico totale come $\sigma_{sys} = 1\,\%$ della media $m^*[\mathcal{T}]$. Quindi il valore numerico é:
 
 \begin{equation*}
 	\sigma_{sys} = 0.01\,\,m^*[\mathcal{T}] = 0.015\,s
 \end{equation*}
-Inoltre se le misure di uno sperimentatore fossero state affette da un errore sistematico i suoi valori medi sarebbero risultati significativamente differenti da quelli degli altri due componenti del gruppo.
 
 \paragraph{Errore casuale o di tipo A:}
 Il valore degli errori casuali è contenuto grazie al fatto che abbiamo deciso di misurare il periodo di 10 oscillazioni consecutive e quindi il loro valore è stato ridotto di un fattore dieci. Infatti abbiamo che:
@@ -326,11 +332,14 @@ Il valore degli errori casuali è contenuto grazie al fatto che abbiamo deciso d
 \end{equation*}
 
 \paragraph{Errore di risoluzione tipo:}
-Al fine di stimare un errore complessivo sulla misura del periodo del pendolo è doveroso prendere in considerazione anche l'errore di risoluzione standard dovuto allo strumento. Per questo motivo, utilizzando le conoscenze acquisite in classe, possiamo dire che:
+Al fine di stimare un errore comlessivo sulla misura del periodo del pendolo è doveroso prendere in considerazione anche l'errore di risoluzione standard dovuto allo strumento. Per questo motivo utilizzando le conoscenze acquisite in classe dire che:
+
 \begin{equation*}
 	\sigma_{ris} = \frac{1}{\sqrt{12}} \Delta\mathcal{T}_{m}\\
 \end{equation*}
-dove $\Delta\mathcal{T}_{m}$ rappresenta l'errore di risoluzione dovuto alla procedura di misura e quindi 	$\frac{\Delta\mathcal{T}_{s}}{10}$. Da questo otteniamo che
+
+dove $\Delta\mathcal{T}_{m}$ rappresenta l'errore di risoluzione dovuto alla procedura di misura e quindi $\frac{\Delta\mathcal{T}_{s}}{10}$.
+Poiché $\Delta\mathcal{T}$, è la risoluzione dello strumento, che ricordiamo vale 0.01 s, otteniamo che:
 
 \begin{equation*}
 	\sigma_{ris} = 0.0003\,s 
@@ -339,15 +348,45 @@ dove $\Delta\mathcal{T}_{m}$ rappresenta l'errore di risoluzione dovuto alla pro
 \paragraph{Unione dei vari errori:}
 Quindi grazie hai risultati così ottenuti possiamo dire che l'errore complessivo sulla misura del periodo del pendolo risulta essre:
 
-\begin{equation}
-	\sigma_{tot} = \sqrt{\sigma_{sys}^2 + \tilde{\sigma}[\mathcal{T}]^2 + \sigma_{ris}^2} = 0.016\,s
-\end{equation}
+\begin{equation*}
+	\delta\mathcal{T} = \sigma_{tot} = \sqrt{\sigma_{sys}^2 + \tilde{\sigma}[\mathcal{T}]^2 + \sigma_{ris}^2} = 0.016\,s
+\end{equation*}
+
 Grazie a questo risultato possiamo concludere riportando che il periodo del pendolo risulta essere:
 
 \begin{equation}
-	\mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T} = 1.500\,s \pm 0.016\,s
-\end{equation}\\
-dove $\mathcal{T}_0$ rappresenta $m^*[\mathcal{T}]$ e $\delta\mathcal{T}$ rappresenta $\sigma_{tot}$.
+	\mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T} = 1.500 \pm 0.016\,s
+\end{equation}
+
+Come si può notare, gli errore casuali e di risoluzione non sono stati significativi.
+L'incertezza dominante è l'errore sistematico dovuto al fatto che il modello teorico
+è troppo semplicistico per spiegare con precisione il fenomeno osservato e anche
+a problemi pratici di realizzazione dell'esperimento.
+
+\begin{SCtable}[][tb]
+	\centering
+	\begin{tabular} {c c c c c | c c c c c}
+		\toprule
+		\multicolumn{10}{c}{Periodo del pendolo - Misure di un operatore [s]} \\
+		\midrule
+		1.46 & 1.54 & 1.55 & 1.57 & 1.41 & 1.45 & 1.52 & 1.45 & 1.37 & 1.53 \\
+		1.57 & 1.50 & 1.52 & 1.50 & 1.48 & 1.49 & 1.44 & 1.49 & 1.43 & 1.53 \\
+		1.50 & 1.50 & 1.56 & 1.61 & 1.45 & 1.38 & 1.52 & 1.41 & 1.60 & 1.49 \\
+		1.48 & 1.53 & 1.52 & 1.55 & 1.54 & 1.46 & 1.51 & 1.51 & 1.49 & 1.52 \\
+		1.52 & 1.50 & 1.48 & 1.46 & 1.41 & 1.48 & 1.45 & 1.48 & 1.52 & 1.51 \\
+		\midrule
+		1.55 & 1.52 & 1.55 & 1.49 & 1.51 & 1.50 & 1.52 & 1.49 & 1.54 & 1.52 \\
+		1.45 & 1.49 & 1.47 & 1.47 & 1.48 & 1.48 & 1.53 & 1.51 & 1.52 & 1.47 \\
+		1.54 & 1.42 & 1.43 & 1.45 & 1.49 & 1.42 & 1.47 & 1.36 & 1.50 & 1.55 \\
+		1.58 & 1.52 & 1.45 & 1.48 & 1.44 & 1.52 & 1.51 & 1.50 & 1.54 & 1.52 \\
+		1.52 & 1.52 & 1.47 & 1.52 & 1.44 & 1.56 & 1.50 & 1.49 & 1.52 & 1.56 \\
+	\bottomrule
+	\end{tabular}
+	\caption{Misure di periodo effettuate da uno dei tre componenti del gruppo.
+        Sono riportati i valori di lettura del cronometro riferiti a singole oscillazioni
+        (periodi) dell'apparato.}
+    \label{tab:pendolo100}
+\end{SCtable}
 
 \subsubsection{Analisi dei dati dello sperimentatore singolo}
 
@@ -356,19 +395,19 @@ Procediamo ora con l'analisi dei dati relativi alle cento misurazioni del period
 
 \begin{itemize}
     \item{La media campionaria é:}
-        \begin{equation}
+        \begin{equation*}
             m^*[\mathcal{T}] = \frac{1}{N} \sum_{i=1}^{N} \mathcal{T}_i = 1.50\,s
-        \end{equation} 
+        \end{equation*} 
 
     \item{La varianza campionaria del periodo di oscilazione del pendolo è:}
-        \begin{equation}
+        \begin{equation*}
             \tilde{D}[\mathcal{T}] = \frac{1}{N - 1} \sum_{i=1}^{N} (\mathcal{T}_i - m^*[\mathcal{T}])^2 = 0.0022\,s^2
-        \end{equation}
+        \end{equation*}
 
     \item{La deviazione standard campionaria risulta essere:}
-        \begin{equation}
+        \begin{equation*}
             \tilde{\sigma}[\mathcal{T}] = \sqrt{\frac{1}{N - 1} \sum_{i=1}^{N} (\mathcal{T}_i - m^*[\mathcal{T}])^2} = 0.05\,s
-        \end{equation}
+        \end{equation*}
 
     \item{La mediana, il quantile 10\% e il quantile 90\% sono relativamente:}
         \begin{equation*}
@@ -378,56 +417,77 @@ Procediamo ora con l'analisi dei dati relativi alle cento misurazioni del period
         \end{equation*}
 \end{itemize}
 
-Innanzitutto, si può notare che le cento misure di oscillazione di un singolo periodo hanno una precisione fino al centesimo di secondo, mentre quelle relative a tutti e tre i componenti avevano una precisione fino al millesimo. Infatti la deviazione standard di queste misure è di un ordine di grandezza maggiore rispetto al dato relativo alle misure precedenti.
-Pertanto possiamo dire che:
+Innanzitutto, si può notare che le cento misure di oscillazione di un singolo
+periodo hanno una precisione fino al centesimo di secondo, mentre quelle relative
+a tutti e tre i componenti avevano una precisione fino al millesimo. Infatti la
+deviazione standard di queste misure è di un ordine di grandezza maggiore rispetto
+al dato relativo alle misure precedenti. Ci aspettiamo quindi che in questo caso 
+non sia l'errore sistematico ad essere dominante, come nel caso precedente.
+
+Volendo esprimere, come abbiamo fatto per le 60 misure di tre diversi sperimentatori,
+con un unico risultato i dati ottenuti, possiamo dire che:
+
+\begin{equation*}
+	\mathcal{T}_0 = m^*[\mathcal{T}] = 1.50 \,s
+\end{equation*}
+
+Inoltre:
 
 \begin{itemize}
-	\item{Errore sistematico: l'errore sistematico presente sulle cento misure è esattamente lo stesso che avevamo per le sessanta misure analizzate precedentemente. Quindi 
-		\begin{equation}
+	\item{\textbf{Errore sistematico:} l'errore sistematico presente sulle cento misure è esattamente lo stesso che avevamo per le sessanta misure analizzate precedentemente. Quindi 
+		\begin{equation*}
 			\sigma_{sys} = 0.01\,\,m^*[\mathcal{T}] = 0.015\,s
-		\end{equation}	 }
-	\item{Errore casuale o di tipo A: l'errore casuale grazie all'analisi appena fatta risulta essere
-		\begin{equation}
+		\end{equation*}	 }
+	\item{\textbf{Errore casuale o di tipo A:} l'errore casuale grazie all'analisi appena fatta risulta essere
+		\begin{equation*}
 			\tilde{\sigma}[\mathcal{T}] = 0.05\,s
-		\end{equation}}
-	\item{Errore di risoluzione tipo: l'errore di risoluzione tipo risulta essere:
-		\begin{equation}
+		\end{equation*}}
+	\item{\textbf{Errore di risoluzione tipo:} l'errore di risoluzione tipo risulta essere:
+		\begin{equation*}
 			 {\sigma}[\mathcal{T}]_{ris} = \frac{1}{\sqrt{12}} \,\, \Delta\mathcal{T}_{s} = 0.003\,s	
-		\end{equation}}
+		\end{equation*}}
 \end{itemize}
 
 Quindi anche in questo caso possiamo concludere dicendo che l'errore totale sul periodo di oscillazione del pendolo risulta essere:
 
-\begin{equation}
-	\sigma_{tot} = \sqrt{\sigma_{sys}^2 + \tilde{\sigma}[\mathcal{T}]^2 + \sigma_{ris}^2} = 0.05 \,s
-\end{equation}
+\begin{equation*}
+	\delta\mathcal{T} = \sigma_{tot} = \sqrt{\sigma_{sys}^2 + \tilde{\sigma}[\mathcal{T}]^2 + \sigma_{ris}^2} = 0.05 \,s
+\end{equation*}
 e pertanto otteniamo che:
 
 \begin{equation}
-	\mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T} = 1.500\,s \pm 0.05\,s
+	\mathcal{T} = \mathcal{T}_0 \pm \delta\mathcal{T} = 1.50 \pm 0.05\,s
 \end{equation}
-dove $\mathcal{T}_0$ rappresenta $m^*[\mathcal{T}]$ e $\delta\mathcal{T}$ rappresenta $\sigma_{tot}$.
+
+Come previsto, in questo caso l'incertezza dominante è l'errore casuale.
+Le altre cause di incertezza spariscono, praticamente, nel calcolo dell'errore totale. 
 
 \subsubsection{Distribuzione dei valori medi campionari}
 
-Se procediamo ora con un'analisi più approfondita dei dati ottenuti dalle cento misure e li raggruppiamo in dieci gruppi di dieci misure ciascuno, possiamo calcolare la media campionaria di ogni singolo gruppo:
+Concludiamo ora con una breve analisi più approfondita dei dati ottenuti dalle cento
+misure. Raggruppandoli in dieci gruppi di dieci misure ciascuno, possiamo calcolare
+la media campionaria di ogni singolo gruppo:
 
-\begin{equation}
+\begin{equation*}
 m_k^* \quad con \,\, K \in{\{1,2,...,10\}}
-\end{equation}
+\end{equation*}
+
 dove k indica il numero del gruppo considerato.
 Ottenute queste misure possiamo considerarle come singoli dati e farne una media campionaria ($ m[m_k^*] $):
 
-\begin{equation}
+\begin{equation*}
 m[m_k^*] = \sum_{k=1}^{10} (m_k^*) = 1.50\,s
-\end{equation}
-che risulta essere uguale alla media campionaria delle cento misure prese singolarmente. Calcolando la deviazione standard delle medie ($ \sigma[m_k^*] $):
+\end{equation*}
 
-\begin{equation}
+che risulta essere uguale, come previsto dalla teoria, alla media campionaria delle cento
+misure prese singolarmente. Calcolando la deviazione standard delle medie ($ \sigma[m_k^*] $):
+
+\begin{equation*}
 \sigma[m_k^*] = \sqrt{\frac{10}{10-1} \sum_{k=1}^{10} (m_k^* - m[m_k^*])^2} = 0.020\,s
-\end{equation}
+\end{equation*}
+
 otteniamo che il rapporto tra $\frac{\sigma[m_k^*]}{\tilde{\sigma}[\mathcal{T}]}$ risulta essere circa 0.42 che è un risultato attendibile dal momento che la predizione teorica ci dice che:
 
-\begin{equation}
+\begin{equation*}
 \frac{\sigma[m_k^*]}{\tilde{\sigma}[\mathcal{T}]} = \frac{1}{\sqrt{10}} \simeq \, 0.32
-\end{equation}
+\end{equation*}
