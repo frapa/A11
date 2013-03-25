@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.20)  25 MAR 2013 15:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.25)  25 MAR 2013 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Relazione.tex
 (./Relazione.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, it
-alian, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -35,9 +35,14 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Italian'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@italian = a dialect from \language0
 Package babel Info: Making " an active character on input line 94.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
@@ -538,31 +543,42 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--33
-[]$ 
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+
  []
 
-[3]) [4] (./dinamica.tex) [5] (./Relazione.aux) ) 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+) [4] (./dinamica.tex
+Overfull \hbox (0.3322pt too wide) in paragraph at lines 7--8
+\OT1/cmr/m/n/10.95 Per cal-co-lare la costante elas-ti-ca me-di-ante il meto-do
+ di-nam-i-co dob-bi-amo av-valer-ci del-la rezazione
+ []
+
+) [5] (./Relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 4061 strings out of 495048
- 59307 string characters out of 3181554
+ 4062 strings out of 495059
+ 59316 string characters out of 3182030
  121998 words of memory out of 3000000
- 7159 multiletter control sequences out of 15000+200000
+ 7157 multiletter control sequences out of 15000+200000
  9782 words of font info for 35 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,4n,38p,588b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione.pdf (5 pages, 165859 bytes).
+ 38i,5n,38p,614b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
+c10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relazione.pdf (5 pages, 170526 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
