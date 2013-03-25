@@ -12,6 +12,7 @@ masse = masse ./ 1000;
 pesi = masse .* g;
 pos_molla1 = (pos_molla1 - 50) ./ (-100);
 %pos_molla2 = (pos_molla2 - 50) ./ (-100);
+%pos_molla1 = pos_molla2;
 
 % incertezza tipo
 dmi = (([1:1:13]' .* 0) + 0.001) ./ sqrt(12);
