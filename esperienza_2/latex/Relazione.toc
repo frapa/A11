@@ -5,4 +5,6 @@
 \contentsline {subsection}{\numberline {2.2}Procedura di aquisizione dei dati}{3}
 \contentsline {subsection}{\numberline {2.3}Elaborazione dei dati}{4}
 \contentsline {section}{\numberline {3}Ricerca della costante elastica della molla: metodo dinamico}{5}
-\contentsline {subsection}{\numberline {3.1}primo studio qualitativo del moto oscillatorio}{5}
+\contentsline {subsection}{\numberline {3.1}Apparato sperimentale}{5}
+\contentsline {subsection}{\numberline {3.2}Procedura di acquisizione dei dati}{5}
+\contentsline {subsection}{\numberline {3.3}Primo studio qualitativo del moto oscillatorio}{5}
