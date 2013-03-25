@@ -1,5 +1,6 @@
 % mi posiziono nella cartella dati
-cd /home/dejavu/Documents/Laboratorio/A11/esperienza_2/dati
+cd ../
+cd dati
 
 % carico i dati
 load masse.csv
