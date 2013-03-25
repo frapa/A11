@@ -4,7 +4,7 @@ cd /home/dejavu/Documents/Laboratorio/A11/esperienza_2/dati
 % carico i dati
 load masse.csv
 load pos_molla1.csv
-load pos_molla2.csv
+%load pos_molla2.csv
 g = 9.806;
 
 % porto i dati nelle unità del SI
@@ -20,7 +20,7 @@ dz = 0.001 / sqrt(12);
 dxi = (([1:1:13]' .* 0) + dz) .* sqrt(2);
 
 % plotto il grafico
-%errorbar(pesi,masse,dpi,dxi,"~>")
+errorbar(pesi,masse,dpi,dxi,"~>")
 
 ki = pesi ./ pos_molla1;
 dki = ki .* (sqrt((dpi ./ pesi).^2 + (dxi ./ pos_molla1).^2));
