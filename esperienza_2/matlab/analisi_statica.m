@@ -5,24 +5,25 @@ cd dati
 % carico i dati
 load masse.csv
 load pos_molla1.csv
-%load pos_molla2.csv
+% load pos_molla2.csv
 g = 9.806;
 
 % porto i dati nelle unità del SI
 masse = masse ./ 1000;
 pesi = masse .* g;
 pos_molla1 = (pos_molla1 - 50) ./ (-100);
-%pos_molla2 = (pos_molla2 - 50) ./ (-100);
-%pos_molla1 = pos_molla2;
+% pos_molla2 = (pos_molla2 - 50) ./ (-100);
+% pos_molla1 = pos_molla2;
 
 % incertezza tipo
-dmi = (([1:1:13]' .* 0) + 0.001) ./ sqrt(12);
+dmi = (ones(13, 1) .* 0.0001) ./ sqrt(12); % incertezze sulle masse
 dpi = dmi .* g;
-dz = 0.001 / sqrt(12);
-dxi = (([1:1:13]' .* 0) + dz) .* sqrt(2);
+
+dz = 0.001;
+dxi = ones(13, 1) * (dz / sqrt(6));
 
 % plotto il grafico
-errorbar(pesi,masse,dpi,dxi,"~>")
+errorbar(pesi, pos_molla1, dpi, dxi, "~>")
 
 ki = pesi ./ pos_molla1;
 dki = ki .* (sqrt((dpi ./ pesi).^2 + (dxi ./ pos_molla1).^2));
