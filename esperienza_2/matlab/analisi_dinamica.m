@@ -10,22 +10,24 @@ g = 9.806;
 dyn_data(:,1) = dyn_data(:,1) ./ 1000;
 % trasformo le masse in pesi (kg --> N)
 dyn_data(:,1) = dyn_data(:,1)  .* g;
+dyn_data = dyn_data';
+dyn_data(2:16,:) = dyn_data(2:16,:) ./ 10;
 
-dPi= ones(14,1) .* 0.1 /1000 .*g;
+dPi= ones(1,14) .* 0.1 /1000 .*g;
 
 % creo i valori medi di ogni periodo
-mTi = mean(dyn_data(:,2:end)');
-mTi = mTi';
+mTi = mean(dyn_data(2:16,:));
+% mTi
 
 % cerco la deviazione standard dei periodi
-D = sum(((dyn_data(:,2:end) - mTi).^2)')
 
-%D = sum(((dyn_data(:,2:end) - mTi).^2)');
-dTi = (D').^(0.5);
-dTi
-%dTi = 0.01;
+% bsxfun(@minus,dyn_data(2:16,:),mTi);
+% (bsxfun(@minus,dyn_data(2:16,:),mTi)).^2;
+% sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2);
+% sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2) ./ 15;
+dTi = sqrt(sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2) ./ 15);
+% dTi
 
-%dTi = sqrt(sum((dyn_data(:,2:end) - mTi).^2) ./ 15);
-%dTi= dTi'
+errorbar(dyn_data(1,:),mTi, dPi,dTi, '~>')
 
-errorbar(dyn_data(:,1),mTi, dPi,dTi, '~>');
+dTi2 = (mTi .* dTi) .* 2
