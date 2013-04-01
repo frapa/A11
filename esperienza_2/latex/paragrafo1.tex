@@ -3,8 +3,8 @@
 \subsection{Apparato sperimentale}
 L'apparato sperimentale utilizzato è costituito da:
 	\begin{itemize}
-		\item{una base ad A sulla quale sono installati verticalmente un supporto con gancio di sospensione delle molle e asta millimetrata scorrevole. L'asta millimetrata presentava sul lato sinistro una scala millimetrata con una risoluzione di mezzo millimetro, mentre sul lato destro una scala millimetrata con una risoluzione del millimetro;}
-		\item{quattro molle elicoidali con caratteristica elastica differente tra di loro: in particolare una particolarmente morbida, una dura e due con caratteristiche medie;}
+		\item{una base ad A sulla quale sono installati verticalmente un supporto con gancio di sospensione delle molle e asta millimetrata scorrevole. L'asta millimetrata presenta sul lato sinistro una scala millimetrata con una risoluzione di mezzo millimetro, mentre sul lato destro una scala millimetrata con una risoluzione del millimetro;}
+		\item{quattro molle elicoidali con caratteristica elastica differente tra di loro: nello specifico una particolarmente morbida, una dura e due con caratteristiche medie;}
 		\item{un piattello portapesi di massa $m_{piattello} = 25.2\,\,g \pm\, 0.1\,\,g$, quattro pesi cilindrici neri rispettivamente di massa nominale 5, 10, 25 e 50 grammi e quattro pesi argentei identici a quelli neri, con stesse masse nominali;}
 		\item{una bilancia a un piattello con una risoluzione di 0.1 grammi;}
 	\end{itemize}
@@ -35,23 +35,69 @@ di apprezzare una deformazione utile alla lettura per carichi troppo leggeri. \u
 Al fine di calcolare l'allungamento di una delle due molle elicoidali mediante il metodo statico abbiamo posizionato il sistema molla e piattello lungo l'asta millimetrata, appendendo un'estremità della molla al gancio di supporto. Atteso che l'oscillazione della molla si smorzasse il più ossibile abbiamo allineato il bordo inferiore del piattello, agganciato alla molla, con la tacca dei 50 cm dell'asta graduata, cercando di evitare eventuali errori di parallasse. In questo modo la posizione di equilibrio della molla risulta essere:
 
 \begin{equation*}
-	z_{eq} = z_0\,\pm\,\delta(z_0) = 50.0\,cm\,\pm\,0.1\,cm
+	z_{eq} = z_0\,\pm\,\delta z_0 = 50.0\,cm\,\pm\,0.1\,cm
 \end{equation*}
 Infine abbiamo misurato il differente allungamento della molla man mano che variavamo il carico applicato ad essa, attendendo sempre che le oscillazioni del sistema si smorzassero il più possibile. Così facendo abbiamo ottenuto una serie di misure delle varie posizioni di equilibrio della molla:
 
 \begin{equation*}
-	z_i = z_i\,\pm\,\delta(z_i) 
+	z_i = z_i\,\pm\,\delta z_i 
 \end{equation*}
 dalle quali possiamo ricavare l'allungamento della stessa:
 
 \begin{equation*}
 	x_i = |z_i\,-\,z_0|
 \end{equation*}
-e quindi l’incertezza sugli allungamenti ($\delta(x_i)$) si ottiene applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
+e quindi l’incertezza sugli allungamenti ($\delta x_i$) si ottiene applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
 
 \begin{equation*}
-	\delta(x_i) = \sqrt{\delta(z_i)^2\,-\,\delta(z_0)^2}
-	\quad \underline{? = \delta(z_0)\sqrt{2}}
+	\delta x_i = \sqrt{\delta z_i^2\,-\,\delta z_0^2}
 \end{equation*}
 
 \subsection{Elaborazione dei dati}
+
+\subsubsection{Considerazioni inziali:}
+Come detto precedentemente pe misurare la massa dei dischetti a nostra disposizione abbiamo utilizzato una bilancia a un piattello con una risoluzione di 0.1 grammi. Abbiamo osservato che lo strumento era abbastanza sensibile da rilevare variazioni nella pressione dell'aria circostante. Lo abbiamo apurato soffiandoci sopra e notando che il valore rilevato dalla bilancia aumentava in modo considerevole. Per questo motivo per trovare le varie masse dei nostri pesi ci siamo premuniti di stare quato più lontani dalla bilancia ci fosse concesso e di evitare di cuotere il tavolo di lavoro.
+E' importante sottoineare che la massa dei nostri tredici pesi è data da una composizione dei dischetti a nostra disposizione, e ogni dischetto è affetto da un errore sulla sua massa, dovuto principamente alla risoluzione dello strumento:
+
+\begin{equation*}
+	\delta m_i = \frac{\Delta m}{2} = 0.05 g 
+\end{equation*}
+abbiamo deciso di non usare l'incertezza tipo sull'errore di misurazione in quanto, come detto sopra, le misure potevano non risultare così fedeli in quanto soggette anche a variazioni repentine dell'ambiente esterno.
+Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
+Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,\,g$ allora dobbiamo propagare l'incertezza derivante dalla isura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
+
+\begin{equation*}
+	\delta F_{p}\, =\, g\,\delta m_i
+\end{equation*}
+Per quanto riguarda gli errori relativi all'errore di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. C'è però da aggiungere che la osizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.
+Precisiamo che la relzione
+
+\begin{equation*}
+	\delta x_i = \sqrt{\delta z_i^2\,-\,\delta z_0^2}
+\end{equation*}
+è valida in quanto le misure effettuate sono indipndenti le une dalle altre poichè a ogni cambio della massa applicata alla molla il piattelo portapesi veniva sganciato dalla molla e caricato con la massa successiva.
+E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad uan leggere oscillazione. Questa continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.s
+
+\subsubsection{Analisi di dati:}
+Nella \ref{tabella allungamenti} sono riportate le masse applicate alla molla con la loro relativa posizione di equilibrio.Stessa cosa vale per la \ref{tabella carico e scarico}.
+La \ref{tabella carico e scarico} mostra la posizione di equilibrio per alcune masse applicate ed è stata realizzata con una procedura di carico e scarico della molla. Ovvero: per le masse scelte si è deciso di caricare la molla e rilevare le varie posizioni di equilibrio, stessa cosa si è fatta nello scariare la molla. Questa procedura è stata ripetuta due volte.
+Come si può intuire da una prima anlsi superficiale delle tabelle risulta evidente che le misure sono compatibili tra di loro e questo quindi ci porta a dire che la molla non è stata affeta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico) e che sono riproducibili entro il carico massimo della molla oltre ilquale si avrebbe una deformazione permanente della stessa.
+Affermiamo questo perchè prendendo per esempio la mssa da "55 g" possiamo oservare che le varie misure sono le seguenti:
+\begin{itemize}
+	\item{primo allungamento $x_{all_1}$ = $() cm$}
+	\item{secondo allungamento $x_{all_2}$ = $() cm$}
+	\item{terzo allungamento $x_{all_3}$ = $() cm$}
+	\item{quarto allungamento $x_{all_4}$ = $() cm$}
+	\item{quinto allungamento $x_{all_5}$ = $() cm$}
+\end{itemize}
+quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
+
+\begin{equation*}
+	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) =
+\end{equation*}
+e l'incertezza su questo valore è il seguente:
+
+\begin{equation}
+	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 
+\end{equation}
+quindi possiamo ricavare R e posto fattore di copertura ... calcoli e ...

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.25)  25 MAR 2013 18:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.3.25)  1 APR 2013 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -552,36 +552,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-) [4] (./dinamica.tex
+[4]
+
+LaTeX Warning: Reference `tabella allungamenti' on page 5 undefined on input li
+ne 82.
+
+
+LaTeX Warning: Reference `tabella carico e scarico' on page 5 undefined on inpu
+t line 82.
+
+
+LaTeX Warning: Reference `tabella carico e scarico' on page 5 undefined on inpu
+t line 83.
+
+[5]) [6] (./dinamica.tex
 Overfull \hbox (0.3322pt too wide) in paragraph at lines 7--8
 \OT1/cmr/m/n/10.95 Per cal-co-lare la costante elas-ti-ca me-di-ante il meto-do
  di-nam-i-co dob-bi-amo av-valer-ci del-la rezazione
  []
 
-) [5] (./Relazione.aux) ) 
+) [7] (./Relazione.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4062 strings out of 495059
- 59316 string characters out of 3182030
- 121998 words of memory out of 3000000
- 7157 multiletter control sequences out of 15000+200000
+ 4066 strings out of 495059
+ 59387 string characters out of 3182030
+ 122998 words of memory out of 3000000
+ 7161 multiletter control sequences out of 15000+200000
  9782 words of font info for 35 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,5n,38p,614b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
-c10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relazione.pdf (5 pages, 170526 bytes).
+ 38i,5n,38p,810b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relazione.pdf (7 pages, 193302 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
