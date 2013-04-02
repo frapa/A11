@@ -1,2 +1,0 @@
-\select@language {italian}
-\contentsline {section}{\numberline {1}Introduzione}{3}
