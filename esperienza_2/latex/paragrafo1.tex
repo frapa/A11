@@ -84,20 +84,38 @@ La \ref{tabella carico e scarico} mostra la posizione di equilibrio per alcune m
 Come si può intuire da una prima anlsi superficiale delle tabelle risulta evidente che le misure sono compatibili tra di loro e questo quindi ci porta a dire che la molla non è stata affeta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico) e che sono riproducibili entro il carico massimo della molla oltre ilquale si avrebbe una deformazione permanente della stessa.
 Affermiamo questo perchè prendendo per esempio la mssa da "55 g" possiamo oservare che le varie misure sono le seguenti:
 \begin{itemize}
-	\item{primo allungamento $x_{all_1}$ = $() cm$}
-	\item{secondo allungamento $x_{all_2}$ = $() cm$}
-	\item{terzo allungamento $x_{all_3}$ = $() cm$}
-	\item{quarto allungamento $x_{all_4}$ = $() cm$}
-	\item{quinto allungamento $x_{all_5}$ = $() cm$}
+	\item{primo allungamento $x_{all_1}$ = $(5.7 \pm 0.1) cm$}
+	\item{secondo allungamento $x_{all_2}$ = $(5.6 \pm 0.1) cm$}
+	\item{terzo allungamento $x_{all_3}$ = $(5.6 \pm 0.1) cm$}
+	\item{quarto allungamento $x_{all_4}$ = $(5.5 \pm 0.1) cm$}
+	\item{quinto allungamento $x_{all_5}$ = $(5.6 \pm 0.1) cm$}
 \end{itemize}
 quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
 
 \begin{equation*}
-	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) =
+	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.6 cm
 \end{equation*}
 e l'incertezza su questo valore è il seguente:
 
 \begin{equation}
-	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 
+	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 0.1 cm
 \end{equation}
-quindi possiamo ricavare R e posto fattore di copertura ... calcoli e ...
+Quindi con questi valori possiamo valutare se la media delle misure ottenute dalla procedura di carico e scarico è compatibile con la misura ottenuta durante il primo ciclo di misurazione. Posto a priori un fattore di copertura k = 1.5 andiamo a verificare che il resto tra la differenza fra $m^*[x_{all_i}]$ e $x_{all_1}$ risulti essere minore dell'errore relatovo al resto moltiplicato per il fattore di copertura.
+Otteniamo quindi:
+
+\begin{equation*}
+	R = x_{all_1} - m^*[x_{all_i}] = 0.1 \,\,cm
+\end{equation*}
+
+\begin{equation*}
+	\sigma_{R} = k\,\, \sqrt{(\sigma[x_{all_1}])^2 + (\sigma[m^*[x_{all_i}]])} = 0.2 \,\,cm
+\end{equation*}
+Da questo quindi possiamo dire che $m^*[x_{all_i}]$ e $x_{all_1}$ risultano essere compatibili, e compatibii sono anche le misure che abbiamo ottenuto per fare la media dei cicli di scarico e carico, sempre utilizzando come fattore di copertura il k scelto in precednza.
+Questo discorso e procedura si può estendere anche a tutte le misure relative alle masse differeni da 55 g e quindi possiamo concludere che le misure sono tra di loro compatibili e non ci sono state deformazioni nella molla.
+Un importante osservazione che si può fare analizzando \ref{tabella allungamenti} e \ref{tabella carico e scarico} è che per lo stesso carico applicato alla molla le misue dell'allungamento differiscono tra di loro per 0.1 cm. Abbiamo ipotizzato che questa differenza possa essere dovuta principalmente a due elementi:
+
+\begin{enumerate}
+	\item{dal momento che prima di effetuare i cicli di carico e scarico la molla era stata tolta dal supporto assieme al piattello portapesi,è probabile che nel riposizionare l'apparato l'allineamento del piattello portapesi, nella sua posizione di equilibrio, con la tacca dei 50 cm non sia stato perfetto ma sia risultato errato di 0.1 cm;}
+	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escdere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un operazione così elementare come può sembrare;}
+\end{enumerate}
+
