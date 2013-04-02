@@ -139,12 +139,14 @@ tenuto conto degli errori casuali e sistematici, ma solo dell'errore di risoluzi
     print "\tb = {:.3} ∓ {:.3} m/N".format(b, sigma_b_new)
     print "\tk = {:.3} ∓ {:.3} N/m".format(k0_chi, dk_chi_new)
     print "\t(Sono cambiate solo le incertezze ovviamente)"
+
 elif cmd in ("-h", "--help"):
     print "Se si esegue lo script senza argomenti, verrà stampata una descrizione con i calcoli effettuati.\n"
     print "Argomenti possibili:"
     print "\t-h\tMostra questo aiuto"
     print "\t-g\tDisegna il grafico"
     print "\t-t\tStampa la tabella per latex"
+
 elif cmd == "-g":
     if not mpl:
         print "Non è installata la libraria per il disegno dei grafici. Si installa con:"
