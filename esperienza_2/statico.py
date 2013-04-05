@@ -6,6 +6,7 @@ from math import *
 
 mpl = False
 try:
+    import matplotlib
     from matplotlib import pyplot as plt
     mpl = True
 except:
@@ -153,20 +154,54 @@ elif cmd == "-g":
         print "\tsudo apt-get install python-matplotlib"
         sys.exit(1)
 
-    f1 = plt.figure()
+    f1 = plt.figure(figsize=(8, 6))
+    f1.suptitle("Pesi e allungamenti", y=0.93, fontsize=15)
 
     ax = f1.add_subplot(1, 1, 1)
-    ax.errorbar(x=pesi, y=allungamenti,
+    dots = ax.errorbar(x=pesi, y=allungamenti,
         #xerr=sigma_res_p, yerr=sigma_res_l,
         fmt='o')
 
-    ax.errorbar(x=(0, 1.4), y=(0, b*1.4))
+    fit1 = ax.errorbar(x=(0, 1.4), y=(0, b*1.4))
+    #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
     #ax.errorbar(x=(0, 1.4), y=(0, (b-sigma_b)*1.4))
     #ax.errorbar(x=(0, 1.4), y=(0, (b+sigma_b)*1.4))
 
-    ax.set_xlabel(u'Peso [N]', fontsize=14)
-    ax.set_ylabel(u'Allungamento [m]', fontsize=14)
+    ax.set_xlabel(u'Peso [N]', labelpad=12, fontsize=14)
+    ax.set_ylabel(u'Allungamento [m]', labelpad=6, fontsize=14)
     ax.grid(True)
+    ax.set_xticks((0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4))
+
+    ax.legend((dots, fit1), ("Dati misurati", "Media pesata"), 'upper left',
+        prop={'size': 12})
+
+    f1.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
+
+    f2 = plt.figure()
+    ax2 = f2.add_subplot(1, 1, 1)
+
+    f2.suptitle("Discrepanza", y=0.93, fontsize=15)
+
+    err2 = ax2.errorbar(x=pesi, y=[(x_i - b*p_i) * 1000 for p_i, x_i in zip(pesi, allungamenti)],
+        yerr=sigma_l_new * 1000, fmt=None, capsize=7)
+    err1 = ax2.errorbar(x=pesi, y=[(x_i - b*p_i) * 1000 for p_i, x_i in zip(pesi, allungamenti)],
+        yerr=sigma_res_l * 1000, fmt='o', capsize=7)
+    ax2.errorbar(x=(0, 1.4), y=(0, 0))
+
+    ax2.set_xlabel(u'Peso [N]', labelpad=12, fontsize=14)
+    ax2.set_ylabel(u'Discrepanza [mm]', labelpad=6, fontsize=14)
+    ax2.grid(True)
+    ax2.set_xticks((0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4))
+
+    ax2.legend((err1, err2), ("Errore standard di risoluzione", "Incertezze corrette"), 'upper right',
+        prop={'size': 12}, numpoints=1)
+
+    # easter eggs
+    if len(sys.argv) == 3 and sys.argv[2] == '-r':
+        import random
+        ax2.set_xticks([random.randint(0, 14) / 14.0 for i in range(10)])
+
+    f2.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
 
     plt.show()
 elif cmd == "-t":
