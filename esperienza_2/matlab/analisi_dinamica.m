@@ -68,22 +68,23 @@ wi = dyt .^ (-2);
 % 	attenzione! non sapendo che lettera mettere per il denominatore ho usato la 'Q' a caso
 %	calcolo quindi A e B (finalmente?)
 Q = (sum(wi)) * (sum(wi .* (dyn_data(1,:)).^2) ) - ( sum(wi .* dyn_data(1,:)) )^2;
-A = ( ( sum(wi .* (dyn_data(1,:)).^2) )*( sum(wi .* (mTi.^2)) ) - (sum(wi .* dyn_data(1,:)))*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) ) / Q;
-B = ( ( sum(wi) )*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) - (sum(wi .* dyn_data(1,:)))*( sum(wi .* (mTi.^2) ) ) ) / Q;
+A = ( ( sum(wi .* (dyn_data(1,:)).^2) )*( sum(wi .* (mTi.^2)) ) - (sum(wi .* dyn_data(1,:)))*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) ) / Q
+% c'è un errore B è fuori di un fattore 10 circa...
+B = ( ( sum(wi) )*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) - (sum(wi .* dyn_data(1,:)))*( sum(wi .* (mTi.^2) ) ) ) / Q
 
 %	calcolo la deviazione di A e B
 dA2 = ( sum(wi .* (dyn_data(1,:)).^2) ) / Q;
 dB2 = ( sum(wi) ) / Q;
 
-'A e dA2'
-[A dA2]
-'B e dB2'
-[B dB2]
+#'A e dA2'
+%[A dA2]
+#'B e dB2'
+%[B dB2]
 
 %	Calcolo C e me da A e B
-k= 9.6;
-C = sqrt(B * k);
-me = A  / B;
+k = 9.64;
+C = sqrt(B * k)
+me = A  / B
 %dC =
 %dme =
 
@@ -92,6 +93,10 @@ me = A  / B;
 %chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) .* (wi));
 chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) ./ (dyt));
 chi2 % adesso viene 0.01! ma che cavolo sta succedendo?
+% se metti il giusto valore di B viene una roba x 10^4 ... qui ci sono
+% evidenti errori di calcolo... :-(
+% la cosa divertente è che facendo come viene a me il chi quadro
+% viene 470... il che mi fa pensare che ho sbagliato anche io...
 
 %errorbar(dyn_data(1,:),(mTi .- A .- ( B .* dyn_data(1,:) )), dyt,dTi, '~>')
 
