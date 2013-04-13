@@ -1,0 +1,3 @@
+* modificare abstract
+* apparato sperimentale
+* introduzione periodo pendolo (verifica indiretta Hooke)
