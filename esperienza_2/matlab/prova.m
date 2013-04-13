@@ -5,6 +5,7 @@ cd dati
 g = 9.806;
 k = 9.64;
 
+% dati in input
 dati = csvread("dyn_masse.csv")(2:end,:);
 periodi = dati(:,2:end) / 10;
 masse = dati(:,1) / 1000;
@@ -12,6 +13,7 @@ pesi = masse .* g;
 
 N = length(periodi(1,:));
 
+% calcolo le medie dei periodi e relativi errori
 medie_periodi = mean(periodi, 2);
 d = zeros(length(periodi(:,1)), 1);
 for i = 1:N
@@ -19,10 +21,13 @@ for i = 1:N
 endfor
 sigma_periodi = sqrt(d ./ (N - 1));
 
+% eleviamo al quadrato
 medie_periodi_2 = medie_periodi .^ 2;
 sigma_periodi_2 = 2 * medie_periodi .* sigma_periodi;
 
 % funziona, non toccare!
+% sto usando il metodo dell'inversa per calcolare le solzioni 
+% e questo costruisce la matrice (non tutto oin una riga!)
 m1 = sum(sigma_periodi_2 .^ -2);
 m2 = sum(masse ./ (sigma_periodi_2 .^ 2));
 m3 = sum(masse ./ (sigma_periodi_2 .^ 2));
@@ -39,3 +44,4 @@ B = risultato(2);
 
 m_e = (A * k) / (2 * pi) ^ 2
 k_n = (2 * pi) ^ 2 / B
+
