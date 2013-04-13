@@ -124,7 +124,7 @@ Un importante osservazione che si può fare analizzando \ref{tabella allungament
 	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escdere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un operazione così elementare come può sembrare;}
 \end{enumerate}
 
-\subsubsection{Calcolo della costante elastica K a partir dalla tabella}
+\subsubsection{Calcolo della costante elastica K a partire dalla tabella}
 Per calcolare la costante elastica della molla abbiamo decisso di procedere in questo modo:
 
 Abbiamo calcolato la $F_{p_{i}}$ delle masse applicate alla molla, come riportato nella quinta colonna della tabella, e anche il rapporto $k_{i} = \frac{F_{p_{i}}}{x_{i}}$. Abbiamo anche stimato l'incertezza $\delta_{k_{i}}$ riguardante la costante elastica relativa ai vari pesi mediante la regola pr la propagazione delle incertezze sui rapporti di misure indipendenti:
@@ -133,7 +133,7 @@ Abbiamo calcolato la $F_{p_{i}}$ delle masse applicate alla molla, come riportat
 	\left(\frac{\delta {k_{i}}}{k_{i}}\right)^2  =  \left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2  +  \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2 
 \end{equation*}
 Queste incertezze sono riportate sulla sesta colonna della tabella e come si può osservare queste non risultano essere tutte uguali. In particolar modo abbiamo che il contributo dell'incertezza relativa al peso sull'incertezza complessiva è trascurabile.\\
-Ottenuti quindi tutti questi valori differenti di k per riunirli tutti in un unico valore che riassuma l'esito di tutte queste misurazioni abbiamo deciso di adottare due procedure differenti e verificare quele ci avrebbe dato il risultato più reciso e perchè.\\
+Ottenuti quindi tutti questi valori differenti di k per riunirli in un unico valore che riassuma l'esito complessivo di queste misurazioni abbiamo deciso di adottare due procedure differenti e verificare quele ci avrebbe dato il risultato più reciso e perchè.\\
 Il primo metodo che prendiamo in considerazione è quello di calcolare la media pesata dei valori $k_{i}$ e per farlo ci serviremo delle seguenti formule:
 
 \begin{equation}
@@ -147,11 +147,47 @@ Quindi con i dati a nostra disposizione abbiamo otteuto i seguenti risultati:
 	\item{  $  \delta k_0 = 0.0143 \,\, N/m  $  }
 \end{itemize}
 
+Il secondo metodo che addottiamo per il calcolo della costante elastica della molla elicoidale è quello di considerare la distribuzine dei valori $K_i$, ovvero se ne deve calcolare la media campionaria $m^*_k$ e stimarne lo scarto quadratico medio. In questo modo otteniamo:
 
-	
-	
-	
-	
-	
-	
-	
+\begin{equation*}
+	k_0 \,\,=\,\, m^*_k \,\,=\,\, \frac{1}{13}\,\,\sum_{i=1}^{13} (k_i) \,\,=\,\, 9.58 \,\,N/m
+\end{equation*}
+\begin{equation*}
+	\delta k_0 \,\,=\,\, \sigma_{k_0} \,=\, \sqrt{\frac{1}{13}\,\,\sum_{i=1}^{13} (k_i - m^*_k)^2} \,\,=\,\, 0.156 \,\,N/m
+\end{equation*}
+Quindi mettendo a confronto queste due procedure e aiutandoci con i dati riportati in tabella possiamo osservare che la media pesata sembrerebbe essere la procedura che meglio approssima il risultato dell'esperimento. Affermiamo questo perchè dalla tabella si può oservare che le prime quattro misurazioni fatte risultano avere un incertezza sulla costante elastica dieci volte superiore alle altre misure effettuate, e quindi ci sembra doveroso che nel calcolo di $k_0$ si tenga in considerazione della differente accuratezza delle misure dando più importanza a quelle con un incertezza inferiore rispetto alle altre.
+
+Una spiegazione al perchè in queste prime quattro misure l'incertezza risulti essere maggiore rispetto alle altre si può trovare nel fatto che i carichi appesi alla molla non fossero sufficientemente importanti, e quindi la molla non [ha lavorato correttamente.]. Nonostante questo però non possiamo dire che la legge di Hooke non sia valida nel regime di carichi "relativamente bassi": infatti per quanto si può osservare dai dati raccolti l'alungamento della molla ha avuto un andamento lineare sin dall'inizio delle misurazioni.
+
+\subsubsection{Calcolo della costante elastica K a partire dal grafico}
+Ricordando le seguenti relazioni:
+
+\begin{equation*}
+	x \,\,=\,\, bF_p \,\,\,\,\,ovvero\,\,\,\,\, F_p \,\,=\,\, kx \,\,\,\,\,pertanto\,\,\,\,\, b \,\,=\,\, \frac{1}{k}
+\end{equation*}
+possiamo procedere al calcolo della costante elastica k a partire direttamente dal garfico. Per farlo però e necessario stare attenti al fatto che i punti sperimentali sono affetti da incertezza, pertanto per trovare la retta che meglio approssima il loro andameno i possono seguire due procedure distinte:
+
+\paragraph{Prima procedura: Metodo della retta minima e massima\\\\}
+Come suggerisce il titolo si tratta di una procedura molto semplice e molto veloce, ma anche abbastanza imprecisa in quanto consiste nel misurare la pendenza della retta massima e della retta minima direttamente dal grafico e successivamente calcolarne la media per ottenere il valore medio $k_0$. Per ottene l'icertezza su $k_0$ basta fare la differenza tra i due valori massimo e minimo e dividere per due.\\
+Nel caso in cui le barre d'errore risultessero troppo piccole da rendere impossibile distinguere le due rette [come nel nostro caso] allora il calcolo di $k_0$ risulterebbe immediato in quanto sarebbe la pendenza della retta.\\
+Pertanto seguendo questa procedura otteniamo:
+
+[Vediamo cosa otteniamo]
+
+\paragraph{Seconda procedura: Regressione lineare\\\\}
+Questa procedura risulta essere più precisa della precedente e si basa sul metodo dei minimi quadrati.\\
+La stima migliore del coefficiente angolare b è data dal valore che rende mnima la discrepanza tra i punti sperientli $F_{p_i} \,\,e\,\, x_i$ e la retta $x \,=\, bF_p$.\\
+Procediamo operativamente in questo modo:
+\begin{itemize}
+	\item{procedimo con la misura della discrepanza:
+			\begin{equation*}
+				discrepanza \,\,=\,\, \sum_{i=1}^{13} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2} \,\,=\,\,		
+			\end{equation*}
+			ricordando che consideriamo le incertezze $\delta F_{p_i}$ trascurabili rispetto alle incertezze $\delta x_i$. [non sono sicuro su quale sia trascurabile] Notiamo inoltre che le incertezze si $x_i$ hanno tutte lo stesso valore}
+	\item{a}
+\end{itemize}
+
+
+
+
+
