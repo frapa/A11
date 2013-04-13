@@ -23,10 +23,8 @@ dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g 
 Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
 Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte. Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro, si è misurata la massa complessiva di ogni combinazione. Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre le combinazioni in un secondo momento. Le combinazioni sono riportate nella tabella \ref{tab:masse}.
 =======
-dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g = 9.806\,\,m\,s^{-2}$.
-
-Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
-Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte. Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro, si è misurata la massa complessiva di ogni combinazione. Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre le combinazioni in un secondo momento. Le combinazioni sono riportate nella tabella \ref{tab:masse}.
+dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore di: $g = 9.806\,\,m\,s^{-2}$.
+Innanzitutto abbiamo verificato che la massa degli otto cilindri a nostra disposizione fosse uguale a quella nominale riportata sugli stessi, scoprendo così delle discrepanze dell'ordine di qualche decimo di grammo. Per evitare di dover propagare gli errori sono state scelte tredici combinazioni di cilindri e si è misurata la massa complessiva di ogni combinazione.\\
 Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre le combinazioni in un secondo momento. Le combinazioni sono riportate nella tabella \ref{tab:masse}.
 >>>>>>> 0ca8f4aa259e95aa8ef6752810bc3e3b2b891ecf
 
