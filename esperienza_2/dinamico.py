@@ -41,18 +41,24 @@ B =  4.0605
 #print "\t", "\n\t".join(map(str, medie_periodi_2))
 
 chi_2 = sum([(mp - A - B * m)**2 / sp**2 for mp, m, sp in zip(medie_periodi_2, masse, sigma_periodi_2)])
-print chi_2
+sigma_chi_teo = sqrt(2*12)
+print "chi^2:", chi_2
+print "chi^2 teorico:", 12, "pm", sigma_chi_teo
+
+R = abs(chi_2 - 12)
+print R
+print 2.5*sigma_chi_teo
 
 if mpl:
     f1 = plt.figure(figsize=(8, 6))
     f1.suptitle("Pesi e allungamenti", y=0.93, fontsize=15)
 
     ax = f1.add_subplot(1, 1, 1)
-    dots = ax.errorbar(x=masse, y=medie_periodi_2, #[p - (A + B*m) for p, m in zip(medie_periodi_2, masse)],
+    dots = ax.errorbar(x=masse, y=[p - (A + B*m) for p, m in zip(medie_periodi_2, masse)],
         yerr=sigma_periodi_2, #xerr=sigma_res_p, 
-        )#fmt='o')
+        fmt='o')
 
-    fit1 = ax.errorbar(x=(0.02, 0.179999), y=(A + B*0.02, A + B*0.18))
+    #fit1 = ax.errorbar(x=(0.02, 0.179999), y=(A + B*0.02, A + B*0.18))
     #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
     #ax.errorbar(x=(0, 1.4), y=(0, (b-sigma_b)*1.4))
     #ax.errorbar(x=(0, 1.4), y=(0, (b+sigma_b)*1.4))
