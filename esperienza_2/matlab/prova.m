@@ -22,12 +22,11 @@ endfor
 sigma_periodi = sqrt(d ./ (N - 1));
 
 % eleviamo al quadrato
-periodi_2 = periodi .^ 2;
-medie_periodi_2 = mean(periodi_2, 2)
+medie_periodi_2 = medie_periodi .^ 2;
 sigma_periodi_2 = 2 * medie_periodi .* sigma_periodi;
 
-errorbar(masse, medie_periodi, sigma_periodi)
-errorbar(masse, medie_periodi_2, sigma_periodi_2)
+#errorbar(masse, medie_periodi, sigma_periodi)
+#errorbar(masse, medie_periodi_2, sigma_periodi_2)
 
 % funziona, non toccare!
 % sto usando il metodo dell'inversa per calcolare le solzioni 
@@ -52,13 +51,11 @@ m_e_C = A / B % equivalente
 k_n = (2 * pi) ^ 2 / B
 m_e_2pi = (A * k) / (2 * pi) ^ 2
 
-chi_2 = sum(((sigma_periodi_2 - A - B*masse) .^ 2) ./ (sigma_periodi_2))
+chi_2 = sum(((medie_periodi_2 - A - B*masse) .^ 2) ./ (sigma_periodi_2 .^ 2))
 
 % prova correzione
 nu = 12;
 corr = chi_2 / nu
 
-sigma_periodi_2_corr = corr .* sigma_periodi_2;
-sigma_periodi_corr = sqrt(sigma_periodi_2_corr);
-chi_2_corr = sum(((sigma_periodi_2 - A - B*masse) .^ 2) ./
-	(sigma_periodi_2_corr))
+chi_2_corr = sum(((medie_periodi_2 - A - B*masse) .^ 2) ./
+	(corr * (sigma_periodi_2 .^ 2)))

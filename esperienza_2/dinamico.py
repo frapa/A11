@@ -27,24 +27,32 @@ with open("dati/dyn_masse.csv") as f:
 
             periodi.append([float(p) / 10 for p in row[1:]])
 
-medie_periodi = [sum(ps)/len(ps) for ps in periodi]
-medie_periodi_2 = [mp**2 for mp in medie_periodi]
+#periodi_2 = [[p**2 for p in ps] for ps in periodi]
 
-sigma_periodi = [ for ps in periodi]
+medie_periodi = [sum(ps)/len(ps) for ps in periodi]
+medie_periodi_2 = [p**2 for p in medie_periodi]#[sum(ps)/len(ps) for ps in periodi_2]
+
+sigma_periodi = [sqrt(1.0/(len(periodi[0]) - 1)*sum([(p - mp)**2 for p in ps])) for ps, mp in zip(periodi, medie_periodi)]
+sigma_periodi_2 = [2*mp*sp for mp, sp in zip(medie_periodi, sigma_periodi)]
+
+A =  0.033628
+B =  4.0605
+
+#print "\t", "\n\t".join(map(str, medie_periodi_2))
+
+chi_2 = sum([(mp - A - B * m)**2 / sp**2 for mp, m, sp in zip(medie_periodi_2, masse, sigma_periodi_2)])
+print chi_2
 
 if mpl:
     f1 = plt.figure(figsize=(8, 6))
     f1.suptitle("Pesi e allungamenti", y=0.93, fontsize=15)
 
-    A =  0.033628
-    B =  4.0605
-
     ax = f1.add_subplot(1, 1, 1)
-    dots = ax.errorbar(x=masse, y=[p - (A + B*m) for p, m in zip(medie_periodi_2, masse)],
-        yerr=sigma_res_l, #xerr=sigma_res_p, 
-        fmt='o')
+    dots = ax.errorbar(x=masse, y=medie_periodi_2, #[p - (A + B*m) for p, m in zip(medie_periodi_2, masse)],
+        yerr=sigma_periodi_2, #xerr=sigma_res_p, 
+        )#fmt='o')
 
-    #fit1 = ax.errorbar(x=(0.02, 0.179999), y=(A + B*0.02, A + B*0.18))
+    fit1 = ax.errorbar(x=(0.02, 0.179999), y=(A + B*0.02, A + B*0.18))
     #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
     #ax.errorbar(x=(0, 1.4), y=(0, (b-sigma_b)*1.4))
     #ax.errorbar(x=(0, 1.4), y=(0, (b+sigma_b)*1.4))

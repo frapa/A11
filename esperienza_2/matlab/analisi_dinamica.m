@@ -96,7 +96,8 @@ chi2 % adesso viene 0.01! ma che cavolo sta succedendo?
 % se metti il giusto valore di B viene una roba x 10^4 ... qui ci sono
 % evidenti errori di calcolo... :-(
 % la cosa divertente è che facendo come viene a me il chi quadro
-% viene 470... il che mi fa pensare che ho sbagliato anche io...
+% viene 1.5... il che mi fa pensare che ho sbagliato anche io...
+% oddio... 1.5 non è proprio male, però è ancora un po' lontano perché bisogna dividere circa per 3 le incertezze...
 
 %errorbar(dyn_data(1,:),(mTi .- A .- ( B .* dyn_data(1,:) )), dyt,dTi, '~>')
 
