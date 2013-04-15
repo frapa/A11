@@ -9,36 +9,32 @@ g = 9.806;
 % 	porto i dati nelle unità del SI (g --> kg)
 dyn_data(:,1) = dyn_data(:,1) ./ 1000;
 % 	trasformo le masse in pesi (kg --> N) e traspongo la matrice
-dyn_data(:,1) = dyn_data(:,1)  .* g;
+%dyn_data(:,1) = dyn_data(:,1)  .* g;
 dyn_data = dyn_data';
 dyn_data(2:16,:) = dyn_data(2:16,:) ./ 10;
 
 %	calcolo l'errore sui pesi
-dPi= ones(1,14) .* 0.1 /1000 .*g;
+dPi= ones(1,14) .* 0.1 /1000; %.*g;
 
 % 	creo i valori medi di ogni periodo
-mTi = mean(dyn_data(2:16,:));
+mTi = mean(dyn_data(2:16,:))
 
 
 % 	cerco la deviazione standard dei periodi
+dTi = sqrt(sum( (dyn_data(2:16,:) .- (mTi .* ones(15,14))).^2 )./14);
+%dTi = dTi .+ (0.001*0.3);
+%	sommo l'errore casuale a quello di risoluzione
+dTi = sqrt((dTi.^2 .+ (0.001.^2/12))./14)
 
-% bsxfun(@minus,dyn_data(2:16,:),mTi);
-% (bsxfun(@minus,dyn_data(2:16,:),mTi)).^2;
-% sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2);
-% sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2) ./ 15;
-dTi = sqrt(sum((bsxfun(@minus,dyn_data(2:16,:),mTi)).^2) ./ 15);
-%dTi = dTi .+ (0.0001*0.3);
 
+%	calcolo la devazione standard di Tau^2
+dTi2 = (mTi .* dTi) .* 2;
 
 % 	plotto il grafico:
 % 	parabola
 %errorbar(dyn_data(1,:),mTi, dPi,dTi, '~>')
 % 	retta
-%errorbar(dyn_data(1,:),(mTi.^2),dPi,(dTi.^2), '~>')
-
-%	calcolo la devazione standard di Tau^2
-dTi2 = (mTi .* dTi) .* 2;
-
+errorbar(dyn_data(1,:), (mTi.^2), dPi, dTi2, '~>');
 
 % 	---------------- 4.4.12 !!! roba nuova !!! ----------------
 % 	calcolo i pesi wi per dTi2
@@ -48,29 +44,32 @@ wi = dTi2 .^(-2);
 % 	xi = dyn_data(1,:) ---- yi = mTi.^2
 % 	x ≡ m, y ≡ T^2 , A ≡ C^2 me /k, B ≡ C^2 /k.
 % 	δxi ≡ δmi ---- δyi ≡ δTi2
-%	osservo che δxi << δyi? secondo me no...
-		% asd = (dTi2)'; % asd2 = (dPi)'; % asd3 = [asd asd2]'
+%	osservo che δxi << δyi?	secondo me se...
+
+%	{		secondo me no...
+		 % asd = (dTi2)';  asd2 = (dPi)'; asd3 = [asd asd2]'
 %	pertanto...
 
 %	stimo il valore di B con i dai sulla molla ottenuti dalla precedente esperienza
 %	poiché dPi non è trascurabile rispetto a dTi2, infatti
-%[dPi' dTi2' (dPi' ./ dTi2')]
+
 %mean(dPi' ./ dTi2')
-B = 4 * pi^2/ 9.64;
+%B = 4 * pi^2/ 9.64;
+%[dPi' dTi2' (dPi'.* B ./ dTi2')]
 
 %	ottengo quindi i valori per l'incertezza trasferita (dytr)
-dytr = dPi .* B;
+%dytr = dPi .* B;
 %	e calcolo quindi la nuova incertezza totale (dyt) e i nuovi pesi (sovrascrivo wi)
-dyt = ((dytr.^2 + dTi2.^2)/2).^(0.5);
+%dyt = ((dytr.^2 + dTi2.^2)/2).^(0.5);
 
-wi = dyt .^ (-2);
+%wi = dyt .^ (-2);
+%	}
 
 % 	attenzione! non sapendo che lettera mettere per il denominatore ho usato la 'Q' a caso
 %	calcolo quindi A e B (finalmente?)
-Q = (sum(wi)) * (sum(wi .* (dyn_data(1,:)).^2) ) - ( sum(wi .* dyn_data(1,:)) )^2;
+Q = sum(wi) * sum(wi .* (dyn_data(1,:).^2)) - sum(wi .* dyn_data(1,:))^2
 A = ( ( sum(wi .* (dyn_data(1,:)).^2) )*( sum(wi .* (mTi.^2)) ) - (sum(wi .* dyn_data(1,:)))*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) ) / Q
-% c'è un errore B è fuori di un fattore 10 circa...
-B = ( ( sum(wi) )*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) - (sum(wi .* dyn_data(1,:)))*( sum(wi .* (mTi.^2) ) ) ) / Q
+B = ( ( sum(wi)*sum(wi .* dyn_data(1,:) .* (mTi.^2)) ) - ( sum(wi .* dyn_data(1,:))*sum(wi .* (mTi.^2)) ) ) / Q
 
 %	calcolo la deviazione di A e B
 dA2 = ( sum(wi .* (dyn_data(1,:)).^2) ) / Q;
@@ -88,18 +87,8 @@ me = A  / B
 %dC =
 %dme =
 
+chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) .* (wi));
+chi2 % adesso viene ~19.5
 
-
-%chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) .* (wi));
-chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) ./ (dyt));
-chi2 % adesso viene 0.01! ma che cavolo sta succedendo?
-% se metti il giusto valore di B viene una roba x 10^4 ... qui ci sono
-% evidenti errori di calcolo... :-(
-% la cosa divertente è che facendo come viene a me il chi quadro
-% viene 1.5... il che mi fa pensare che ho sbagliato anche io...
-% oddio... 1.5 non è proprio male, però è ancora un po' lontano perché bisogna dividere circa per 3 le incertezze...
-
-%errorbar(dyn_data(1,:),(mTi .- A .- ( B .* dyn_data(1,:) )), dyt,dTi, '~>')
-
-%	che è sta formula?
-%	A = sum( (mTi.^2 - dyn_data(1,:).*(4 * pi^2 / 9.64)) ./ (dTi2).^2 )
+%	grafico della distanza tra la predizione e i dati
+%errorbar(dyn_data(1,:),(mTi.^2) .- A .- ( B .* dyn_data(1,:) ),dPi,dTi2, '~>');
