@@ -25,6 +25,9 @@ sigma_periodi = sqrt(d ./ (N - 1));
 medie_periodi_2 = medie_periodi .^ 2;
 sigma_periodi_2 = 2 * medie_periodi .* sigma_periodi;
 
+#errorbar(masse, medie_periodi, sigma_periodi)
+#errorbar(masse, medie_periodi_2, sigma_periodi_2)
+
 % funziona, non toccare!
 % sto usando il metodo dell'inversa per calcolare le solzioni 
 % e questo costruisce la matrice (non tutto oin una riga!)
@@ -39,9 +42,20 @@ noto =  [sum(medie_periodi_2 ./ (sigma_periodi_2 .^ 2));
 	sum(masse .* medie_periodi_2 ./ (sigma_periodi_2 .^ 2))];
 
 risultato = inv(M) * noto;
-A = risultato(1);
-B = risultato(2);
+A = risultato(1)
+B = risultato(2)
 
-m_e = (A * k) / (2 * pi) ^ 2
+C = sqrt(B * k)
+m_e_C = (A * k) / C ^ 2
+m_e_C = A / B % equivalente
 k_n = (2 * pi) ^ 2 / B
+m_e_2pi = (A * k) / (2 * pi) ^ 2
 
+chi_2 = sum(((medie_periodi_2 - A - B*masse) .^ 2) ./ (sigma_periodi_2 .^ 2))
+
+% prova correzione
+nu = 12;
+corr = chi_2 / nu
+
+chi_2_corr = sum(((medie_periodi_2 - A - B*masse) .^ 2) ./
+	(corr * (sigma_periodi_2 .^ 2)))
