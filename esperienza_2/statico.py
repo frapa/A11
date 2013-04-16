@@ -40,7 +40,7 @@ sigma_res_l = res_l / sqrt(6)
 ks = [p_i/x_i for p_i, x_i in zip(pesi, allungamenti)]
 sigma_ks = [sqrt(sigma_res_p**2 / p_i**2 + sigma_res_l**2 / x_i**2) * k_i
     for p_i, x_i, k_i in zip(pesi, allungamenti, ks)]
-sigma_ks_without = [sqrt(sigma_res_l**2 / x_i**2) * k_i
+sigma_ks_without = [sigma_res_l / x_i * k_i
     for x_i, k_i in zip(allungamenti, ks)]
 
 # media pesata
@@ -171,8 +171,10 @@ elif cmd == "-g":
     ax.set_ylabel(u'Allungamento [m]', labelpad=6, fontsize=14)
     ax.grid(True)
     ax.set_xticks((0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4))
+    ax.set_yticks((0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16))
+    ax.text(-0.03, -0.005, "0")
 
-    ax.legend((dots, fit1), ("Dati misurati", "Media pesata"), 'upper left',
+    ax.legend((dots, fit1), ("Dati misurati", "Retta di fit"), 'upper left',
         prop={'size': 12})
 
     f1.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
