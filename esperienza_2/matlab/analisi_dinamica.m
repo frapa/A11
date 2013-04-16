@@ -17,14 +17,18 @@ dyn_data(2:16,:) = dyn_data(2:16,:) ./ 10;
 dPi= ones(1,14) .* 0.1 /1000; %.*g;
 
 % 	creo i valori medi di ogni periodo
-mTi = mean(dyn_data(2:16,:))
+mTi = mean(dyn_data(2:16,:));
 
 
 % 	cerco la deviazione standard dei periodi
 dTi = sqrt(sum( (dyn_data(2:16,:) .- (mTi .* ones(15,14))).^2 )./14);
-%dTi = dTi .+ (0.001*0.3);
+%	e deviazione standard risoluzione
+dTris = 0.001 * 0.3;
+%dTi = sqrt((dTi.^2) .+ (dTris^2)) ./ sqrt(14);
 %	sommo l'errore casuale a quello di risoluzione
-dTi = sqrt((dTi.^2 .+ (0.001.^2/12))./14)
+%dTi = sqrt((dTi.^2) .+ (dTris^2)) ./ sqrt(14);
+%dTi = sqrt( ((dTi.^2)./14) .+ ((dTris^2)/196) );
+dTi = sqrt(dTi.^2./15 .+ dTris.^2);
 
 
 %	calcolo la devazione standard di Tau^2
@@ -34,7 +38,7 @@ dTi2 = (mTi .* dTi) .* 2;
 % 	parabola
 %errorbar(dyn_data(1,:),mTi, dPi,dTi, '~>')
 % 	retta
-errorbar(dyn_data(1,:), (mTi.^2), dPi, dTi2, '~>');
+%errorbar(dyn_data(1,:), (mTi.^2), dPi, dTi2, '~>');
 
 % 	---------------- 4.4.12 !!! roba nuova !!! ----------------
 % 	calcolo i pesi wi per dTi2
@@ -65,30 +69,38 @@ wi = dTi2 .^(-2);
 %wi = dyt .^ (-2);
 %	}
 
-% 	attenzione! non sapendo che lettera mettere per il denominatore ho usato la 'Q' a caso
-%	calcolo quindi A e B (finalmente?)
-Q = sum(wi) * sum(wi .* (dyn_data(1,:).^2)) - sum(wi .* dyn_data(1,:))^2
-A = ( ( sum(wi .* (dyn_data(1,:)).^2) )*( sum(wi .* (mTi.^2)) ) - (sum(wi .* dyn_data(1,:)))*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) ) / Q
-B = ( ( sum(wi)*sum(wi .* dyn_data(1,:) .* (mTi.^2)) ) - ( sum(wi .* dyn_data(1,:))*sum(wi .* (mTi.^2)) ) ) / Q
+%	attenzione! non sapendo che lettera mettere per il denominatore ho usato la 'Q' a caso
+%	calcolo quindi A e B (finalmente?),
+Q = sum(wi) * sum(wi .* (dyn_data(1,:).^2)) - sum(wi .* dyn_data(1,:))^2;
+A = ( ( sum(wi .* (dyn_data(1,:)).^2) )*( sum(wi .* (mTi.^2)) ) - (sum(wi .* dyn_data(1,:)))*(sum(wi .* dyn_data(1,:) .* (mTi.^2) )) ) / Q;
+B = ( ( sum(wi)*sum(wi .* dyn_data(1,:) .* (mTi.^2)) ) - ( sum(wi .* dyn_data(1,:))*sum(wi .* (mTi.^2)) ) ) / Q;
 
 %	calcolo la deviazione di A e B
-dA2 = ( sum(wi .* (dyn_data(1,:)).^2) ) / Q;
-dB2 = ( sum(wi) ) / Q;
+dA2 = sqrt(( sum(wi .* (dyn_data(1,:)).^2) ) / Q);
+dB2 = sqrt(( sum(wi) ) / Q);
 
-#'A e dA2'
-%[A dA2]
-#'B e dB2'
-%[B dB2]
+display( [A dA2] )
+display( [B dB2] )
 
+'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+display("")
 %	Calcolo C e me da A e B
 k = 9.64;
 C = sqrt(B * k)
+dC = sqrt(k/B)*dB2/2
 me = A  / B
-%dC =
-%dme =
+dme = sqrt(B^(-2)*dA2^2 + A^2*B^(-4)*dB2^2)
+mu = 3*me
+dmu = 3*dme
+'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+k = 4*(pi^2)/B;
+dk = 4*pi^2*B^(-2)*dB2;
+
+k
+dk
 
 chi2 = sum ((((mTi.^2) .- A .- ( B .* dyn_data(1,:) )).^2) .* (wi));
-chi2 % adesso viene ~19.5
+chi2 % adesso viene ~21
 
 %	grafico della distanza tra la predizione e i dati
 %errorbar(dyn_data(1,:),(mTi.^2) .- A .- ( B .* dyn_data(1,:) ),dPi,dTi2, '~>');
