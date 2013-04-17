@@ -28,12 +28,88 @@ Al contrario se il nostro apparato sperimentle non si potesse semplificare al mo
 dove $\mathcal{C}$ rappresenta una costante differente da $2 \pi$ che non si può determinare mediante una semplice analisi dimensionale, ma che sicuramente terrà conto anche dell'ampiezza.
 
 \subsection{Studio quantitativo del moto oscillatorio}
+[principalmente servono grafici e tabelle. la parte di commento è molto ridotta]
+\subsection{Massa efficace della molla}
+Grazie ai grafici del paragrafo precedente possiamo notare che la retta che meglio interpreta i punti sperimentali nel grafico che rappresenta $\mathcal{T}^2$ in funzione della massa non passa per l'origine, ma interseca l'asse delle ascisse in corrispondenza di un valore negativo che definiamo come $- m_e$, che è la massa efficace della molla.
+Noi sappiamo che un molla in sospensione a riposo è comunque soggetta a uno sforzo in quanto, avendo un propria massa, le spire sono sottoposte alla forza peso dovuta alla molla stessa. Questo effetto apparentemente complicato si può semplificare affermando che lo sforzo compiuto dalla molla può essere paragonato all'effetto che darebbe una massa di valore ($m_e$) appesa alla molla. Pertanto grazie allo studio del grafico abbiamo trovato un valore della massa efficace che risulta essere:
 
+\begin{equation*}
+	m_e \,\,=\,\, 8 grammi
+\end{equation*}
+%
+Per questo motivo è doveroso modificare l'equazione
 
+\begin{equation*}
+	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{m}{k}}
+\end{equation*}
+%
+sostituendo a m (la massa allpicata) con $M = m + m_e$ per cui noi otteniamo quanto segue:
 
+\begin{equation*}
+	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{M}{k}}
+\end{equation*}
+%
+e quindi la legge lineare che dipende da $\mathcal{T}^2$ e dalla massa (M) data dalla somma dei carichi applicati (m) e la massa efficace della molla ($m_e$).
 
+\subsection{Calcolo dei parametri $\mathcal{C}$ e $m_e$ mediante il metodo della regressione lineare}
+Prendiamo in considerazione la seguente legge:
 
- 
+\begin{equation*}
+	\mathcal{T}^2 \,\,=\,\, \frac{\mathcal{C}^2}{k} m_e \,+\, \frac{\mathcal{C}^2}{k} m
+\end{equation*}
+%
+la cui scrittura può essere semplificata nel seguente modo:
+
+\begin{equation*}
+	y \,=\, A \,+\, Bx
+\end{equation*}
+%
+dove $x \equiv m$ (massa appesa) $y \equiv \mathcal{T}^2$, $A \equiv \frac{\mathcal{C}^2}{k} m_e$ e $B \equiv \frac{\mathcal{C}^2}{k}$.
+Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza mediante la tecnica della regressione lineare pertanto procediamo con il metodo utilizzato anche nella sezione due.
+\begin{itemize}
+\item{calcoliamo la discrepanza:
+		\begin{equation*}
+			discrepanza \,=\, \sum_{i=1}^{13} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
+		\end{equation*}
+		%
+		ricordando che l'incertezza sull'asse delle ascisse è la stessa incertezza sulla massa ovvero $\delta m_i$ che in questa analisi poniamo uguli a $\delta x_i$ e che risulta trascurabile [è vero?????] rispetto all'incertezza che dellasse delle ordinate $\delta y_i \equiv \delta \mathcal{T}^2$}
+\item{quindi per quanto studiato in classe abbiamo che:
+		\begin{equation*}
+			A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w-i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\,
+		\end{equation*}
+		%
+		\begin{equation*}
+			B \,=\, \frac{(\sum_i w_i)(\sum_i w-i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\,
+		\end{equation*}
+		%
+		dove:
+		\begin{equation*}
+			\Delta \,=\, (\sum_i w_i)(\sum_i w_i x_i^2) - (\sum_i w_i x_i)^2 \,\,\,\,\,\,\, e \,\,\,\,\,\,\,
+			w_i \,=\, \frac{1}{(\delta y_i)^2}
+		\end{equation*}}
+\item{di conseguenza abbiamo che le incertezze relative su A e B sono:
+
+		\begin{equation*}
+			(\delta A)^2 \,=\, \frac{\sum_i w_i x_i^2}{\Delta} \,=\,  \,\,\,\,\, e \,\,\,\,\,
+			(\delta B)^2 \,=\, \frac{\sum_i w_i}{\Delta} \,=\,
+		\end{equation*}}
+\end{itemize} 
+Quindi possiamo riassumere i risultati di questa procedura in questo modo:
+
+\begin{equation*}
+	A \,\pm\, \delta A \,=\, \pm \,\,\,\,\, e \,\,\,\,\,
+	B \,\pm\, \delta B \,=\, \pm
+\end{equation*}
+Perciò noti questi parametri possiamo risalire ai valoti di $\mathcal{C}$ e $k$ risolvendo l'equazione in (... inizio ...) e utilizzando come valore di k quello trovato nell'analisi dati della sezine precedente ovvero $K = ...$
+
+\subsection{Test del chi quadro}
+Procediamo ora a verificare che i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quaro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i datisperimentali A e B. Pertanti ci aspettiamo che:
+
+\begin{equation*}
+	\chi^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,\simeq\, N - 2
+\end{equation*}
+%
+
 
 
 

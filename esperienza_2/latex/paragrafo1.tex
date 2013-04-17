@@ -16,7 +16,7 @@ Ritenendo essere noto che una forza F di trazione o compressione applicata, nel 
 \begin{equation}
 	F_{p} = mg
 \end{equation}
-
+%
 dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g = 9.806\,\,m\,s^{-2}$.
 
 Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
@@ -41,7 +41,7 @@ Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da 
 
 Completata la classificazione dei pesi, abbiamo scelto la molla di cui calcolare la
 costante elastica. Abbiamo notato che una di esse era molto ``morbida'' per i carichi che saremmo
-andati ad applicare e si deformava in visibilmente anche con carichi piccoli, rendendo impossibili
+andati ad applicare e si deformava visibilmente anche con carichi piccoli, rendendo impossibili
 le misure di deformazione dei carichi più grandi per questioni di spazio.
 La abbiamo quindi scartata, anche perché sarebbe stata suscettibile di deformazione
 plastica che avrebbe compromesso la buona riuscita dell'esperimento.
@@ -82,12 +82,12 @@ E' importante sottolineare che la massa dei nostri tredici pesi è data da una c
 \end{equation*}
 abbiamo deciso di non usare l'incertezza tipo sull'errore di misurazione in quanto, come detto sopra, le misure potevano non risultare così fedeli in quanto soggette anche a variazioni repentine dell'ambiente esterno.
 Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
-Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
+Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
 
 \begin{equation*}
 	\delta F_{p}\, =\, g\,\delta m_i
 \end{equation*}
-Per quanto riguarda gli errori (relativi all'errore) di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
+Per quanto riguarda gli errori di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
 E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad uan leggere oscillazione. Questo continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.
 
 \subsubsection{Analisi di dati:}
@@ -105,13 +105,15 @@ Affermiamo questo perchè prendendo per esempio la massa da "55 g" possiamo oser
 quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
 
 \begin{equation*}
-	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.6/, cm
+	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.6\, cm
 \end{equation*}
+%
 e l'incertezza su questo valore è la seguente:
 
 \begin{equation*}
-	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 0.1/, cm
+	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 0.1\, cm
 \end{equation*}
+%
 Con questi valori possiamo pertanto valutare se la media delle misure ottenute dalla procedura di carico e scarico è compatibile con la misura ottenuta durante il primo ciclo di misurazione. Posto a priori un fattore di copertura k = 1.5 andiamo a verificare che il resto tra la differenza fra $m^*[x_{all_i}]$ e $x_{all_1}$ risulti essere minore dell'errore relativo al resto moltiplicato per il fattore di copertura.
 Otteniamo quindi:
 
@@ -122,13 +124,14 @@ Otteniamo quindi:
 \begin{equation*}
 	\sigma_{R} = k\,\, \sqrt{(\sigma[x_{all_1}])^2 + (\sigma[m^*[x_{all_i}]])} = 0.2 \,\,cm
 \end{equation*}
+%
 Da questo quindi possiamo dire che $m^*[x_{all_i}]$ e $x_{all_1}$ risultano essere compatibili, e compatibii sono anche le misure che abbiamo ottenuto per fare la media dei cicli di scarico e carico, sempre utilizzando come fattore di copertura il k scelto in precednza.
 Poiché tale procedura si può estendere anche a tutte le altre misure relative alle masse ottenendo le stesse conclusioni, possiamo desumere che le misure sono tra di loro compatibili e non ci sono state deformazioni della molla.
 Un'importante osservazione che si può fare analizzando \ref{tabella allungamenti} e \ref{tabella carico e scarico} è che per lo stesso carico applicato alla molla le misure dell'allungamento differiscono tra di loro per 0.1 cm. Abbiamo ipotizzato che questa differenza possa essere dovuta principalmente a due elementi:
 
 \begin{enumerate}
 	\item{dal momento che prima di effetuare i cicli di carico e scarico la molla era stata tolta dal supporto assieme al piattello portapesi, è probabile che nel riposizionare l'apparato l'allineamento del piattello portapesi, nella sua posizione di equilibrio, con la tacca dei 50 cm non sia stato perfetto ma sia risultato errato di 0.1 cm;}
-	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escdere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un'operazione così elementare come può sembrare;}
+	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escludere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un'operazione così elementare come può sembrare;}
 \end{enumerate}
 
 \subsubsection{Calcolo della costante elastica K a partire dalla tabella}
