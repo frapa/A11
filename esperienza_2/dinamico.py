@@ -54,17 +54,45 @@ if mpl:
     f1.suptitle("Pesi e allungamenti", y=0.93, fontsize=15)
 
     ax = f1.add_subplot(1, 1, 1)
-    dots = ax.errorbar(x=masse, y=[p - (A + B*m) for p, m in zip(medie_periodi_2, masse)],
-        yerr=sigma_periodi_2, #xerr=sigma_res_p, 
-        fmt='o')
+    dots = ax.errorbar(x=masse, y=[(p - (A + B*m)) * 1000 for p, m in zip(medie_periodi_2, masse)],
+        yerr=[sp2 * 1000 for sp2 in sigma_periodi_2], #xerr=sigma_res_p, 
+        fmt='o', capsize=7)
 
     #fit1 = ax.errorbar(x=(0.02, 0.179999), y=(A + B*0.02, A + B*0.18))
     #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
     #ax.errorbar(x=(0, 1.4), y=(0, (b-sigma_b)*1.4))
     #ax.errorbar(x=(0, 1.4), y=(0, (b+sigma_b)*1.4))
 
-    ax.set_xlabel(u'Peso [N]', labelpad=12, fontsize=14)
-    ax.set_ylabel(u'Allungamento [m]', labelpad=6, fontsize=14)
+    ax.set_xlabel(u'Massa [Kg]', labelpad=12, fontsize=14)
+    ax.set_ylabel(u'Discrepanza [$\\times 10^{-3} s^2$]', labelpad=6, fontsize=14)
     ax.grid(True)
+    ax.set_xticks((0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18))
+
+    f1.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
+    
+    f2 = plt.figure(figsize=(8, 6))
+    f2.suptitle("Periodo al variare della massa", y=0.93, fontsize=15)
+
+    ax2 = f2.add_subplot(1, 1, 1)
+    dots = ax2.errorbar(x=masse, y=medie_periodi_2,
+        #yerr=sigma_periodi_2, #xerr=sigma_res_p, 
+        fmt='o')
+
+    fit1 = ax2.errorbar(x=(-0.01, 0.179999), y=(A + B*-0.01, A + B*0.18))
+    #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
+    #ax.errorbar(x=(0, 1.4), y=(0, (b-sigma_b)*1.4))
+    #ax.errorbar(x=(0, 1.4), y=(0, (b+sigma_b)*1.4))
+
+    ax2.set_xlabel(u'Massa [Kg]', labelpad=12, fontsize=14)
+    ax2.set_ylabel(u'Periodi al quadrato [$s^2$]', labelpad=6, fontsize=14)
+    ax2.grid(True)
+    ax2.set_xticks((0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18))
+    ax2.set_xlim(-0.01, 0.18)
+    ax2.set_ylim(0, 0.8)
+
+    ax2.legend((dots, fit1), ("Dati misurati", "Retta di fit"), 'upper left',
+        prop={'size': 12})
+
+    f2.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
     
     plt.show()

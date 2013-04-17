@@ -3,7 +3,7 @@
 \subsection{Apparato sperimentale}
 L'apparato sperimentale utilizzato è costituito da:
 	\begin{itemize}
-		\item{una base ad A che sostiene un'asta verticale dotata di gancio di sospensione per le molle e asta millimetrata scorrevole. L'asta millimetrata aveva sul lato sinistro una scala con una risoluzione di mezzo millimetro, mentre sul lato destro c'era una scala con una risoluzione di un millimetro.}
+		\item{una base ad A che sostiene un'asta verticale dotata di gancio di sospensione per le molle e asta millimetrata scorrevole. L'asta millimetrata ha sul lato sinistro una scala con una risoluzione di mezzo millimetro, mentre sul lato destro una scala con una risoluzione di un millimetro.}
 		\item{quattro molle elicoidali con costanti elastiche differenti tra di loro: nello specifico una particolarmente ``morbida'', una ``dura'' e due con caratteristiche intermedie.}
 		\item{un piattello portapesi di massa $m_{piattello} = 25.2\,\,g \pm\, 0.1\,\,g$, quattro pesi cilindrici neri rispettivamente di massa nominale 5, 10, 25 e 50 grammi e quattro pesi argentei analoghi a quelli neri, con le stesse masse nominali.}
         \item{una bilancia a un piattello con una risoluzione di 0.1 grammi. (???)}
@@ -20,7 +20,8 @@ Ritenendo essere noto che una forza F di trazione o compressione applicata, nel 
 dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g = 9.806\,\,m\,s^{-2}$.
 
 Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
-Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte. Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro, si è misurata la massa complessiva di ogni combinazione.
+Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte.
+(Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro, si è misurata la massa complessiva di ogni combinazione. ~da eliminare~)
 Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre le combinazioni in un secondo momento. Le masse delle combinazioni sono riportate nella tabella \ref{tab:masse}.
 
 \begin{table}[tb]
@@ -81,6 +82,7 @@ E' importante sottolineare che la massa dei nostri tredici pesi è data da una c
 	\delta m_i = \frac{\Delta m}{2} = 0.05 g 
 \end{equation*}
 abbiamo deciso di non usare l'incertezza tipo sull'errore di misurazione in quanto, come detto sopra, le misure potevano non risultare così fedeli in quanto soggette anche a variazioni repentine dell'ambiente esterno.
+<<<<<<< HEAD
 Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
 Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
 
@@ -89,6 +91,15 @@ Dal momento che per calcolare la costante elastica della molla siamo costretti a
 \end{equation*}
 Per quanto riguarda gli errori di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
 E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad uan leggere oscillazione. Questo continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.
+=======
+Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in anticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
+Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazione $F_{el} = -k\,x$ e poiché nel nostro caso vale $F_{el} = F_{p} = m\,\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
+\begin{equation*}
+	\delta F_{p}\, =\, g\,\delta m_i
+\end{equation*}
+Per quanto riguarda gli errori (relativi all'errore) di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
+E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad una leggera oscillazione. Questo continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.
+>>>>>>> 8cc81a9ec69fc7f07e07fd96261fbf113c340964
 
 \subsubsection{Analisi di dati:}
 Nella \ref{tabella allungamenti} sono riportate le masse applicate alla molla con la loro relativa posizione di equilibrio. Stessa cosa vale per la \ref{tabella carico e scarico}.
