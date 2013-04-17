@@ -1,21 +1,58 @@
 \section{Ricerca della costante elastica della molla: metodo dinamico}
 
 \subsection{Apparato sperimentale}
-L'apparato sperimentale utilizzato per compiere le misurazioni del periodo di oscillazione della molla elicoidale è lo stesso utilizzato per la procedura del metodo dinamico. La configurazione dei pesi è la stessa utilizzata pecedentemente come anche la molla. Da notare che in questo caso il valore delle masse applicate alla molla è stato calcolato misurando assieme la massa del gancio e della massa applicata. Inoltre per questa procedura avevamo a nostra disposizione un cronometro con risoluzione di misura pari a un centesimo di secondo ovvero: 0.01 s.
+
+L'apparato sperimentale e la strumentazione utilizzata per compiere questo secondo esperimento, è la stessa utilizzata per la procedura del metodo statico, eccezion fatta per il cronometro. Il cronometro da noi utilizzato è un normale cronometro con risoluzione di misura di 0.01 s.
 
 \subsection{Procedura di acquisizione dei dati}
-Per calcolare la costante elastica mediante il metodo dinamico dobbiamo avvalerci della relazione che sussiste tra il periodo di oscillazione di una molla e il rapporto tra la massa applicata e la costante elastica della stessa il tutto sotto radice quadrata. Ovvero:
+
+Per calcolare la costante elastica mediante il metodo dinamico ci siamo avvalsi della relazione che sussiste tra il periodo e la massa appesa della stessa, ovvero
 
 \begin{equation}
 	\mathcal{T} = {2\,\pi}{\sqrt{\frac{m}{k}}}
+    \label{eq:pp}
 \end{equation}
 %
-Come si può notare il periodo di oscillazione della molla risulta essere in una proporzionalità quadratica iversa rispetto alla massa applicata alla suddetta. Dal momento che la costante elatica della molla (K) è una costane, allora ci si dovrebbe aspettare che il periodo cresca al crescere della massa appesa, ma non con una proporzionalità diretta poichè la massa risulta essere sotto radice.\\
-Per ottenere quidi il periodo di oscillazione della molla abbiamo agito come segue:
+dove $\mathcal{T}$ indica il periodo e $m$ la massa appesa alla molla.
+
+[Come si può notare dalla formula (\ref{eq:pp}) il periodo di oscillazione della molla è proporzionale alla radice di $m$. Se la costante elatica $k$ della molla è una costante e la legge è corretta, allora ci si dovrebbe aspettare che il periodo cresca al crescere della massa appesa, ma non con una proporzionalità diretta poichè la massa risulta essere sotto radice.]
+
+Per le misurazioni sono state usate le stesse masse e le stesse combinazioni di cilindri scelte nell'esperimento precedente, con una sola differenza: è stata aggiunta una nuova configurazione di pesi di massa complessiva 135 g. Il numero totale delle configurazioni è quindi salito a 14.
+Nella formula (\ref{eq:pp}), $m$ indica la massa complessiva che viene agganciata alla molla, quindi in questo caso si è dovuto tener conto della massa del piattello portapesi. Per evitare di dover propagare gli errori, abbiamo quindi misurato nuovamente la massa delle combinazioni
+con l'aggiunta del piattello. Le masse nominali e pesate sono riportate nella tabella \ref{tab:masse_dinamico}.
+
+Abbiamo quindi appeso le masse scelte alla molla e la abbiamo fatta oscillare.
+Per ottenere il periodo di oscillazione abbiamo agito come segue:
+
 \begin{itemize}
-	\item{abbiamo deciso di cronometrare il perido di dieci oscillazioni della molla poichè abbiamo ritenuto di non essere in grado di rilevare con una precisione accettabile il periodo di una singola oscillazione;}
-	\item{ogni componente del gruppo ha cronometrato per ogni massa cinque cicli di dieci oscillazioni, in modo che alla fine per ogni massa ci siano quindici misure indipendeni di un ciclo da dieci oscillazioni. In questo modo abbiamo ritenuto di poter ottenere una precisione maggiore sulla stima del periodo di oscillazione della molla e anche di evitare possibili errori sistematici dovuti all' azione di un unico sperimentatore.}
+	\item{Si è deciso di cronometrare dieci oscillazioni della molla
+        poichè abbiamo ritenuto di non essere in grado di rilevare con una precisione
+        accettabile il periodo di una singola oscillazione. Questo metodo ha inoltre
+        il pregio di un fattor dieci la risoluzione dello strumento.}
+
+	\item{Per ogni massa sono state rilevate 15 misure di periodo.
+        Ogni componente del gruppo ha cronometrato cinque cicli di dieci oscillazioni. 
+        In questo modo gli errori sistematici dovuti alla prontezza di riflessi degli
+        operatori dovrebbero essere misurabili o quantomeno visibili.}
 \end{itemize}
+
+I valori di lettura del cronometro sono stati divisi per dieci per ottenere i valori reali di periodo dell'oscillatore.
+I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
+
+\begin{table}[b]
+    \centering
+    \footnotesize
+    \begin{tabular}{l | c c c c c c c c c c c c c c}
+        \multicolumn{15}{c}{Masse delle combinazioni di cilindri [g]} \\[1mm]
+        \toprule
+        Nominali & 30 & 40 & 50 & 60 & 70 & 80& 90 & 100 & 110 & 120 & 130 & 140 & 150 & 160 \\
+        Pesate & 30.3 & 40.3 & 50.2 & 60.3 & 70.4 & 80.3 & 90.5 & 100.3 & 110.4 & 120.4 & 130.4 & 140.4 & 150.5 & 160.5 \\
+        \bottomrule
+    \end{tabular}
+    \caption{La tabella riporta le masse nominali e le masse rilavate con la bilancia delle combinazioni di pesi scelte per
+    l'esperimento. Le masse includono il piattello portapesi e i cilindri delle combinazioni.}
+    \label{tab:masse_dinamico}
+\end{table}
 
 \subsection{Studio qualitativo del moto oscillatorio}
 Come ci si aspetta dall'equvalenza (5) provando a mettere in oscillazione le quattro molle elicoidali a nostra disposizione soggette allo stesso carico il periodo di un'oscillazione è abbastanza differente tra l'una e l'altra. Infatti il periodo di oscillazione delle quattro molle, per piccole ampiezze, è differente pechè la loro costante elastica è diversa e questo risulta particolarmente evedente confrontando il periodo di oscillazione tra la molla più dura e quella più morbida. Lo steso discoso vale se alla stessa molla erano applicate masse differenti.
