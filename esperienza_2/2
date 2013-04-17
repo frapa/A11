@@ -185,16 +185,15 @@ elif cmd == "-g":
     f2.suptitle("Discrepanza", y=0.93, fontsize=15)
 
     err2 = ax2.errorbar(x=pesi, y=[(x_i - b*p_i) * 1000 for p_i, x_i in zip(pesi, allungamenti)],
-        yerr=sigma_l_new * 1000, fmt=None, capsize=7)
+        yerr=sigma_l_new * 1000, fmt=None, capsize=7, linewidth=2)
     err1 = ax2.errorbar(x=pesi, y=[(x_i - b*p_i) * 1000 for p_i, x_i in zip(pesi, allungamenti)],
         yerr=sigma_res_l * 1000, fmt='o', capsize=7)
-    ax2.errorbar(x=(-0.1, 1.4), y=(0, 0))
+    ax2.errorbar(x=(0, 1.4), y=(0, 0))
 
     ax2.set_xlabel(u'Peso [N]', labelpad=12, fontsize=14)
     ax2.set_ylabel(u'Discrepanza [mm]', labelpad=6, fontsize=14)
     ax2.grid(True)
-    ax2.set_xticks((0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4))
-    ax2.set_xlim(-0.1, 1.4)
+    ax2.set_xticks((0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4))
 
     ax2.legend((err1, err2), ("Errore standard di risoluzione", "Incertezze corrette"), 'upper right',
         prop={'size': 12}, numpoints=1)
