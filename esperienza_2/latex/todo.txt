@@ -1,4 +1,3 @@
- * modificare abstract
  * apparato sperimentale
  * introduzione periodo pendolo (verifica indiretta Hooke)
  * incertezza complessiva (far vedere che trasferita è trascurabile)
