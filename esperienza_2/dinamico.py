@@ -25,10 +25,10 @@ with open("dati/dyn_masse.csv") as f:
     reader = csv.reader(f)
     for n, row in enumerate(reader):
         if n != 0:
-            masse_raw.append(row[0])
+            masse_raw.append(row[0].strip())
             masse.append(float(row[0]) / 1000.0)
 
-            periodi_raw.append(row[1:])
+            periodi_raw.append([p.strip() for p in row[1:]])
             periodi.append([float(p) / 10 for p in row[1:]])
 
 #periodi_2 = [[p**2 for p in ps] for ps in periodi]
@@ -146,3 +146,7 @@ if mpl:
     plt.show()
 
 print " & ".join(masse_raw), "\\\\"
+print
+
+for n, massa in enumerate(masse_raw):
+    print "\t\t" + massa + " & " + " & ".join(periodi_raw[n]), "\\\\"

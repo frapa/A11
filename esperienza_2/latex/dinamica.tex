@@ -41,9 +41,9 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
 \begin{table}[b]
     \centering
-    \footnotesize
+    \scriptsize
     \begin{tabular}{l | c c c c c c c c c c c c c c}
-        \multicolumn{15}{c}{Masse delle combinazioni di cilindri [g]} \\[1mm]
+        \multicolumn{15}{c}{\small \textbf{Masse delle combinazioni di cilindri [g]}} \\[1mm]
         \toprule
         Nominali & 30 & 40 & 50 & 60 & 70 & 80& 90 & 100 & 110 & 120 & 130 & 140 & 150 & 160 \\
         Pesate & 30.3 & 40.3 & 50.2 & 60.3 & 70.4 & 80.3 & 90.5 & 100.3 & 110.4 & 120.4 & 130.4 & 140.4 & 150.5 & 160.5 \\
@@ -52,6 +52,36 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
     \caption{La tabella riporta le masse nominali e le masse rilavate con la bilancia delle combinazioni di pesi scelte per
     l'esperimento. Le masse includono il piattello portapesi e i cilindri delle combinazioni.}
     \label{tab:masse_dinamico}
+\end{table}
+
+\begin{table}
+    \centering
+    \scriptsize
+    \begin{tabular}{l | c c c c c c c c c c c c c c c}
+        \multicolumn{16}{c}{\small \textbf{Periodi}} \\[1mm]
+        \toprule
+        {\footnotesize Massa [g]} & \multicolumn{15}{c}{\footnotesize Periodi di oscillazione della molla [s]} \\
+        \midrule
+		30.3 & 3.84 & 3.90 & 3.95 & 3.95 & 3.99 & 3.91 & 3.91 & 3.93 & 3.90 & 3.94 & 4.04 & 3.92 & 4.00 & 3.98 & 3.95 \\
+		40.3 & 4.38 & 4.43 & 4.43 & 4.45 & 4.41 & 4.54 & 4.45 & 4.49 & 4.50 & 4.56 & 4.49 & 4.52 & 4.47 & 4.49 & 4.41 \\
+		50.2 & 4.84 & 4.76 & 4.85 & 4.92 & 4.87 & 4.93 & 4.88 & 4.78 & 4.83 & 4.82 & 4.95 & 5.02 & 4.93 & 4.99 & 4.78 \\
+		60.3 & 5.29 & 5.33 & 5.27 & 5.24 & 5.30 & 5.27 & 5.30 & 5.21 & 5.25 & 5.27 & 5.30 & 5.34 & 5.34 & 5.31 & 5.34 \\
+		70.4 & 5.65 & 5.65 & 5.64 & 5.63 & 5.59 & 5.63 & 5.64 & 5.63 & 5.66 & 5.63 & 5.81 & 5.67 & 5.63 & 5.63 & 5.65 \\
+		80.3 & 5.98 & 5.98 & 5.95 & 5.98 & 5.95 & 6.01 & 6.08 & 6.02 & 5.98 & 5.95 & 5.98 & 5.99 & 6.06 & 6.09 & 6.07 \\
+		90.5 & 6.33 & 6.34 & 6.32 & 6.34 & 6.32 & 6.33 & 6.26 & 6.31 & 6.31 & 6.31 & 6.34 & 6.35 & 6.37 & 6.34 & 6.34 \\
+		100.3 & 6.58 & 6.63 & 6.56 & 6.59 & 6.56 & 6.63 & 6.69 & 6.64 & 6.58 & 6.63 & 6.63 & 6.68 & 6.63 & 6.57 & 6.69 \\
+		110.4 & 6.86 & 6.96 & 6.93 & 6.94 & 6.84 & 6.91 & 6.86 & 6.99 & 6.96 & 6.94 & 6.99 & 6.84 & 6.94 & 6.95 & 6.88 \\
+		120.4 & 7.24 & 7.20 & 7.22 & 7.23 & 7.20 & 7.18 & 7.23 & 7.13 & 7.24 & 7.23 & 7.24 & 7.21 & 7.27 & 7.26 & 7.24 \\
+		130.4 & 7.53 & 7.51 & 7.45 & 7.52 & 7.56 & 7.53 & 7.52 & 7.57 & 7.52 & 7.52 & 7.56 & 7.55 & 7.53 & 7.46 & 7.50 \\
+		140.4 & 7.81 & 7.78 & 7.76 & 7.74 & 7.74 & 7.73 & 7.79 & 7.82 & 7.81 & 7.74 & 7.79 & 7.79 & 7.73 & 7.78 & 7.79 \\
+		150.5 & 8.02 & 7.94 & 8.04 & 8.06 & 8.07 & 8.12 & 8.02 & 8.05 & 7.98 & 8.04 & 7.99 & 7.93 & 8.02 & 7.99 & 8.02 \\
+		160.5 & 8.30 & 8.27 & 8.15 & 8.29 & 8.25 & 8.24 & 8.35 & 8.31 & 8.41 & 8.27 & 8.36 & 8.34 & 8.34 & 8.31 & 8.31 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Periodi di oscillazione misurati con masse diverse. Ogni riga riporta le 15 misure effettuate per la massa
+    riportata nella prima colonna della riga stessa. Sono riportati i valori di lettura del cronometro, relativi a 10
+    periodi.}
+    \label{tab:periodi}
 \end{table}
 
 \subsection{Studio qualitativo del moto oscillatorio}
