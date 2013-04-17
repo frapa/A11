@@ -21,8 +21,7 @@ dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g 
 
 Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
 Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte.
-(Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro, si è misurata la massa complessiva di ogni combinazione. ~da eliminare~)
-Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre le combinazioni in un secondo momento. Le masse delle combinazioni sono riportate nella tabella \ref{tab:masse}.
+Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre gli accoppiamenti in un secondo momento. Le masse delle combinazioni sono riportate nella tabella \ref{tab:masse}.
 
 \begin{table}[tb]
     \centering
@@ -35,7 +34,7 @@ Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da 
         \bottomrule
     \end{tabular}
     \caption{Masse usate per misurare l'allungamento della molla. Le masse erano composte da combinazioni
-    di cilindri da 5, 10, 25 e 50 grammi. Nella seconda riga sono riportati i pesi rilevati con
+    di cilindri da 5, 10, 25 e 50 grammi. Nella seconda riga sono riportati i pesi (con incertezza di 0.1 grammi) rilevati con
     la bilancia, che in alcuni casi differiscono da quelli nominali, riportate nella prima riga.}
     \label{tab:masse}
 \end{table}
@@ -54,18 +53,19 @@ Per effettuare le misure, abbiamo agganciato il sistema molla-piattello al ganci
 \begin{equation*}
 	z_{eq} = z_0\,\pm\,\delta z_0 = 50.0\,cm\,\pm\,0.1\,cm
 \end{equation*}
-
+%
 Infine abbiamo misurato l'allungamento della molla al variare delle combinazioni di cilindretti scelte. Ad ogni variazione del carico si è aspettato che le oscillazioni del sistema si smorzassero prima di effettuare la lettura dell'asta graduata. La lettura è stata effettuata sul lato dell'asta con risoluzione di un millimetro, poiché non siamo riusciti ad apprezzare i mezzi millimetri a causa delle oscillazioni della molla, che per quanto piccole erano sempre presenti. Così facendo abbiamo ottenuto una serie di misure delle diverse posizioni di equilibrio della molla:
 
 \begin{equation*}
 	z_i = z_i\,\pm\,\delta z_i 
 \end{equation*}
-
+%
 dalle quali possiamo ricavare l'allungamento della stessa:
 
 \begin{equation*}
 	x_i = |z_i\,-\,z_0|
 \end{equation*}
+%
 e quindi l’incertezza sugli allungamenti ($\delta x_i$) si ottiene applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
 
 \begin{equation*}
@@ -81,25 +81,18 @@ E' importante sottolineare che la massa dei nostri tredici pesi è data da una c
 \begin{equation*}
 	\delta m_i = \frac{\Delta m}{2} = 0.05 g 
 \end{equation*}
-abbiamo deciso di non usare l'incertezza tipo sull'errore di misurazione in quanto, come detto sopra, le misure potevano non risultare così fedeli in quanto soggette anche a variazioni repentine dell'ambiente esterno.
-<<<<<<< HEAD
-Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
-Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
+%
+abbiamo deciso di non usare l'incertezza tipo sull'errore di misurazione in quanto, come detto sopra, le misure potevano non risultare così fedeli poichè soggette anche a variazioni repentine dell'ambiente esterno.
+
+Inoltre per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione cosicché risultasse affetta soltanto dall'errore di risoluzione dello strumento.
+Dal momento che, per calcolare la costante elastica della molla, siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso la $F_{el} = F_{p} = m\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
 
 \begin{equation*}
 	\delta F_{p}\, =\, g\,\delta m_i
 \end{equation*}
+%
 Per quanto riguarda gli errori di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
-E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad uan leggere oscillazione. Questo continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.
-=======
-Quindi per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in anticipo la massa di ogni composizione così che risultasse affetta soltanto dall'errore di risoluzione dello strumento.
-Dal momento che per calcolare la costante elastica della molla siamo costretti a passare per la relazione $F_{el} = -k\,x$ e poiché nel nostro caso vale $F_{el} = F_{p} = m\,\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
-\begin{equation*}
-	\delta F_{p}\, =\, g\,\delta m_i
-\end{equation*}
-Per quanto riguarda gli errori (relativi all'errore) di misura dell'allungamento della molla rispetto alla sua posizione di equilibrio le considerazioni sono quelle esposte nel paragrafo precedente. Bisnogna però aggiungere che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa.\\
 E' importante sottolineare che abbiamo deciso di rilevare l'allungamento della molla sulla scala millimetrata con risoluzione del millimetro in quanto abbiamo ritenuto di non riuscire a sfruttare la scala con risoluzione di mezzo millimetro. Questo è dovuto principalmente al fatto che nella lettura della riga la molla non era completamente ferma ma era soggetta ad una leggera oscillazione. Questo continuo moto oscillatorio unito anche al probabile errore di parallasse commesso nella lettura dello strumento ci ha convito a porre come incertezza sulle varie miure dell'allungamento un delta di un millimetro. Questo giustifica anche la stima fatta della posizione di equilibrio della molla $z_0$ che risulta anch'essa affetta da un errore di un millimetro.
->>>>>>> 8cc81a9ec69fc7f07e07fd96261fbf113c340964
 
 \subsubsection{Analisi di dati:}
 Nella \ref{tabella allungamenti} sono riportate le masse applicate alla molla con la loro relativa posizione di equilibrio. Stessa cosa vale per la \ref{tabella carico e scarico}.
@@ -153,8 +146,9 @@ Abbiamo calcolato la $F_{p_{i}}$ delle masse applicate alla molla, come riportat
 \begin{equation*}
 	\left(\frac{\delta {k_{i}}}{k_{i}}\right)^2  =  \left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2  +  \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2 
 \end{equation*}
+%
 Queste incertezze sono riportate sulla sesta colonna della tabella [(!) che tabella?] e come si può osservare queste non risultano essere tutte uguali. In particolar modo abbiamo che il contributo dell'incertezza relativa al peso [ma è corretto?] sull'incertezza complessiva è trascurabile.\\
-Ottenuti quindi tutti questi valori differenti di k per riunirli in un unico valore che riassuma l'esito complessivo di queste misurazioni abbiamo deciso di adottare due procedure differenti e verificare quele ci avrebbe dato il risultato più Preciso e perchè.
+Ottenuti quindi tutti questi valori differenti di k per riunirli in un unico valore che riassuma l'esito complessivo di queste misurazioni abbiamo deciso di adottare due procedure differenti e verificare quele ci avrebbe dato il risultato più preciso e perchè.
 
 \paragraph{Primo metodo\\}
 Il primo metodo che prendiamo in considerazione è quello di calcolare la media pesata dei valori $k_{i}$ e per farlo ci serviremo delle seguenti formule:
@@ -162,32 +156,38 @@ Il primo metodo che prendiamo in considerazione è quello di calcolare la media 
 \begin{equation*}
 		k_{0} = \frac{\sum (k_i w_i)}{\sum (w_i)} , \,\,\,\,\,\, \delta k_0 = \frac{1}{\sqrt{\sum (w_i)}} , \,\,\,\,dove\,\,\,\, w_i = \frac{1}{(\delta k_i)^2}
 \end{equation*}
+%
 in particolare $k_0$ appresenta il risultato della media pesata delle varie costanti elastiche ($k_i$) ottenute, $\delta k_0$ simboleggia l'errore relativo a $k_0$ e $w_i$ è il peso relativo alla misura $k_i$, ovvero quanto quella misura contribuisce nella media complessiva. E' importente sottolineare che la procedura non è in grdo di tenere conto di eventuali altre sorgenti di incertezza come ad esempio l'errore sistematico.
 
 Quindi con i dati a nostra disposizione abbiamo otteuto i seguenti risultati:
 \begin{itemize}
-	\item{  $  k_{0} = 9.64 \, N/m  $  }
-	\item{  $  \delta k_0 = 0.0143 \,\, N/m  $  }
+	\item{  $  k_{0} =  \, N/m  $  }
+	\item{  $  \delta k_0 =  \,\, N/m  $  }
 \end{itemize}
 che portano alla misura della costante elastica:
+
 \begin{equation}
-		k = 9.640 \,\, \pm \,\, 0.015\,\,N/m
+		k =  \,\, \pm \,\, \,\,N/m
 \end{equation}
 
 \paragraph{Secondo metodo\\}
-Il secondo metodo che addottiamo per il calcolo della costante elastica della molla elicoidale è quello di considerare la distribuzine dei valori $K_i$, ovvero se ne deve calcolare la media campionaria $m^*_k$ e stimarne lo scarto quadratico medio. In questo modo otteniamo:
+Il secondo metodo che addottiamo per il calcolo della costante elastica della molla elicoidale è quello di considerare la distribuzine dei valori $K_i$, ovvero se ne deve calcolare la media campionaria $m^*_k$ e stimarne l'errore casuale. In questo modo otteniamo:
 
 \begin{equation*}
-	k_0 \,\,=\,\, m^*_k \,\,=\,\, \frac{1}{13}\,\,\sum_{i=1}^{13} (k_i) \,\,=\,\, 9.58 \,\,N/m
+	k_0 \,\,=\,\, m^*_k \,\,=\,\, \frac{1}{13}\,\,\sum_{i=1}^{13} (k_i) \,\,=\,\,  \,\,N/m
 \end{equation*}
+%
 \begin{equation*}
-	\delta k_0 \,\,=\,\, \sigma_{k_0} \,=\, \sqrt{\frac{1}{13}\,\,\sum_{i=1}^{13} (k_i - m^*_k)^2} \,\,=\,\, 0.156 \,\,N/m
+	\sigma_{k_0} \,=\, \sqrt{\frac{1}{13}\,\,\sum_{i=1}^{13} (k_i - m^*_k)^2} \,\,=\,\,  \,\,N/m
 \end{equation*}
+%
+poichè sappiamo che 
 ottenendo la misura
-\begin{equation}
-		k = 9.60 \,\, \pm \,\, 0.15 \,\, N/m
-\end{equation}
 
+\begin{equation}
+		k =  \,\, \pm \,\,  \,\, N/m
+\end{equation}
+%
 Quindi mettendo a confronto queste due procedure e aiutandoci con i dati riportati in tabella possiamo osservare che la media pesata sembrerebbe essere la procedura che meglio approssima il risultato dell'esperimento. Affermiamo questo perchè dalla tabella si può oservare che le prime quattro misurazioni fatte risultano avere un incertezza sulla costante elastica dieci volte superiore alle altre misure effettuate, e quindi ci sembra doveroso che nel calcolo di $k_0$ si tenga in considerazione della differente accuratezza (o precisione?) delle misure dando più importanza a quelle con un incertezza inferiore rispetto alle altre.
 
 Una spiegazione al perchè in queste prime quattro misure l'incertezza risulti essere maggiore rispetto alle altre si può trovare nel fatto che i carichi appesi alla molla non fossero sufficientemente importanti, e quindi la molla non [ha lavorato correttamente.]. Nonostante questo però non possiamo dire che la legge di Hooke non sia valida nel regime di carichi "relativamente bassi": infatti per quanto si può osservare dai dati raccolti l'alungamento della molla ha avuto un andamento lineare sin dall'inizio delle misurazioni.
@@ -198,6 +198,7 @@ Ricordando le seguenti relazioni:
 \begin{equation}
 	x \,\,=\,\, bF_p \,\,\,\,\,ovvero\,\,\,\,\, F_p \,\,=\,\, kx \,\,\,\,\,pertanto\,\,\,\,\, b \,\,=\,\, \frac{1}{k}
 \end{equation}
+%
 possiamo procedere al calcolo della costante elastica k a partire direttamente dal garfico. Per farlo però è necessario stare attenti al fatto che i punti sul grafico sono ricavati sperimentalmente e di conseguenza sono affetti da incertezza, pertanto, per trovare la retta che meglio approssima il loro andamento, si possono seguire due procedure distinte:
 
 \paragraph{Prima procedura: Metodo della retta minima e massima\\}
@@ -258,19 +259,24 @@ Per questo motivo abbiamo come prima cosa verificato che questo non fosse dovuto
 \begin{equation*}
 	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,\,\, non fosse >> 1
 \end{equation*}
+%
 [dal momento che non si è verificata questa eventualita siamo sicuri che tutti i nostri dati sono stati presi con sufficiente accuratezza...]
 Per questo motivo le soluzioni possibili sono due: la prima è che idati sperimentali non sono compatibili con la legge di Hooke, caso che ci sentiamo di escludere in quanto è stato provato ripetutamente che la legge in questione è valida. Perciò non rimane che ammettere di aver sottostimato le incertezze della grandezza $x_i$ che rappresenta l'allungamento.\\
 Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$. Abbiamo operato nel seguente modo:
 \begin{itemize}
 \item{Abbiamo deciso di ricalcolare a "posteriori" le incertezze, così facendo cerchiamo di avvicinarci col chi quadro osservato ($\chi_{oss}^2$) al chi quadro teorico ($\chi_{teo}^2$) il più possibile}
 \item{Abbiamo deciso di considerare uguali tra di loro tutte le varianze in modo da poter procedere con la seguente operazione:
+
 	\begin{equation*}
 		\chi_{oss}^2 \,=\, \sum_{i=1}^{13} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} \,=\, \chi_{teo}^2 
 	\end{equation*}
+	%
 	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ ci restituische una nuova varianza grazie alla quale i due chi risulteranna uguali. Infatti abbiamo ottenuto:
+	
 	\begin{equation*}
 		\chi_{oss}^2 \,=\, \frac{1}{\delta x_{i}^2} \sum_{1}^{13} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
 	\end{equation*}
+	%
 	poichè sappiamo che:
 	
 	\begin{equation*}
@@ -278,8 +284,10 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
 		\nu \,=\, N - 1 \,\,\,\,\, e \,\,\,\,\,
 		\delta x_{iposteriori}^2 \,=\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{ipriori}^2 \,=\, 0.000633 \,\, m^2
 	\end{equation*}
+	%
 	con $\nu$ ch rappresenta i gradi di libertà.
 	Quindi si ottiene che:
+	
 	\begin{equation*}
 		\delta x_{iposteriori} \,=\, 0.00155 \,\, m \,=\, 1.5 \,\, mm
 	\end{equation*}}	 
@@ -290,5 +298,6 @@ Dal momento che abbiamo variato l'errore sulla misura dell'allungamento otteniam
 \begin{equation*}
 	k_0 \,\,=\,\, 9.64 \pm 0.0222 \,\, N/m
 \end{equation*}
+%
 dove ovviamente l'unico cambiamento riguarda l'incertezza sulla misura che risuta essere maggiore di quella calcolata in precedenza per ovvi motivi.
 
