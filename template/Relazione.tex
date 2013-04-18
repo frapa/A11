@@ -8,12 +8,18 @@
 \usepackage{wrapfig}
 \usepackage{sidecap}
 \usepackage[font=small]{caption}
+\usepackage[bookmarks]{hyperref} %<-- questo permette attiva sia i link che l'indice nel pdf
+%\usepackage{makeidx} %\makeindex %<<- questi non so che diamine facciano
+
 
 \begin{document}
 
 \input{cover.tex}
 \newpage
+\input{tableofcontents.tex}
+\newpage
 \input{introduzione.tex}
+%\index{paragrafo1}
 %\input{paragrafo1.tex}
 %\newpage
 %\input{paragrafo2.tex}
