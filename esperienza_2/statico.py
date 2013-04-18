@@ -31,7 +31,7 @@ with open("dati/frapa_statico.csv") as f:
 
 
 # incertezze
-res_p = 0.0001
+res_p = 0.0001 * g
 res_l = 0.001
 sigma_res_p = res_p / sqrt(12)
 sigma_res_l = res_l / sqrt(6)
@@ -51,7 +51,7 @@ dk_w = 1 / sqrt(sum(ws))
 # parametri statistici
 k0_s = sum(ks) / len(ks)
 # scarto quadratico standard
-dk_s = sqrt(sum([(k_i - k0_s)**2 for k_i in ks]) / (len(ks) - 1))
+dk_s = 1 / sqrt(len(ks)) * sqrt(sum([(k_i - k0_s)**2 for k_i in ks]) / (len(ks) - 1))
 
 # chi quadro
 b = sum([p_i*x_i for p_i, x_i in zip(pesi, allungamenti)]) / \
@@ -216,3 +216,8 @@ elif cmd == "-t":
 
     print "\t\t\\bottomrule\n\t\\end{tabular}"
     print "\\end{table}"
+
+    print
+
+    print "\n\t\t".join(["{:.4} & {} & {:.3} & {:.3} & {:.3} \\\\".format(p_i, x_i, k_i, dk_i, dk_i_w)
+        for i, (p_i, x_i, k_i, dk_i, dk_i_w) in enumerate(zip(pesi, allungamenti, ks, sigma_ks, sigma_ks_without))])
