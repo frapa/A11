@@ -30,11 +30,16 @@ with open("dati/frapa_statico.csv") as f:
         allungamenti.append(round(abs(float(row[1]) - 50) / 100, 5))
 
 
+b = 1/9.58
+
 # incertezze
 res_p = 0.0001 * g
 res_l = 0.001
 sigma_res_p = res_p / sqrt(12)
 sigma_res_l = res_l / sqrt(6)
+
+sigma_tot = sqrt(sigma_res_l**2 + b**2*sigma_res_p**2)
+print sigma_res_l, sigma_tot
 
 # metodo della tabella
 ks = [p_i/x_i for p_i, x_i in zip(pesi, allungamenti)]

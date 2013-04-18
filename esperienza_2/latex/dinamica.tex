@@ -4,18 +4,44 @@
 
 L'apparato sperimentale e la strumentazione utilizzata per compiere questo secondo esperimento, è la stessa utilizzata per la procedura del metodo statico, eccezion fatta per il cronometro. Il cronometro da noi utilizzato è un normale cronometro con risoluzione di misura di 0.01 s.
 
-\subsection{Procedura di acquisizione dei dati}
+\subsection{Studio qualitativo e analisi dimensionale}
 
-Per calcolare la costante elastica mediante il metodo dinamico ci siamo avvalsi della relazione che sussiste tra il periodo e la massa appesa della stessa, ovvero
+Come prima cosa abbiamo verificato in maniera qualitativa le relazioni che intercorrono tra
+costante elastica della molla, massa applicata, ampiezza dell'oscillazione e periodo di oscillazione. I risultati sono stati
+i seguenti:
+
+\begin{itemize}
+    \item{A parità di altre condizioni, all'aumentare della massa il periodo dell'oscillatore aumenta.}
+    \item{A parità di altre condizioni, le molle più ''morbide`` (con costante elastica più bassa), hanno periodi più lunghi
+        di molle più rigide (con costante elastica maggiore).}
+    \item{A parità di altre condizioni, l'ampiezza dell'oscillazione non fa variare il periodo della molla. Questo significa
+        che il periodo non dipende dall'ampiezza dell'oscillazione.}
+\end{itemize}
+
+\paragraph{Analisi dimensionale\\}
+
+Con un analisi dimensionale è possibile ricavare una formula che metta in relazione periodo, massa e costante elastica della molla.
+Per quanto visto sopra, supponiamo che il periodo $\mathcal{T}$ dipenda dalla massa $m$ appesa alla molla, dalla costante elastica $k$
+e dall'ampiezza $A$ dell'oscillazione. Si ha quindi che $\mathcal{T} \propto m^\alpha k^\beta A^\gamma$. Facendo un analisi dimensionale:
+
+\begin{equation*}
+    [\mathcal{T}]^1 \,=\, [M]^{\alpha+\beta} [L]^\gamma [T]^{-2\beta} \quad \implies \quad \gamma = 0; \,\, \beta = -1/2; \,\, \alpha = 1/2
+\end{equation*}
+%
+da cui si segue che
 
 \begin{equation}
-	\mathcal{T} = {2\,\pi}{\sqrt{\frac{m}{k}}}
+	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{m}{k}}
     \label{eq:pp}
 \end{equation}
 %
-dove $\mathcal{T}$ indica il periodo e $m$ la massa appesa alla molla.
+dove $\mathcal{C}$ rappresenta una costante che non può essere determinata mediante l'analisi dimensionale. Come ci si poteva aspettare
+dall'analisi qualitativa il periodo non dipende dall'ampiezza dell'oscillazione.
 
-[Come si può notare dalla formula (\ref{eq:pp}) il periodo di oscillazione della molla è proporzionale alla radice di $m$. Se la costante elatica $k$ della molla è una costante e la legge è corretta, allora ci si dovrebbe aspettare che il periodo cresca al crescere della massa appesa, ma non con una proporzionalità diretta poichè la massa risulta essere sotto radice.]
+\subsection{Procedura di acquisizione dei dati}
+
+Per calcolare la costante elastica mediante il metodo dinamico ci siamo avvalsi della relazione (\ref{eq:pp})
+ricavata dall'analisi dimensionale.
 
 Per le misurazioni sono state usate le stesse masse e le stesse combinazioni di cilindri scelte nell'esperimento precedente, con una sola differenza: è stata aggiunta una nuova configurazione di pesi di massa complessiva 135 g. Il numero totale delle configurazioni è quindi salito a 14.
 Nella formula (\ref{eq:pp}), $m$ indica la massa complessiva che viene agganciata alla molla, quindi in questo caso si è dovuto tener conto della massa del piattello portapesi. Per evitare di dover propagare gli errori, abbiamo quindi misurato nuovamente la massa delle combinazioni
@@ -39,7 +65,7 @@ Per ottenere il periodo di oscillazione abbiamo agito come segue:
 I valori di lettura del cronometro sono stati divisi per dieci per ottenere i valori reali di periodo dell'oscillatore.
 I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
-\begin{table}[b]
+\begin{table}
     \centering
     \scriptsize
     \begin{tabular}{l | c c c c c c c c c c c c c c}
@@ -84,19 +110,23 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
     \label{tab:periodi}
 \end{table}
 
-\subsection{Studio qualitativo del moto oscillatorio}
-Come ci si aspetta dall'equvalenza (5) provando a mettere in oscillazione le quattro molle elicoidali a nostra disposizione soggette allo stesso carico il periodo di un'oscillazione è abbastanza differente tra l'una e l'altra. Infatti il periodo di oscillazione delle quattro molle, per piccole ampiezze, è differente pechè la loro costante elastica è diversa e questo risulta particolarmente evedente confrontando il periodo di oscillazione tra la molla più dura e quella più morbida. Lo steso discoso vale se alla stessa molla erano applicate masse differenti.
-Al contrario se il nostro apparato sperimentle non si potesse semplificare al modello di pendolo semplice per piccole oscillazioni allora si dovrebbe tenere conto anche dell'ampiezza delle oscillazioni e quindi risulterebbe che: $\mathcal{T} \propto m^\alpha k^\beta A^\gamma$. Facendo una semplice analisi dimensionale si otterrebbe il seguente risultato:
+\subsection{Elaborazione dei dati}
 
-\begin{equation*}
-	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{m}{k}}
-\end{equation*}
-%
-dove $\mathcal{C}$ rappresenta una costante differente da $2 \pi$ che non si può determinare mediante una semplice analisi dimensionale, ma che sicuramente terrà conto anche dell'ampiezza.
+\subsubsection{Studio quantitativo del moto oscillatorio}
 
-\subsection{Studio quantitativo del moto oscillatorio}
+Nel grafico in figura \ref{fig:periodo_massa} sono riportati i risultati delle misure
+
+Come si può notare dalla formula (\ref{eq:pp}) il periodo di oscillazione della molla è proporzionale alla radice di $m$. Se la costante elatica $k$ della molla è una costante e la legge è corretta, allora ci si dovrebbe aspettare che il periodo cresca al crescere della massa appesa, ma non con una proporzionalità diretta poichè la massa risulta essere sotto radice.]
+
+\begin{SCfigure}
+    \centering
+    \includegraphics[width=120mm]{immagini/periodo_massa.pdf}
+    \caption{Grafico}
+    \label{fig:periodo_massa}
+\end{SCfigure}
+
 [principalmente servono grafici e tabelle. la parte di commento è molto ridotta]
-\subsection{Massa efficace della molla}
+\subsubsection{Massa efficace della molla}
 Grazie ai grafici del paragrafo precedente possiamo notare che la retta che meglio interpreta i punti sperimentali nel grafico che rappresenta $\mathcal{T}^2$ in funzione della massa non passa per l'origine, ma interseca l'asse delle ascisse in corrispondenza di un valore negativo che definiamo come $- m_e$, che è la massa efficace della molla.
 Noi sappiamo che un molla in sospensione a riposo è comunque soggetta a uno sforzo in quanto, avendo un propria massa, le spire sono sottoposte alla forza peso dovuta alla molla stessa. Questo effetto apparentemente complicato si può semplificare affermando che lo sforzo compiuto dalla molla può essere paragonato all'effetto che darebbe una massa di valore ($m_e$) appesa alla molla. Pertanto grazie allo studio del grafico abbiamo trovato un valore della massa efficace che risulta essere:
 
@@ -118,7 +148,7 @@ sostituendo a m (la massa allpicata) con $M = m + m_e$ per cui noi otteniamo qua
 %
 e quindi la legge lineare che dipende da $\mathcal{T}^2$ e dalla massa (M) data dalla somma dei carichi applicati (m) e la massa efficace della molla ($m_e$).
 
-\subsection{Calcolo dei parametri $\mathcal{C}$ e $m_e$ mediante il metodo della regressione lineare}
+\subsubsection{Calcolo dei parametri $\mathcal{C}$ e $m_e$ mediante il metodo della regressione lineare}
 Prendiamo in considerazione la seguente legge:
 
 \begin{equation*}
@@ -169,7 +199,7 @@ Quindi possiamo riassumere i risultati di questa procedura in questo modo:
 \end{equation*}
 Perciò noti questi parametri possiamo risalire ai valoti di $\mathcal{C}$ e $k$ risolvendo l'equazione in (... inizio ...) e utilizzando come valore di k quello trovato nell'analisi dati della sezine precedente ovvero $K = ...$
 
-\subsection{Test del chi quadro}
+\subsubsection{Test del chi quadro}
 Procediamo ora a verificare che i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quaro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i datisperimentali A e B. Pertanti ci aspettiamo che:
 
 \begin{equation*}

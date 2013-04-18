@@ -1,0 +1,51 @@
+This is makeindex, version 2.15 [TeX Live 2012] (kpathsea + Thai support).
+Scanning input file Relazione.tex...
+!! Input index error (file = Relazione.tex, line = 1):
+   -- Unknown index keyword \documentclass[11pt,twoside,a4paper].
+!! Input index error (file = Relazione.tex, line = 2):
+   -- Unknown index keyword \usepackage[italian].
+!! Input index error (file = Relazione.tex, line = 3):
+   -- Unknown index keyword \usepackage[utf8].
+!! Input index error (file = Relazione.tex, line = 4):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 5):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 6):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 7):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 8):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 9):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = Relazione.tex, line = 10):
+   -- Unknown index keyword \usepackage[font=small].
+!! Input index error (file = Relazione.tex, line = 12):
+   -- Unknown index keyword \begin.
+!! Input index error (file = Relazione.tex, line = 14):
+   -- Unknown index keyword \input.
+!! Input index error (file = Relazione.tex, line = 15):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Relazione.tex, line = 16):
+   -- Unknown index keyword \input.
+!! Input index error (file = Relazione.tex, line = 17):
+   -- Unknown index keyword \input.
+!! Input index error (file = Relazione.tex, line = 18):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Relazione.tex, line = 19):
+   -- Unknown index keyword \input.
+!! Input index error (file = Relazione.tex, line = 20):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Relazione.tex, line = 21):
+   -- Unknown index keyword %\input.
+!! Input index error (file = Relazione.tex, line = 22):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Relazione.tex, line = 23):
+   -- Unknown index keyword %\input.
+!! Input index error (file = Relazione.tex, line = 24):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = Relazione.tex, line = 26):
+   -- Unknown index keyword \end.
+done (0 entries accepted, 23 rejected).
+Nothing written in Relazione.ind.
+Transcript written in Relazione.ilg.
