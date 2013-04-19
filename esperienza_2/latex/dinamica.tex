@@ -7,7 +7,9 @@ L'apparato sperimentale e la strumentazione utilizzata per compiere questo secon
 \subsection{Studio qualitativo e analisi dimensionale}
 
 Come prima cosa abbiamo verificato in maniera qualitativa le relazioni che intercorrono tra
-costante elastica della molla, massa applicata, ampiezza dell'oscillazione e periodo di oscillazione. I risultati sono stati
+costante elastica della molla, massa applicata, ampiezza dell'oscillazione e periodo di oscillazione.
+Per fare ciò, abbiamo fatto oscillare molle diverse (che significa costanti elastiche differenti), abbiamo variato
+le masse applicate alle molle ed abbiamo variato l'ampiezza delle oscillazioni. I risultati sono stati
 i seguenti:
 
 \begin{itemize}
@@ -15,14 +17,15 @@ i seguenti:
     \item{A parità di altre condizioni, le molle più ''morbide`` (con costante elastica più bassa), hanno periodi più lunghi
         di molle più rigide (con costante elastica maggiore).}
     \item{A parità di altre condizioni, l'ampiezza dell'oscillazione non fa variare il periodo della molla. Questo significa
-        che il periodo non dipende dall'ampiezza dell'oscillazione.}
+        che il periodo non dipende dall'ampiezza dell'oscillazione, almeno non in prima approssimazione.}
 \end{itemize}
 
 \paragraph{Analisi dimensionale\\}
 
 Con un analisi dimensionale è possibile ricavare una formula che metta in relazione periodo, massa e costante elastica della molla.
 Per quanto visto sopra, supponiamo che il periodo $\mathcal{T}$ dipenda dalla massa $m$ appesa alla molla, dalla costante elastica $k$
-e dall'ampiezza $A$ dell'oscillazione. Si ha quindi che $\mathcal{T} \propto m^\alpha k^\beta A^\gamma$. Facendo un analisi dimensionale:
+e dall'ampiezza $A$ dell'oscillazione (e ci aspettiamo già che non dipenda dall'ampiezza).
+Si ha quindi che $\mathcal{T} \propto m^\alpha k^\beta A^\gamma$. Facendo un analisi dimensionale:
 
 \begin{equation*}
     [\mathcal{T}]^1 \,=\, [M]^{\alpha+\beta} [L]^\gamma [T]^{-2\beta} \quad \implies \quad \gamma = 0; \,\, \beta = -1/2; \,\, \alpha = 1/2
@@ -112,41 +115,120 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
 \subsection{Elaborazione dei dati}
 
+\begin{SCtable}
+    \centering
+	\begin{tabular}{l c  c  c  c }
+        \multicolumn{5}{c}{\textbf{Medie periodi}} \\
+        \toprule
+        k & $\mathcal{T}_k$ [s] & $\delta\mathcal{T}_k$ [s] & $\mathcal{T}_k^2$ [$s^2$] & $\delta(\mathcal{T}_k^2)$ [$s^2$] \\
+
+        \midrule
+
+        1 & 0.394		& 0.005		& 0.155		& 0.001	\\
+        2 & 0.447		& 0.005		& 0.200		& 0.001	\\
+        3 & 0.488		& 0.008		& 0.238		& 0.002	\\
+        4 & 0.529		& 0.004		& 0.280		& 0.001	\\
+        5 & 0.565		& 0.005		& 0.319		& 0.001	\\
+        6 & 0.600		& 0.005		& 0.361		& 0.002	\\
+        7 & 0.633		& 0.002		& 0.400		& 0.001	\\
+        8 & 0.662		& 0.004		& 0.438		& 0.002	\\
+        9 & 0.692		& 0.005		& 0.479		& 0.002	\\
+        10 & 0.722		& 0.003		& 0.521		& 0.001	\\
+        11 & 0.752		& 0.003		& 0.566		& 0.001	\\
+        12 & 0.777		& 0.003		& 0.604		& 0.001	\\
+        13 & 0.802		& 0.005		& 0.643		& 0.002	\\
+        14 & 0.830		& 0.006		& 0.689		& 0.003	\\
+
+        \bottomrule
+
+	\end{tabular}
+    \caption{}
+    \label{tab:calcolati}
+\end{SCtable}
+
 \subsubsection{Studio quantitativo del moto oscillatorio}
 
-Nel grafico in figura \ref{fig:periodo_massa} sono riportati i risultati delle misure
+Per comodità notazionale da qui in avanti indicheremo con $T_k$ i periodi relativi alla massa $m_k$, con $k$ che va da 1 a 14 ed
+indica i pesi in ordine crescente di massa, come sono riportati in tabella \ref{tab:masse_dinamico}.
+Per ogni massa utilizzata, è stata calcolata la media dei periodi $\mathcal{T}_k \equiv m^*[T_k]$ e la deviazione tipo sulla distribuzione
+delle medie $\delta \mathcal{T}_k \equiv \sigma[\mathcal{T}_k]$. I valori calcolati sono elencati nelle prime
+due colonne nella tabella \ref{tab:calcolati}.
+Nel grafico in figura \ref{fig:periodo_massa} è mostrato il plot massa ($m_k$) versus periodo ($\mathcal{T}_k$)
+per ciascuna massa scelta, e si vede chiaramente
+che i punti sul grafico non sono allineati lungo una retta. Infatti, come si può notare dalla formula (\ref{eq:pp}),
+il periodo di oscillazione della molla non è proporzionale a $m$, bensì a $\sqrt{m}$.
 
-Come si può notare dalla formula (\ref{eq:pp}) il periodo di oscillazione della molla è proporzionale alla radice di $m$. Se la costante elatica $k$ della molla è una costante e la legge è corretta, allora ci si dovrebbe aspettare che il periodo cresca al crescere della massa appesa, ma non con una proporzionalità diretta poichè la massa risulta essere sotto radice.]
+Al fine di ottenere un andamento lineare abbiamo considerato i valori $\mathcal{T}_k^2$. Le incertezze $\delta \mathcal{T}_k^2$
+sui valori di $\mathcal{T}_k^2$ sono state ottenute usando le regole di propagazione dell'incertezza, con la formula:
+
+\begin{equation*}
+    \delta(\mathcal{T}_k^2) = 2 \,\, \mathcal{T}_k^2 \,\, \delta \mathcal{T}_k
+\end{equation*}
+
+I valori ottenuti con questa procedura sono riportati nella stessa tabella \ref{tab:calcolati}, nelle ultime due colonne e sono
+graficati in figura \ref{fig:periodo2_massa}. In questo caso è evidente l'andamento lineare dei punti riportati in figura.
 
 \begin{SCfigure}
     \centering
     \includegraphics[width=120mm]{immagini/periodo_massa.pdf}
-    \caption{Grafico}
+    \caption{Il grafico mostra il periodo di oscillazione della molla al variare della massa ad essa appesa.
+        Le barre d'errore su massa e periodo non sono mostrate in quanto molto piccole e difficilmente leggibili.
+        Come si vede chiaramente il periodo non dipende dalla massa in modo lineare, al contrario, segue una legge del tipo
+        $\sqrt{a + bm}$, con coefficienti a e b, come quella tracciata in figura.}
     \label{fig:periodo_massa}
 \end{SCfigure}
 
-[principalmente servono grafici e tabelle. la parte di commento è molto ridotta]
+\begin{SCfigure}
+    \centering
+    \includegraphics[width=120mm]{immagini/periodo2_massa.pdf}
+    \caption{boh}
+    \label{fig:periodo2_massa}
+\end{SCfigure}
+
 \subsubsection{Massa efficace della molla}
-Grazie ai grafici del paragrafo precedente possiamo notare che la retta che meglio interpreta i punti sperimentali nel grafico che rappresenta $\mathcal{T}^2$ in funzione della massa non passa per l'origine, ma interseca l'asse delle ascisse in corrispondenza di un valore negativo che definiamo come $- m_e$, che è la massa efficace della molla.
-Noi sappiamo che un molla in sospensione a riposo è comunque soggetta a uno sforzo in quanto, avendo un propria massa, le spire sono sottoposte alla forza peso dovuta alla molla stessa. Questo effetto apparentemente complicato si può semplificare affermando che lo sforzo compiuto dalla molla può essere paragonato all'effetto che darebbe una massa di valore ($m_e$) appesa alla molla. Pertanto grazie allo studio del grafico abbiamo trovato un valore della massa efficace che risulta essere:
+
+Il sistema molla più massa studiato è un sistema reale che non rispecchia con fedeltà assoluta la semplicistica
+legge (\ref{eq:pp}) ricavata in precenza. Infatti, per ricavare la (\ref{eq:pp}) con analisi dimensionale
+si devono fare delle ipotesi sulle grandezze che influenzano il periodo, e si può facilmente mancare di considerare qualche
+fattore importante. Per esempio non sono state prese in considerazione le caratteristiche proprie della molla stessa
+al di fuori della sua costante elastica. La molla possiede infatti una massa ed altre caratteristiche
+come una dissipazione interna, che sono state trascurate. Il principale fattore che è stato trascurato
+è l'inerzia (massa) della molla stessa. Questo effetto si può notare nel grafico in figura \ref{fig:periodo2_massa},
+dove si vede che la retta che meglio interpreta i dati non passa per l'origine.
+
+Questi effetti apparentemente complicati, possono essere semplificati introducendo un fattore correttivo $m_e$ detto
+\emph{massa efficace} della molla, che ne tiene conto. Questo fattore correttivo va a modificare l'equazione (\ref{eq:pp}) che diventa
+
+\begin{equation}
+    \mathcal{T} \, = \, \mathcal{C} \, \sqrt{\frac{M}{k}}
+    \label{eq:ppme}
+\end{equation}
+%
+dove $M = m_e + m$. Quindi nella figura \ref{fig:periodo2_massa} la retta interseca l'asse delle ascissa
+nel punto $-m_e$.
+
+La massa efficace non è la massa della molla stessa, ma la massa fittizia che occorrerebbe
+appendere ad una molla ideale per rendere le sue oscillazioni identice a quelle della molla reale.
+
+Troviamo ora la relazione che collega la massa efficace $m_e$ della molla alla sua massa reale $\mu$.
+Immaginiamo di far oscillare la molla di massa $\mu$ e lunghezza $L$ mantenendo fisso un estremo.
+Consideriamo un pezzetto infinitesimo della molla a distanza $l$ dall'estremo fisso. La massa del pezzo
+varrà $\mu \, dl / L$. Ipotizzando che la velocità di tale pezzo sia proporzionale alla distanza dall'estremo
+fisso, si ottiene che la sua velocità è $v \, l / L$, dove $v$ è la velocità dell'estremo libero.
+Calcoliamo l'energia cinetica tramite l'integrale:
 
 \begin{equation*}
-	m_e \,\,=\,\, 8 grammi
+    E_k \, = \, \int_0^L \frac{1}{2} \frac{\mu v^2}{L^3} l^2 \, dl \, = \,
+    \frac{1}{2} \frac{\mu v^2}{L^3} \int_0^L l^2 \, dl = \frac{1}{6} \mu v^2
 \end{equation*}
 %
-Per questo motivo è doveroso modificare l'equazione
+Tuttavia, per una massa ideale con le stesse oscillazioni, vale:
 
 \begin{equation*}
-	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{m}{k}}
+    E_k \, = \, \frac{1}{2} m_e v^2
 \end{equation*}
 %
-sostituendo a m (la massa allpicata) con $M = m + m_e$ per cui noi otteniamo quanto segue:
-
-\begin{equation*}
-	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{M}{k}}
-\end{equation*}
-%
-e quindi la legge lineare che dipende da $\mathcal{T}^2$ e dalla massa (M) data dalla somma dei carichi applicati (m) e la massa efficace della molla ($m_e$).
+Eguagliando le due equazioni si ottiene $m_e = \mu/3$ ovvero $\mu = 3m_e$. 
 
 \subsubsection{Calcolo dei parametri $\mathcal{C}$ e $m_e$ mediante il metodo della regressione lineare}
 Prendiamo in considerazione la seguente legge:

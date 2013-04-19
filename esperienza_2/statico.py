@@ -125,8 +125,8 @@ sul peso sull'incertezza totale è trascurabile.
     print """Per il calcolo della pendenza è stata seguita la procedira del paragrafo 4.4.6.
 Sono state ignorate le incertezze sul peso.\n"""
 
-    print "Pendenza della retta di fit (b = 1/k della molla):\n\tb = {:.3} ∓ {:.3} m/N".format(b, sigma_b)
-    print "\tCorrisponde a k = {:.3} ∓ {:.3} N/m".format(k0_chi, dk_chi)
+    print "Pendenza della retta di fit (b = 1/k della molla):\n\tb = {:.4} ∓ {:.3} m/N".format(b, sigma_b)
+    print "\tCorrisponde a k = {:.4} ∓ {:.3} N/m".format(k0_chi, dk_chi)
     print """\t(Notare che il k ottenuto qui è uguale a quello ottenuto nel punto (a) precedente
 \tcon la media pesata. Questo perché le due procedure sono equivalenti.)\n"""
 

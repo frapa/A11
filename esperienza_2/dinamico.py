@@ -134,7 +134,7 @@ if mpl:
     ax3.set_xlabel(u'Massa [Kg]', labelpad=12, fontsize=14)
     ax3.set_ylabel(u'Periodo [s]', labelpad=6, fontsize=14)
     ax3.grid(True)
-    #ax3.set_xticks((0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18))
+    ax3.set_yticks((0.4, 0.5, 0.6, 0.7, 0.8, 0.9))
     ax3.set_xlim(0.02, 0.18)
     #ax3.set_ylim(0, 0.8)
 
