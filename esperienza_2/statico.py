@@ -96,7 +96,7 @@ della costante k della molla con il metodo statico."""
 
     print "\tN\tPesi [N]\tAllungamenti [m]\tk [N/m]\t\tδk [N/m]\tδk (no incertezza peso) [N/m]\n"
     # stampa la tabella in solo 2 righe! (lo so è incomprensibile)
-    print "\t" + "\n\t".join(["{}\t{:.4}\t\t{}\t\t\t{:.3}\t\t{:.3}\t\t{:.3}".format(i+1, p_i, x_i, k_i, dk_i, dk_i_w)
+    print "\t" + "\n\t".join(["{}\t{:.5}\t\t{}\t\t\t{:.5}\t\t{:.5}\t\t{:.5}".format(i+1, p_i, x_i, k_i, dk_i, dk_i_w)
         for i, (p_i, x_i, k_i, dk_i, dk_i_w) in enumerate(zip(pesi, allungamenti, ks, sigma_ks, sigma_ks_without))])
     print
 

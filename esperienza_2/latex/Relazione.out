@@ -1,18 +1,11 @@
-\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
-\BOOKMARK [1][-]{section.2}{Ricerca della costante elastica della molla: metodo statico}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Apparato sperimentale}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Procedura di aquisizione dei dati}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Elaborazione dei dati}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Considerazioni inziali}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Analisi di dati:}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Calcolo della costante elastica K a partire dalla tabella}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Calcolo della costante elastica K a partire dal grafico}{subsection.2.3}% 9
-\BOOKMARK [2][-]{subsection.2.4}{Test del chi quadro}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Ricerca della costante elastica della molla: metodo dinamico}{}% 11
-\BOOKMARK [2][-]{subsection.3.1}{Apparato sperimentale}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.2}{Procedura di acquisizione dei dati}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.3}{Studio qualitativo del moto oscillatorio}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.4}{Studio quantitativo del moto oscillatorio}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.5}{Massa efficace della molla}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.6}{Calcolo dei parametri C e me mediante il metodo della regressione lineare}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.7}{Test del chi quadro}{section.3}% 18
+\BOOKMARK [1][]{section.1}{Introduzione}{}% 1
+\BOOKMARK [0][]{culo.0}{1}{}% 2
+\BOOKMARK [1][]{section.2}{Ricerca della costante elastica della molla: metodo statico}{culo.0}% 3
+\BOOKMARK [2][]{subsection.2.1}{Apparato sperimentale}{section.2}% 4
+\BOOKMARK [2][]{subsection.2.2}{Procedura di aquisizione dei dati}{section.2}% 5
+\BOOKMARK [2][]{subsection.2.3}{Elaborazione dei dati}{section.2}% 6
+\BOOKMARK [1][]{section.3}{Ricerca della costante elastica della molla: metodo dinamico}{culo.0}% 7
+\BOOKMARK [2][]{subsection.3.1}{Apparato sperimentale}{section.3}% 8
+\BOOKMARK [2][]{subsection.3.2}{Studio qualitativo e analisi dimensionale}{section.3}% 9
+\BOOKMARK [2][]{subsection.3.3}{Procedura di acquisizione dei dati}{section.3}% 10
+\BOOKMARK [2][]{subsection.3.4}{Elaborazione dei dati}{section.3}% 11

@@ -1,5 +1,4 @@
- * apparato sperimentale
- * introduzione periodo pendolo (verifica indiretta Hooke)
  * incertezza complessiva (far vedere che trasferita è trascurabile)
+ * tabella period^2 spazioatura [1mm] titolo
  * controllare conti
  * controllare valori numerici

@@ -17,17 +17,24 @@ L'apparato sperimentale utilizzato è costituito da:
 
 \subsection{Procedura di aquisizione dei dati}
 
-Ritenendo essere noto che una forza F di trazione o compressione applicata, nel nostro caso, ad una molla elicoidale provoca una deformazione del corpo abbiamo deciso di sfruttare come forza agente la forza peso $F_{p}$ delle masse cilindriche a nostra disposizione. Per fare questo ricordiamo che la relazione tra una massa inerziale e la forza peso è la seguente:
+Poiché una forza F di trazione o compressione applicata ad una molla elicoidale provoca una deformazione del corpo ed una conseguente risposta elastica, abbiamo deciso di sfruttare come forza agente la forza peso $F_{p}$ delle masse cilindriche a nostra disposizione. Per fare questo ricordiamo che la relazione tra una massa inerziale e la forza peso è la seguente:
 
 \begin{equation}
 	F_{p} = mg
+    \label{eq:fp}
 \end{equation}
 %
-dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g = 9.806\,\,m\,s^{-2}$.
+dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g = 9.806\,\,m\,s^{-2}$ e di cui trascuriamo l'incertezza.
 
-Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g, suddividendo l'intervallo in modo equispaziato.
-Sono quindi state selezionate tredici combinazioni di cilindri aventi le masse scelte.
-Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre gli accoppiamenti in un secondo momento. Le masse delle combinazioni sono riportate nella tabella \ref{tab:masse}.
+La molla risponde all'allungamento dovuto alla forza $F_p$ con una forza $F_{el}$ uguale e contraria
+data dalla (\ref{eq:hooke}),
+per cui si ottiene $F_p = kx$. Applicando alla molla diverse massa e quindi diverse forze peso è possibile risalire al valore di $k$.
+
+Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g circa, suddividendo l'intervallo in modo equispaziato.
+Sono quindi state selezionate tredici combinazioni di masse cilindriche aventi le masse scelte.
+Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro,
+si è misurata la massa complessiva di ogni combinazione.
+Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da poter ricomporre gli accoppiamenti in un secondo momento. Le masse totali delle combinazioni sono riportate nella tabella \ref{tab:masse}.
 
 \begin{table}[tb]
     \centering
@@ -40,12 +47,14 @@ Abbiamo annotato quali cilindri facevano parte di ogni combinazione, in modo da 
         \bottomrule
     \end{tabular}
     \caption{Masse usate per misurare l'allungamento della molla. Le masse erano composte da combinazioni
-    di cilindri da 5, 10, 25 e 50 grammi. Nella seconda riga sono riportati i pesi (con incertezza di 0.1 grammi) rilevati con
-    la bilancia, che in alcuni casi differiscono da quelli nominali, riportate nella prima riga.}
+    di cilindri da 5, 10, 25 e 50 grammi di massa nominale. Nella seconda riga sono riportati le masse
+    rilevate con la bilancia, che in alcuni casi differiscono da quelli nominali, riportati nella prima riga.
+    I valori riportati sono i valori di lettura dello strumento (che ha risoluzione 0.1 grammi). L'incertezza tipo sulle misure
+    è 0.03 g.}
     \label{tab:masse}
 \end{table}
 
-Per misurare la massa dei dischetti a nostra disposizione abbiamo utilizzato una bilancia elettronica con una risoluzione di 0.1 grammi. Abbiamo osservato che lo strumento era abbastanza sensibile da rilevare variazioni nella pressione dell'aria circostante. Lo abbiamo appurato soffiandoci sopra e notando che il valore rilevato dalla bilancia aumentava in modo considerevole. Per questo motivo per trovare le varie masse dei nostri pesi ci siamo assicurati di stare quato più lontani dalla bilancia ci fosse concesso e di evitare di scuotere il tavolo di lavoro.
+Per misurare la massa dei dischetti a nostra disposizione abbiamo utilizzato una bilancia elettronica con una risoluzione di 0.1 grammi. Abbiamo osservato che lo strumento era abbastanza sensibile da rilevare variazioni nella pressione dell'aria circostante. Lo abbiamo appurato soffiandoci sopra e notando che il valore rilevato dalla bilancia aumentava in modo considerevole. Per questo motivo per trovare le varie masse dei nostri pesi ci siamo assicurati di stare lontani dalla bilancia e di evitare di scuotere il tavolo di lavoro.
 
 Completata la classificazione dei pesi, abbiamo scelto la molla di cui calcolare la
 costante elastica. Abbiamo notato che una di esse era molto ``morbida'' per i carichi che saremmo
@@ -56,86 +65,126 @@ plastica che avrebbe compromesso la buona riuscita dell'esperimento.
 Un'altra molla è stata scartata in quanto troppo rigida: le sue deformazioni infatti non sarebbero state apprezzabili con carichi leggeri. Per questi motivi la scelta è ricaduta sulla molla tra 
 le due restanti che permetteva una migliore lettura della deformazione in relazione ai pesi.
 
-Per effettuare le misure, abbiamo agganciato il sistema molla-piattello al gancio di sospensione dell'asta verticale, lungo l'asta millimetrata. Atteso che l'oscillazione della molla si smorzasse, il bordo inferiore del piattello agganciato alla molla, è stato allineato con la tacca dei 50 cm dell'asta graduata. In questo modo la posizione di equilibrio della molla risulta essere:
+Per effettuare le misure, abbiamo agganciato il sistema molla-piattello al gancio di sospensione dell'asta verticale, lungo l'asta millimetrata. Atteso che l'oscillazione della molla si smorzasse, il bordo inferiore del piattello agganciato alla molla è stato allineato con la tacca dei 50 cm dell'asta graduata. In questo modo la posizione di equilibrio della molla senza carico risulta essere:
 
 \begin{equation*}
-	z_{eq} = z_0\,\pm\,\delta z_0 = 50.00\,cm\,\pm\,0.03\,cm
+	z_0\,\pm\,\delta z_0 = 50.00\,\pm\,0.03\,cm
 \end{equation*}
 %
-per la quale abbiamo deciso di usare come incertezza l'errore tipo di risoluzione.
-Infine abbiamo misurato l'allungamento della molla al variare delle combinazioni di cilindretti scelte. Ad ogni variazione del carico si è aspettato che le oscillazioni del sistema si smorzassero prima di effettuare la lettura dell'asta graduata. La lettura è stata effettuata sul lato dell'asta con risoluzione di un millimetro, poiché non siamo riusciti ad apprezzare i mezzi millimetri a causa delle oscillazioni della molla, che per quanto piccole erano sempre presenti. Così facendo abbiamo ottenuto una serie di misure delle diverse posizioni di equilibrio della molla:
+per la quale abbiamo deciso di usare come incertezza l'errore tipo di risoluzione e la risoluzione è pari ad 1 mm.
+Infine abbiamo misurato l'allungamento della molla al variare delle combinazioni di cilindretti scelte. Ad ogni variazione del carico si è aspettato che le oscillazioni del sistema si smorzassero prima di effettuare la lettura dell'asta graduata. La lettura è stata effettuata sul lato dell'asta con risoluzione di un millimetro, poiché non siamo riusciti ad apprezzare i mezzi millimetri a causa delle oscillazioni della molla, che per quanto piccole erano sempre presenti. Così facendo abbiamo ottenuto una serie di misure delle diverse posizioni di equilibrio della molla
 
 \begin{equation*}
-	z_i = z_i\,\pm\,\delta z_i 
+	z_i\,\pm\,\delta z
 \end{equation*}
+%
+dove $\delta z \,=\, 0.3$ mm indica l'errore tipo di risoluzione, uguale per tutte le misure.
 
 \subsection{Elaborazione dei dati}
 
-\subsubsection{Considerazioni inziali}
+\subsubsection{Considerazioni inziali e incertezze}
+\label{incertezze}
 
-E' importante sottolineare che la massa dei nostri tredici pesi è data da una composizione dei dischetti a nostra disposizione e ogni dischetto è affetto da un errore sulla sua massa, dovuto principamente alla risoluzione dello strumento. Abbiamo deciso di associre tutte le misure rilevato l'icertezza tipo di risoluzione.
-Inoltre per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato in aticipo la massa di ogni composizione cosicché risultasse affetta soltanto dall'errore tipo di risoluzione dello strumento:
-
-\begin{equation*}
-	\delta m_i \,=\, \frac{1}{\sqrt{12}}\Delta m \,\simeq\, 0.03 \,g 
-\end{equation*}
-%
-Dal momento che, per calcolare la costante elastica della molla, siamo costretti a passare per la relazionie $F_{el} = -k\,x$ e poichè nel nostro caso $F_{el} = F_{p} = m\,g$ allora dobbiamo propagare l'incertezza derivante dalla misura della massa usata anche sul calcolo della forza peso applicata alla molla ottenendo quindi una relazione di questo tipo:
+Come detto precedentemente, la massa dei nostri tredici pesi è data da delle composizioni dei cilindretti a nostra disposizione e ognuno di essi è affetto da un errore sulla sua massa, dovuto alla risoluzione della bilancia. Per evitare di dover propagare le incertezze delle singole masse alle loro somme, abbiamo misurato la massa di ogni composizione cosicché risultasse affetta soltanto dall'errore di risoluzione dello strumento. Quindi le masse sono tutte affette dalla stessa incertezza tipo di risoluzione, che vale
 
 \begin{equation*}
-	\delta F_{p}\, =\, g\,\delta m_i
+	\delta m \,=\, \frac{1}{\sqrt{12}}\Delta m \,\simeq\, 0.03 \,g 
 \end{equation*}
 %
-Per quanto riguarda l'allungamento della molla, dal momento che è dato dalla differenza tra la posizione finale $z_i$ e quella di equilibrio $z_0$, si ottiene:
+dove $\Delta m = 0.1$ g indica la risoluzione dello strumento.
+
+L'allungamento della molla è proporzionale alla forza ad essa applicata, cioè la forza peso, che è stata calcolata con la relazione (\ref{eq:fp})
+dove è stato assunto il valore $g = 9.806 \,\, m/s^2$ e si è trascurata la sua incertezza. I pesi ottenuti sono riportati nella
+prima colonna della tabella \ref{tab:dati}.
+
+Dal momento che, per calcolare la costante elastica della molla, siamo costretti a passare per la relazione $F_p = k\,x$, in cui entra la forza peso e non la massa, dobbiamo propagare l'incertezza dalla misura della massa alla forza peso applicata alla molla. Si ottenene quindi la relazione:
+
+\begin{equation*}
+	\delta F_{p}\, =\, g\,\delta m \,=\, 0.0003 \,\, N 
+\end{equation*}
+%
+L'allungamento della molla all'applicazione della massa $i$-esima è dato dalla differenza tra la posizione finale $z_i$ e quella di equilibrio $z_0$:
 
 \begin{equation*}
 	x_i = |z_i\,-\,z_0|
 \end{equation*}
 %
-e quindi l’incertezza sugli allungamenti $\delta x_i$ si ricava applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
+Gli allungamenti calcolati sono riportati in tabella \ref{tab:dati}. L’incertezza sugli allungamenti $\delta x$, che è uguale per tutte le misure, si ricava applicando la regola per la propagazione delle incertezze sulla differenza di misure indipendenti:
 
 \begin{equation*}
-	\delta x_i = \sqrt{\delta z_i^2\, + \,\delta z_0^2}
+	\delta x = \sqrt{\delta z^2\, + \,\delta z_0^2} \,=\, 0.0004 \,\, m
 \end{equation*}
 %
 Da notare che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa pertanto l'allungamento rilevato si riferisce soltanto alla massa applicata.\\
 
-\begin{SCtable}
+\begin{table}
     \centering
-    \begin{tabular}{c c c c c}
-        \multicolumn{5}{c}{\textbf{Pesi e allungamenti}} \\[1mm]
+    \begin{tabular}{c c c c c c c}
+        \multicolumn{7}{c}{\textbf{Pesi e allungamenti}} \\[1mm]
         \toprule
-        Peso [N] & Allungamenti [m] & $k$ [$\frac{N}{m}$] & $\delta k$ [$\frac{N}{m}$] & $\delta k_x$ [$\frac{N}{m}$]\\
+        Massa [g] & Pos. eq. [cm] & Peso [N] & Allungamenti [m] & $k$ [$\frac{N}{m}$] & $\delta k$ [$\frac{N}{m}$] & $\delta k_x$ [$\frac{N}{m}$]\\
         \midrule
-        0.049 & 0.005 & 9.8 & 0.8 & 0.8 \\
-		0.148 & 0.016 & 9.3 & 0.2 & 0.2 \\
-		0.244 & 0.026 & 9.4 & 0.1 & 0.1 \\
-		0.343 & 0.036 & 9.5 & 0.1 & 0.1 \\
-		0.443 & 0.047 & 9.43 & 0.08 & 0.08 \\
-		0.540 & 0.057 & 9.48 & 0.07 & 0.07 \\
-		0.639 & 0.067 & 9.54 & 0.06 & 0.06 \\
-		0.736 & 0.076 & 9.68 & 0.05 & 0.05 \\
-		0.835 & 0.086 & 9.70 & 0.05 & 0.05 \\
-		0.934 & 0.096 & 9.72 & 0.04 & 0.04 \\
-		1.030 & 0.107 & 9.62 & 0.04 & 0.04 \\
-		1.130 & 0.117 & 9.66 & 0.03 & 0.03 \\
-		1.229 & 0.127 & 9.67 & 0.03 & 0.03 \\
+        5.0 & 49.5 & 0.049 & 0.005 & 9.8 & 0.8 & 0.8 \\
+		15.1 & 48.4 & 0.148 & 0.016 & 9.3 & 0.2 & 0.2 \\
+		24.9 & 47.4 & 0.244 & 0.026 & 9.4 & 0.1 & 0.1 \\
+		35.0 & 46.4 & 0.343 & 0.036 & 9.5 & 0.1 & 0.1 \\
+		45.2 & 45.3 & 0.443 & 0.047 & 9.43 & 0.08 & 0.08 \\
+		55.1 & 44.3 & 0.540 & 0.057 & 9.48 & 0.07 & 0.07 \\
+		65.2 & 43.3 & 0.639 & 0.067 & 9.54 & 0.06 & 0.06 \\
+		75.0 & 42.4 & 0.735 & 0.076 & 9.68 & 0.05 & 0.05 \\
+		85.1 & 41.4 & 0.834 & 0.086 & 9.70 & 0.05 & 0.05 \\
+		95.2 & 40.4 & 0.934 & 0.096 & 9.72 & 0.04 & 0.04 \\
+		105.0 & 39.3 & 1.029 & 0.107 & 9.62 & 0.04 & 0.04 \\
+		115.2 & 38.3 & 1.130 & 0.117 & 9.66 & 0.03 & 0.03 \\
+		125.3 & 37.3 & 1.229 & 0.127 & 9.67 & 0.03 & 0.03 \\
         \bottomrule
     \end{tabular}
-    \caption{La tabella riassume i dati raccolti ed i calcoli eseguiti. La prima colonna riporta i pesi in newton
-        delle masse appese alle molle (calcolati con il valore $g = 9.806 \,\, m/s^2$), la seconda i relativi allungamenti.
-        La terza colonna riporta il valore di k stimato facendo il rapporto $P_i/x_i$ della relativa riga. Le ultime due colonne
+    \caption{La tabella riassume i dati raccolti ed i calcoli eseguiti. La prima elenca le masse delle combinazioni, riportate anche in tabella
+        \ref{tab:masse}, mentre la seconda colonna riporta le posizioni di equilibrio misurate per le rispettive masse.
+        La terza colonna riporta i pesi in Newton
+        delle masse appese alle molle (calcolati con il valore $g = 9.806 \,\, m/s^2$), la quarta i relativi allungamenti.
+        Le incertezze sui valori delle prime tre colonne sono calcolate nel paragrafo \ref{incertezze}.
+        La quinta colonna riporta il valore di k stimato facendo il rapporto $P_i/x_i$ della relativa riga. Le ultime due colonne
         riportano le incertezze sul k ricavate con la propagazione degli errori. Nell'ultima colonna è stato trascurato il contributo
-        dell'incertezza sul peso, che, si può vedere facilmente, non è significativa.}
+        dell'incertezza sul peso, che, si può vedere facilmente, non è significativa. \emph{Nota:}
+        I dati delle prime quattro colonne sono approssimati come da risoluzione degli strumenti usati, anche se i loro errori standard
+        sono di un ordine di grandezza inferiore. Non avrebbe molto senso mettere una cifra in più in quanto va oltre la risoluzione degli
+        strumenti e non porta informazione.}
     \label{tab:dati}
-\end{SCtable}
+\end{table}
 
-\subsubsection{Analisi di dati}
+\begin{table}
+    \centering
+	\begin{tabular}{ c c  c  c  c  c }
+        \multicolumn{6}{c}{\textbf{Carico e scarico della molla}} \\[1mm]
+        \toprule
+        \multirow{2}*{Massa [g]} & \multicolumn{5}{c}{Allungamenti [cm]} \\
+        \cmidrule{2-6}
+        & Prima misura & Carico 1	& Scarico 1	& Carico 2	& Scarico 2 \\
+        \midrule
+        15.1		& 1.6 & 1.5		& 1.5			& 1.5		& 1.5	\\
+        35.0		& 3.6 & 3.5		& 3.5			& 3.5		& 3.5	\\
+        55.1		& 5.7 & 5.6		& 5.6			& 5.5		& 5.6	\\
+        75.0		& 7.6 & 7.5		& 7.5			& 7.5		& 7.6	\\	
+        95.2		& 9.6 & 9.6		& 9.6			& 9.6		& 9.6	\\
+        115.2		& 11.7 & 11.6		& 11.6			& 11.6		& 11.6	\\
+        \bottomrule
+	\end{tabular}
+    \caption{La tabella mostra gli allungamenti della molla registrati durante le misurazioni effettuate per l'esperimento
+        (prima misura, riportate anche in tabella \ref{tab:dati}), e durante i due cicli di carico-scarico.
+        Tutte le misure sono affette dall'incertezza standard di
+        risoluzione sulla lunghezza pari a 0.3 mm.}
+    \label{tab:carico_scarico}
+\end{table}
 
-Nella \ref{tabella allungamenti} sono riportate le masse applicate alla molla con la loro relativa posizione di equilibrio. Stessa cosa vale per la \ref{tabella carico e scarico}.
-La \ref{tabella carico e scarico} mostra la posizione di equilibrio per alcune masse applicate ed è stata realizzata con una procedura di carico e scarico della molla. Ovvero: per le masse scelte si è deciso di caricare la molla e rilevare le varie posizioni di equilibrio, stessa cosa si è fatta nello scariare la molla. Questa procedura è stata ripetuta due volte.
-Come si può intuire da una prima analisi superficiale delle tabelle risulta evidente che le misure sono compatibili tra di loro e questo quindi ci porta a dire che la molla non è stata affeta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico) e che sono riproducibili entro il carico massimo della molla oltre il quale si avrebbe una deformazione permanente della stessa.
-Affermiamo questo perchè prendendo per esempio la massa da "55 g" possiamo oservare che le varie misure sono le seguenti:
+\subsubsection{Carico e scarico della molla}
+
+In tutto il resto dell'esperimento abbiamo assunto che la molla non si deformasse (ovvero che fosse in regime elastico)
+e che non cambiassero le posizioni di equilibrio relative alle diverse masse. Affinchè queste ipotesi risultino fondate,
+abbiamo dovuto verificare che le posizioni di equilibrio delle masse non varino a seconda che vengano misurate durante la fase di carico
+o scarico della molla. La tabella \ref{tab:carico_scarico} mostra la posizione di equilibrio per alcune masse applicate ed è stata realizzata con una procedura di carico e scarico della molla. Ovvero: per le masse scelte si è deciso di caricare la molla e rilevare le varie posizioni di equilibrio, stessa cosa si è fatta nello scariare la molla. Questa procedura è stata ripetuta due volte.
+Come si può intuire da una prima analisi qualitativa della tabella, risulta evidente che le misure sono compatibili tra di loro e questo ci porta a dire che la molla non è stata affetta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico).
+Affermiamo questo perchè prendendo per esempio la massa da ``55 g'' possiamo oservare che le varie misure sono le seguenti:
 \begin{itemize}
 	\item{primo allungamento $x_{all_1}$ = $(5.7 \pm 0.03) cm$}
 	\item{secondo allungamento $x_{all_2}$ = $(5.6 \pm 0.03) cm$}
