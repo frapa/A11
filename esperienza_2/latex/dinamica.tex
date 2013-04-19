@@ -326,13 +326,13 @@ Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pp
 	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,\simeq\, N - 2 \quad \text{ricordando che} \quad \chi_{teo}^2 \,\,:=\,\, N - 2
 \end{equation*}
 %
-purtroppo il nostro valore del chi quadro osservato è:
+il nostro valore del chi quadro osservato è:
 
 \begin{equation*}
-	\chi_{oss}^2 \,\,=\,\, 21.1 \quad \text{che non risulta essere compatibile con il} \quad \chi_{teo}^2
+	\chi_{oss}^2 \,\,=\,\, 21.1 \quad \text{che risulta essere compatibile con il} \quad \chi_{teo}^2
 \end{equation*}
 %
-in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12.0 \, \pm \, 4.9 $ pertanto la differenza tra i due chi quadro risulta essere la seguente:
+in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12.0 \, \pm \, 4.9$ pertanto la differenza tra i due chi quadro risulta essere la seguente:
 
 \begin{equation*}
 	|R| \,\,=\,\, (\chi_{oss}^2 - \chi_{teo}^2) \,\,=\,\, 9.1
@@ -344,9 +344,38 @@ mentre, posto a priori un fattore di copertura k = 2, l'errore sul resto è:
 	k \, \sigma_{R} \,\,=\,\, 9.8
 \end{equation*}
 %
-e quindi non risulta che $|R| \, \leq \, k \, \sigma_{R}$.\\
+e quindi risulta che $|R| \, \leq \, k \, \sigma_{R}$.\\
 
-Dal momento che il chi quadro osservato risulta essere molto maggiore del chi quadro teorico crediamo che questo sia dovuto al fatto che abbiamo sottostimato le incertezze sulle misure 
+Dal momento che il chi quadro osservato pur essendo compatibile con la predizione teorica risulta essere molto maggiore del chi quadro teorico abbiamo deciso di rifare il fit per ottenere una migliore stima deglle inceretezze sul periodo che probabilmente sono state sottostimate.\\
+Pertanto rifacendo la procedura del fit vogliamo aggiustare il valore delle incertezze in modo da eguagiare i due chi, ovvero quello teorico e sperimentale. Pertanto:
+
+RIGUARDAREEEEEEEEEE
+
+\begin{equation*}
+	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,=\, \chi_{teo}^2 
+\end{equation*}
+%
+e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta y_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+	
+\begin{equation*}
+	\chi_{oss}^2 \,\,=\,\, \frac{1}{\delta y_{i}^2} \sum_{1}^{N} (y_i - A - Bx_i)^2  \,\,=\,\, \chi_{teo}^2
+\end{equation*}
+%
+poichè sappiamo che:
+	
+\begin{equation*}
+	\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
+	\nu \,=\, N - 1 \quad \quad e \quad \quad
+	\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
+\end{equation*}
+%
+con $\nu$ che rappresenta i gradi di libertà.
+Quindi si ottiene che:
+
+\begin{equation*}
+	\delta x_{posteriori} \,=\,  \,m \,\,=\,  \,\, mm
+\end{equation*}	 
+ 
 
 
 
