@@ -162,7 +162,7 @@ Al fine di ottenere un andamento lineare abbiamo considerato i valori $\mathcal{
 sui valori di $\mathcal{T}_k^2$ sono state ottenute usando le regole di propagazione dell'incertezza, con la formula:
 
 \begin{equation*}
-    \delta(\mathcal{T}_k^2) = 2 \,\, \mathcal{T}_k^2 \,\, \delta \mathcal{T}_k
+    \delta(\mathcal{T}_k^2) = 2 \,\, \mathcal{T}_k \,\, \delta \mathcal{T}_k
 \end{equation*}
 
 I valori ottenuti con questa procedura sono riportati nella stessa tabella \ref{tab:calcolati}, nelle ultime due colonne e sono
@@ -205,21 +205,21 @@ Questi effetti apparentemente complicati, possono essere semplificati introducen
 \end{equation}
 %
 dove $M = m_e + m$. Quindi nella figura \ref{fig:periodo2_massa} la retta interseca l'asse delle ascissa
-nel punto $-m_e$.
+nel punto $m_e$.
 
 La massa efficace non è la massa della molla stessa, ma la massa fittizia che occorrerebbe
 appendere ad una molla ideale per rendere le sue oscillazioni identice a quelle della molla reale.
 
 Troviamo ora la relazione che collega la massa efficace $m_e$ della molla alla sua massa reale $\mu$.
 Immaginiamo di far oscillare la molla di massa $\mu$ e lunghezza $L$ mantenendo fisso un estremo.
-Consideriamo un pezzetto infinitesimo della molla a distanza $l$ dall'estremo fisso. La massa del pezzo
-varrà $\mu \, dl / L$. Ipotizzando che la velocità di tale pezzo sia proporzionale alla distanza dall'estremo
-fisso, si ottiene che la sua velocità è $v \, l / L$, dove $v$ è la velocità dell'estremo libero.
+Consideriamo un pezzetto infinitesimo della molla a distanza $\ell$ dall'estremo fisso. La massa del pezzo
+varrà $\mu \, d\ell / L$. Ipotizzando che la velocità di tale pezzo sia proporzionale alla distanza dall'estremo
+fisso, si ottiene che la sua velocità è $v \, \ell / L$, dove $v$ è la velocità dell'estremo libero.
 Calcoliamo l'energia cinetica tramite l'integrale:
 
 \begin{equation*}
-    E_k \, = \, \int_0^L \frac{1}{2} \frac{\mu v^2}{L^3} l^2 \, dl \, = \,
-    \frac{1}{2} \frac{\mu v^2}{L^3} \int_0^L l^2 \, dl = \frac{1}{6} \mu v^2
+    E_k \, = \, \int_0^L \frac{1}{2} \frac{\mu v^2}{L^3} \ell^2 \, d\ell \, = \,
+    \frac{1}{2} \frac{\mu v^2}{L^3} \int_0^L \ell^2 \, d\ell = \frac{1}{6} \mu v^2
 \end{equation*}
 %
 Tuttavia, per una massa ideale con le stesse oscillazioni, vale:
@@ -228,37 +228,66 @@ Tuttavia, per una massa ideale con le stesse oscillazioni, vale:
     E_k \, = \, \frac{1}{2} m_e v^2
 \end{equation*}
 %
-Eguagliando le due equazioni si ottiene $m_e = \mu/3$ ovvero $\mu = 3m_e$. 
+Eguagliando le due equazioni si ottiene $m_e = \mu/3$ ovvero $\mu = 3\,\,m_e$. 
 
 \subsubsection{Calcolo dei parametri $\mathcal{C}$ e $m_e$ mediante il metodo della regressione lineare}
-Prendiamo in considerazione la seguente legge:
+Considerando l'equazione (\ref{eq:ppme}) e analizzandola tenendo conto del nuovo valore della massa $M = m_e + m$, otteniamo:
 
 \begin{equation*}
+	\mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{M}{k}}	\,\,\,=>\,\,\, \mathcal{T} \,=\, \mathcal{C} \, \sqrt{\frac{m_e + m}{k}}
+\end{equation*}
+%
+pertanto elevando tutti i membri al quadrato otteniamo:
+
+\begin{equation*}
+	\mathcal{T}^2 \,=\, \mathcal{C}^2 \,\, \frac{(m_e + m)}{k}
+\end{equation*}
+%
+Che si può riscrivere come segue:
+
+\begin{equation}
 	\mathcal{T}^2 \,\,=\,\, \frac{\mathcal{C}^2}{k} m_e \,+\, \frac{\mathcal{C}^2}{k} m
-\end{equation*}
+	\label{eq:mCspezzati}
+\end{equation}
 %
-la cui scrittura può essere semplificata nel seguente modo:
+ed inoltre, la si può rendere più leggibile, scivendola nel seguente modo:
 
-\begin{equation*}
+\begin{equation}
 	y \,=\, A \,+\, Bx
-\end{equation*}
+	\label{eq:pppar}
+\end{equation}
 %
-dove $x \equiv m$ (massa appesa) $y \equiv \mathcal{T}^2$, $A \equiv \frac{\mathcal{C}^2}{k} m_e$ e $B \equiv \frac{\mathcal{C}^2}{k}$.
+dove $x \equiv m$ (massa applicata) $y \equiv \mathcal{T}^2$, $A \equiv \frac{\mathcal{C}^2}{k} \, m_e$ e $B \equiv \frac{\mathcal{C}^2}{k}$.\\
 Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza mediante la tecnica della regressione lineare pertanto procediamo con il metodo utilizzato anche nella sezione due.
 \begin{itemize}
 \item{calcoliamo la discrepanza:
 		\begin{equation*}
-			discrepanza \,=\, \sum_{i=1}^{13} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
+			\text{discrepanza} \,=\, \sum_{i=1}^{13} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
 		\end{equation*}
 		%
-		ricordando che l'incertezza sull'asse delle ascisse è la stessa incertezza sulla massa ovvero $\delta m_i$ che in questa analisi poniamo uguli a $\delta x_i$ e che risulta trascurabile [è vero?????] rispetto all'incertezza che dellasse delle ordinate $\delta y_i \equiv \delta \mathcal{T}^2$}
+		ricordando che l'incertezza sull'asse delle ascisse è la stessa incertezza sulla massa ovvero $\delta m_i$ che in questa analisi poniamo uguli a $\delta x_i$.}
+\item{Prima di procedere con l'analisi è necessario verificare che l'incertezza relativa alle masse sia trascurabile rispetto a quella dei periodi al quadrato. Per accertarlo è stato necessario fare una stima preliminare del parametro B. Dal momento che dal grafico è impossibile individuare le rette di massima e minima pendenza abbiamo deciso di ricavare il parmetro B valutando il coefficiente angolare della retta utilizzando il classico rapporto tra due punti del grafico, ovvero:
+
+	\begin{equation*}
+		\text{B} \,\,=\,\, \frac{\mathcal{T}_{14} - \mathcal{T}_{1}}{m_{14} - m_1} \,\,=\,\, 4.09 \,\, s^2 \,\,\,[verificare \,\,\,cifre]
+	\end{equation*}
+	%
+	quindi grazie a questo valore di B siamo in grado di stimare l'incertezza trasferita, ovvero: $\sigma m_{tras} \,\,=\,\, B \, \sigma m$ dove $\sigma m$ rappresenta l'errore tipo di misura sulla massa. Abbiamo notato che questo valore è 10 volte minore rispetto all'incertezza sul periodo quadrato, e quindi poichè l'incertezza totale risulta essere la seguente
+	
+	\begin{equation*}
+		\delta y_i \,=\, \sqrt{(\delta \mathcal{T}_k^2)^2 + \sigma m_{tras}^2} 
+	\end{equation*}	
+	%
+	possiamo notare che sotto radice il termine $\sigma m_{tras}^2$ risulta essere 100 volte minore di $(\delta \mathcal{T}_k^2)^2$ quindi lo si può considerare trascurabile rispetto all'incertezza rispetto al periodo quadro.
+	}
 \item{quindi per quanto studiato in classe abbiamo che:
+
 		\begin{equation*}
-			A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w-i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\,
+			A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w-i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\, 0.033655 \,\, s^2
 		\end{equation*}
 		%
 		\begin{equation*}
-			B \,=\, \frac{(\sum_i w_i)(\sum_i w-i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\,
+			B \,=\, \frac{(\sum_i w_i)(\sum_i w-i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\, 4.0603 \,\, s^2 / kg
 		\end{equation*}
 		%
 		dove:
@@ -269,25 +298,84 @@ Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza med
 \item{di conseguenza abbiamo che le incertezze relative su A e B sono:
 
 		\begin{equation*}
-			(\delta A)^2 \,=\, \frac{\sum_i w_i x_i^2}{\Delta} \,=\,  \,\,\,\,\, e \,\,\,\,\,
-			(\delta B)^2 \,=\, \frac{\sum_i w_i}{\Delta} \,=\,
+			(\delta A)^2 \,=\, \frac{\sum_i w_i x_i^2}{\Delta}  \,\,\,\,\, e \,\,\,\,\,
+			(\delta B)^2 \,=\, \frac{\sum_i w_i}{\Delta} 
 		\end{equation*}}
 \end{itemize} 
 Quindi possiamo riassumere i risultati di questa procedura in questo modo:
 
 \begin{equation*}
-	A \,\pm\, \delta A \,=\, \pm \,\,\,\,\, e \,\,\,\,\,
-	B \,\pm\, \delta B \,=\, \pm
-\end{equation*}
-Perciò noti questi parametri possiamo risalire ai valoti di $\mathcal{C}$ e $k$ risolvendo l'equazione in (... inizio ...) e utilizzando come valore di k quello trovato nell'analisi dati della sezine precedente ovvero $K = ...$
-
-\subsubsection{Test del chi quadro}
-Procediamo ora a verificare che i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quaro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i datisperimentali A e B. Pertanti ci aspettiamo che:
-
-\begin{equation*}
-	\chi^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,\simeq\, N - 2
+	A \,\pm\, \delta A \,=\, (0.034 \,\, \pm \,\, 0.001) \,\,s^2 \,\,\,\,\, e \,\,\,\,\,
+	B \,\pm\, \delta B \,=\, (4.06 \,\, \pm \,\, 0.01) \,\,s^2 \,/\, kg
 \end{equation*}
 %
+Perciò noti questi parametri possiamo risalire ai valoti di $\mathcal{C}$ e $m_e$ risolvendo l'equazione in (\ref{eq:pppar}) e utilizzando come valore di k quello trovato nell'analisi dati della sezine precedente ovvero $K_0 \,=\, 9.64 \, N/m$ otteniamo quanto segue:
+
+\begin{equation*}
+	\mathcal{C} \,\pm\, \delta \mathcal{C} \,\,=\,\, (6.256 \, \pm \, 0.007)
+\end{equation*}
+%
+\begin{equation*}
+	m_e \, \pm \, \delta m_e \,\,=\,\, (0.0083 \,\, \pm \,\, 0.0002) \,\, kg
+\end{equation*}
+
+\subsubsection{Test del chi quadro}
+Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pppar}) i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quaro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i  valori sperimentali A e B. Pertanto ci aspettiamo che:
+
+\begin{equation*}
+	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,\simeq\, N - 2 \quad \text{ricordando che} \quad \chi_{teo}^2 \,\,:=\,\, N - 2
+\end{equation*}
+%
+il nostro valore del chi quadro osservato è:
+
+\begin{equation*}
+	\chi_{oss}^2 \,\,=\,\, 21.1 \quad \text{che risulta essere compatibile con il} \quad \chi_{teo}^2
+\end{equation*}
+%
+in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12.0 \, \pm \, 4.9$ pertanto la differenza tra i due chi quadro risulta essere la seguente:
+
+\begin{equation*}
+	|R| \,\,=\,\, (\chi_{oss}^2 - \chi_{teo}^2) \,\,=\,\, 9.1
+\end{equation*}
+%
+mentre, posto a priori un fattore di copertura k = 2, l'errore sul resto è:
+
+\begin{equation*}
+	k \, \sigma_{R} \,\,=\,\, 9.8
+\end{equation*}
+%
+e quindi risulta che $|R| \, \leq \, k \, \sigma_{R}$.\\
+
+Dal momento che il chi quadro osservato pur essendo compatibile con la predizione teorica risulta essere molto maggiore del chi quadro teorico abbiamo deciso di rifare il fit per ottenere una migliore stima deglle inceretezze sul periodo che probabilmente sono state sottostimate.\\
+Pertanto rifacendo la procedura del fit vogliamo aggiustare il valore delle incertezze in modo da eguagiare i due chi, ovvero quello teorico e sperimentale. Pertanto:
+
+RIGUARDAREEEEEEEEEE
+
+\begin{equation*}
+	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,=\, \chi_{teo}^2 
+\end{equation*}
+%
+e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta y_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+	
+\begin{equation*}
+	\chi_{oss}^2 \,\,=\,\, \frac{1}{\delta y_{i}^2} \sum_{1}^{N} (y_i - A - Bx_i)^2  \,\,=\,\, \chi_{teo}^2
+\end{equation*}
+%
+poichè sappiamo che:
+	
+\begin{equation*}
+	\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
+	\nu \,=\, N - 1 \quad \quad e \quad \quad
+	\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
+\end{equation*}
+%
+con $\nu$ che rappresenta i gradi di libertà.
+Quindi si ottiene che:
+
+\begin{equation*}
+	\delta x_{posteriori} \,=\,  \,m \,\,=\,  \,\, mm
+\end{equation*}	 
+ 
 
 
 
