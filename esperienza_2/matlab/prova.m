@@ -23,13 +23,18 @@ for i = 1:N
 	d += (periodi(:,i) - medie_periodi) .^ 2;
 endfor
 sigma_periodi = sqrt(d ./ (N - 1));
-sigma_periodi = sqrt(sum((periodi - medie_periodi) .^ 2, 2) / (N - 1));
+sigma_periodi = sqrt(sum((periodi - medie_periodi) .^ 2, 2) / (N*(N - 1)));
 
-dT = sqrt(((sigma_periodi .^ 2) / N) + sigma_res_periodi .^ 2);
+dT = sqrt(((sigma_periodi .^ 2)) + sigma_res_periodi .^ 2);
 
 % eleviamo al quadrato
 medie_periodi_2 = medie_periodi .^ 2;
-sigma_periodi_2 = 2 * medie_periodi .* dT;
+sigma_periodi_2 = 2 * medie_periodi .* dT
+
+B = (medie_periodi_2(14) - medie_periodi_2(1)) / (masse(14) - masse(1))
+sigma_trans = B * sigma_res_massa
+#sigma_periodi_2 = sqrt((sigma_periodi_2 .^ 2) + sigma_trans ^ 2)
+
 
 #errorbar(masse, medie_periodi, sigma_periodi)
 #errorbar(masse, medie_periodi_2, sigma_periodi_2)
