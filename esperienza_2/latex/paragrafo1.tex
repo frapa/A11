@@ -194,6 +194,8 @@ Affermiamo questo perchè prendendo per esempio la massa da ``55 g'' possiamo os
 \end{itemize}
 quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
 
+RIVEDERE QUESTO PEZZO CON PASA E BUZZ !!!!!!!!
+
 \begin{equation*}
 	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.57\, cm
 \end{equation*}
@@ -298,9 +300,9 @@ Procediamo operativamente in questo modo:
 \begin{itemize}
 	\item{la funzione per la misura della discrepanza è:
 			\begin{equation*}
-				\sum_{i=1}^{13} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2}	
+				\sum_{i=1}^{N} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2}	
 			\end{equation*}}
-	\item{Consideriamo come stima prelminare di $b \,=\, \frac{1}{k_0}$, da utilizzare per minimizzare la funzione della discrepanza, il vaore che si ottiene utilizzando il $k_0$ ottenuto dal metodo della distribuzione dei valori $k_i$. Pertato questo primo b risulta essere $\frac{1}{9.58} m/N$ . Avendo verificato che l'incerteza $\delta F_{p_i}$ risulta essere trascurabile rispetto a quella sugli allungamenti $\delta x_i$ in quanto: l'incertezza totale che otteniamo componendo l'incertezza sugli allungamenti $\delta x_i$ e quella relativa all'inceretezza del peso trasferita $\delta x_{i trasferto} \,=\, b \, \delta x_i $ ci mostra che il contributo di quest'ultima ($\delta x_{i trasferto}$) è trascurabile rispetto a quella relativa all'allungamento. Notiamo inoltre che le incertezze di $x_i$ hanno tutte lo stesso valore.}
+	\item{Consideriamo come stima prelminare di $b \,=\, \frac{1}{k_0}$, da utilizzare per minimizzare la funzione della discrepanza, il vaore che si ottiene utilizzando il $k_0$ ottenuto dal metodo della distribuzione dei valori $k_i$. Pertato questo primo b risulta essere $\frac{1}{9.58} \, m/N$ . Avendo verificato che l'incerteza $\delta F_{p_i}$ risulta essere trascurabile rispetto a quella sugli allungamenti $\delta x_i$ in quanto: l'incertezza totale che otteniamo componendo l'incertezza sugli allungamenti $\delta x_i$ e quella relativa all'inceretezza del peso trasferita $\delta x_{i trasferto} \,=\, b \, \delta x_i $ ci mostra che il contributo di quest'ultima ($\delta x_{i trasferto}$) è trascurabile rispetto a quella relativa all'allungamento. Notiamo inoltre che le incertezze di $x_i$ hanno tutte lo stesso valore.}
 	\item{quindi otteniamo le segenti relazioni:
 			\begin{equation*}
 				b_0  \,=\,  \frac{\sum F_{p_i}  x_i}{\sum F_{p_i}^2} \,=\, 0.1037 \,\, m/N \quad \,\, e \quad\,\,
@@ -348,7 +350,7 @@ Ricordando che:
 andiamo a verifichiamo che il $\chi_{oss}^2$ sia compatibile con il $\chi_{teo}^2$, andando a verificare che
 
 \begin{equation*}
-	|R| \,\,leq\,\,  \,\,=\,\, k \, \sqrt{2(N - 1)}
+	|R| \,\, \leq \,\, k \, \sqrt{2(N - 1)}
 \end{equation*}
 %
 premettendo che adotteremo come fattore di copertura k = 2.\\
@@ -368,16 +370,16 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
 \item{Abbiamo deciso di considerare uguali tra di loro tutte le varianze in modo da poter procedere con la seguente operazione:
 
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \sum_{i=1}^{13} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} \,=\, \chi_{teo}^2 
+		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,=\, \chi_{teo}^2 
 	\end{equation*}
 	%
-	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ che ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
 	
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \frac{1}{\delta x_{i}^2} \sum_{1}^{13} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
+		\chi_{oss}^2 \,=\, \frac{1}{(\delta x)^2} \sum_{1}^{N} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
 	\end{equation*}
 	%
-	poichè sappiamo che:
+	con $(\delta x)^2$ che rappresenta la nuova varianza. Dal momento che valgono le seguenti relazioni:
 	
 	\begin{equation*}
 		\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
@@ -385,8 +387,7 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
 		\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
 	\end{equation*}
 	%
-	con $\nu$ che rappresenta i gradi di libertà.
-	Quindi si ottiene che:
+	con $\nu$ che rappresenta i gradi di libertà si ottiene che:
 	
 	\begin{equation*}
 		\delta x_{posteriori} \,=\, 0.0006 \,m \,\,=\, 0.6 \,\, mm

@@ -262,7 +262,7 @@ Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza med
 \begin{itemize}
 \item{calcoliamo la discrepanza:
 		\begin{equation*}
-			\text{discrepanza} \,=\, \sum_{i=1}^{13} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
+			\text{discrepanza} \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
 		\end{equation*}
 		%
 		ricordando che l'incertezza sull'asse delle ascisse è la stessa incertezza sulla massa ovvero $\delta m_i$ che in questa analisi poniamo uguli a $\delta x_i$.}
@@ -347,34 +347,38 @@ mentre, posto a priori un fattore di copertura k = 2, l'errore sul resto è:
 e quindi risulta che $|R| \, \leq \, k \, \sigma_{R}$.\\
 
 Dal momento che il chi quadro osservato pur essendo compatibile con la predizione teorica risulta essere molto maggiore del chi quadro teorico abbiamo deciso di rifare il fit per ottenere una migliore stima deglle inceretezze sul periodo che probabilmente sono state sottostimate.\\
-Pertanto rifacendo la procedura del fit vogliamo aggiustare il valore delle incertezze in modo da eguagiare i due chi, ovvero quello teorico e sperimentale. Pertanto:
-
-RIGUARDAREEEEEEEEEE
+Pertanto rifacendo la procedura del fit vogliamo aggiustare il valore delle incertezze in modo da eguagiare i due chi quadro, ovvero quello teorico e sperimentale. Pertanto:
 
 \begin{equation*}
 	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,=\, \chi_{teo}^2 
 \end{equation*}
 %
-e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta y_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+quindi sfruttando questa relazione vogliamo trovare un coefficiente che moltiplicato per il precedente $\delta y_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Perciò otteniamo quanto segue:
 	
 \begin{equation*}
-	\chi_{oss}^2 \,\,=\,\, \frac{1}{\delta y_{i}^2} \sum_{1}^{N} (y_i - A - Bx_i)^2  \,\,=\,\, \chi_{teo}^2
+	\chi_{oss}^2 \,\,=\,\, \frac{1}{(\delta y)^2} \sum_{1}^{N} (y_i - A - Bx_i)^2  \,\,=\,\, \chi_{teo}^2
 \end{equation*}
 %
-poichè sappiamo che:
+ricordando che il termine $(\delta y)^2$ la nuova stima dell'incertezza sul periodo. Sapendo che valgono:
 	
 \begin{equation*}
 	\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
 	\nu \,=\, N - 1 \quad \quad e \quad \quad
-	\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
+	\delta y_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta y_{priori}^2
 \end{equation*}
 %
-con $\nu$ che rappresenta i gradi di libertà.
-Quindi si ottiene che:
+con $\nu$ che rappresenta i gradi di libertà. Otteniamo:
 
 \begin{equation*}
-	\delta x_{posteriori} \,=\,  \,m \,\,=\,  \,\, mm
+	\delta x_{posteriori} \,=\,  \,s
 \end{equation*}	 
+
+\subsubsection{Determinazione dinamica della costante elastica K}
+Grazie alla procedura di regrassione lineare adottata sopra siamo riusciti a determinare i 2 parametri A e B, pertanto ora sfruttando la teoria dell'oscillatore armonico si trova che $\mathcal{C}$ ha il valore di $2 \, \pi$, per cui assumendo che la nostra molla sia perfettamente elastica, otteniamo la relazione:
+
+\begin{equation}
+	\mathcal{T} \,\,=\,\, 2 \, \pi \, \sqrt{\frac{M}{k}} \quad \text{dove} \quad M \,=\, m_e\,+\,m
+\end{equation}
  
 
 
