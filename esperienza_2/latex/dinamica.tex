@@ -382,10 +382,10 @@ Grazie alla procedura di regrassione lineare adottata sopra siamo riusciti a det
 %
 Ora se noi imponiamo che il parametro $\mathcal{C} \,=\, 2\,\pi$ siamo in grado di stimare nuovamente i parametri $k \,e\, m_e$ a partire dalla regressione lneare, in quanto:
 \begin{itemize}
-	\item{balla definizione di B sappiamo che:
+	\item{dalla definizione di B sappiamo che:
 	
 			\begin{equation*}
-				B \,\,=\,\, \frac{\mathcal{C}^2}{k} \quad => \quad k \,\,=\,\, \frac{\mathcal{C}^2}{B} \,\,=\,\,
+				B \,\,=\,\, \frac{\mathcal{C}^2}{k} \quad => \quad k \,\,=\,\, \frac{\mathcal{C}^2}{B} \,\,=\,\, 9.72 \, N/m
 			\end{equation*}}
 	\item{mentre dalla definizione di A sappiamo che:
 	
@@ -398,23 +398,49 @@ Invece per quanto riguarda gli errori relativi a questi risultati abbiamo che:
 	\item{per stimare l'errore relativo alla costante elastica si può procedere come segue:
 	
 			\begin{equation*}
-				\delta k_0 \,\,=\,\, \frac{\delta B}{\mathcal{C}^2} \,\,=\,\,
+				\delta k_0 \,\,=\,\, \frac{\delta B}{\mathcal{C}^2} \,\,=\,\, 0.02 \, N/m
 			\end{equation*}
 			%
 			}
-	\item{mentre per stimare l'errore sulla massa efficace della molla si può fare:
+	\item{mentre per stimare l'errore sulla massa efficace della molla si può sfruttare la regola della propagazione dell'errore per divisoni e ottenere:
 	
 			\begin{equation*}
-				
+				\delta m_e \,\,=\,\, m_e \, \sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta k_0}{k})^2} \,\,=\,\,	
 			\end{equation*}
 			%
 			}
-
-
-
 \end{itemize}
+Quindi abbiamo ottenuto che la costante elastica trovata mediante la procedura dinamica risulta essere:
 
+\begin{equation*}
+	k_0 \, \pm \, \delta k_0 \,\,=\,\, (9.72 \, \pm \, 0.02) \, N/m
+\end{equation*}
+%
+e la massa efficace della molla:
 
+\begin{equation*}
+	m_e \, \pm \, \delta m_e \,\,=\,\, 
+\end{equation*}
+%
+Quindi non ci rimane che verificare se la costante elastica trovata con questa procedura è compatibile con quella trovata grazie alla procedura statica mediante la tecnica della regrssione lineare.\\
+Quindi come prima cosa andiamo a calcolare il resto (R) dato dalla differenza dei due $k_0$:
+
+\begin{equation*}
+	|R| \,\,=\,\, (k_{dinamico} \,-\, k_{statico}) \,\,=\,\, 0.08 \, N/m
+\end{equation*}
+%
+quindi posto a priori un fattore di copertura $k \,=\, 3$ calcoliamo lo scarto relativo al resto R ($\sigma R$):
+
+\begin{equation*}
+	\sigma R \,\,=\,\, \sqrt{(\delta k_{dinamico})^2 \,-\, (\delta k_{statico})^2} \,\,=\,\, 0.03 N/m	
+\end{equation*}
+%
+quindi verifichiamo che:
+\begin{equation*}
+	|R| \,\,\leq\,\, k \, \sigma R  
+\end{equation*}
+%
+e infatti risulta che $|R| \,\leq\, k\,\sigma R$ e pertanto le due costanti elastiche trovate con le due procedure sono compatibili.
 
 
 
