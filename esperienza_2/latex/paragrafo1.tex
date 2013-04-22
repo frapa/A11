@@ -186,15 +186,13 @@ o scarico della molla. La tabella \ref{tab:carico_scarico} mostra la posizione d
 Come si può intuire da una prima analisi qualitativa della tabella, risulta evidente che le misure sono compatibili tra di loro e questo ci porta a dire che la molla non è stata affetta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico).
 Affermiamo questo perchè prendendo per esempio la massa da ``55 g'' possiamo oservare che le varie misure sono le seguenti:
 \begin{itemize}
-	\item{primo allungamento $x_{all_1}$ = $(5.7 \pm 0.03) cm$}
-	\item{secondo allungamento $x_{all_2}$ = $(5.6 \pm 0.03) cm$}
-	\item{terzo allungamento $x_{all_3}$ = $(5.6 \pm 0.03) cm$}
-	\item{quarto allungamento $x_{all_4}$ = $(5.5 \pm 0.03) cm$}
-	\item{quinto allungamento $x_{all_5}$ = $(5.6 \pm 0.03) cm$}
+	\item{primo allungamento $x_{all_1}$ = $5.7 \pm 0.03 \,\,cm$}
+	\item{secondo allungamento $x_{all_2}$ = $5.6 \pm 0.03 \,\,cm$}
+	\item{terzo allungamento $x_{all_3}$ = $5.6 \pm 0.03 \,\,cm$}
+	\item{quarto allungamento $x_{all_4}$ = $5.5 \pm 0.03 \,\,cm$}
+	\item{quinto allungamento $x_{all_5}$ = $5.6 \pm 0.03 \,\,cm$}
 \end{itemize}
 quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
-
-RIVEDERE QUESTO PEZZO CON PASA E BUZZ !!!!!!!!
 
 \begin{equation*}
 	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.57\, cm
@@ -226,21 +224,31 @@ Un'importante osservazione che si può fare analizzando \ref{tabella allungament
 	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escludere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un'operazione così elementare come può sembrare;}
 \end{enumerate}
 
-\subsubsection{Calcolo della costante elastica K a partire dalla tabella}
-Per calcolare la costante elastica della molla abbiamo deciso di procedere in questo modo:
+\subsubsection{Calcolo della costante elastica elastica a partire dalla tabella}
 
-Abbiamo calcolato la $F_{p_{i}}$ delle masse applicate alla molla, come riportato nella quinta colonna della tabella, e anche il rapporto $k_{i} = \frac{F_{p_{i}}}{x_{i}}$. Abbiamo anche stimato l'incertezza $\delta_{k_{i}}$ riguardante la costante elastica relativa ai vari pesi mediante la regola pr la propagazione delle incertezze sui rapporti di misure indipendenti:
+La procedura per il calcolo della costante elastica da noi seguita è il seguente:
+per ogni massa usata si è stimato il valore della costante $k_i$ facendo il rapporto $k_{i} = \frac{F_{p_{i}}}{x_{i}}$,
+e i valori ottenuti sono stati utilizzati per ricavare un unico valore di $k$ mediante due procedure: la media pesata e il metodo statistico.
+L'incertezza $\delta k_{i}$ su ogni valore $k_i$ è stata calcolata mediante la regola per la propagazione delle incertezze sui rapporti di misure indipendenti:
 
 \begin{equation*}
 	\left(\frac{\delta {k_{i}}}{k_{i}}\right)^2  =  \left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2  +  \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2 
 \end{equation*}
-
-\begin{equation*}
-	\delta k_{i} \,=\, k_i\,\, \sqrt{\left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2 + \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2} 
-\end{equation*}
 %
-Queste incertezze sono riportate sulla sesta colonna della tabella [(!) che tabella] e come si può osservare queste non risultano essere tutte uguali. In particolar modo abbiamo che il contributo dell'incertezza relativa al peso sull'incertezza complessiva è trascurabile.\\
-Ottenuti quindi tutti questi valori differenti di k per riunirli in un unico valore che riassuma l'esito complessivo di queste misurazioni abbiamo deciso di adottare due procedure differenti e verificare quele ci avrebbe dato il risultato più preciso e perchè.
+da cui segue
+
+\begin{equation}
+	\delta k_{i} \,=\, k_i\,\, \sqrt{\left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2 + \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2} 
+    \label{eq:deltaki}
+\end{equation}
+%
+I valori $k_i$ calcolati e le relative incertezze sono riportati in tabella \ref{tab:dati}. Da notare che le incertezza
+non risultano essere tutte uguali, poichè nella formula (\ref{eq:deltaki}) sono presenti le incertezze relative, che
+variano per ogni massa. Notiamo inoltre che le incertezze relative sul peso sono trascurabili, infatti eliminado il termine
+$\left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2$ dalla (\ref{eq:deltaki}) i valori delle incertezze $\delta k_i$ non variano.
+I valori delle incertezze ottenute trascurando l'errore sul peso sono riportati nell'ultima colonna della tabella \ref{tab:dati}.
+
+Vediamo ora come abbiamo ottenuto il valore $k$ tramite i due metodi accennati sopra.
 
 \paragraph{Primo metodo: Media pesata\\}
 Il primo metodo che prendiamo in considerazione è quello di calcolare la media pesata dei valori $k_{i}$ e per farlo ci serviremo delle seguenti formule:
@@ -300,9 +308,9 @@ Procediamo operativamente in questo modo:
 \begin{itemize}
 	\item{la funzione per la misura della discrepanza è:
 			\begin{equation*}
-				\sum_{i=1}^{N} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2}	
+				\sum_{i=1}^{13} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2}	
 			\end{equation*}}
-	\item{Consideriamo come stima prelminare di $b \,=\, \frac{1}{k_0}$, da utilizzare per minimizzare la funzione della discrepanza, il vaore che si ottiene utilizzando il $k_0$ ottenuto dal metodo della distribuzione dei valori $k_i$. Pertato questo primo b risulta essere $\frac{1}{9.58} \, m/N$ . Avendo verificato che l'incerteza $\delta F_{p_i}$ risulta essere trascurabile rispetto a quella sugli allungamenti $\delta x_i$ in quanto: l'incertezza totale che otteniamo componendo l'incertezza sugli allungamenti $\delta x_i$ e quella relativa all'inceretezza del peso trasferita $\delta x_{i trasferto} \,=\, b \, \delta x_i $ ci mostra che il contributo di quest'ultima ($\delta x_{i trasferto}$) è trascurabile rispetto a quella relativa all'allungamento. Notiamo inoltre che le incertezze di $x_i$ hanno tutte lo stesso valore.}
+	\item{Consideriamo come stima prelminare di $b \,=\, \frac{1}{k_0}$, da utilizzare per minimizzare la funzione della discrepanza, il vaore che si ottiene utilizzando il $k_0$ ottenuto dal metodo della distribuzione dei valori $k_i$. Pertato questo primo b risulta essere $\frac{1}{9.58} m/N$ . Avendo verificato che l'incerteza $\delta F_{p_i}$ risulta essere trascurabile rispetto a quella sugli allungamenti $\delta x_i$ in quanto: l'incertezza totale che otteniamo componendo l'incertezza sugli allungamenti $\delta x_i$ e quella relativa all'inceretezza del peso trasferita $\delta x_{i trasferto} \,=\, b \, \delta x_i $ ci mostra che il contributo di quest'ultima ($\delta x_{i trasferto}$) è trascurabile rispetto a quella relativa all'allungamento. Notiamo inoltre che le incertezze di $x_i$ hanno tutte lo stesso valore.}
 	\item{quindi otteniamo le segenti relazioni:
 			\begin{equation*}
 				b_0  \,=\,  \frac{\sum F_{p_i}  x_i}{\sum F_{p_i}^2} \,=\, 0.1037 \,\, m/N \quad \,\, e \quad\,\,
@@ -350,7 +358,7 @@ Ricordando che:
 andiamo a verifichiamo che il $\chi_{oss}^2$ sia compatibile con il $\chi_{teo}^2$, andando a verificare che
 
 \begin{equation*}
-	|R| \,\, \leq \,\, k \, \sqrt{2(N - 1)}
+	|R| \,\,leq\,\,  \,\,=\,\, k \, \sqrt{2(N - 1)}
 \end{equation*}
 %
 premettendo che adotteremo come fattore di copertura k = 2.\\
@@ -370,16 +378,16 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
 \item{Abbiamo deciso di considerare uguali tra di loro tutte le varianze in modo da poter procedere con la seguente operazione:
 
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,=\, \chi_{teo}^2 
+		\chi_{oss}^2 \,=\, \sum_{i=1}^{13} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} \,=\, \chi_{teo}^2 
 	\end{equation*}
 	%
-	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ che ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
 	
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \frac{1}{(\delta x)^2} \sum_{1}^{N} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
+		\chi_{oss}^2 \,=\, \frac{1}{\delta x_{i}^2} \sum_{1}^{13} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
 	\end{equation*}
 	%
-	con $(\delta x)^2$ che rappresenta la nuova varianza. Dal momento che valgono le seguenti relazioni:
+	poichè sappiamo che:
 	
 	\begin{equation*}
 		\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
@@ -387,7 +395,8 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
 		\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
 	\end{equation*}
 	%
-	con $\nu$ che rappresenta i gradi di libertà si ottiene che:
+	con $\nu$ che rappresenta i gradi di libertà.
+	Quindi si ottiene che:
 	
 	\begin{equation*}
 		\delta x_{posteriori} \,=\, 0.0006 \,m \,\,=\, 0.6 \,\, mm
