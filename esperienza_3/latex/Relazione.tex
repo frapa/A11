@@ -1,0 +1,75 @@
+\documentclass[11pt, twoside, a4paper]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{sidecap}
+\usepackage[font=small]{caption}
+\usepackage[bookmarks, hidelinks]{hyperref}
+
+\begin{document}
+
+\input{cover.tex}
+\newpage
+\input{tableofcontents.tex}
+\newpage
+\input{introduzione.tex}
+
+\section{Dipendenza dalla massa}
+%\input{massa.tex}
+%bla bla bla - introduzione alla massa
+\subsection{Apparato Sperimentale}
+	\input{m_apparato.tex}
+\subsection{Procedura di misura}
+	\input{m_procedura.tex}
+\subsection{Analisi dati}
+%\input{m_analisi.tex}
+\subsubsection{Medie pesate}
+		\input{m_medie.tex}
+\subsubsection{Test del chi quadro}
+		\input{m_chi.tex}
+\subsubsection{Regressione lineare}
+		\input{m_regressione.tex}
+\subsection{Conclusioni intermedie !-!-!-!-!-!-!-!-!-!-!-!-!-!-!}
+	\input{m_deduzioni.tex}
+\newpage
+\section{Dipendenza dalla linghezza}
+	%\input{lunghezza.tex}
+	%bla bla bla - introduzione alla lunghezza
+	\subsection{Apparato Sperimentale}
+	\input{l_apparato.tex}
+	\subsection{Procedura di misura}
+	\input{l_procedura.tex}
+	\subsection{Analisi dati}
+	%\input{•}
+		\subsubsection{Medie (errore)}
+		\input{l_medie.tex}
+		\subsubsection{Test del chi quadro}
+		\input{l_chi.tex}
+		\subsubsection{FIT - titoletti x schematizzare}
+		\input{l_fit.tex}
+	\subsection{Conclusioni intermedie !-!-!-!-!-!-!-!-!-!-!-!-!-!-!}
+	\input{l_deduzioni.tex}
+\newpage
+\section{Misurazione di 'g'}
+%\input{misurazione.tex}
+	\subsection{Analisi tabella}
+	\input{g_analisi.tex}
+	\subsection{Determinare 'g' da tabella}
+	\input{g_tabella.tex}
+	\subsection{Determinare 'g' da grafico}
+	\input{g_grafico.tex}
+	\subsection{Test del chi quadro}
+	\input{g_chi.tex}
+	\subsection{Confronto con valore tabulati}
+	\input{g_confronto.tex}
+
+\newpage
+\section{Conclusioni}
+\input{conclusioni.tex}
+
+\end{document}
