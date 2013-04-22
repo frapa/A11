@@ -1,6 +1,6 @@
 \section{Ricerca della costante elastica della molla: metodo statico}
 
-\subsection{Apparato sperimentale}
+{Apparato sperimentale}
 L'apparato sperimentale utilizzato è costituito da:
 	\begin{itemize}
 		\item{una base ad A che sostiene un'asta verticale dotata di gancio di sospensione
@@ -17,7 +17,7 @@ L'apparato sperimentale utilizzato è costituito da:
 
 \subsection{Procedura di aquisizione dei dati}
 
-Poiché una forza F di trazione o compressione applicata ad una molla elicoidale provoca una deformazione del corpo ed una conseguente risposta elastica, abbiamo deciso di sfruttare come forza agente la forza peso $F_{p}$ delle masse cilindriche a nostra disposizione. Per fare questo ricordiamo che la relazione tra una massa inerziale e la forza peso è la seguente:
+ una forza F di trazione o compressione applicata ad una molla elicoidale provoca una deformazione del corpo ed una conseguente risposta elastica, abbiamo deciso di sfruttare come forza agente la forza peso $F_{p}$ delle masse cilindriche a nostra disposizione. Per fare questo ricordiamo che la relazione tra una massa inerziale e la forza peso è la seguente:
 
 \begin{equation}
 	F_{p} = mg
@@ -29,8 +29,317 @@ dove g rappresenta l'accelerazione di gravità che assumiamo avere un valore $g 
 La molla risponde all'allungamento dovuto alla forza $F_p$ con una forza $F_{el}$ uguale e contraria
 data dalla (\ref{eq:hooke}),
 per cui si ottiene $F_p = kx$. Applicando alla molla diverse massa e quindi diverse forze peso è possibile risalire al valore di $k$.
+13tion*}
+%
+Da notare che la posizione iniziale della molla è stata calcolata con il piattello portapesi già agganciato ad essa pertanto l'allungamento rilevato si riferisce soltanto alla massa applicata.\\
 
-Innanzitutto abbiamo deciso di applicare alla molla 13 masse da 5 g a 125 g circa, suddividendo l'intervallo in modo equispaziato.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c c c c c}
+        \multicolumn{7}{c}{\textbf{Pesi e allungamenti}} \\[1mm]
+        \toprule
+        Massa [g] & Pos. eq. [cm] & Peso [N] & Allungamenti [m] & $k$ [$\frac{N}{m}$] & $\delta k$ [$\frac{N}{m}$] & $\delta k_x$ [$\frac{N}{m}$]\\
+        \midrule
+        5.0 & 49.5 & 0.049 & 0.005 & 9.8 & 0.8 & 0.8 \\
+		15.1 & 48.4 & 0.148 & 0.016 & 9.3 & 0.2 & 0.2 \\
+		24.9 & 47.4 & 0.244 & 0.026 & 9.4 & 0.1 & 0.1 \\
+		35.0 & 46.4 & 0.343 & 0.036 & 9.5 & 0.1 & 0.1 \\
+		45.2 & 45.3 & 0.443 & 0.047 & 9.43 & 0.08 & 0.08 \\
+		55.1 & 44.3 & 0.540 & 0.057 & 9.48 & 0.07 & 0.07 \\
+		65.2 & 43.3 & 0.639 & 0.067 & 9.54 & 0.06 & 0.06 \\
+		75.0 & 42.4 & 0.735 & 0.076 & 9.68 & 0.05 & 0.05 \\
+		85.1 & 41.4 & 0.834 & 0.086 & 9.70 & 0.05 & 0.05 \\
+		95.2 & 40.4 & 0.934 & 0.096 & 9.72 & 0.04 & 0.04 \\
+		105.0 & 39.3 & 1.029 & 0.107 & 9.62 & 0.04 & 0.04 \\
+		115.2 & 38.3 & 1.130 & 0.117 & 9.66 & 0.03 & 0.03 \\
+		125.3 & 37.3 & 1.229 & 0.127 & 9.67 & 0.03 & 0.03 \\
+        \bottomrule
+    \end{tabular}
+    \caption{La tabella riassume i dati raccolti ed i calcoli eseguiti. La prima elenca le masse delle combinazioni, riportate anche in tabella
+        \ref{tab:masse}, mentre la seconda colonna riporta le posizioni di equilibrio misurate per le rispettive masse.
+        La terza colonna riporta i pesi in Newton
+        delle masse appese alle molle (calcolati con il valore $g = 9.806 \,\, m/s^2$), la quarta i relativi allungamenti.
+        Le incertezze sui valori delle prime tre colonne sono calcolate nel paragrafo \ref{incertezze}.
+        La quinta colonna riporta il valore di k stimato facendo il rapporto $P_i/x_i$ della relativa riga. Le ultime due colonne
+        riportano le incertezze sul k ricavate con la propagazione degli errori. Nell'ultima colonna è stato trascurato il contributo
+        dell'incertezza sul peso, che, si può vedere facilmente, non è significativa. \emph{Nota:}
+        I dati delle prime quattro colonne sono approssimati come da risoluzione degli strumenti usati, anche se i loro errori standard
+        sono di un ordine di grandezza inferiore. Non avrebbe molto senso mettere una cifra in più in quanto va oltre la risoluzione degli
+        strumenti e non porta informazione.}
+    \label{tab:dati}
+\end{table}
+
+\begin{table}
+    \centering
+	\begin{tabular}{ c c  c  c  c  c }
+        \multicolumn{6}{c}{\textbf{Carico e scarico della molla}} \\[1mm]
+        \toprule
+        \multirow{2}*{Massa [g]} & \multicolumn{5}{c}{Allungamenti [cm]} \\
+        \cmidrule{2-6}
+        & Prima misura & Carico 1	& Scarico 1	& Carico 2	& Scarico 2 \\
+        \midrule
+        15.1		& 1.6 & 1.5		& 1.5			& 1.5		& 1.5	\\
+        35.0		& 3.6 & 3.5		& 3.5			& 3.5		& 3.5	\\
+        55.1		& 5.7 & 5.6		& 5.6			& 5.5		& 5.6	\\
+        75.0		& 7.6 & 7.5		& 7.5			& 7.5		& 7.6	\\	
+        95.2		& 9.6 & 9.6		& 9.6			& 9.6		& 9.6	\\
+        115.2		& 11.7 & 11.6		& 11.6			& 11.6		& 11.6	\\
+        \bottomrule
+	\end{tabular}
+    \caption{La tabella mostra gli allungamenti della molla registrati durante le misurazioni effettuate per l'esperimento
+        (prima misura, riportate anche in tabella \ref{tab:dati}), e durante i due cicli di carico-scarico.
+        Tutte le misure sono affette dall'incertezza standard di
+        risoluzione sulla lunghezza pari a 0.3 mm.}
+    \label{tab:carico_scarico}
+\end{table}
+
+\subsubsection{Carico e scarico della molla}
+
+In tutto il resto dell'esperimento abbiamo assunto che la molla non si deformasse (ovvero che fosse in regime elastico)
+e che non cambiassero le posizioni di equilibrio relative alle diverse masse. Affinchè queste ipotesi risultino fondate,
+abbiamo dovuto verificare che le posizioni di equilibrio delle masse non varino a seconda che vengano misurate durante la fase di carico
+o scarico della molla. La tabella \ref{tab:carico_scarico} mostra la posizione di equilibrio per alcune masse applicate ed è stata realizzata con una procedura di carico e scarico della molla. Ovvero: per le masse scelte si è deciso di caricare la molla e rilevare le varie posizioni di equilibrio, stessa cosa si è fatta nello scariare la molla. Questa procedura è stata ripetuta due volte.
+Come si può intuire da una prima analisi qualitativa della tabella, risulta evidente che le misure sono compatibili tra di loro e questo ci porta a dire che la molla non è stata affetta da una deformazione dovuta ad un carico eccessivo. Si può inoltre osservare che i risultati non dipendono dalla procedura con cui è stato misurato l'allungamento (carico o scarico).
+Affermiamo questo perchè prendendo per esempio la massa da ``55 g'' possiamo oservare che le varie misure sono le seguenti:
+\begin{itemize}
+	\item{primo allungamento $x_{all_1}$ = $5.7 \pm 0.03 \,\,cm$}
+	\item{secondo allungamento $x_{all_2}$ = $5.6 \pm 0.03 \,\,cm$}
+	\item{terzo allungamento $x_{all_3}$ = $5.6 \pm 0.03 \,\,cm$}
+	\item{quarto allungamento $x_{all_4}$ = $5.5 \pm 0.03 \,\,cm$}
+	\item{quinto allungamento $x_{all_5}$ = $5.6 \pm 0.03 \,\,cm$}
+\end{itemize}
+quindi facendo una media gli ultimi quattro allungamenti, che sono stati ricavati dalla proceura di carico e scarico ricaviamo che
+
+RIVEDERE QUESTO PEZZO CON PASA E BUZZ !!!!!!!!
+
+\begin{equation*}
+	m^*[x_{all_i}] = \frac{1}{4} \sum_{i=2}^{5} (x_{all_i}) = 5.57\, cm
+\end{equation*}
+%
+e l'incertezza su questo valore è la seguente:
+
+\begin{equation*}
+	\sigma^*[m^*[x_{all_i}]] = \sqrt{\frac{1}{4} \sum_{i=2}^{5} (x_{all_i} - m^*[x_{all_i}])^2} = 0.04 \,cm
+\end{equation*}
+%
+Con questi valori possiamo pertanto valutare se la media delle misure ottenute dalla procedura di carico e scarico è compatibile con la misura ottenuta durante il primo ciclo di misurazione. Posto a priori un fattore di copertura k = 3 andiamo a verificare che il resto tra la differenza fra $m^*[x_{all_i}]$ e $x_{all_1}$ risulti essere minore dell'errore relativo al resto moltiplicato per il fattore di copertura.
+Otteniamo quindi:
+
+\begin{equation*}
+	R = x_{all_1} - m^*[x_{all_i}] = 0.13 \,\,cm
+\end{equation*}
+
+\begin{equation*}
+	k\, \sigma_{R} = k\,\, \sqrt{(\sigma[x_{all_1}])^2 + (\sigma[m^*[x_{all_i}]])^2} = 0.15 \,\,cm
+\end{equation*}
+%
+Da questo quindi possiamo dire che $m^*[x_{all_i}]$ e $x_{all_1}$ risultano essere compatibili, e compatibii sono anche le misure che abbiamo ottenuto per fare la media dei cicli di scarico e carico, sempre utilizzando come fattore di copertura il k scelto in precedenza.
+Poiché tale procedura si può estendere anche a tutte le altre misure relative alle masse ottenendo le stesse conclusioni, possiamo dedurre che le misure sono tra di loro compatibili e non ci sono state deformazioni della molla.
+Un'importante osservazione che si può fare analizzando \ref{tabella allungamenti} e \ref{tabella carico e scarico} è che per lo stesso carico applicato alla molla le misure dell'allungamento differiscono tra di loro per 0.1 cm. Abbiamo ipotizzato che questa differenza possa essere dovuta principalmente a due elementi:
+
+\begin{enumerate}
+	\item{dal momento che prima di effetuare i cicli di carico e scarico la molla era stata tolta dal supporto assieme al piattello portapesi, è probabile che nel riposizionare l'apparato l'allineamento del piattello portapesi, nella sua posizione di equilibrio, con la tacca dei 50 cm non sia stato perfetto ma sia risultato errato di 0.1 cm;}
+	\item{un'altra possibilità è data da eventuali errori di parallasse, che non sono da escludere, in quanto riuscire a traguardare correttamente tra il bordo inferiore e l'asta millimtrata non è un'operazione così elementare come può sembrare;}
+\end{enumerate}
+
+\subsubsection{Calcolo della costante elastica elastica a partire dalla tabella}
+
+La procedura per il calcolo della costante elastica da noi seguita è il seguente:
+per ogni massa usata si è stimato il valore della costante $k_i$ facendo il rapporto $k_{i} = \frac{F_{p_{i}}}{x_{i}}$,
+e i valori ottenuti sono stati utilizzati per ricavare un unico valore di $k$ mediante due procedure: la media pesata e il metodo statistico.
+L'incertezza $\delta k_{i}$ su ogni valore $k_i$ è stata calcolata mediante la regola per la propagazione delle incertezze sui rapporti di misure indipendenti:
+
+\begin{equation*}
+	\left(\frac{\delta {k_{i}}}{k_{i}}\right)^2  =  \left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2  +  \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2 
+\end{equation*}
+%
+da cui segue
+
+\begin{equation}
+	\delta k_{i} \,=\, k_i\,\, \sqrt{\left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2 + \left(\frac{\delta_{x_{i}}}{x_{i}}\right)^2} 
+    \label{eq:deltaki}
+\end{equation}
+%
+I valori $k_i$ calcolati e le relative incertezze sono riportati in tabella \ref{tab:dati}. Da notare che le incertezza
+non risultano essere tutte uguali, poichè nella formula (\ref{eq:deltaki}) sono presenti le incertezze relative, che
+variano per ogni massa. Notiamo inoltre che le incertezze relative sul peso sono trascurabili, infatti eliminado il termine
+$\left(\frac{\delta F_{p_{i}}}{F_{p_{i}}}\right)^2$ dalla (\ref{eq:deltaki}) i valori delle incertezze $\delta k_i$ non variano.
+I valori delle incertezze ottenute trascurando l'errore sul peso sono riportati nell'ultima colonna della tabella \ref{tab:dati}.
+
+Vediamo ora come abbiamo ottenuto il valore $k$ tramite i due metodi accennati sopra.
+
+\paragraph{Primo metodo: Media pesata\\}
+Il primo metodo che prendiamo in considerazione è quello di calcolare la media pesata dei valori $k_{i}$ e per farlo ci serviremo delle seguenti formule:
+
+\begin{equation*}
+		k_{0} = \frac{\sum (k_i w_i)}{\sum (w_i)} , \,\,\,\,\,\, \delta k_0 = \frac{1}{\sqrt{\sum (w_i)}} , \,\,\,\,dove\,\,\,\, w_i = \frac{1}{(\delta k_i)^2}
+\end{equation*}
+%
+in particolare $k_0$ appresenta il risultato della media pesata delle varie costanti elastiche ($k_i$) ottenute, $\delta k_0$ simboleggia l'errore relativo a $k_0$ e $w_i$ è il peso relativo alla misura $k_i$, ovvero quanto quella misura contribuisce nella media complessiva. E' importente sottolineare che la procedura non è in grdo di tenere conto di eventuali altre sorgenti di incertezza come ad esempio un errore sistematico.
+
+Quindi con i dati a nostra disposizione abbiamo otteuto il seguente risultato:
+
+\begin{equation}
+	k_0 \,\, \pm \,\, \delta k_0 =  (9.64 \,\, \pm \,\, 0.01) \,\,N/m
+\end{equation}
+
+\paragraph{Secondo metodo: Distribuzione dei valori di $k_i$\\}
+Il secondo metodo che addottiamo per il calcolo della costante elastica della molla elicoidale è quello di considerare la distribuzione dei valori $K_i$, ovvero se ne deve calcolare la media campionaria $m^*_k$ e stimarne lo scarto quadratico medio della distribuzione delle medie. In questo modo otteniamo:
+
+\begin{equation*}
+	k_0 \,\,=\,\, m^*_k \,\,=\,\, \frac{1}{N}\,\,\sum_{i=1}^{N} (k_i) \,\,=\,\, 9.58  \,N/m
+\end{equation*}
+%
+\begin{equation*}
+	\delta k_0  \,=\, \frac{1}{\sqrt{N}} \sigma_{k_0} \,=\, \frac{1}{\sqrt{N}}\sqrt{\frac{1}{N - 1}\,\,\sum_{i=1}^{N} (k_i - m^*_k)^2}\,=\, 0.04 \,N/m
+\end{equation*}
+%
+ottenendo la misura:
+
+\begin{equation}
+		k_0 \, \pm \, \delta k_0 \,=\, (9.58 \,\, \pm \,\, 0.04)\,\, N/m
+\end{equation}
+%
+Quindi mettendo a confronto queste due procedure e aiutandoci con i dati riportati in tabella possiamo osservare che la media pesata sembrerebbe essere la procedura che meglio approssima il risultato dell'esperimento. Affermiamo questo perchè dalla tabella ?? si può osservare che le prime quattro misurazioni fatte risultano avere un incertezza sulla costante elastica dieci volte superiore alle altre misure effettuate e quindi ci sembra doveroso che nel calcolo di $k_0$ si tenga in considerazione della differente accuratezza (o precisione?) delle misure dando più importanza a quelle con un incertezza inferiore rispetto alle altre.\\
+Una spiegazione al perchè in queste prime quattro misure l'incertezza risulti essere maggiore rispetto alle altre si può trovare nel fatto che i carichi appesi alla molla non fossero sufficientemente importanti, e quindi la molla non [ha lavorato correttamente.]. Nonostante questo però non possiamo dire che la legge di Hooke non sia valida nel regime di carichi "relativamente bassi": infatti per quanto si può osservare dai dati raccolti l'alungamento della molla ha avuto un andamento lineare sin dall'inizio delle misurazioni.
+
+\paragraph{Compatibilità delle costanti elastiche trovate\\}
+Altra importante osservazione da fare è che le due misure della costante elastca ottenute con queste due procedure di misura risultano essere comatibili in quanto, fissato un fattore di copertura k = 2, a priori, otteniamo:
+\begin{itemize}
+	\item{la differenza tra i due $k_0$ risulta essere: $R \,=\, 0.06 \,\, N/m$}
+	\item{l'errore relativo alla differenza dei due $k_0$ e la seguente: $k \, \sigma_R \,=\, 0.08 \,\, N/m$}
+\end{itemize}
+pertanto dal momento che $ R \leq k \, \sigma_R$ i due risultati della costante elastica risultano essere compatibili tra di loro.
+
+\subsubsection{Calcolo della costante elastica K a partire dal grafico}
+Ricordando le seguenti relazioni:
+
+\begin{equation}
+	x \,\,=\,\, bF_p \,\,\,\,\,ovvero\,\,\,\,\, F_p \,\,=\,\, kx \,\,\,\,\,pertanto\,\,\,\,\, b \,\,=\,\, \frac{1}{k}
+\end{equation}
+%
+possiamo procedere al calcolo della costante elastica k a partire direttamente dal grafico. Poiché i punti sul grafico sono ricavati sperimentalmente e di conseguena sono affetti da incertezza, per trovare la retta che meglio approssima il loro andamento, possiamo seguire la seguente procedura:
+
+\paragraph{Metodo della Regressione lineare\\}
+Questa procedura si basa sul metodo dei minimi quadrati ovvero serve a ricavare la stima migliore del coefficiente angolare b che è data dal valore che rende minima la discrepanza tra i dati sperientali $F_{p_i} \,\,e\,\, x_i$ e la retta $x \,=\, bF_p$.\\
+Procediamo operativamente in questo modo:
+\begin{itemize}
+	\item{la funzione per la misura della discrepanza è:
+			\begin{equation*}
+				\sum_{i=1}^{N} \frac{(x_i - bF_{p_i})^2}{(\delta x_i)^2}	
+			\end{equation*}}
+	\item{Consideriamo come stima prelminare di $b \,=\, \frac{1}{k_0}$, da utilizzare per minimizzare la funzione della discrepanza, il vaore che si ottiene utilizzando il $k_0$ ottenuto dal metodo della distribuzione dei valori $k_i$. Pertato questo primo b risulta essere $\frac{1}{9.58} \, m/N$ . Avendo verificato che l'incerteza $\delta F_{p_i}$ risulta essere trascurabile rispetto a quella sugli allungamenti $\delta x_i$ in quanto: l'incertezza totale che otteniamo componendo l'incertezza sugli allungamenti $\delta x_i$ e quella relativa all'inceretezza del peso trasferita $\delta x_{i trasferto} \,=\, b \, \delta x_i $ ci mostra che il contributo di quest'ultima ($\delta x_{i trasferto}$) è trascurabile rispetto a quella relativa all'allungamento. Notiamo inoltre che le incertezze di $x_i$ hanno tutte lo stesso valore.}
+	\item{quindi otteniamo le segenti relazioni:
+			\begin{equation*}
+				b_0  \,=\,  \frac{\sum F_{p_i}  x_i}{\sum F_{p_i}^2} \,=\, 0.1037 \,\, m/N \quad \,\, e \quad\,\,
+				\delta b  =  \frac{\delta x_i}{\sqrt{\sum F_{p_i}^2}} \,=\, 0.0002 \,\, m/N
+			\end{equation*}
+			e quindi sfruttando la regola della propagazione dell'incertezze sul quoziente abbiamo
+			\begin{equation*}
+				\frac{\delta k}{k} \,=\, \frac{\delta b}{b}
+			\end{equation*}
+			pertanto ricordando che $k \,=\, \frac{1}{b}$ possiamo ottenere i valori di $k_0 = \frac{1}{b_0}$ e $\delta k = \frac{\delta b}{b} k$, infatti otteniamo:
+			\begin{equation*}
+				k \,=\, (9.64 \pm 0.01) \,\,N/m
+			\end{equation*}
+			}
+\end{itemize}
+Possiamo notare che la costante elastica così ottenua è uguale a quella ottenuta con la media pesata. Questo è dovuto al fatto che le due procedure sono equivalenti.
+
+\subsubsection{Test del chi quadro}
+Fino a questo punto noi abbiamo valutato la compatibilità dei valori sperimentali con la legge di Hooke esaminando qualitativamente il grafico. Possiamo però valutare la compatibilità dei dati anche con un metodo quantitativo che si basa sul test del chi quadro. Questo test confronta, punto per punto, la discrepanza tra i valori sperimentali e la retta teorica
+$(x_i - b-0 F_{p_i})$ e questo valore dovrebbe essere mediamente paragonabile con l'incertezza ($\delta x_i$) del singolo dato. Ricordiamo che la discrepanza viene calcolata sui valori che nel grafico saranno riportati sull'asse delle ordinate. Inoltre questa verifica presuppone che l'errore sui valori in ascissa sia trascurabile rispetto a quello sull'ordinata.
+Pertanto in base alla nostra analisi noi abbiamo che l'icertezza sul peso risulta essere trascurabile rispetto  a quella sull'allungamento, come richiesto dal test.\\
+Procediamo quindi col test del chi quadro:
+\begin{itemize}
+\item{calcoliamo il chi quadro (osservato):
+
+	\begin{equation*}
+		\chi_{oss}^2 \,=\, \sum_{i=1}^{13} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} = 28.9
+	\end{equation*}
+	%
+	dove $b_0$ rappresenta il coefficiente angolare determinato mediante la regressione lineare}
+\item{se il test va a buon fine ci si aspetterebbe che:
+
+	\begin{equation*}
+		\chi_{oss}^2 \, \simeq \, \chi_{teo}^2 \,=\, N - 1 \,=\, 12  
+	\end{equation*}
+	%
+	ricordando che $\chi_{teo}^2 \equiv$ numero gradi di libertà del sistema, che nel nostro caso sono N-1 in quanto dobbiamo tener conto che un parametro della curva (retta) teorica, ovvero $b_0$, è stato ricavato a partire da un punto sperimentale, e N rappresenta l'insieme di tutti i dati sperimentali.}
+\end{itemize}
+Ricordando che:
+
+\begin{equation*}
+	\chi_{teo}^2 \,\,=\,\, (N-1) \,\, \pm \,\, \sqrt{2(N-1)} \,\,=\,\, 12 \,\,\pm\,\, 5
+\end{equation*}
+%
+andiamo a verifichiamo che il $\chi_{oss}^2$ sia compatibile con il $\chi_{teo}^2$, andando a verificare che
+
+\begin{equation*}
+	|R| \,\, \leq \,\, k \, \sqrt{2(N - 1)}
+\end{equation*}
+%
+premettendo che adotteremo come fattore di copertura k = 2.\\
+
+Pertanto abbiamo che la differenza tra i due chi quadro risulta essere $R \,=\, 16.9$ che non risulta essere minore di $k \, \sigma \chi_{teo}^2$ che ha valore 10  pertanto i due chi quadro non sono compatibili.\\
+Per questo motivo abbiamo come prima cosa verificato che questo non fosse dovuto all'influenza di particolari punti sperimentali ad esempio il primo o l'ultimo. A tal fine abbiamo controllato che la discrepanza tra il dato singolo e la predizione teorica non fosse molto maggiore di uno:
+
+\begin{equation*}
+	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,\,\, >> \,\,\, 1
+\end{equation*}
+%
+dal momento che non si è verificata questa eventualità siamo sicuri che tutti i nostri dati sono stati presi con sufficiente accuratezza.\\
+Per questo motivo le soluzioni possibili sono due: la prima è che i dati sperimentali non sono compatibili con la legge di Hooke, caso che ci sentiamo di escludere in quanto è stato provato ripetutamente che la legge in questione è valida. Perciò non rimane che ammettere di aver sottostimato le incertezze della grandezza $x_i$ che rappresenta l'allungamento.\\
+Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$. Abbiamo operato nel seguente modo:
+\begin{itemize}
+\item{Abbiamo deciso di ricalcolare a "posteriori" le incertezze, così facendo cerchiamo di avvicinarci con il chi quadro osservato ($\chi_{oss}^2$) al chi quadro teorico ($\chi_{teo}^2$) il più possibile}
+\item{Abbiamo deciso di considerare uguali tra di loro tutte le varianze in modo da poter procedere con la seguente operazione:
+
+	\begin{equation*}
+		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,=\, \chi_{teo}^2 
+	\end{equation*}
+	%
+	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ che ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
+	
+	\begin{equation*}
+		\chi_{oss}^2 \,=\, \frac{1}{(\delta x)^2} \sum_{1}^{N} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
+	\end{equation*}
+	%
+	con $(\delta x)^2$ che rappresenta la nuova varianza. Dal momento che valgono le seguenti relazioni:
+	
+	\begin{equation*}
+		\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
+		\nu \,=\, N - 1 \quad \quad e \quad \quad
+		\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
+	\end{equation*}
+	%
+	con $\nu$ che rappresenta i gradi di libertà si ottiene che:
+	
+	\begin{equation*}
+		\delta x_{posteriori} \,=\, 0.0006 \,m \,\,=\, 0.6 \,\, mm
+	\end{equation*}}	 
+\end{itemize}
+Quindi grazie a tutto questo abbiamo ottento che il $\chi_{oss}^2$ combacia con $\chi_{teo}^2$ soltanto dopo aver modificato l'incertezza relativa alle misure dell'allungamento della molla aumentandola. Crediamo che questa variazione sia più che accettabile. Infatti come accennato all'inizio dell'analisi dei dati quando si cercava di leggere lo strumento la misura poteva non risultare così precisa a causa delle continue oscillazioni della molla, che è a tutti gli effetti un oscillatore armonico, e di un probabile errore di parallasse.\\
+Dal momento che abbiamo variato l'errore sulla misura dell'allungamento otteniamo come nuovo valore della costante elastica della molla il seguente risultato:
+
+\begin{equation*}
+	k_0 \,\, \pm \,\, \delta k_0 \,\,=\,\, (9.64 \,\, \pm \,\, 0.02)\,\, N/m
+\end{equation*}
+%
+dove ovviamente l'unico cambiamento riguarda l'incertezza sulla misura che risuta essere maggiore di quella calcolata in precedenza per ovvi motivi.\\
+
+Quindi l'unica cosa che ci rimane da verificare è se questo nuovo valore di $K_0$ sia compatibile con i valore di $k_0$ trovato mediante la distribuzione dei $k_i$.
+Pertanto abbiamo quanto segue:
+\begin{itemize}
+	\item{il resto (R) tra i due $k_0$ risulta essere: $R \,=\, 0.06 \,\, N/m$}
+	\item{posto come fattore di copertura k = 2 abbiamo che $k \, \sigma_R$risulta essere:
+			\begin{equation*}
+				k \, \sigma_R \,\,=\,\, 0.09 \, N/m
+			\end{equation*}}
+	\item{pertanto abbiamo che $|R| \,\, \leq \,\, k \, \sigma_R $ e quindi i due $k_0$ risultano essere compatibili}
+\end{itemize}
+
+ masse da 5 g a 125 g circa, suddividendo l'intervallo in modo equispaziato.
 Sono quindi state selezionate tredici combinazioni di masse cilindriche aventi le masse scelte.
 Per evitare di dover propagare gli errori sulla massa delle combinazioni, invece di misurare la massa di ogni singolo cilindro,
 si è misurata la massa complessiva di ogni combinazione.
