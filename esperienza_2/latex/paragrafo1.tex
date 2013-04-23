@@ -365,66 +365,85 @@ Procediamo operativamente in questo modo:
 
 Possiamo notare che la costante elastica così ottenua è uguale a quella ottenuta con la media pesata. Questo è dovuto al fatto che le due procedure sono equivalenti.
 
-\begin{figure}
+\begin{SCfigure}
     \centering
     \includegraphics[width=120mm]{immagini/pesi_allungamenti.pdf}
-    \caption{}
+    \caption{Plot massa versus allungamento della molla. Le barre di incertezza dei punti non sono mostrate,
+        in quanto molto piccole (circa la dimensione dei pallini) e difficilmente leggibili. Si vede bene
+        che l'allungamento è funzione lineare della massa. La retta verde è la retta di fit calcolata mediante la regressione lineare.}
     \label{fig:regressione}
-\end{figure}
+\end{SCfigure}
 
 \subsubsection{Test del chi quadro}
 
 Fino a questo punto noi abbiamo valutato la compatibilità dei valori sperimentali con la legge di Hooke esaminando qualitativamente il grafico. Possiamo però valutare la compatibilità dei dati anche con un metodo quantitativo che si basa sul test del chi quadro. Questo test confronta, punto per punto, la discrepanza tra i valori sperimentali e la retta teorica
-$(x_i - b-0 F_{p_i})$ e questo valore dovrebbe essere mediamente paragonabile con l'incertezza ($\delta x_i$) del singolo dato. Ricordiamo che la discrepanza viene calcolata sui valori che nel grafico saranno riportati sull'asse delle ordinate. Inoltre questa verifica presuppone che l'errore sui valori in ascissa sia trascurabile rispetto a quello sull'ordinata.
-Pertanto in base alla nostra analisi noi abbiamo che l'icertezza sul peso risulta essere trascurabile rispetto  a quella sull'allungamento, come richiesto dal test.\\
+$(x_i - b-0 F_{p_i})$ e questo valore dovrebbe essere mediamente paragonabile con l'incertezza ($\delta x_i$) del singolo dato. Ricordiamo che la discrepanza viene calcolata sui valori che nel grafico saranno riportati sull'asse delle ordinate. Inoltre questa verificaparte dall'ipotesi, nel nostro caso verificata, che l'errore sui valori in ascissa sia trascurabile rispetto a quello sull'ordinata.
 Procediamo quindi col test del chi quadro:
+
 \begin{itemize}
-\item{calcoliamo il chi quadro (osservato):
+\item{Calcoliamo il chi quadro (oss sta per osservato, ovvero calcolato dai dati sperimentali):
 
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \sum_{i=1}^{13} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} = 28.9
+		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} = 28.9
 	\end{equation*}
 	%
-	dove $b_0$ rappresenta il coefficiente angolare determinato mediante la regressione lineare}
-\item{se il test va a buon fine ci si aspetterebbe che:
+	dove $b_0$ rappresenta il coefficiente angolare determinato, mediante la regressione lineare, nel paragrafo precedente.}
+\item{Se il test va a buon fine ci si aspetterebbe che:
 
 	\begin{equation*}
 		\chi_{oss}^2 \, \simeq \, \chi_{teo}^2 \,=\, N - 1 \,=\, 12  
 	\end{equation*}
 	%
-	ricordando che $\chi_{teo}^2 \equiv$ numero gradi di libertà del sistema, che nel nostro caso sono N-1 in quanto dobbiamo tener conto che un parametro della curva (retta) teorica, ovvero $b_0$, è stato ricavato a partire da un punto sperimentale, e N rappresenta l'insieme di tutti i dati sperimentali.}
+	ricordando che $\chi_{teo}^2 \equiv$ ``numero gradi di libertà del sistema'', che nel nostro caso sono $N - 1$ in
+    quanto dobbiamo tener conto che un parametro della curva di fit, ovvero $b_0$, è stato ricavato a partire dai dati
+    sperimentali. N rappresenta il numero di punti sperimentali.}
+\item{L'incertezza sul chi quadro teorico vale:
+
+    \begin{equation*}
+        \delta\chi_{teo}^2 \,=\, \sqrt{2(N - 1)} = 5  
+	\end{equation*}
+
+    }
 \end{itemize}
-Ricordando che:
+%
+Si ha quindi:
 
 \begin{equation*}
-	\chi_{teo}^2 \,\,=\,\, (N-1) \,\, \pm \,\, \sqrt{2(N-1)} \,\,=\,\, 12 \,\,\pm\,\, 5
+	\chi_{teo}^2 \pm \delta\chi_{teo}^2 \,\,=\,\, 12 \,\,\pm\,\, 5
 \end{equation*}
 %
-andiamo a verifichiamo che il $\chi_{oss}^2$ sia compatibile con il $\chi_{teo}^2$, andando a verificare che
+andiamo a verificare che $\chi_{oss}^2$ sia compatibile con $\chi_{teo}^2$, premettendo che adotteremo, come
+nel resto della relazione, un fattore di copertura k = 3:
 
 \begin{equation*}
-	|R| \,\, \leq \,\, k \, \sqrt{2(N - 1)}
+	|R| \,\, \leq \,\, k \, \delta\chi_{teo}^2 \qquad \text{dove} \quad |R| = |\chi_{teo}^2 - \chi_{oss}^2|
 \end{equation*}
 %
-premettendo che adotteremo come fattore di copertura k = 3.\\
 
-Pertanto abbiamo che la differenza tra i due chi quadro risulta essere $R \,=\, 16.9$ che non risulta essere minore di $k \, \sigma \chi_{teo}^2$ che ha valore 15  pertanto i due chi quadro non sono compatibili.\\
-Per questo motivo abbiamo come prima cosa verificato che questo non fosse dovuto all'influenza di particolari punti sperimentali ad esempio il primo o l'ultimo. A tal fine abbiamo controllato che la discrepanza tra il dato singolo e la predizione teorica non fosse molto maggiore di uno:
+La differenza tra i due chi quadro risulta essere $|R| \,=\, 16.9$ che \emph{non} risulta essere minore di
+$k \, \sigma \chi_{teo}^2 \,=\, 15$, pertanto i due chi quadro non sono compatibili.
+
+Come prima cosa verificato che questo non fosse dovuto all'influenza di particolari punti sperimentali ad esempio il primo o l'ultimo.
+A tal fine abbiamo controllato che la discrepanza tra il dato singolo e la predizione teorica non fosse molto maggiore di uno:
 
 \begin{equation*}
-	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,\,\, >> \,\,\, 1
+	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \, \gg \, 1
 \end{equation*}
 %
-dal momento che non si è verificata questa eventualità siamo sicuri che tutti i nostri dati sono stati presi con sufficiente accuratezza.\\
+dal momento che non si è verificata questa eventualità siamo sicuri che tutti i nostri dati sono stati presi con sufficiente accuratezza.
+
 Per questo motivo le soluzioni possibili sono due: la prima è che i dati sperimentali non sono compatibili con la legge di Hooke, caso che ci sentiamo di escludere in quanto è stato provato ripetutamente che la legge in questione è valida. Perciò non rimane che ammettere di aver sottostimato le incertezze della grandezza $x_i$ che rappresenta l'allungamento.\\
 Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$. Abbiamo operato nel seguente modo:
 
-\begin{figure}
+\begin{SCfigure}
     \centering
     \includegraphics[width=120mm]{immagini/discrepanza_statico.pdf}
-    \caption{}
-    \label{fig:regressione}
-\end{figure}
+    \caption{La figura mostra la discrepanza tra i valori di allungamento misurati e la retta ottenuta col fit, in modo
+        da rendere visibili le incertezze. Le barre di errore verdi mostrano l'errore calcolato a priori mentre
+        le barre blu mostrano le incertezze corrette per far tornare il $\chi^2$. Le incertezze sono tutte uguali.
+        Da notare il fatto che non si distingue alcun andamento residuo nei dati.}
+    \label{fig:discrepanza_statico}
+\end{SCfigure}
 
 \begin{itemize}
 \item{Abbiamo deciso di ricalcolare a "posteriori" le incertezze, così facendo cerchiamo di avvicinarci con il chi quadro osservato ($\chi_{oss}^2$) al chi quadro teorico ($\chi_{teo}^2$) il più possibile}
