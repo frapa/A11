@@ -316,7 +316,7 @@ Questa procedura si basa sul metodo dei minimi quadrati, ovvero serve a ricavare
 Procediamo operativamente in questo modo:
 
 \begin{itemize}
-	\item{La funzione da minimizzare che misura della discrepanza è:
+	\item{La funzione da minimizzare che misura la discrepanza è:
 			\begin{equation}
                 \sum_{i=1}^{N} \frac{(x_i - bF_{p_i})^2}{(\delta x\ped{tot})^2}	
                 \label{eq:min_quad}
@@ -384,7 +384,7 @@ Procediamo quindi col test del chi quadro:
 \item{Calcoliamo il chi quadro (oss sta per osservato, ovvero calcolato dai dati sperimentali):
 
 	\begin{equation*}
-		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i^2)} = 28.9
+        \chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x)^2} = 29
 	\end{equation*}
 	%
 	dove $b_0$ rappresenta il coefficiente angolare determinato, mediante la regressione lineare, nel paragrafo precedente.}
@@ -420,20 +420,20 @@ nel resto della relazione, un fattore di copertura k = 3:
 \end{equation*}
 %
 
-La differenza tra i due chi quadro risulta essere $|R| \,=\, 16.9$ che \emph{non} risulta essere minore di
+La differenza tra i due chi quadro risulta essere $|R| \,=\, 17$ che \emph{non} risulta essere minore di
 $k \, \sigma \chi_{teo}^2 \,=\, 15$, pertanto i due chi quadro non sono compatibili.
 
 Come prima cosa verificato che questo non fosse dovuto all'influenza di particolari punti sperimentali ad esempio il primo o l'ultimo.
 A tal fine abbiamo controllato che la discrepanza tra il dato singolo e la predizione teorica non fosse molto maggiore di uno:
 
 \begin{equation*}
-	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \, \gg \, 1
+	\frac{(x_i - b_0 F_{p_i})^2}{(\delta x)^2} \, \gg \, 1
 \end{equation*}
 %
-dal momento che non si è verificata questa eventualità siamo sicuri che tutti i nostri dati sono stati presi con sufficiente accuratezza.
+Il grafico in figura \ref{fig:discrepanza_statico} mostra la discrepanza tra dati e retta di fit.
+Si può vedere che non ci sono punti che contribuiscono in maniera esagerata rispetto ad altri al valore $\chi^2_{oss}$.
 
-Per questo motivo le soluzioni possibili sono due: la prima è che i dati sperimentali non sono compatibili con la legge di Hooke, caso che ci sentiamo di escludere in quanto è stato provato ripetutamente che la legge in questione è valida. Perciò non rimane che ammettere di aver sottostimato le incertezze della grandezza $x_i$ che rappresenta l'allungamento.\\
-Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$. Abbiamo operato nel seguente modo:
+A questi punto le possibili soluzioni sono due: la prima è che i dati sperimentali non sono compatibili con la legge di Hooke, caso che ci sentiamo di escludere in quanto è stato provato ripetutamente che la legge in questione è valida. Perciò non rimane che ammettere di aver sottostimato le incertezze sugli allugamenti $x_i$.
 
 \begin{SCfigure}
     \centering
@@ -445,35 +445,30 @@ Quindi abbiamo deciso di procedere ad aggiustare l'inceretezza relativa a $x_i$.
     \label{fig:discrepanza_statico}
 \end{SCfigure}
 
-\begin{itemize}
-\item{Abbiamo deciso di ricalcolare a "posteriori" le incertezze, così facendo cerchiamo di avvicinarci con il chi quadro osservato ($\chi_{oss}^2$) al chi quadro teorico ($\chi_{teo}^2$) il più possibile}
-\item{Abbiamo deciso di considerare uguali tra di loro tutte le varianze in modo da poter procedere con la seguente operazione:
+Si è deciso di aggiustare l'errore $\delta x$. Imponiamo che:
 
-	\begin{equation*}
-		\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x_i)^2} \,=\, \chi_{teo}^2 
-	\end{equation*}
-	%
-	e così facendo troviamo un coefficiente che moltiplicato per il precedente $\delta x_i$ che ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Infatti abbiamo ottenuto:
-	
-	\begin{equation*}
-		\chi_{oss}^2 \,=\, \frac{1}{(\delta x)^2} \sum_{1}^{N} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
-	\end{equation*}
-	%
-	con $(\delta x)^2$ che rappresenta la nuova varianza. Dal momento che valgono le seguenti relazioni:
-	
-	\begin{equation*}
-		\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
-		\nu \,=\, N - 1 \quad \quad e \quad \quad
-		\delta x_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta x_{priori}^2
-	\end{equation*}
-	%
-	con $\nu$ che rappresenta i gradi di libertà si ottiene che:
-	
-	\begin{equation*}
-		\delta x_{posteriori} \,=\, 0.0006 \,m \,\,=\, 0.6 \,\, mm
-	\end{equation*}}	 
-\end{itemize}
-Quindi grazie a tutto questo abbiamo ottento che il $\chi_{oss}^2$ combacia con $\chi_{teo}^2$ soltanto dopo aver modificato l'incertezza relativa alle misure dell'allungamento della molla aumentandola. Crediamo che questa variazione sia più che accettabile. Infatti come accennato all'inizio dell'analisi dei dati quando si cercava di leggere lo strumento la misura poteva non risultare così precisa a causa delle continue oscillazioni della molla, che è a tutti gli effetti un oscillatore armonico, e di un probabile errore di parallasse.\\
+\begin{equation*}
+    \chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(x_i - b_0 F_{p_i})^2}{(\delta x)^2} \,=\, \chi_{teo}^2 
+\end{equation*}
+%
+da cui ricaviamo, grazie al fatto che le incertezze sono tutte di egual valore,
+
+\begin{equation*}
+    \delta x\ped{posteriori}^2 \,\,=\,\, \frac{\sum_{i=1}^{N} (x_i - b_0 F_{p_i})^2}{\chi_{teo}^2}
+    %\chi_{oss}^2 \,=\, \frac{1}{(\delta x)^2} \sum_{1}^{N} (x_i - b_0 F_{p_i})^2  \,=\, \chi_{teo}^2
+\end{equation*}
+%
+Poiché $\chi_{teo}^2 = 12.0$ si calcola facilmente che:
+
+\begin{equation*}
+    \delta x\ped{posteriori} \,=\, 0.0006 \,m \,\,=\, 0.6 \,\, mm
+\end{equation*}
+%
+Abbiamo ottento che il $\chi_{oss}^2$ coincide con $\chi_{teo}^2$ dopo aver aumentato l'incertezza sugli allungamenti di un fattore
+$$.
+Crediamo che questa variazione sia più che accettabile. Infatti come accennato all'inizio dell'analisi dei dati, la lettura
+dell'allungamento non risultava così agevole a causa delle continue oscillazioni della molla, che è a tutti gli effetti
+un oscillatore armonico. Inoltre, non abbiamo tenuto conto dell'errore di parallasse.\\
 Dal momento che abbiamo variato l'errore sulla misura dell'allungamento otteniamo come nuovo valore della costante elastica della molla il seguente risultato:
 
 \begin{equation*}
