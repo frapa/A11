@@ -28,6 +28,6 @@ function A, B, sA, sB = fit(y, x, w)
 	A = R(1);
 	B = R(2);
 	
-	sA = sum(x.^2 .* w) / det(M);
+	sA = sum((x.^2) .* w) / det(M);
 	sB = sum(w) / det(M);
 endfunction
