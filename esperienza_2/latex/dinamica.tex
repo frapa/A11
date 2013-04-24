@@ -142,7 +142,8 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
 	\end{tabular}
     \caption{Sono elencate le medie dei periodi, l'incertezza sulle medie, le medie al quadrato e le incertezze sulle medie
-    al quadrato per me varie masse. Le prime}
+    al quadrato per me varie masse. Si è tenuto conto solo delle cifre che non superavano la risoluzione degli strumenti usati.
+    Nelle ultime due colonne abbiamo mantenuto lo stesso numero di cifre significative delle prime due.}
     \label{tab:calcolati}
 \end{SCtable}
 
@@ -278,36 +279,41 @@ ed inoltre, la si può rendere più leggibile, scivendola nel seguente modo:
 \end{equation}
 %
 dove $x \equiv m$ (massa applicata) $y \equiv \mathcal{T}^2$, $A \equiv \frac{\mathcal{C}^2}{k} \, m_e$ e $B \equiv \frac{\mathcal{C}^2}{k}$.\\
-Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza mediante la tecnica della regressione lineare pertanto procediamo con il metodo utilizzato anche nella sezione due.
+Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza mediante la tecnica della regressione lineare pertanto procediamo con il metodo utilizzato anche nella sezione 2.
 \begin{itemize}
 \item{La funzione da minimizzare che misura la discrepanza è:
 		\begin{equation*}
-			\sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2}
+            \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_{tot})^2}
 		\end{equation*}
 		%
-		ricordando che l'incertezza sull'asse delle ascisse è la stessa incertezza sulla massa, ovvero $\delta m_i$, che in questa analisi poniamo uguale a $\delta x_i$.}
-\item{Prima di procedere con l'analisi è necessario verificare che l'incertezza relativa alle masse sia trascurabile rispetto a quella dei periodi al quadrato. Per accertarlo è stato necessario fare una stima preliminare del parametro B. Dal momento che dal grafico è impossibile individuare le rette di massima e minima pendenza abbiamo deciso di ricavare il parmetro B valutando il coefficiente angolare della retta utilizzando il classico rapporto tra due punti del grafico, ovvero:
+    ricordando che $\delta y_{tot} = \sqrt{\delta y_i^2 + B\delta x_i^2}$. Inoltre $\delta y_i \equiv \delta (\mathcal{T}^2)$
+    e $\delta x_i \equiv \delta m$.}
+
+\item{Al fine di calcolare $\delta y_{tot}$, dobbiamo fare una stima preliminare del parametro B. Dal momento che dal grafico è impossibile individuare le rette di massima e minima pendenza abbiamo deciso di ricavare il parmetro B valutando il coefficiente angolare della retta utilizzando il classico rapporto tra due punti del grafico, ovvero:
 
 	\begin{equation*}
-		\text{B} \,\,=\,\, \frac{\mathcal{T}_{14} - \mathcal{T}_{1}}{m_{14} - m_1} \,\,=\,\, 4.09 \,\, s^2 \,\,\,[verificare \,\,\,cifre]
+		\text{B} \,\,=\,\, \frac{\mathcal{T}_{14} - \mathcal{T}_{1}}{m_{14} - m_1} \,\,=\,\, 4.09 \,\, s^2/kg
 	\end{equation*}
 	%
-	quindi grazie a questo valore di B siamo in grado di stimare l'incertezza trasferita, ovvero: $\sigma (m_{tras}) \,=\, B \, \sigma (m)$ dove $\sigma (m)$ rappresenta l'errore tipo di misura sulla massa. Abbiamo notato che questo valore è 10 volte minore rispetto all'incertezza sul periodo quadrato, e quindi poichè l'incertezza totale risulta essere la seguente
+    quindi grazie a questo valore di B siamo in grado di stimare l'incertezza trasferita, ovvero:
+    $\delta y_{tras} \,=\, B \, \delta m$. Abbiamo notato che questo valore ($\delta y_{tras}$) è 10
+    volte minore rispetto all'incertezza sul periodo quadrato ($\delta y_i$), e quindi poichè nella
+    formula
 	
 	\begin{equation*}
-		\delta y_i \,=\, \sqrt{(\delta \mathcal{T}_i^2)^2 + \sigma (m_{tras})^2} 
+		\delta y_{tot} = \sqrt{\delta y_i^2 + B\delta x_i^2}
 	\end{equation*}	
 	%
-	possiamo notare che sotto radice il termine $\sigma (m_{tras})^2$ risulta essere 100 volte minore di $(\delta \mathcal{T}_k^2)^2$ quindi lo si può considerare trascurabile rispetto all'incertezza rispetto al quadrato del periodo.
+	i termini entrano al quadrato, $\delta y_{tras}^2$ risulta essere trascurabile.
 	}
-\item{quindi per quanto studiato in classe abbiamo che:
+\item{Quindi per quanto studiato in classe abbiamo che:
 
 		\begin{equation*}
-			A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w-i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\, 0.033655 \,\, s^2
+			A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w_i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\, 0.034 \,\, s^2
 		\end{equation*}
 		%
 		\begin{equation*}
-			B \,=\, \frac{(\sum_i w_i)(\sum_i w-i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\, 4.0603 \,\, s^2 / kg
+			B \,=\, \frac{(\sum_i w_i)(\sum_i w_i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\, 4.06 \,\, s^2 / kg
 		\end{equation*}
 		%
 		dove:
@@ -315,7 +321,7 @@ Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza med
 			\Delta \,=\, (\sum_i w_i)(\sum_i w_i x_i^2) - (\sum_i w_i x_i)^2 \,\,\,\,\,\,\, e \,\,\,\,\,\,\,
 			w_i \,=\, \frac{1}{(\delta y_i)^2}
 		\end{equation*}}
-\item{di conseguenza abbiamo che le incertezze relative su A e B sono:
+\item{Di conseguenza abbiamo che le incertezze relative su A e B sono:
 
 		\begin{equation*}
 			(\delta A)^2 \,=\, \frac{\sum_i w_i x_i^2}{\Delta}  \,\,\,\,\, e \,\,\,\,\,
@@ -329,17 +335,20 @@ Quindi possiamo riassumere i risultati di questa procedura in questo modo:
 	B \,\pm\, \delta B \,=\, (4.06 \,\, \pm \,\, 0.01) \,\,s^2 \,/\, kg
 \end{equation*}
 %
-Perciò, noti questi parametri, possiamo risalire ai valori di $\mathcal{C}$ e $m_e$ risolvendo l'equazione in (\ref{eq:pppar}) e utilizzando come valore di k quello trovato nell'analisi dati della sezione precedente, ovvero $K_0 \,=\, 9.64 \, N/m$, otteniamo quanto segue:
+Perciò, noti questi parametri, possiamo risalire ai valori di $\mathcal{C}$ e $m_e$ risolvendo l'equazione in (\ref{eq:pppar}) e utilizzando come valore di k quello trovato nell'analisi dati della sezione precedente, ovvero $k_0 \pm \delta k \,=\, 9.64 \pm 0.02 \, N/m$, otteniamo quanto segue:
 
 \begin{equation*}
-	\mathcal{C} \,\pm\, \delta \mathcal{C} \,\,=\,\, (6.256 \, \pm \, 0.007)
+	\mathcal{C} \,\pm\, \delta \mathcal{C} \,\,=\,\, 6.26 \, \pm \, 0.01
 \end{equation*}
 %
 \begin{equation*}
 	m_e \, \pm \, \delta m_e \,\,=\,\, (0.0083 \,\, \pm \,\, 0.0002) \,\, kg
 \end{equation*}
+%
+dove le incertezze sono state stimate tramite la propagazione degli errori.
 
 \subsubsection{Test del chi quadro}
+
 Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pppar}) i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quadro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i  valori sperimentali A e B. Pertanto ci aspettiamo che:
 
 \begin{equation*}
