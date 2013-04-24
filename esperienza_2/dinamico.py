@@ -68,14 +68,14 @@ if mpl:
         yerr=[sp2 * 1000 for sp2 in sigma_periodi_2], #xerr=sigma_res_p, 
         fmt='o', capsize=7)
 
-    dots2 = ax.errorbar(x=masse, y=[(p - (A + B*m)) * 1000 for p, m in zip(medie_periodi_2, masse)],
-        yerr=[sp2 * 1000 for sp2 in sigma_corr], fmt=None, capsize=7)
+     #dots2 = ax.errorbar(x=masse, y=[(p - (A + B*m)) * 1000 for p, m in zip(medie_periodi_2, masse)],
+     #   yerr=[sp2 * 1000 for sp2 in sigma_corr], fmt=None, capsize=7)
 
     for cap in dots[1]:
         cap.set_markeredgewidth(1)
 
-    for cap in dots2[1]:
-        cap.set_markeredgewidth(1)
+    #for cap in dots2[1]:
+    #    cap.set_markeredgewidth(1)
 
     fit1 = ax.errorbar(x=(0.02, 0.179999), y=(0, 0))
     #fit2 = ax.errorbar(x=(0, 1.4), y=(0, 1.4/k0_s))
@@ -88,8 +88,10 @@ if mpl:
     ax.set_xticks((0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18))
     ax.set_ylim(-6, 7)
 
-    ax.legend((dots, dots2), ("Incertezza su $T^2$", "Barre d'errore corrette"), 'upper left',
+    ax.legend((dots,), ("Incertezza su $T^2$",), 'upper left',
         prop={'size': 12}, numpoints=1)
+    #ax.legend((dots, dots2), ("Incertezza su $T^2$", "Barre d'errore corrette"), 'upper left',
+    #    prop={'size': 12}, numpoints=1)
 
     f1.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
     
