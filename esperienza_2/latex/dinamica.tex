@@ -79,7 +79,8 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
         \bottomrule
     \end{tabular}
     \caption{La tabella riporta i valori nominali e i valori rilevati con la bilancia della massa delle combinazioni di pesi scelte per
-    l'esperimento. Ogni valore include la massa del piattello portapesi e della combinazione di cilindri scelta.}
+    l'esperimento. Ogni valore include la massa del piattello portapesi e della combinazione di cilindri scelta. Le misure sono state fatte
+    con una bilancia di risoluzione di 0.1 g.}
     \label{tab:masse_dinamico}
 \end{table}
 
@@ -107,7 +108,7 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 		160.5 & 8.30 & 8.27 & 8.15 & 8.29 & 8.25 & 8.24 & 8.35 & 8.31 & 8.41 & 8.27 & 8.36 & 8.34 & 8.34 & 8.31 & 8.31 \\
         \bottomrule
     \end{tabular}
-    \caption{Periodi di oscillazione misurati con masse diverse. Ogni riga contiene i valori di lettura del cronometro per le misure di 10 periodi di oscillazione relativi alla massa riportata nella prima colonna. I valori sono stati ottenuti da tre operatori, ognuno 5 misure, per un totale di 15.}
+    \caption{Periodi di oscillazione misurati con masse diverse. Ogni riga contiene i valori di lettura del cronometro per le misure di 10 periodi di oscillazione relativi alla massa riportata nella prima colonna. I valori sono stati ottenuti da tre operatori, ognuno 5 misure, per un totale di 15. Il cronometro aveva una risoluzione di 0.01 s.}
     \label{tab:periodi}
 \end{table}
 
@@ -122,20 +123,20 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
         \midrule
 
-        1 & 0.394		& 0.005		& 0.155		& 0.001	\\
-        2 & 0.447		& 0.005		& 0.200		& 0.001	\\
-        3 & 0.488		& 0.008		& 0.238		& 0.002	\\
-        4 & 0.529		& 0.004		& 0.280		& 0.001	\\
-        5 & 0.565		& 0.005		& 0.319		& 0.001	\\
-        6 & 0.600		& 0.005		& 0.361		& 0.002	\\
-        7 & 0.633		& 0.002		& 0.400		& 0.001	\\
-        8 & 0.662		& 0.004		& 0.438		& 0.002	\\
-        9 & 0.692		& 0.005		& 0.479		& 0.002	\\
-        10 & 0.722		& 0.003		& 0.521		& 0.001	\\
-        11 & 0.752		& 0.003		& 0.566		& 0.001	\\
-        12 & 0.777		& 0.003		& 0.604		& 0.001	\\
-        13 & 0.802		& 0.005		& 0.643		& 0.002	\\
-        14 & 0.830		& 0.006		& 0.689		& 0.003	\\
+        1 & 0.394		& 0.001		& 0.155		& 0.001	\\
+        2 & 0.447		& 0.001		& 0.200		& 0.001	\\
+        3 & 0.488		& 0.002		& 0.238		& 0.002	\\
+        4 & 0.529		& 0.001		& 0.280		& 0.001	\\
+        5 & 0.565		& 0.001		& 0.319		& 0.001	\\
+        6 & 0.600		& 0.001		& 0.361		& 0.002	\\
+        7 & 0.633		& 0.001		& 0.400		& 0.001	\\
+        8 & 0.662		& 0.001		& 0.438		& 0.002	\\
+        9 & 0.692		& 0.001		& 0.479		& 0.002	\\
+        10 & 0.722		& 0.001		& 0.521		& 0.001	\\
+        11 & 0.752		& 0.001		& 0.566		& 0.001	\\
+        12 & 0.777		& 0.001		& 0.604		& 0.001	\\
+        13 & 0.802		& 0.001		& 0.643		& 0.002	\\
+        14 & 0.830		& 0.002		& 0.689		& 0.003	\\
 
         \bottomrule
 
@@ -147,10 +148,29 @@ I dati rilevati sono riportati nella tabella \ref{tab:periodi}.
 
 \subsubsection{Studio quantitativo del moto oscillatorio}
 
+Le considerazioni sull'incertezza della massa sono le stesse già discusse nell'esperimento precedente,
+quindi l'incertezza sulla massa, uguale per tutte le combinazioni di cilindri, vale:
+
+\begin{equation*}
+    \delta m = 0.03 \,\, g
+\end{equation*}
+
 Per comodità notazionale da qui in avanti indicheremo con $T_i$ i periodi relativi alla massa $m_i$, con $i$ che va da 1 a 14 ed
 indica i pesi in ordine crescente di massa, come sono riportati in tabella \ref{tab:masse_dinamico}.
 Per ogni massa utilizzata, è stata calcolata la media dei periodi $\mathcal{T}_i \equiv m^*[T_i]$ e la deviazione tipo sulla distribuzione
-delle medie $\delta \mathcal{T}_i \equiv \sigma[\mathcal{T}_i]$. I valori calcolati sono elencati nelle prime
+delle medie $\sigma[\mathcal{T}_i]$.
+
+È doveroso notare che tutte le misure del periodo sono affette dall'errore di risoluzione standard.
+Dal momento che andremo ad operare con le medie dei 15 periodi l'incertezza complessiva delle medie è data dalla composizione
+dell'errore di risoluzione standard con l'incertezza statistica. Cioè, per ogni massa $i$-esima:
+
+\begin{equation*}
+    \delta \mathcal{T}_i = \sqrt{\sigma[\mathcal{T}_i]^2 + \sigma_{ris}[\mathcal{T}]^2}
+\end{equation*}
+%
+dove $\sigma_{ris}[\mathcal{T}]$ indica l'errore di risoluzione tipo pari a 0.0003 s.
+
+I valori calcolati sono elencati nelle prime
 due colonne della tabella \ref{tab:calcolati}.
 In figura \ref{fig:periodo_massa} è mostrato il grafico del periodo di oscillazione $\mathcal{T}_i$ della molla al variare della massa $m_i$ ad essa appesa. Si vede chiaramente
 che i punti sul grafico non sono allineati lungo una retta. Infatti, come si può notare dalla formula (\ref{eq:pp}),
@@ -181,7 +201,8 @@ graficati in figura \ref{fig:periodo2_massa}. In questo caso è evidente l'andam
     \includegraphics[width=120mm]{immagini/periodo2_massa.pdf}
     \caption{Il grafico mostra la relazione tra il periodo di oscillazione della molla al quadrato e la massa ad essa appesa.
         Anche in questo caso le barre d'errore non sono mostrate in quanto troppo piccole per una chiara lettura.
-        Si può notare che ${\mathcal{T}_i}^2$ e $m_i$ sono legati da una relazione lineare.}
+        Si può notare che ${\mathcal{T}_i}^2$ e $m_i$ sono legati da una relazione lineare. Si nota inoltre che la retta di fit
+        interseca l'asse delle ascisse nel punto $-m_e$.}
     \label{fig:periodo2_massa}
 \end{SCfigure}
 
