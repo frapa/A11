@@ -345,11 +345,16 @@ Perciò, noti questi parametri, possiamo risalire ai valori di $\mathcal{C}$ e $
 	m_e \, \pm \, \delta m_e \,\,=\,\, (0.0083 \,\, \pm \,\, 0.0002) \,\, kg
 \end{equation*}
 %
-dove le incertezze sono state stimate tramite la propagazione degli errori.
+dove le incertezze sono state stimate tramite la propagazione degli errori. Dal valore della massa efficace, tramite la relazione $\mu = 3m_e$
+ricavata precedentemente, si può risalire alla massa reale della molla:
+
+\begin{equation*}
+    \mu = 3m_e = 24.9 \pm 0.6 \,\, g
+\end{equation*}
 
 \subsubsection{Test del chi quadro}
 
-Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pppar}) i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quadro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in qunto due dati sono stati utilizzati per calcolare i  valori sperimentali A e B. Pertanto ci aspettiamo che:
+Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pppar}) ed i valori sopra ottenuti siano compatibili con i dati sperimentali mediante il test del chi quadro. Ricordiamo che il numero di gradi di libertà in questo caso non è più N - 1, ma risulta essere N - 2 in quanto due dati sono stati utilizzati per calcolare i  valori sperimentali A e B. Pertanto ci aspettiamo che:
 
 \begin{equation*}
 	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,\simeq\, N - 2 \quad \text{ricordando che} \quad \chi_{teo}^2 \,\,:=\,\, N - 2
@@ -358,10 +363,10 @@ Procediamo ora a verificare che le equazioni (\ref{eq:mCspezzati}) e (\ref{eq:pp
 il nostro valore del chi quadro osservato è:
 
 \begin{equation*}
-	\chi_{oss}^2 \,\,=\,\, 21 \quad \text{che risulta essere compatibile con il} \quad \chi_{teo}^2
+	\chi_{oss}^2 \,\,=\,\, 21.1 \quad \text{che risulta essere compatibile con il} \quad \chi_{teo}^2
 \end{equation*}
 %
-in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12 \, \pm \, 5$ pertanto la differenza tra i due chi quadro risulta essere la seguente:
+in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12 \, \pm \, 4.9$ pertanto la differenza tra i due chi quadro risulta essere la seguente:
 
 \begin{equation*}
 	|R| \,\,=\,\, (\chi_{oss}^2 - \chi_{teo}^2) \,\,=\,\, 9.1
@@ -370,89 +375,69 @@ in quanto $\chi_{teo}^2 \, \pm \, \delta \chi_{teo}^2 \,\,=\,\, 12 \, \pm \, 5$ 
 mentre, posto a priori un fattore di copertura k = 3, l'errore sul resto è:
 
 \begin{equation*}
-	k \, \sigma_{R} \,\,=\,\, 14.2
+    k \, \sigma_{R} \,\,=\,\, 14.7 \qquad \text{dove} \quad \sigma_{R} \equiv \delta\chi_{teo}^2
 \end{equation*}
 %
 e quindi risulta che $|R| \, \leq \, k \, \sigma_{R}$.\\
 
-Dal momento che il chi quadro osservato, pur essendo compatibile con la predizione teorica, risulta essere molto maggiore del chi quadro teorico, abbiamo deciso di rifare il fit per ottenere una migliore stima delle inceretezze sul periodo che probabilmente sono state sottostimate.\\
-Pertanto rifacendo la procedura del fit vogliamo aggiustare il valore delle incertezze in modo da eguagliare i due chi quadro, ovvero quello teorico e quello sperimentale. Pertanto:
-
-\begin{equation*}
-	\chi_{oss}^2 \,=\, \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_i)^2} \,=\, \chi_{teo}^2 
-\end{equation*}
+%Dal momento che il chi quadro osservato, pur essendo compatibile con la predizione teorica, risulta essere molto maggiore del chi quadro teorico, abbiamo deciso di aggiustare comunque il $\chi^2$ per ottenere una migliore stima delle inceretezze sul periodo,
+%che probabilmente sono state sottostimate.
 %
-quindi sfruttando questa relazione vogliamo trovare un coefficiente che moltiplicato per il precedente $\delta y_i$ ci restituisce una nuova varianza grazie alla quale i due chi risulteranno uguali. Perciò otteniamo quanto segue:
-	
-\begin{equation*}
-	\chi_{oss}^2 \,\,=\,\, \frac{1}{(\delta y)^2} \sum_{1}^{N} (y_i - A - Bx_i)^2  \,\,=\,\, \chi_{teo}^2
-\end{equation*}
+%In questo caso le incertezze $\delta y_i^2$ sono diverse, per cui le moltiplichiamo tutte per un fattore $h$.
+%Imponiamo:
 %
-ricordando che il termine $(\delta y)^2$ la nuova stima dell'incertezza sul periodo. Sapendo che valgono:
-	
-\begin{equation*}
-	\chi_{teo}^2 \,=\, \nu \quad \quad con \quad \quad
-	\nu \,=\, N - 2 \quad \quad e \quad \quad
-	\delta y_{posteriori}^2 \,\,=\,\, \frac{\chi_{oss}^2}{\nu} \, \delta y_{priori}^2
-\end{equation*}
+%\begin{equation*}
+%    \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{h(\delta y_i)^2} \,=\, \frac{\chi_{oss}^2}{h} \,=\, \chi_{teo}^2 
+%\end{equation*}
+%%
+%quindi sfruttando questa relazione vogliamo trovare $h$, che ci restituisce una nuova incertezza, grazie alla quale i due chi
+%risulteranno uguali. Perciò otteniamo quanto segue:
 %
-con $\nu$ che rappresenta i gradi di libertà. Otteniamo:
-
-\begin{equation*}
-	\delta x_{posteriori} \,=\, \bigotimes \,s
-\end{equation*}	 
+%\begin{equation*}
+%    h \,=\, \frac{\chi_{oss}^2}{\chi_{teo}^2} = 1.75
+%\end{equation*}
+%%
+%Pertanto le incertezze $\delta y_i$ sono corrette di un fattore:
+%
+%\begin{equation*}
+%    \sqrt{h} = 1.32
+%\end{equation*}
+%%
+%che è, a nostro avviso, accettabile poiché non si è tenuto conto di errori sistematici nella misura del per
 
 \subsubsection{Determinazione dinamica della costante elastica K}
-Grazie alla procedura di regressione lineare adottata sopra siamo riusciti a determinare i 2 parametri A e B, pertanto ora, sfruttando la teoria dell'oscillatore armonico, si trova che $\mathcal{C}$ ha il valore di $2 \, \pi$, per cui assumendo che la nostra molla sia perfettamente elastica, otteniamo la relazione:
+
+Grazie alla procedura di regressione lineare adottata sopra siamo riusciti a determinare i 2 parametri A e B. Ora, sfruttando la teoria dell'oscillatore armonico, si trova che $\mathcal{C}$ ha il valore di $2 \, \pi$, per cui assumendo che la nostra molla sia perfettamente elastica, otteniamo la relazione:
 
 \begin{equation}
 	\mathcal{T} \,\,=\,\, 2 \, \pi \, \sqrt{\frac{M}{k}} \quad \text{dove} \quad M \,=\, m_e\,+\,m
 \end{equation}
 %
-Se noi imponiamo $\mathcal{C} \,=\, 2\,\pi$ siamo in grado di stimare nuovamente i parametri $k \,e\, m_e$ a partire dalla regressione lineare, in quanto:
+Imponendo $\mathcal{C} \,=\, 2\,\pi$ in (\ref{eq:mCspezzati}) e (\ref{eq:pppar}), siamo in grado di stimare nuovamente il parametro $k$ a partire dalla regressione lineare, in quanto:
 \begin{itemize}
 	\item{dalla definizione di B sappiamo che:
 	
 			\begin{equation*}
-				B \,\,=\,\, \frac{\mathcal{C}^2}{k} \quad \Longrightarrow \quad k \,\,=\,\, \frac{\mathcal{C}^2}{B} \,\,=\,\, 9.72 \, N/m
+				B \,\,=\,\, \frac{\mathcal{C}^2}{k} \quad \Longrightarrow \quad k \,\,=\,\, \frac{\mathcal{C}^2}{B} \,\,
+                =\,\, \frac{4\pi^2}{B} \,\,=\,\, 9.72 \, N/m
 			\end{equation*}}
-	\item{mentre dalla definizione di A sappiamo che:
+	\item{per stimare l'errore relativo alla costante elastica si procede come segue:
 	
 			\begin{equation*}
-				A \,\,=\,\, \frac{\mathcal{C}^2}{k} \, m_e \,\, = \,\, \frac{B\,k}{k} \, m_e \,\, = \,\, B\,m_e \quad \Longrightarrow \quad m_e \,=\, \frac{A}{B} \,\,=\,\, \bigotimes
-			\end{equation*}}
-\end{itemize}
-Invece per quanto riguarda gli errori relativi a questi risultati abbiamo che:
-\begin{itemize}
-	\item{per stimare l'errore relativo alla costante elastica si può procedere come segue:
-	
-			\begin{equation*}
-				\delta k_0 \,\,=\,\, \frac{\delta B}{\mathcal{C}^2} \,\,=\,\, 0.02 \, N/m
-			\end{equation*}
-			%
-			}
-	\item{mentre per stimare l'errore sulla massa efficace della molla si può sfruttare la regola della propagazione dell'errore per divisoni e ottenere:
-	
-			\begin{equation*}
-				\delta m_e \,\,=\,\, m_e \, \sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta k_0}{k})^2} \,\,=\,\, \bigotimes
+				\delta k \,\,=\,\, \frac{4\pi^2}{B^2}\delta B \,\,=\,\, 0.02 \, N/m
 			\end{equation*}
 			%
 			}
 \end{itemize}
+
 Abbiamo dunque ottenuto che la costante elastica trovata mediante la procedura dinamica risulta essere:
 
 \begin{equation*}
 	k_0 \, \pm \, \delta k_0 \,\,=\,\, (9.72 \, \pm \, 0.02) \, N/m
 \end{equation*}
 %
-e la massa efficace della molla:
-
-\begin{equation*}
-	m_e \, \pm \, \delta m_e \,\,=\,\, \bigotimes
-\end{equation*}
-%
 Quindi non ci rimane che verificare se la costante elastica trovata con questa procedura è compatibile con quella trovata grazie alla procedura statica mediante la tecnica della regressione lineare.\\
-Come prima cosa andiamo a calcolare il resto $|R|$ dato dalla differenza dei due $k_0$:
+Come prima cosa andiamo a calcolare il resto $|R|$ dato dalla differenza dei due $k$:
 
 \begin{equation*}
 	|R| \,\,=\,\, (k_{dinamico} \,-\, k_{statico}) \,\,=\,\, 0.08 \, N/m
@@ -470,6 +455,4 @@ infine verifichiamo se:
 \end{equation*}
 %
 Poiché risulta effettivamente che $|R| \,\leq\, k\,\sigma_R$, le due costanti elastiche trovate con le due procedure sono compatibili.
-
-
-
+L'esperimento è andato a buon fine e le constanti elastiche risultano tutte combatibili tra di loro.
