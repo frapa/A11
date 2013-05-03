@@ -21,9 +21,9 @@ function A, B, sA, sB = fit(y, x, w)
 	n1 = sum(w .* y);
 	n2 = sum(w .* x .* y);
 	
-	N = [n1; n2];
+	Noto = [n1; n2];
 	
-	R = inv(M) * N;
+	R = inv(M) * Noto;
 	
 	A = R(1);
 	B = R(2);
