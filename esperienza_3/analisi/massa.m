@@ -42,14 +42,24 @@ T = mean(periodi)
 sigma_T = sigma(periodi, T);
 sigma_tot_T = sqrt(sigma_T.^2 + sigma_ris_T^2)
 
+
 # pesi
 w = sigma_tot_T.^-2;
 
+# media pesata
 media_T = sum(w .* T) / sum(w)
 sigma_media_T = sum(w)^-0.5
 
 #errorbar(masse, T, sigma_tot_T, "~")
+# chi quadro con la costante media_T (retta orizzontale)
+chi2_T = chi2(T, masse, sigma_tot_T, media_T, 0)
 
-chi2(T, masse, sigma_tot_T, media_T, 0)
 
+# non si fa il trasferimento incertezza poiché
+# il B stimato è 0
+
+# regressione lineare
 [A, B, sigma_A, sigma_B] = fit(T, masse, w)
+
+# chi quadro della regressione (retta quasi orizzontale)
+chi2_fit = chi2(T, masse, sigma_tot_T, A, B)
