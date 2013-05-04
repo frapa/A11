@@ -285,7 +285,7 @@ Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza med
             \sum_{i=1}^{N} \frac{(y_i - A - Bx_i)^2}{(\delta y_{tot})^2}
 		\end{equation*}
 		%
-    ricordando che $\delta y_{tot} = \sqrt{\delta y_i^2 + B\delta x_i^2}$. Inoltre $\delta y_i \equiv \delta (\mathcal{T}^2)$
+    ricordando che $\delta y_{tot} = \sqrt{\delta y_i^2 + B^2\delta x_i^2}$. Inoltre $\delta y_i \equiv \delta (\mathcal{T}^2)$
     e $\delta x_i \equiv \delta m$.}
 
 \item{Al fine di calcolare $\delta y_{tot}$, dobbiamo fare una stima preliminare del parametro B. Dal momento che dal grafico è impossibile individuare le rette di massima e minima pendenza abbiamo deciso di ricavare il parmetro B valutando il coefficiente angolare della retta utilizzando il classico rapporto tra due punti del grafico, ovvero:
@@ -299,7 +299,7 @@ Vogliamo quindi determinare i valori di A e B che minimizzano la discrepanza med
     volte minore rispetto all'incertezza sul periodo quadrato ($\delta y_i$), e quindi, poichè nella formula
 	
 	\begin{equation*}
-		\delta y_{tot} = \sqrt{\delta y_i^2 + B\delta x_i^2}
+		\delta y_{tot} = \sqrt{\delta y_i^2 + B^2\delta x_i^2}
 	\end{equation*}	
 	%
 	i termini entrano al quadrato, $\delta y_{tras}^2$ risulta essere trascurabile.
