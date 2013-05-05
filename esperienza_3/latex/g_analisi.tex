@@ -1,21 +1,51 @@
 \begin{center}
---- INSERIRE TABELLA DATI ---
-
-colonne:
-
-$\ell_i$, $\delta\ell$, $\mathcal{T}_i$, $\delta\mathcal{T}$, $g_i$, $\delta g_i$
+$\Uparrow\Uparrow$ --- TABELLA DATI --- $\Uparrow\Uparrow$
 \end{center}
 
-dai dati $\ell_i$ e $\mathcal{T}_i$ abbiamo calcolato l'incertezza $\delta g_i$ utilizzando la formula generale per la propagazione degli errori:
-%formula generale per la propagazione degli errori
-\begin{equation}
-	(\delta g)^2 \,\, \simeq \,\, \left( \frac{\partial g}{\partial \ell} \right)^2 (\delta \ell)^2 \,\, + \,\, \left( \frac{\partial g}{\partial \mathcal{T}} \right)^2 (\delta \mathcal{T})^2 \,\, \simeq \,\, \left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2
-\end{equation}
-\begin{equation*}
-	\delta g \,\, \simeq \,\, \sqrt{\left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2}
-\end{equation*}
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \multicolumn{3}{c}{\textbf{Lunghezze, periodi e accelerazione ricavata}} \\
+        \toprule
+        Lunghezza [\si{\metre}] & Periodi [\si{\second}] & Accelerazione di gravità [\si{\metre\per\square\second}] \\
+        $\ell_i \pm \delta\ell$ & $\mathcal{T}_i \pm \delta\mathcal{T}$ & $g_i \pm \delta g_i$ \\
+        \midrule
+%		1.057 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.953 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.853 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.753 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.653 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.553 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.453 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.353 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.253 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+%		0.153 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 & 1 $\,\pm\,$ 1 \\
+		1.0525 $\,\pm\,$ 0.0006 & 2.061 $\,\pm\,$ 0.006 & 9.78 $\,\pm\,$ 0.05 \\
+		0.9485 $\,\pm\,$ 0.0006 & 1.947 $\,\pm\,$ 0.004 & 9.87 $\,\pm\,$ 0.04 \\
+		0.8485 $\,\pm\,$ 0.0006 & 1.856 $\,\pm\,$ 0.003 & 9.72 $\,\pm\,$ 0.03 \\
+		0.7485 $\,\pm\,$ 0.0006 & 1.739 $\,\pm\,$ 0.003 & 9.77 $\,\pm\,$ 0.04 \\
+		0.6485 $\,\pm\,$ 0.0006 & 1.610 $\,\pm\,$ 0.003 & 9.88 $\,\pm\,$ 0.04 \\
+		0.5485 $\,\pm\,$ 0.0006 & 1.477 $\,\pm\,$ 0.005 & 9.93 $\,\pm\,$ 0.07 \\
+		0.4485 $\,\pm\,$ 0.0006 & 1.335 $\,\pm\,$ 0.004 & 9.94 $\,\pm\,$ 0.06 \\
+		0.3485 $\,\pm\,$ 0.0006 & 1.187 $\,\pm\,$ 0.004 & 9.77 $\,\pm\,$ 0.07 \\
+		0.2485 $\,\pm\,$ 0.0006 & 1.008 $\,\pm\,$ 0.004 & 9.65 $\,\pm\,$ 0.08 \\
+		0.1485 $\,\pm\,$ 0.0006 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{CAPTION!}
+    \label{tab:calcolo_g}
+\end{table}
 
-Osservando i valori, si può notare che le incertezze $\delta\ell$ sono più influenti delle incertezze $\delta\mathcal{T}$ nel determinare $\delta g_i$
+Dai dati $\ell_i$ e $\mathcal{T}_i$ abbiamo calcolato l'incertezza $\delta g_i$ utilizzando la formula generale per la propagazione degli errori:
+%formula generale per la propagazione degli errori
+\begin{equation*}
+	(\delta g)^2 \,\, \simeq \,\, \left( \frac{\partial g}{\partial \ell} \right)^2 (\delta \ell)^2 \,\, + \,\, \left( \frac{\partial g}{\partial \mathcal{T}} \right)^2 (\delta \mathcal{T})^2 \,\, \simeq \,\, \left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2
+\end{equation*}
+\begin{equation} \label{eq:delta_g}
+	\delta g \,\, \simeq \,\, \sqrt{\left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2}
+\end{equation}
+
+Osservando i valori riportati in tabella \ref{tab:calcolo_g}, si può notare che le incertezze $\delta\ell$ sono meno influenti delle incertezze $\delta\mathcal{T}$ nel determinare $\delta g_i$. Ciononostante, esaminando la formula \ref{eq:delta_g}, si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
 
 \begin{center}
 --- INSERIRE GRAFICO---
@@ -23,6 +53,7 @@ Osservando i valori, si può notare che le incertezze $\delta\ell$ sono più inf
 $g_i$ in funzione di $\ell_i$ 
 \end{center}
 
-Sono più affidabili i valori di g ricavati da $\ell$ grandi o $\ell$ piccoli?
+% togliere le domande e inserire le risposte !!
+Nel grafico è evidente una dipendenza di g da l? Sono più affidabili i valori di g ricavati da $\ell$ grandi o $\ell$ piccoli?
 
-Basandosi sulle approssimazioni di pendolo semplice (punto materiale, filo inestensibile e privo di massa) e di piccole oscillazioni si può osservare che i valori più attendibili di g saranno quelli realizzati con $\ell$ grandi in quanto più vicini alle approssimazioni effettuate.
+Basandosi sul modello di pendolo semplice (punto materiale, filo inestensibile e privo di massa) e di piccole oscillazioni si può osservare che i valori più attendibili di g saranno quelli realizzati con $\ell$ grandi in quanto più vicini alle approssimazioni effettuate.

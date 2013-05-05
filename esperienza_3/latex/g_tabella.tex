@@ -2,31 +2,38 @@ Per ottenere un valore unico di $g \pm \delta g$ procediamo seguendo due differe
 
 \paragraph{Primo metodo: Media pesata\\}
 
-Calcolo la media pesata con le seguenti formule:
+Il primo metodo che adotteremo per trovare il valore dell'accelerazione di gravità è il calcolo della media pesata, utilizzando le seguenti formule:
 \begin{equation}
-	g \,\, = \,\, \frac{\sum g_iw_i}{\sum w_i} \quad\quad e \quad\quad \delta g \,\, = \,\, \frac{1}{\sqrt{\sum w_i}} \quad\quad dove \quad\quad w_i \,\, = \,\, \frac{1}{(\delta g_i)^2}
+	g_w \,\, = \,\, \frac{\sum g_iw_i}{\sum w_i} \quad\quad e \quad\quad \delta g_w \,\, = \,\, \frac{1}{\sqrt{\sum w_i}} \quad\quad dove \quad\quad w_i \,\, = \,\, \frac{1}{(\delta g_i)^2}
 \end{equation}
 %
-ricavando il seguente valore per l'accelerazione di gravità:
+$g_w$ e $\delta g_w$ rappresentano relativamente il risultato della media pesata e il suo errore relativo. Inoltre $w_i$ è il peso relativo ad ogni misura $g_i$.
+Eseguendo questa procedura sui dati si ricava il seguente valore per l'accelerazione di gravità:
 \begin{equation}
-	g \pm \delta g \,\, = \,\, 9,800 \pm 0,015 \,\, ms^{-2}
+	g_w \pm \delta g_w \,\, = \,\, 9,800 \pm 0,015 \,\, \si{\metre\per\square\second}
 \end{equation}
 
 \paragraph{Secondo metodo: distribuzione dei valori\\}
 
-Si calcoli il valore medio $\langle g\rangle$ e il suo scarto quadratico medio $\sigma[\langle g \rangle]$:
+Il secondo metodo che utilizziamo è quello di considerare la distribuzione dei valori $g_i$, cioè calcolarne il valore medio $\langle g\rangle$ e lo scarto quadratico medio della distribuzione dei valori medi $\sigma[\langle g \rangle]$.
 \begin{equation}
-	\langle g \rangle \,\, = \,\, \frac{\sum g_i}{N} \quad\quad 	e	\quad\quad	\sigma[\langle g \rangle] \,\, = \,\, \sqrt{\frac{\sum (g_i - \langle g \rangle)^2}{N}}
+	g_s \, = \, \langle g_i \rangle \, = \, \frac{\sum g_i}{N} \quad\quad 	e	\quad\quad	\delta g_s \, = \, \frac{1}{\sqrt{N}}\sigma[\langle g_i \rangle] \, = \, \frac{1}{\sqrt{N}}\sqrt{\frac{\sum (g_i - \langle g_i \rangle)^2}{N-1}}
 \end{equation}
-
+%\delta g_s \,\, = \,\, \sigma[\langle g_i \rangle] \,\, = \,\, \sqrt{\frac{\sum (g_i - \langle g_i \rangle)^2}{N}}
+%
 da cui si ricava il valore:
 \begin{equation}
-	g \pm \delta g \,\, = \,\, 9,8 \pm 0,1 \,\, ms^{-2}
+	g_s \pm \delta g_s \,\, = \,\, 9,80 \pm 0,03 \,\, \si{\metre\per\square\second}
 \end{equation}
 
+\paragraph{Osservazioni sulla metodologia e sulla compatibilità dei valori ricavati\\}
 
-\begin{center}
-	---OSSERVAZIONI---
-	
-	osservazioni sui due metodi di calcolo di g
-\end{center}
+Comparando le due metodologie si può innanzitutto notare che il valore ottenuto con la media pesata risulta avere un errore minore del valore ottenuto con lo studio della distribuzione dei valori. Ciò è dovuto al fatto che la media pesata tiene in considerazione maggiormente i valori con un errore minore, ottenendo così una misura più precisa. Nonostante ciò, l'errore determinato con lo studio della distribuione dei valori è poco più grande di quello determinato dalla media pesata. Questa eventualità è probabilmente dovuta al fatto che non vi è una marcata differenza tra i valori con $\delta g$ maggiore (ricavati con $\ell$ minore) e valori con $\delta g$ minore (ricavati con $\ell$ maggiore).
+
+Per quanto riguarda la compatibilità, poiché i valori di $g_w$ e $g_s$ coincidono, ad esclusione del loro errore, risulta futile discutere approfonditamente la differenza e l'errore relativo alla differenza in quanto le due misure sono certamente compatibili.
+%, fissato a priori un fattore di copertura $k \, = \, 3$, si può osservare che:
+%\begin{itemize}
+%	\item $R \,\, = \,\, |g_w - g_s| \,\, = \,\, \SI{0}{\metre\per\square\second}$
+%	\item $k \sigma_R \,\, = \,\, \sqrt{\delta g_w^2 + \delta g_s^2} \,\, = \,\, %\SI{.04}{\metre\per\square\second}$
+%\end{itemize}
+%poiché è verificato che $R \leq k\sigma_R$ allora $g_w$ e $g_s$ risultano essere compatibili.

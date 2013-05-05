@@ -91,11 +91,16 @@ wi = delta_gi.^(-2);
 
 g1 = sum(gi .* wi) / sum(wi)
 dg1 = 1 / sqrt(sum(wi))
-
+" "
 %	metodo 2:
 %	distribuzione dei valori
 g2 = sum(gi) / 10
 dg2 = sqrt( sum((gi .- g2).^2) / 10)
-
+dg22 = sqrt( sum((gi .- g2).^2) / 90)
+" "
 g3 = (2*pi/a)^2
 dg3 = 8*pi^2*a^(-3)*sigma_a
+" "
+" "
+"l, dl, T, dT, g, dg"
+[Ls' ones(10,1)*sigma_L T' sigma_tot_T' gi' delta_g']
