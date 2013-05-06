@@ -1,17 +1,18 @@
-Abbiamo scelto 10 diverse lunghezze del filo, riportate in tabella \ref{tab:lunghezze_filo}.
+Abbiamo scelto dieci diverse lunghezze del filo, riportate nella prima colonna della tabella \ref{tab:lunghezze_periodi}.
+Le misure riportate in tabella si riferiscono alla distanza tra l'attaccatura del filo al cilindro e la parte superiore
+del morsetto che reggeva il cavo. Per ottenere la distanza del cilindo dal punto di sospensione è quindi
+necessario sottrarre la lunghezza $l\ped{mors}$ del morsetto. Abbiamo preso le misure in questo modo per problemi tecnici nella
+misurazione diretta.
 
-\begin{table}
-    \centering
-    \begin{tabular}{c c c c c c c c c c}
-        \multicolumn{10}{c}{\textbf{Lunghezze del filo [cm]}} \\
-        \toprule
-        105.7 & 95.3 & 85.3 & 75.3 & 65.3 & 55.3 & 45.3 & 35.3 & 25.3 & 15.3 \\
-        \bottomrule
-    \end{tabular}
-    \caption{Lunghezze del filo scelte per testare la dipendenza del periodo
-        del pendolo dalla lunghezza. Le dieci misure sono equispaziate ad intervalli di \SI{10}{\centi\metre}.}
-    \label{tab:lunghezze_filo}
-\end{table}
+Per ogni lunghezza del cavo sono stati registrati $N = 10$ valori di periodi. Ogni valore è stato ottenuto
+misurando 5 periodi e dividendo per 5 la misura. Si è prestato attenzione a mantenere le oscillazioni del pendolo
+all'interno di un piano; si è inoltre fatto ripartire il pendolo ad ogni misura, al fine di ridurre l'effetto dell'attrito
+dell'aria.
+
+Le lunghezze scelte sono separate da intervalli regolari di \SI{10}{\centi\metre} ciascuno, a parte la prima
+misura per cui abbiamo usato i dati dicavati nell'esperimento precedente (dipendenza dalla massa), per questioni di tempo.
+Poiché nella sezione precedente sono stati presi 15 dati per massa e in questo esperimento ne abbiamo preso solo 10
+per ogni lunghezza, abbiamo scartato gli ultimi 5 valori in tabella ((())).
 
 \begin{table}
     \centering
@@ -32,4 +33,10 @@ Abbiamo scelto 10 diverse lunghezze del filo, riportate in tabella \ref{tab:lung
         0.153 & 0.762 & 0.774 & 0.790 & 0.794 & 0.790 & 0.768 & 0.770 & 0.768 & 0.794 & 0.772 \\
         \bottomrule
     \end{tabular}
+    \caption{Lunghezze del filo scelte per testare la dipendenza del periodo
+        del pendolo dalla lunghezza. Le dieci misure sono equispaziate ad intervalli di \SI{10}{\centi\metre}.
+        Le lunghezze riportate si riferiscono alla distanza tra l'attaccatura del filo al cilindro e la parte superiore
+        del morsetto che reggeva il cavo. Per ottenere la distanza del cilindo dal punto di sospensione è quindi
+        necessario sottrarre la lunghezza del morsetto.}
+    \label{tab:lunghezze_periodi}
 \end{table}
