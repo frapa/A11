@@ -95,7 +95,7 @@ dg1 = 1 / sqrt(sum(wi))
 %	metodo 2:
 %	distribuzione dei valori
 g2 = sum(gi) / 10
-dg2 = sqrt( sum((gi .- g2).^2) / 10)
+dg2 = sqrt( sum((gi .- g2).^2) / 9)
 dg22 = sqrt( sum((gi .- g2).^2) / 90)
 " "
 g3 = (2*pi/a)^2
