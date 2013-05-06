@@ -9,7 +9,7 @@ function chi = chi2(y, x, dy, A, B)
 	chi = sum((y - A - B*x).^2 ./ (dy .^ 2));
 endfunction
 
-function A, B, sA, sB = fit(y, x, w)
+function A, B, sA, sB = fit(y, x, w) % w = dy^(-2)
 	N = length(x);
 	
 	m1 = sum(w);
