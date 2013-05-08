@@ -1,11 +1,35 @@
-Analisi dati:
+Come prima operazione calcoliamo le medie pesate delle misure del periodo ($\mathcal{T}$). Ricordiamo che le misure del singolo periodo ($t_i$) devono essere divise per un fattore 5, poichè sono state cronometrate cinque oscillazioni. Per questo motivo l'errore che affligge ogni singola misura di periodo sarà il seguente:
 
-errori usati per le singole misure\\
-trattazione accurata errori\\
-errori totali ricavati da quali formule e come sono stati usati\\
-discorso sulle misure dell'allungamento e sul baricentro dek cilindri con approssimazione pendolo semplice e non fisico, inerzia\\
-regressione lineare e test del chi quadro\\
-il filo non si è allungato (forse)\\
-per i chi quadro e loro valore fare riferimento al sito internet datoci dal profo\\
-mini conclusione sul fatto che la massa non influisce minimamente sul periodo del pendolo, verificato praticamente\\
+\begin{equation*}
+	\delta t_i \,=\, \frac{1}{5} \, \frac{\Delta t}{\sqrt{12}}
+\end{equation*}
+%
+dove $\frac{\Delta t}{\sqrt{12}}$ rappresenta l'intervalo di incertezza tipo sulla misura del periodo singolo.\\
+Pertanto per calolare la media pesata procediamo come segue:
+\begin{itemize}
+	\item{calcoliamo la media pesata dei periodi:
+			\begin{equation*}
+				\mathcal{T} \,=\, \frac{\sum_i t_i w_i}{\sum w_i} \quad \text{dove} \quad w_i \,=\, \frac{1}{(\delta t_i)^2}
+			\end{equation*}
+			%
+			}
+	\item{calcoliamo l'errore sul periodo nel seguente modo:
+			\begin{equation*}
+				\delta \mathcal{T} \,=\, \frac{1}{\sqrt{\sum w_i}}
+			\end{equation*}
+			%
+			}
+\end{itemize}
+pertanto otteniamo una misura del periodo del pendolo di lunghezza fissata $\ell \pm \delta \ell \,=\, (1.0525 \pm 0.0006) \, m$ che ha il seguente valore:
+
+\begin{equation*}
+	\mathcal{T} \pm \delta \mathcal{T} \,=\, (2.056 \pm 0.002) \, s
+\end{equation*}
+%
+
+
+
+
+
+
 
