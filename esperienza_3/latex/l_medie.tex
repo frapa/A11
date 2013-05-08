@@ -13,7 +13,7 @@ L'altezza $h$ del cilindro è stata misurata con un calibro ventesimale di risol
 per cui l'errore tipo di risoluzione è:
 
 \begin{equation}
-    \sigma(l\ped{calibro}) = \frac{\Delta l\ped{calibro}}{\sqrt{12}} = \SI{0.00001}{\metre}
+    \sigma\ped{calibro}(l) = \frac{\Delta l\ped{calibro}}{\sqrt{12}} = \SI{0.00001}{\metre}
 \end{equation}
 
 Poichè abbiamo utilizzato il modello del pendolo semplice, siamo interessati a conoscere la distanza tra il punto
@@ -22,15 +22,17 @@ viene così approssimato ad un punto materiale posto nel suo centro. Vedremo in 
 Per ottenere la distanza tra punto di sospensione del filo e baricentro del cilindro si è usata la formula
 
 \begin{equation}
-	\l_i = \bar{l}_i - l\ped{mors} + \frac{h}{2}
+	\l_i \,=\, \bar{l}_i \,-\, l\ped{mors} \,+\, \frac{h}{2}
     \label{eq:l_i}
 \end{equation}
 
 che è stata applicata ad ogni lunghezza del filo. I risultati dei calcoli sono riportati nella prima colonna
-della tabella \ref{tab:l_dati}. L'incertezza sulla lunghezza trovata con la (\ref{eq:l_i}) si può ricavare mediante la propagazioe
+della tabella \ref{tab:l_dati}. L'incertezza sulla lunghezza trovata con la (\ref{eq:l_i}) si può ricavare mediante la propagazione
 degli errori:
 
-
+\begin{equation}
+	\delta l_i = \sqrt{4\,\sigma(l)^2 + \left\frac{\sigma\ped{calibro}(l)}{2}\right ^2}
+\end{equation}
 
 \begin{SCtable}
     \centering

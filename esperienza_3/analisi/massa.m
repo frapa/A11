@@ -31,7 +31,7 @@ L_p = Lf_p - L_mors + h_p / 2;
 # dato che sono uguali
 L = L_g
 # incertezza totale
-sigma_L = sqrt(4 * sigma_ris_L^2 + sigma_ris_h^2)
+sigma_L = sqrt(4 * sigma_ris_L^2 + (sigma_ris_h/2)^2)
 
 # incertezze periodi
 delta_ris_T = 0.002

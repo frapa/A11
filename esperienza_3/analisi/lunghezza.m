@@ -30,7 +30,7 @@ L_p = Lf_p - L_mors + h_p / 2;
 # dato che sono uguali
 L = L_g
 # incertezza totale
-sigma_L = sqrt(4 * sigma_ris_L^2 + sigma_ris_h^2)
+sigma_L = sqrt(4 * sigma_ris_L^2 + (sigma_ris_h/2)^2)
 
 # estraiamo i dati e li integriamo con quelli delle masse
 lunghezze = [Lf_g, dati(1,:) ./ 100];
