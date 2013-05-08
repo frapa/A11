@@ -25,34 +25,73 @@ Per ottenere la distanza tra punto di sospensione del filo e baricentro del cili
 	\l_i \,=\, \bar{l}_i \,-\, l\ped{mors} \,+\, \frac{h}{2}
     \label{eq:l_i}
 \end{equation}
-
+%
 che è stata applicata ad ogni lunghezza del filo. I risultati dei calcoli sono riportati nella prima colonna
 della tabella \ref{tab:l_dati}. L'incertezza sulla lunghezza trovata con la (\ref{eq:l_i}) si può ricavare mediante la propagazione
 degli errori:
 
 \begin{equation}
-	\delta l_i = \sqrt{4\,\sigma(l)^2 + \left(\frac{\sigma\ped{calibro}(l)}{2}\right) ^2}
+	\delta l = \sqrt{4\,\sigma(l)^2 + \left(\frac{\sigma\ped{calibro}(l)}{2}\right) ^2} = \SI{6e-4}{m}
 \end{equation}
+%
+che è stata indicata con $\delta l$ poiché è uguale per tutti i valori $l_i$.
 
 \begin{SCtable}
     \centering
-    \begin{tabular}{c c}
-        \multicolumn{2}{c}{\textbf{Dati}} \\
+    \begin{tabular}{c c c c}
+        \multicolumn{4}{c}{\textbf{Dati}} \\
         \toprule
-        $l_i$ [m] & Periodo [s] \\
+        $l_i$ [m] & $\mathcal{T}_i$ [s] & $\sigma(\mathcal{T}_i)$ & $\delta T_i$ \\
         \midrule
-        1.0526 &  \\
-        0.9486 &  \\
-        0.8486 &  \\
-        0.7486 &  \\
-        0.6486 &  \\
-        0.5486 &  \\
-        0.4486 &  \\
-        0.3486 &  \\
-        0.2486 &  \\
-        0.1486 &  \\
+        1.053 & 2.061 & 0.006 & 0.006 \\
+        0.949 & 1.947 & 0.004 & 0.004 \\
+        0.849 & 1.856 & 0.003 & 0.003 \\
+        0.749 & 1.739 & 0.003 & 0.003 \\
+        0.649 & 1.610 & 0.003 & 0.003 \\
+        0.549 & 1.477 & 0.005 & 0.005 \\
+        0.449 & 1.335 & 0.004 & 0.004 \\
+        0.349 & 1.187 & 0.004 & 0.004 \\
+        0.249 & 1.008 & 0.004 & 0.004 \\
+        0.149 & 0.778 & 0.004 & 0.004 \\
         \bottomrule
     \end{tabular}
     \caption{}
     \label{tab:l_dati}
 \end{SCtable}
+
+Passiamo alle incertezze sui periodi. La risoluzione di misura dei periodi, che dipende dal cronometro, è
+$\Delta \mathcal{T} = 0.01$ s. Avendo misurato 5 periodi per ogni dato si ha che l'errore tipo di risoluzione vale:
+
+\begin{equation}
+	\sigma\ped{ris}(\mathcal{T}) = \frac{\Delta \mathcal{T}}{5\sqrt{12}} = \SI{6e-4}{s}
+\end{equation}
+
+Avendo misurato un insieme di $N = 10$ periodi per ogni lunghezza $l_i$ del cavo, possiamo trattare statisticamente i dati
+al fine di ottenere un unico valore di periodo per ogni lunghezza, ma anche per ottenere una stima degli errori casuali.
+Abbiamo quindi calcolato la media $\mathcal{T}_i$ di ogni insieme di periodi, ottenendo i dati riportati in tabella \ref{tab:l_dati}.
+
+Si sono poi calcolate le deviazioni standard $\sigma(\mathcal{T}_i)$ sulle medie $\mathcal{T}_i$, utilizzando la consueta formula:
+
+\begin{equation}
+	\sigma(\mathcal{T}_i) = \sqrt{\frac{1}{N(N - 1)}\sum_{j=1}^N (\mathcal{T}_{ij} - \mathcal{T}_i)^2}
+\end{equation}
+%
+dove $N = 10$ indica il numero di dati per in ciascun insieme, mentre $\mathcal{T}_{ij}$ indica il j-esimo dato dell'insieme di misure
+relativo alla lunghezza $l_i$.
+
+Alle incertezze $\sigma(\mathcal{T}_i)$ ricavate è stato sommato il contributo derivante dall'errore di risoluzione, calcolato poco prima,
+mediante la seguente formula
+
+\begin{equation}
+	\delta\mathcal{T}_i = \sqrt{\sigma(\mathcal{T}_i)^2 + \sigma\ped{ris}(\mathcal{T})^2}
+\end{equation}
+
+In questo modo abbiamo ottenuto l'incertezza totale $\delta\mathcal{T}_i$ per ogni media $\mathcal{T}_i$, che tiene conto
+dell'errore di risoluzione e degli errori casuali; possiamo quindi esprimere 
+un unica misura di periodo per ogni lunghezza del filo, nel seguente modo
+
+\begin{equation}
+	\mathcal{T}_i \pm \delta\mathcal{T}_i
+\end{equation}
+
+I valori $\sigma(\mathcal{T}_i)$ e $\delta\mathcal{T}_i$ per tutte le lunghezze sono riportati in tabella \ref{tab:l_dati}.
