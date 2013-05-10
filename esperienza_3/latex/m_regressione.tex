@@ -1,1 +1,13 @@
----
+Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pendolo non dipende linearmente dalla massa applicata. Ciononostante ora vogliamo controllare se effettivamente sia così e quindi abbiamo deciso difare una regressione lineare su $f$ in modo da dare una stima ai parametri A e B e verificare che A risulti compatibile con il periodo $\mathcal{T}$ trovato grazie alla media pesata e che il valore di B sia compatibie con lo 0 teorico.
+
+Procediamo operativamente in questo modo per fare la regressione lieare:
+
+\begin{itemize}
+	\item{La funzione da minimizzare che misura la discrepanza è:
+			\begin{equation}
+                \sum_{i=1}^{N} \frac{(\mathcal{T} - A - B m)}{(\delta \mathcal{T}_{tot})^2}	
+                \label{eq:min_quad}
+			\end{equation}
+			%
+            dove $\delta \mathcal{T}_{tot}$ è l'incertezza totale sulle misure del periodo, ottenuta sommando l'incertezza $\delta \mathcal{T}_i$ e l'errore trasferito dal peso, che risulta essere nullo in quanto come stima preliminare del parametro B abbiamo usato lo 0 poichè anche in precedenza abbiamo assunto che il periodo non dipende dalla massa.}
+\end{itemize}
