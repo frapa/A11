@@ -1,17 +1,17 @@
-Poichè vogliamo verificare che il periodo non dipende dalla massa applicata prendiamo la funzione $f$ così definita:
+Dopo aver calcolato la media pesata delle misure $\mathcal{T}_i$ sfruttiamo il test del chi quadro per verificare se sono compatibili o meno. Per questo motivo defiano la seguente funzione $f$
 
-\begin{equation*}
-	f \,=\, A + B m 
-\end{equation*}
+\begin{equation}
+	f \,:=\, A + B m 
+\end{equation}
 %
 dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo, $m$ la massa applicata al pendolo e A una costante che nel nostro caso particolare è il valore della media pesata dei periodi ($\mathcal{T}$).\\
-Pertanto ora procediamo nel fare il test del chi quadro per accertarci se il risultato da noi trovato è accettabile o meno. Quindi:
+Pertanto ora procediamo nell'eseguire il test del chi quadro per accertarci se il risultato da noi trovato sia accettabile o meno. Quindi:
 \begin{itemize}
 	\item{calcoliamo il chi quadro osservato ($\chi_{oss}^2$):
 			\begin{equation*}
-				\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{N} (t_i - A - B m)^2}{(\delta t_{tot})^2} \,=\, 1.6607
+				\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{N} \mathcal{T}_i - A - B m)^2}{(\delta \mathcal{T}_{tot})^2} \,=\, 1.6607
 			\end{equation*}
 			%
-			è importante sottolineare che il $\delta t_{tot}$ non è altro che $\delta t_i$ in quanto $B = 0$ per ipotesi
+			è importante sottolineare che il $\delta \mathcal{T}_{tot}$ non è altro che $\delta \mathcal{T}_i$ in quanto $B = 0$ per ipotesi
 			}
 \end{itemize}

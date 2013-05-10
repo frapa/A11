@@ -35,7 +35,7 @@ sigma_L = sqrt(4 * sigma_ris_L^2 + (sigma_ris_h/2)^2)
 
 # incertezze periodi
 delta_ris_T = 0.002
-sigma_ris_T = delta_ris_T / sqrt(12);
+sigma_ris_T = delta_ris_T / sqrt(12)
 
 # medie dei periodi
 T = mean(periodi)

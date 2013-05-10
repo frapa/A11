@@ -1,16 +1,8 @@
-nooooooooo prima medie periodi poi media pesata medie periodi.\\\\\\
-Come prima operazione calcoliamo le medie pesate delle misure del periodo ($\mathcal{T}$). Ricordiamo che le misure del singolo periodo ($t_i$) devono essere divise per un fattore 5, poichè sono state cronometrate cinque oscillazioni. Per questo motivo l'errore che affligge ogni singola misura di periodo sarà il seguente:
-
-\begin{equation*}
-	\delta t_i \,=\, \frac{1}{5} \, \frac{\Delta t}{\sqrt{12}}
-\end{equation*}
-%
-dove $\frac{\Delta t}{\sqrt{12}}$ rappresenta l'intervalo di incertezza tipo sulla misura del periodo singolo.\\
-Pertanto per calolare la media pesata procediamo come segue:
+Vogliamo ora calcolare la media pesata delle medie del periodo ($\mathcal{T}_i$) relative a ciasuna massa, dove l'indice $i$ fa riferimento a quale massa viene presa in considerazione, pertanto procediamo come segue:
 \begin{itemize}
 	\item{calcoliamo la media pesata dei periodi:
 			\begin{equation*}
-				\mathcal{T} \,=\, \frac{\sum_i t_i w_i}{\sum w_i} \quad \text{dove} \quad w_i \,=\, \frac{1}{(\delta t_i)^2}
+				\mathcal{T} \,=\, \frac{\sum_i \mathcal{T}_i w_i}{\sum w_i} \quad \text{dove} \quad w_i \,=\, \frac{1}{(\delta \mathcal{T}_i)^2}
 			\end{equation*}
 			%
 			}
@@ -27,10 +19,3 @@ pertanto otteniamo una misura del periodo del pendolo di lunghezza fissata $\ell
 	\mathcal{T} \pm \delta \mathcal{T} \,=\, (2.056 \pm 0.002) \, s
 \end{equation*}
 %
-
-
-
-
-
-
-
