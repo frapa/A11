@@ -5,13 +5,12 @@ Dopo aver calcolato la media pesata delle misure $\mathcal{T}_i$ sfruttiamo il t
 \end{equation}
 %
 dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo, $m$ la massa applicata al pendolo e A una costante che nel nostro caso particolare è il valore della media pesata dei periodi ($\mathcal{T}$).\\
-Pertanto ora procediamo nell'eseguire il test del chi quadro per accertarci se il risultato da noi trovato sia accettabile o meno. Quindi:
-\begin{itemize}
-	\item{calcoliamo il chi quadro osservato ($\chi_{oss}^2$):
-			\begin{equation*}
-				\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{N} \mathcal{T}_i - A - B m)^2}{(\delta \mathcal{T}_{tot})^2} \,=\, 1.6607
-			\end{equation*}
-			%
-			è importante sottolineare che il $\delta \mathcal{T}_{tot}$ non è altro che $\delta \mathcal{T}_i$ in quanto $B = 0$ per ipotesi
-			}
-\end{itemize}
+Pertanto ora procediamo nell'eseguire il test del chi quadro per accertarci se il risultato da noi trovato sia accettabile o meno. Calcoliamo quindi il chi quadro osservato ($\chi_{oss}^2$):
+
+\begin{equation*}
+	\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{N} \mathcal{T}_i - A - B m)^2}{(\delta \mathcal{T}_{tot})^2} \,=\, 1.6607
+\end{equation*}
+%
+è importante sottolineare che il $\delta \mathcal{T}_{tot}$ non è altro che $\delta \mathcal{T}_i$ in quanto $B = 0$ per ipotesi.\\
+Ora, sapendo che i gradi di libertà del nostro sistema sono 3 e che voglamo una probabilità del $95\%$ che i dati sperimentali raccolti siano compatibili con le ipotesi fatte finora, otteniamo che l'intervallo di accettazione del $\chi_{oss}^2$ va da 0 a 7.82. Pertanto dal momento che in nostro $\chi_{oss}^2$ ha valore di 1.66 e quindi ricade all'interno dell'intervallo di accettazione possiamo dire che le misure $\mathcal{T}_i$ del periodo risultano essere compatibili.
+Abbiamo ricavato valori degli estremi di accettazione del chi quadro grazie ad un programma presente sul sito internet "Stat Trek", il cui link sarà riportato alla fine della relazione.
