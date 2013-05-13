@@ -1,44 +1,85 @@
-Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pendolo non dipende linearmente dalla massa applicata. Ciononostante ora vogliamo controllare se effettivamente sia così e quindi abbiamo deciso difare una regressione lineare su $f$ in modo da dare una stima ai parametri A e B e verificare che A risulti compatibile con il periodo $\mathcal{T}$ trovato grazie alla media pesata e che il valore di B sia compatibie con lo 0 teorico.
+Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pendolo non dipende linearmente dalla massa applicata. Ciononostante ora vogliamo controllare se effettivamente sia così e quindi abbiamo deciso di fare una regressione lineare sulla funzine $f$ in modo da dare una stima ai parametri A e B e verificare che A risulti compatibile con il periodo del pendolo $\mathcal{T}$ trovato grazie alla media pesata e che il valore di B sia compatibie con lo 0 teorico.
 
 Procediamo operativamente in questo modo per fare la regressione lieare:
 
 \begin{itemize}
 	\item{La funzione da minimizzare che misura la discrepanza è:
 			\begin{equation}
-                \sum_{i=1}^{N} \frac{(\mathcal{T} - A - B m)}{(\delta \mathcal{T}_{tot})^2}	
+                \sum_{i=1}^{N} \frac{(\mathcal{T}_i - A - B m_i)}{(\delta \mathcal{T}_{tot})^2}	
                 \label{eq:min_quad}
 			\end{equation}
 			%
             dove $\delta \mathcal{T}_{tot}$ è l'incertezza totale sulle misure del periodo, ottenuta sommando l'incertezza $\delta \mathcal{T}_i$ e l'errore trasferito dal peso, che risulta essere nullo in quanto come stima preliminare del parametro B abbiamo usato lo 0 poichè anche in precedenza abbiamo assunto che il periodo non dipende dalla massa.}
-\end{itemize}
-\begin{itemize}
 	\item{Quindi per quanto studiato in classe abbiamo che:
 
 			\begin{equation*}
-				A \,=\, \frac{(\sum_i w_i x_i^2)(\sum_i w_i y_i) - (\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} \,=\, 0.034 \,\, s^2
+				A \,=\, \frac{(\sum_i w_i m_i^2)(\sum_i w_i \mathcal{T}_i) - (\sum_i w_i m_i)(\sum_i w_i m_i \mathcal{T}_i)}{\Delta} \,=\, 2.0510 \,\, s
 			\end{equation*}
 			%
 			\begin{equation*}
-				B \,=\, \frac{(\sum_i w_i)(\sum_i w_i x_i y_i) - (\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta} \,=\, 4.06 \,\, s^2 / kg
+				B \,=\, \frac{(\sum_i w_i)(\sum_i w_i m_i \mathcal{T}_i) - (\sum_i w_i \mathcal{T}_i)(\sum_i w_i m_i)}{\Delta} \,=\, 0.01862 \,\, s/kg
 			\end{equation*}
 			%
 			dove:
 			\begin{equation*}
-				\Delta \,=\, (\sum_i w_i)(\sum_i w_i x_i^2) - (\sum_i w_i x_i)^2 \,\,\,\,\,\,\, e \,\,\,\,\,\,\,
-				w_i \,=\, \frac{1}{(\delta y_i)^2}
+				\Delta \,=\, (\sum_i w_i)(\sum_i w_i m_i^2) - (\sum_i w_i m_i)^2 \,\,\,\,\,\,\, e \,\,\,\,\,\,\,
+				w_i \,=\, \frac{1}{(\delta \mathcal{T}_i)^2}
 			\end{equation*}}
 	\item{Di conseguenza abbiamo che le incertezze relative su A e B sono:
 
 			\begin{equation*}
-				(\delta A)^2 \,=\, \frac{\sum_i w_i x_i^2}{\Delta}  \,\,\,\,\, e \,\,\,\,\,
+				(\delta A)^2 \,=\, \frac{\sum_i w_i m_i^2}{\Delta}  \,\,\,\,\, e \,\,\,\,\,
 				(\delta B)^2 \,=\, \frac{\sum_i w_i}{\Delta} 
 			\end{equation*}}
 	\end{itemize} 
 	Quindi possiamo riassumere i risultati di questa procedura in questo modo:
 
 	\begin{equation*}
-		A \,\pm\, \delta A \,=\, (0.034 \,\, \pm \,\, 0.001) \,\,s^2 \,\,\,\,\, e \,\,\,\,\,
-		B \,\pm\, \delta B \,=\, (4.06 \,\, \pm \,\, 0.01) \,\,s^2 \,/\, kg
+		A \,\pm\, \delta A \,=\, (2.051 \,\, \pm \,\, 0.004) \,\,s \,\,\,\,\, e \,\,\,\,\,
+		B \,\pm\, \delta B \,=\, (0.018602 \,\, \pm \,\, 0.014691) \,\,
 	\end{equation*}
+	%
+Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare essere compatibile con il periodomedio del pendolo calcolato grazie alla media pesata, mentre B deve risultare essere compatibile con lo 0 teorico. Pertanto posto a priori un fattore di copertura pari a tre ($k = 3$):
 
-non c'entra un'azzo ma ... mi serve come traccia!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\begin{itemize}
+	\item{calcoliamo la disrepanza (R) tra $\mathcal{T}$ ed A, ottenendo:
+			\begin{equation*}
+				R \,=\, \mathcal{T} - A \,=\, 0.005 \,s
+			\end{equation*}
+			%
+			}
+	\item{verificiamo ora se $R \leq k\,\sigma[R]$, dove:
+			\begin{equation*}
+				\sigma[R] \,=\, \sqrt{(\delta \mathcal{T})^2 + (\delta A)} \,=\, 0.004 \, s
+			\end{equation*}
+			%
+			pertanto otteniamo che:
+			\begin{equation*}
+				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.005 \, s \leq 0.013 \, s
+			\end{equation*}
+			%
+			e quindi $\mathcal{T}$ risulta compatibile con A}
+	\item{troviamo ora la discrepanza (R) tra $B$ ed il valore teorico 0, ottenendo:
+			\begin{equation*}
+				R \,=\, B - 0 \,=\, 0.0186
+			\end{equation*}
+			%
+			}
+	\item{controlliamo ora se $R \leq k\,\sigma[R]$, dove:
+			\begin{equation}
+				\sigma[R] \,=\, \sqrt{(\delta A)^2} \,=\, 0.0147	
+			\end{equation}
+			%
+			pertanto otteniamo che:
+			\begin{equation*}
+				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.0186 \leq 0.0441
+			\end{equation*}
+			%
+			e quindi B risulta compatibile con lo 0 teorico}			
+\end{itemize}
+
+%A =  2.0510
+%B =  0.018602
+%sigma_A =  0.0042932
+%sigma_B =  0.014691
+%chi2_fit =  0.057346
