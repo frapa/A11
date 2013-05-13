@@ -53,14 +53,18 @@ sigma_tot_T = sqrt(sigma_T.^2 + sigma_ris_T^2);
 
 # Bon, facciamo il fit
 # calcoliamo i logaritmi
-X = log(Ls);
-delta_X = (Ls).^(-1) * sigma_L;
-Y = log(T);
-delta_Y = (T).^(-1) .* sigma_tot_T;
+X = log10(Ls);
+delta_X = log10(e) .* (Ls).^(-1) * sigma_L;
+Y = log10(T);
+delta_Y = log10(e) .* (T).^(-1) .* sigma_tot_T;
+
+#[X', delta_X', Y', delta_Y']
 
 #errorbar(X, Y, delta_X, delta_Y, '~>')
 # trasferimento incertezza
-stima_b = 0.5
+stima_w = delta_Y .^ -2;
+[stima_A, stima_b, stima_sigma_A, stima_sigma_b] = fit(Y, X, w)
+
 delta_Y_tot = sqrt(delta_Y .^ 2 + (stima_b .* delta_X) .^ 2);
 w = delta_Y_tot .^ -2;
 
@@ -80,5 +84,5 @@ w_corr = w ./ p;
 chi_2_corr = chi2(Y, X, delta_Y_tot .* sqrt(p), A, b)
 
 # ricavo a (fattore)
-a = exp(A)
-sigma_a = exp(A) * sigma_A
+a = 10^A
+sigma_a = log(10) * a * sigma_A
