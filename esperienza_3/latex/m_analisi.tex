@@ -1,7 +1,7 @@
 \subsubsection{Considerazioni iniziali}
 In questa prima parte della relazione vogliamo verificare che il periodo di oscillazione del pendolo, a parità di lunghezza del filo, non dipende dalla massa applicatavi.
 Per fare questo abbiamo cronometrato il periodo di ocillazione del pendolo per tutte e quattro le masse a nostra disposizone.\\
-Poichè abbiamo utilizzato l'approssimazione di pendolo semplice, nel quale la massa si considera totalmente applicata in un unico punto, è importante sottolineare che, quando è stata presa la misura del periodo relativo alla massa più piccola, abbiamo dovuto regolare la lunghezza del filo in modo che il baricentro della massa risultasse essere alla stessa distanza dal morsetto, a cui è applicato il filo, rispetto alle masse precedenti.\\
+Poichè abbiamo utilizzato l'approssimazione di pendolo semplice, nel quale tutta la massa si considera applicata in un unico punto, è importante sottolineare che, quando è stata presa la misura del periodo relativo alla massa più piccola, abbiamo dovuto regolare la lunghezza del filo in modo che il baricentro della massa risultasse essere alla stessa distanza dal morsetto, a cui è applicato il filo, rispetto alle masse precedenti.\\
 Ricordiamo inoltre che per ottenere la lunghezza complessiva del filo si è seguita la seguente procedura: la lunghezza complessiva del filo è data da:
 
 \begin{equation}
@@ -12,23 +12,32 @@ dove $l _{filo}$ è la lunghezza del filo misurata dall'estremo superiore del mo
 Pertanto l'errore sulla misura della lunghezza del filo sarà dato dalla propagazione dell'errore per la somma di misure indipendenti, ovvero:
 
 \begin{equation*}
-	\delta l_{tot} \,=\, \sqrt{(\delta l_{filo})^2 + (\delta \frac{h}{2})^2 + (\delta l_{morsetto})^2}
+	\delta l_{tot} \,=\, \sqrt{(\sigma l_{filo})^2 + (\sigma \frac{h}{2})^2 + (\sigma l_{morsetto})^2}
 \end{equation*}
 %
-ricordando che le inceretzze relative alle varie misure sono le incertezze tipo, ovvero:
+ricordando che le inceretzze relative alle varie misure sono le incertezze tipo ($\sigma l$), ovvero:
 
 \begin{equation*}
-	\text{inceretzza tipo su l} \,=\, \frac{\Delta l}{\sqrt{12}}
+	\sigma l \,=\, \frac{\Delta l}{\sqrt{12}}
 \end{equation*}
 %
-Mentre le masse sono affette da un incertezza tipo pertanto ogni massa avrà la seguente incertezza:
+Le masse invece sono affette da un incertezza tipo pertanto ogni massa avrà la seguente incertezza:
 
 \begin{equation*}
 	\delta m \,=\, \frac{\Delta m}{\sqrt{12}} \,=\, 0.03 \,\, g
 \end{equation*}
 
 \subsubsection{Dati}
-Le masse che abbiamo applicato al filo da pesca sono quelle esposte nella tabella \ref{masse} mentre nella tabella \ref{tab:masse_periodi} sono elencati tutti i periodi che abbiamo rilevato per ciascuna massa.\\
+Le masse che abbiamo applicato al filo da pesca sono quelle esposte nella seguente tabella
+
+%\begin{tabular}{c c c c}
+ %       \multicolumn{4}{c}{\textbf{Masse} \\
+ %       \toprule
+ %       88.9 & 162.7 & 202.0 & 670.4 \\ 
+ %       \bottomrule
+%\end{tabular}
+
+mentre nella tabella \ref{tab:masse_periodi} sono elencati tutti i periodi che abbiamo rilevato per ciascuna massa.\\
 
 \begin{table}
     \centering
@@ -58,9 +67,9 @@ Le masse che abbiamo applicato al filo da pesca sono quelle esposte nella tabell
     \label{tab:masse_periodi}
 \end{table}
 
-Dalle tabelle si può notare che il valore delle masse no presenta tante cifre siglificative come l'incertezza tipo che lo affligge, questo è dovuto al fatto che non avrebbe senso aggiungerne in quanto andreamo oltre la risoluzione della bilancia elettronica, fornendo così al lettore valori non coretti della misura.\\
+Dalle tabelle si può notare che il valore delle masse non presenta tante cifre siglificative come l'incertezza tipo che lo affligge, questo è dovuto al fatto che non avrebbe senso aggiungerne in quanto andreamo oltre la risoluzione della bilancia elettronica, fornendo così al lettore valori non coretti della misura.\\
 
-Ricordiamo che le misure del periodo ($t_i$) devono essere divise per un fattore 5 al fine di ottenere il valore del singolo periodo, poichè sono state cronometrate cinque oscillazioni. Per questo motivo l'errore che affligge ogni singola misura di periodo sarà il seguente:
+Ricordiamo che le misure del periodo ($t_i$) devono essere divise per un fattore 5 al fine di ottenere il valore del singolo periodo, poichè sono stati  cronometrati periodi di cinque oscillazioni. Per questo motivo l'errore che affligge ogni singola misura di periodo sarà il seguente:
 
 \begin{equation*}
 	\delta t_i \,=\, \frac{1}{5} \, \frac{\Delta t}{\sqrt{12}}
@@ -81,10 +90,10 @@ e che l'errore sulla media dei periodi risulta essere:
 %
 pertanto otteniamo i seguenti valori di periodo per le quattro masse applicate:
 \begin{itemize}
-	\item{ massa da ($88.9 \pm 0.03$)g: $\mathcal{T} \pm \delta\mathcal{T} \,=\, (2.053 \pm 0.006) s $}
-	\item{ massa da ($162.7 \pm 0.03$)g: $\mathcal{T} \pm \delta\mathcal{T} \,=\, (2.053 \pm 0.004) s $}
-	\item{ massa da ($202.0 \pm 0.03$)g: $\mathcal{T} \pm \delta\mathcal{T} \,=\, (2.055 \pm 0.004) s $}
-	\item{ massa da ($496.7 \pm 0.03$)g: $\mathcal{T} \pm \delta\mathcal{T} \,=\, (2.060 \pm 0.004) s $}
+	\item{ massa da ($88.9 \pm 0.03$)g: $\mathcal{T}_1 \pm \delta\mathcal{T}_1 \,=\, (2.053 \pm 0.006) s $}
+	\item{ massa da ($162.7 \pm 0.03$)g: $\mathcal{T}_2 \pm \delta\mathcal{T}_2 \,=\, (2.053 \pm 0.004) s $}
+	\item{ massa da ($202.0 \pm 0.03$)g: $\mathcal{T}_3 \pm \delta\mathcal{T}_3 \,=\, (2.055 \pm 0.004) s $}
+	\item{ massa da ($496.7 \pm 0.03$)g: $\mathcal{T}_4 \pm \delta\mathcal{T}_4 \,=\, (2.060 \pm 0.004) s $}
 \end{itemize}
 
 %Periodi 2.0532   2.0533   2.0603   2.0553
