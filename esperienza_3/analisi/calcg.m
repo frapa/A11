@@ -26,7 +26,7 @@ L_g = Lf_g - L_mors + h_g / 2;
 #  dato che sono uguali
 L = L_g;
 #  incertezza totale
-sigma_L = sqrt(4 * sigma_ris_L^2 + sigma_ris_h^2);  % <<---
+sigma_L = sqrt(4 * sigma_ris_L^2 + (sigma_ris_h/2)^2);  % <<---
 
 #  estraiamo i dati e li integriamo con quelli delle masse
 lunghezze = [Lf_g, dati(1,:) ./ 100];
@@ -49,14 +49,18 @@ sigma_tot_T = sqrt(sigma_T.^2 + sigma_ris_T^2);  % <<---
 
 # Bon, facciamo il fit
 # calcoliamo i logaritmi
-X = log(Ls);
-delta_X = (Ls).^(-1) * sigma_L;
-Y = log(T);
-delta_Y = (T).^(-1) .* sigma_tot_T;
+X = log10(Ls);
+delta_X = log10(e) .* (Ls).^(-1) * sigma_L;
+Y = log10(T);
+delta_Y = log10(e) .* (T).^(-1) .* sigma_tot_T;
+
+#[X', delta_X', Y', delta_Y']
 
 #errorbar(X, Y, delta_X, delta_Y, '~>')
 # trasferimento incertezza
-stima_b = 0.5;
+stima_w = delta_Y .^ -2;
+[stima_A, stima_b, stima_sigma_A, stima_sigma_b] = fit(Y, X, w);
+
 delta_Y_tot = sqrt(delta_Y .^ 2 + (stima_b .* delta_X) .^ 2);
 w = delta_Y_tot .^ -2;
 
@@ -76,9 +80,8 @@ w_corr = w ./ p;
 chi_2_corr = chi2(Y, X, delta_Y_tot .* sqrt(p), A, b);
 
 # ricavo a (fattore)
-a = exp(A);
-sigma_a = exp(A) * sigma_A;
-
+a = 10^A;
+sigma_a = log(10) * a * sigma_A;
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 %  calcolo delta_g dalla tabella
@@ -92,7 +95,13 @@ wi = delta_gi.^(-2);
 g1 = sum(gi .* wi) / sum(wi)
 dg1 = 1 / sqrt(sum(wi))
 chi_g1 = chi2(gi, Ls, delta_gi, g1, 0)
+%	correzione chi2
 " "
+chi_g1_teo = 9;
+corr = chi_g1 / chi_g1_teo
+delta_gi_post = sqrt(corr)
+chi_g1_corr = chi2(gi, Ls, 2.*delta_gi, g1, 0)	% <-- moltiplicare l'errore per 2 va bene!
+	display(" ");
 %  metodo 2:
 %  distribuzione dei valori
 g2 = mean(gi)
@@ -100,11 +109,17 @@ dg2 = sigma(gi', g2)
 #sigma_g2 = sqrt( sum((gi .- g2).^2) / 9)
 #dg2 = sqrt( sum((gi .- g2).^2) / 90) # == a dg2
 chi_g2 = chi2(gi, Ls, delta_gi, g2, 0)
-" "
+	display(" ");
 g3 = (2*pi/a)^2
 dg3 = 8*pi^2*a^(-3)*sigma_a
 chi_g3 = chi2(gi, Ls, delta_gi, g3, 0)
+%	correzione chi2
 " "
-" "
-"l, dl, T, dT, g, dg"
+chi_g3_teo = 9;
+corr = chi_g3 / chi_g3_teo
+delta_gi_post = sqrt(corr)
+chi_g3_corr = chi2(gi, Ls, 2.*delta_gi, g3, 0)	% <-- moltiplicare l'errore per 2 va bene!
+
+	display(" ");
+	display("l, dl, T, dT, g, dg");
 [Ls' ones(10,1)*sigma_L T' sigma_tot_T' gi' delta_gi']
