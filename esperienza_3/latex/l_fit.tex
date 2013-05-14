@@ -1,14 +1,22 @@
 \begin{SCfigure}[][p]
     \centering
-    \includegraphics[width=125mm]{immagini/lunghezza_periodo.pdf}
-    \caption{}
+    \includegraphics[width=120mm]{immagini/lunghezza_periodo.pdf}
+    \caption{Il grafico in figura mostra il periodo del pendolo in funzione della lunghezza del filo.
+        Le barre di errore non sono mostrate in quanto sono dell'ordine di grandezza dei punti. Si
+        nota immediatamente l'andamento non lineare dei dati sperimentali. La curva in
+        figura è la funzione $\mathcal{T} = a\ell^b$ con i valori di $a$ e $b$ calcolati con la regressione
+        nel paragrafo \ref{l_regressione}.}
     \label{fig:lunghezza_periodo}
 \end{SCfigure}
 
 \begin{SCfigure}[][p]
     \centering
-    \includegraphics[width=125mm]{immagini/log.pdf}
-    \caption{}
+    \includegraphics[width=120mm]{immagini/log.pdf}
+    \caption{Il grafico è analogo a quello nella figura \ref{fig:lunghezza_periodo}, con la sola differenza
+        che in questo caso si tratta di un plot $X = \log_{10} (\ell)$ versus $Y = \log_{10} (\mathcal{T})$, o, equivamentemente,
+        gli assi sono in scala logaritmica. Le barre d'errore non sono mostrate poiché invisibili a questa scala.
+        In questo grafico si nota la relazione lineare tra $X$ e $Y$, rappresentata dalla retta $Y = A + bX$, con $A$ e $b$ calcolati
+        mediante regressione.}
     \label{fig:lunghezza_periodo_log}
 \end{SCfigure}
 
@@ -75,6 +83,7 @@ in figura \ref{fig:periodo_pendolo_log}, e si può quindi utilizzare la consueta
 %\end{table}
 
 \subsubsection{Regressione}
+\label{l_regressione}
 
 Per cominciare abbiamo calcolato, per ogni coppia ($\ell_i$, $\mathcal{T}_i$), i valori $X_i$ e $Y_i$
 e le relative incertezze $\delta X_i$ e $\delta Y_i$, usando le formule (\ref{eq:vars}) e (\ref{eq:delta_XY}).
