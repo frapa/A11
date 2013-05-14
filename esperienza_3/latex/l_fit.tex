@@ -1,16 +1,23 @@
+\begin{SCfigure}[][p]
+    \centering
+    \includegraphics[width=125mm]{immagini/lunghezza_periodo.pdf}
+    \caption{}
+    \label{fig:lunghezza_periodo}
+\end{SCfigure}
+
+\begin{SCfigure}[][p]
+    \centering
+    \includegraphics[width=125mm]{immagini/log.pdf}
+    \caption{}
+    \label{fig:lunghezza_periodo_log}
+\end{SCfigure}
+
 Graficando i dati ottenuti nel paragrafo precedente, ci si accorge immediatamente (si veda
 la figura \ref{fig:lunghezza_periodo}) che il periodo del pendolo dipende dalla lunghezza
 del suo filo, come correttamente previsto dalla teoria. Tuttavia la dipendenza è chiaramente non lineare.
 
 Dall'espressione per il periodo del pendolo semplice (\ref{eq:periodo_pendolo}), si sa che
 il periodo vale
-
-\begin{SCfigure}[][t!]
-    \centering
-    \includegraphics[width=120mm]{immagini/lunghezza_periodo.pdf}
-    \caption{}
-    \label{fig:lunghezza_periodo}
-\end{SCfigure}
 
 \begin{equation}
     \mathcal{T} = 2\pi\sqrt{\frac{\ell}{g}}
@@ -24,7 +31,7 @@ Tuttavia qui assumiamo come ipotesi una dipendenza del tipo:
     \label{eq:ipotesi}
 \end{equation}
 %
-dove a e b sono due costanti. Dal grafico in figura \ref{fig:lunghezza_periodo} si può intuire una dipendenza di questo genere.
+dove $a$ e $b$ sono due costanti. Dal grafico in figura \ref{fig:lunghezza_periodo} si può intuire una dipendenza di questo genere.
 Confrontando la (\ref{eq:periodo_pendolo}) con la (\ref{eq:ipotesi}) otteniamo che, secondo il modello
 del pendolo semplice, deve valere
 
@@ -35,30 +42,31 @@ del pendolo semplice, deve valere
 Queste sono le predizioni teoriche del modello del pendolo semplice. Calcolando $a$ e $b$ dai dati sperimentali
 possiamo quindi verificare la correttezza della formula (\ref{eq:periodo_pendolo}).
 
-Al fine di linearizzare la (\ref{eq:ipotesi}) per poter utilizzare la regressione, definiamo due nuove variabili:
+Vogliamo ora linearizzare la (\ref{eq:ipotesi}) per poter utilizzare la regressione e ricavare $a$ e $b$.
+Al tal fine, definiamo due nuove variabili:
 
 \begin{equation}
     X := \log_{10}{(\ell)} \qquad \qquad Y := \log_{10}{(\mathcal{T})}
+    \label{eq:vars}
 \end{equation}
 
 Le incertezze su $X$ e $Y$, calcolate con le solite regole di propagazione, sono
 
 \begin{equation}
-    \delta Y = \frac{\log_{10}(e)}{\mathcal{T}}\delta\mathcal{T}
-    \qquad \qquad
     \delta X = \frac{\log_{10}(e)}{\ell}\delta \ell
+    \qquad \qquad
+    \delta Y = \frac{\log_{10}(e)}{\mathcal{T}}\delta\mathcal{T}
+    \label{eq:delta_XY}
 \end{equation}
 
-Quindi la (\ref{eq:ipotesi}) diventa
+Quindi, applicando ad entrambi i membri della (\ref{eq:ipotesi}) il logaritmo, si ottiene
 
 \begin{equation}
-    Y = \log_{10} a + b \log_{10} \ell = A + b \log_{10} \ell
+    Y = \log_{10} (\mathcal{T}) = \log_{10} (a) + b \log_{10} (\ell) = A + b X
 \end{equation}
 %
-dove $A := \log_{10} a$ e dunque $a = 10^A$.
-
-Per eseguire la regressione abbiamo calcolato i valori $X_i = \log_{10}(\ell_i)$,
-$Y_i = \log_{10}(\mathcal{T}_i)$
+dove $A := \log_{10} a$ e dunque $a = 10^A$. La legge trovata è lineare, come mostrato dal grafico
+in figura \ref{fig:periodo_pendolo_log}, e si può quindi utilizzare la consueta procedura di fit.
 
 %\begin{table}
 %    \centering
@@ -68,32 +76,51 @@ $Y_i = \log_{10}(\mathcal{T}_i)$
 
 \subsubsection{Regressione}
 
+Per cominciare abbiamo calcolato, per ogni coppia ($\ell_i$, $\mathcal{T}_i$), i valori $X_i$ e $Y_i$
+e le relative incertezze $\delta X_i$ e $\delta Y_i$, usando le formule (\ref{eq:vars}) e (\ref{eq:delta_XY}).
+
 Procediamo ora con il calcolo dei parametri A e b tramite regressione lineare. 
 La regressione si basa sulla minimizzazione della funzione
 
 \begin{equation}
-    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{\delta Y\ped{tot}}
+    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{\delta Y_i^{\text{tot}}}
+    \qquad \qquad \text{dove} \quad
+    \delta Y_i^{\text{tot}} = \sqrt{\delta Y_i^2 + b^2 \delta X_i^2}
     \label{eq:min_quad}
 \end{equation}
-%
-che misura la discrepanza tra legge lineare e dati sperimentali. Minimizzando la (\ref{eq:min_quad}) si ottengono
+
+Questa funzione misura la discrepanza tra legge lineare e dati sperimentali. Minimizzando la (\ref{eq:min_quad}) si ottengono
 i valori di $A$ e $b$, ovvero la retta, che interpretano in modo ``migliore'' i dati.
-Come prima cosa stimiamo il parametro b
-per trasferire l'incertezza dalle X alle Y. La stima è stata ottenuta ignorando l'incertezza sulle X e facendo un fit preliminare.
 
-
-\begin{equation}
-    A = 0.69631 \qquad \qquad b = 0.49915
-\end{equation}
-
-Le incertezze su $A$ e $b$ valgono:
+Come prima cosa si è stimato il parametro b per trasferire l'incertezza dalle X alle Y.
+La stima è stata ottenuta ignorando l'incertezza sulle X, ovvero ponendo $\delta Y_i^{\text{tot}} = \delta Y_i$ e facendo un fit preliminare.
+Dai calcoli risulta:
 
 \begin{equation}
-    \delta A = 0.0010388 \qquad \qquad \delta b = 0.0018843
+    b' + \delta b' = 0.499 \pm 0.002
 \end{equation}
 
-Risaliamo quindi al valore di a:
+Abbiamo utilizzato questo valore $b'$ per trasferire l'incertezza e calcolare $\delta Y_i^{\text{tot}}$. Minimizzando nuovamente la 
+(\ref{eq:min_quad}) con i nuovi valori dell'incertezza trovati, si ha che:
 
 \begin{equation}
-    a = 2.0063 \qquad \qquad \delta a = 0.0039972
+    A = 0.696 \qquad \qquad b = 0.499
 \end{equation}
+
+Le incertezze su $A$ e $b$ si possono ricavare con la propagazione dell'incertezza e valgono:
+
+\begin{equation}
+    \delta A = 0.001 \qquad \qquad \delta b = 0.002
+\end{equation}
+
+Prima di proseguire notiamo che il valore di $b$ ricavato dalla regressione è compatibile con la stima $b'$
+ricavata dal fit preliminare, in quanto i risultati sono uguali entro l'incertezza. Questo indica anche che
+l'incertezza trasferita dalle $X$ è trascurabile rispetto all'incertezza sulle $Y$.
+
+Risaliamo ora al valore di a:
+
+\begin{equation}
+    a = 10^A = 2.006 \qquad \qquad \delta a = \ln(10) \cdot 10^A \cdot \delta A = 0.004
+\end{equation}
+%
+dove $\ln$ è il logaritmo naturale.

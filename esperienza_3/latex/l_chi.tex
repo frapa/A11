@@ -1,1 +1,14 @@
-Verifichiamo ora la compatibilità tra 
+Verifichiamo la bontà della regressione eseguita nel paragrafo precedente tramite il test del chi quadro.
+Il valor atteso $\chi^2_{\text{teo}}$ del test è uguale al numero di gradi di libertà del sistema. Nel nostro caso
+esso vale $\chi^2_{\text{teo}} = N - 2 = 8$ poiché dal fit sono stati calcolati 2 parametri. Poiché
+il numero di gradi di libertà è basso, abbiamo deciso di adottare un intervallo di confidenza del tipo $[0, h]$,
+dove $h$ è il valore critico del chi quadro. Scelta la probabilità di falso allarme del 5 \%, dalla distribuzione
+del chi quadro si può calcolare $h = 15.5$. Quindi l'intervallo di confidenza è [0, 15.5]. 
+
+Utilizzando i valori $A$ e $b$ trovati precedentemente, calcoliamo l'espressione
+
+\begin{equation}
+    \chi^2_{\text{oss}} = \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{\delta Y_i^{\text{tot}}} = 29.4
+\end{equation}
+%
+che è chiaramente al di fuori dell'intervallo di confidenza.

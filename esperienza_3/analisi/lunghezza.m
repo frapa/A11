@@ -63,7 +63,7 @@ delta_Y = log10(e) .* (T).^(-1) .* sigma_tot_T;
 #errorbar(X, Y, delta_X, delta_Y, '~>')
 # trasferimento incertezza
 stima_w = delta_Y .^ -2;
-[stima_A, stima_b, stima_sigma_A, stima_sigma_b] = fit(Y, X, w)
+[stima_A, stima_b, stima_sigma_A, stima_sigma_b] = fit(Y, X, stima_w)
 
 delta_Y_tot = sqrt(delta_Y .^ 2 + (stima_b .* delta_X) .^ 2);
 w = delta_Y_tot .^ -2;
