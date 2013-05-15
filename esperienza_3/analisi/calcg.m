@@ -109,6 +109,8 @@ dg2 = sigma(gi', g2)
 #sigma_g2 = sqrt( sum((gi .- g2).^2) / 9)
 #dg2 = sqrt( sum((gi .- g2).^2) / 90) # == a dg2
 chi_g2 = chi2(gi, Ls, delta_gi, g2, 0)
+" "
+chi_g2_corr = chi2(gi, Ls, 2.*delta_gi, g2, 0)	% <-- moltiplicare l'errore per 2 va bene!
 	display(" ");
 g3 = (2*pi/a)^2
 dg3 = 8*pi^2*a^(-3)*sigma_a
