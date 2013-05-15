@@ -122,4 +122,33 @@ ax2.legend((dots, fit2), ("Dati sperimentali", "Dipendenza lineare $Y = A + bX$"
 
 f2.subplots_adjust(left=0.13, right=0.87, top=0.80, bottom=0.13)
 
+
+f3 = plt.figure(figsize=(8, 6))
+f3.suptitle("Dipendenza del periodo dalla lunghezza", y=0.93, fontsize=15)
+
+ax3 = f3.add_subplot(1, 1, 1)
+dots = ax3.errorbar(x=[log10(l) for l in L], y=[log10(t) - a - b*log10(l) for t, l in zip(T, L)],
+    yerr=dT, #xerr=sigma_res_p, 
+    fmt='o', capsize=7)
+
+ax3.set_xlabel(u'Lunghezza del filo [m]', labelpad=12, fontsize=14)
+ax3.set_ylabel(u'Periodo [s]', labelpad=12, fontsize=14)
+#ax.set_yscale('log')
+
+#fit3 = ax3.errorbar(x=[l / 1000.0 for l in range(1201)], y=[a*(l/1000.0)**b for l in range(1201)])
+#fit2 = ax.errorbar(x=(0, 0.6), y=(A, A + 0.6*B))
+
+#ax.set_xlim((0, 0.6))
+#ax3.set_xticks((0.2, 0.4, 0.6, 0.8, 1, 1.2))
+#ax3.set_yticks((0.5, 1, 1.5, 2, 2.5))
+#ax.set_ylim((2.04, 2.07))
+ax3.grid(True)
+
+#ax3.text(-0.03, -0.1, "0")
+
+ax3.legend((dots, fit1), ("Dati sperimentali", "Dipendenza non lineare"), 'upper left',
+        prop={'size': 12}, numpoints=1)
+
+f3.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
+
 plt.show()

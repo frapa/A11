@@ -16,7 +16,7 @@
         che in questo caso si tratta di un plot $X = \log_{10} (\ell)$ versus $Y = \log_{10} (\mathcal{T})$, o, equivamentemente,
         gli assi sono in scala logaritmica. Le barre d'errore non sono mostrate poiché invisibili a questa scala.
         In questo grafico si nota la relazione lineare tra $X$ e $Y$, rappresentata dalla retta $Y = A + bX$, con $A$ e $b$ calcolati
-        mediante regressione.}
+    mediante regressione. Notare che $X$ e $Y$ sono numeri puri poichè si fa il logaritmo dei soli valori numerici di $\ell$ e $\mathcal{T}$.}
     \label{fig:lunghezza_periodo_log}
 \end{SCfigure}
 
@@ -92,7 +92,7 @@ Procediamo ora con il calcolo dei parametri A e b tramite regressione lineare.
 La regressione si basa sulla minimizzazione della funzione
 
 \begin{equation}
-    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{\delta Y_i^{\text{tot}}}
+    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(\delta Y_i^{\text{tot}})^2}
     \qquad \qquad \text{dove} \quad
     \delta Y_i^{\text{tot}} = \sqrt{\delta Y_i^2 + b^2 \delta X_i^2}
     \label{eq:min_quad}
