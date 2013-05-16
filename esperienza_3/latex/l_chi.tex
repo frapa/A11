@@ -12,3 +12,40 @@ Utilizzando i valori $A$ e $b$ trovati precedentemente, calcoliamo l'espressione
 \end{equation}
 %
 che è chiaramente al di fuori dell'intervallo di confidenza.
+
+Probabilmente questa incompatibilità è dovuta al fatto che l'incertezza sui periodi è stata sottostimata.
+
+[giustificazione del perché]
+
+Aggiustiamo quindi le incertezze per far tornare il chi quadro. Poiché le incertezze sono diverse per ciascun punto,
+moltiplichiamo ogni incertezza $\delta Y_i^{\text{tot}}$ per un fattore $q$ e determiniamo per quale valore di $q$
+il chi quadro diventa uguale al suo valore atteso
+
+\begin{equation}
+    \chi^2 = \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(q\, \delta Y_i^{\text{tot}})^2} = N - 2 = 8
+\end{equation}
+%
+Poiché $q$ è uguale per tutti i valori di $\delta Y_i^{\text{tot}}$, si può portare fuori dal segno di sommatoria.
+Successivamente, mediante passaggi algebrici elementari, si arriva al seguente risultato
+
+\begin{equation}
+    q^2 = \frac{1}{8} \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(\delta Y_i^{\text{tot}})^2} = 3.68 \qquad \text{ovvero} \qquad q = 1.92
+\end{equation}
+
+Abbiamo quindi calcolato che, affinchè il chi quadro diventi uguale al suo valor atteso, è necessario moltiplicare
+le incertezze per un fattore $q \simeq 1.9$. Le incertezze vanno quindi aumentate del 90 \%.
+
+\subsubsection{Conclusione della regressione}
+
+Poiché sono state modificate le incertezze, prima di calcolare i valori definitivi di $a$ e $b$ e concludere l'esperimento,
+è necessario ripetere la procedura di fit per calcolare le nuove incertezze $\delta A$ e $\delta b$
+
+[intermezzo pubblicitario]
+
+Risaliamo ora al valore di a:
+
+\begin{equation}
+    a = 10^A = 2.006 \qquad \qquad \delta a = \ln(10) \cdot 10^A \cdot \delta A = 0.004
+\end{equation}
+%
+dove $\ln$ è il logaritmo naturale.

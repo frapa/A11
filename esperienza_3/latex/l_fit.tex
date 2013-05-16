@@ -74,7 +74,7 @@ Quindi, applicando ad entrambi i membri della (\ref{eq:ipotesi}) il logaritmo, s
 \end{equation}
 %
 dove $A := \log_{10} a$ e dunque $a = 10^A$. La legge trovata è lineare, come mostrato dal grafico
-in figura \ref{fig:periodo_pendolo_log}, e si può quindi utilizzare la consueta procedura di fit.
+in figura \ref{fig:lunghezza_periodo_log}, e si può quindi utilizzare la consueta procedura di fit.
 
 %\begin{table}
 %    \centering
@@ -113,23 +113,15 @@ Abbiamo utilizzato questo valore $b'$ per trasferire l'incertezza e calcolare $\
 (\ref{eq:min_quad}) con i nuovi valori dell'incertezza trovati, si ha che:
 
 \begin{equation}
-    A = 0.696 \qquad \qquad b = 0.499
+    A = 0.3024 \qquad \qquad b = 0.499
 \end{equation}
 
 Le incertezze su $A$ e $b$ si possono ricavare con la propagazione dell'incertezza e valgono:
 
 \begin{equation}
-    \delta A = 0.001 \qquad \qquad \delta b = 0.002
+    \delta A = 0.0005 \qquad \qquad \delta b = 0.002
 \end{equation}
 
 Prima di proseguire notiamo che il valore di $b$ ricavato dalla regressione è compatibile con la stima $b'$
 ricavata dal fit preliminare, in quanto i risultati sono uguali entro l'incertezza. Questo indica anche che
 l'incertezza trasferita dalle $X$ è trascurabile rispetto all'incertezza sulle $Y$.
-
-Risaliamo ora al valore di a:
-
-\begin{equation}
-    a = 10^A = 2.006 \qquad \qquad \delta a = \ln(10) \cdot 10^A \cdot \delta A = 0.004
-\end{equation}
-%
-dove $\ln$ è il logaritmo naturale.
