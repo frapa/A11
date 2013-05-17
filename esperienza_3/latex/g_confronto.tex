@@ -8,7 +8,7 @@ che influisce sulla 6 cifra dopo la virgola, quindi in questa sede li considerer
 poiché i nostri dati hanno un incertezza molto maggiore.
 
 \begin{center}
-    \begin{tabular}{l c}
+    \begin{tabular}{c c}
         \toprule
         Latitudine [$^\circ$] & $g$ [m/s$^2$] \\
         \midrule
@@ -22,8 +22,10 @@ Poiché il laboratorio si trova circa ad una latitudine di 46$^\circ$, occorre i
 riportati. Abbiamo eseguito l'interpolazione con la formula:
 
 \begin{equation}
-    g_{46} = g_{40} + \frac{(g_{50} - g_{40})}{50 - 40} \cdot 6 \; \text{m/s}^2 = \frac{4\, g_{40} + 6\, g_{50}}{10} \; \text{m/s}^2 =
-    9.8071 \; \text{m/s}^2
+    g_{46} = g_{40} + \frac{(g_{50} - g_{40})}{50 - 40} \cdot 6 \; \si{\meter\per\square\second} =
+    \frac{4\, g_{40} + 6\, g_{50}}{10} \; \si{\meter\per\square\second} =
+    9.8071 \; \si{\meter\per\square\second}
+    \label{eq:g46}
 \end{equation}
 %
 dove $g_{40}$ e $g_{50}$ indicano i valori di $g$ riportati in tabella, rispettivamente per le latitudini 40$^\circ$ e 50$^\circ$.
@@ -44,5 +46,30 @@ differenziando e dividendo per g si ottiene
 poiché $\Delta R \ll R$ si può stimare
 
 \begin{equation}
-    dg = - \frac{2\,g}{R^2} dR = 
+    dg = - \frac{2\,g}{R^2} dR = \SI{-1e-3}{\meter\per\square\second}
+    \qquad \qquad
+    g_e = g_{46} + dg = \SI{9.806}{\meter\per\square\second}
+    \label{eq:g_f}
 \end{equation}
+%
+dove $g_e$ indica il valore dell'accelerazione di gravità definitivo per il laboratorio, proveniente dai dati tabulati,
+e si è assunto $R = \SI{6.3709e6}{\metre}$, ovvero il valor medio del raggio della terra.
+
+Questo è il valore che andremo a confrontare con i valori ricavati dall'esperimento e che assumiamo come valore vero
+dell'accelerazione di gravità. Notare che i valori tabulati riportati hanno 5 cifre dopo la virgola, mentre il valore (\ref{eq:g46})
+ne ha 4 poiché si tratta di un approssimazione abbastanza grezza. Il valore (\ref{eq:g_f}) riduce ulteriormente le cifre decimali a 3,
+poiché il valore $\delta g$ che è stato sommato ha una precisione attorno a questo ordine di grandezza. In ogni caso
+le cifre decimali extra non hanno rilevanza ai fini della discussione, poiché i valori di g da noi calcolati hanno solo 2
+cifre decimali. 
+
+Dall'esperimento abbiamo ricavato 3 valori di $g$:
+
+\begin{itemize}
+    \item{$g_w = 9.80 \pm 0.03 \; \si{\metre\per\square\second}$ calcolato con la media pesata.}
+    \item{$g_s = 9.80 \pm 0.03 \; \si{\metre\per\square\second}$ calcolato con metodi statistici.}
+    \item{$g_f = 9.81 \pm 0.04 \; \si{\metre\per\square\second}$ calcolato a partire dai parametri ricavati dalla regressione
+        del paragrafo \ref{l_regressione}.}
+\end{itemize}
+
+La compatibilità dei valori da noi calcolati con il valore di riferimento (\ref{eq:g_f}) è ovvia in quanto esso cade all'interno
+degli intervalli di errore tipo di ciascuna delle tre stime di $g$.

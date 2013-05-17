@@ -77,9 +77,14 @@ chi_2 = chi2(Y, X, delta_Y_tot, A, b)
 # rifacciamo i conti sulle incertezze
 p = chi_2 / 8
 w_corr = w ./ p;
-delta_Y_corr = w_corr .^ -0.5;
+delta_Y_tot_corr = w_corr .^ -0.5;
+
+delta_Y_corr = sqrt(delta_Y_tot_corr .^ 2 - (stima_b .* delta_X) .^ 2);
+
+#delta_T_corr_tot = 10 .^ Y ./ log10(e) .* delta_Y_tot_corr;
 delta_T_corr = 10 .^ Y ./ log10(e) .* delta_Y_corr;
-delta_T_corr' * 5
+#delta_T_corr_tot' * 5 * sqrt(10)
+delta_T_corr' * 5 * sqrt(10)
 
 [A, b, sigma_A, sigma_b] = fit(Y, X, w_corr)
 

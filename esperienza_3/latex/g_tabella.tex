@@ -1,6 +1,6 @@
 Per ottenere un valore unico di $g \pm \delta g$ procediamo seguendo due differenti metodologie:
 
-\paragraph{Primo metodo: Media pesata\\}
+\subsubsection{Primo metodo: Media pesata}
 
 Il primo metodo che adotteremo per trovare il valore dell'accelerazione di gravità è il calcolo della media pesata, utilizzando le seguenti formule:
 
@@ -15,7 +15,20 @@ Eseguendo questa procedura sui dati si ricava il seguente valore per l'acceleraz
 g_w \pm \delta g_w \,\, = \,\, 9.80 \pm 0.03 \,\, \si{\metre\per\square\second}
 \end{equation}
 
-\paragraph{Secondo metodo: distribuzione dei valori\\}
+\paragraph{Test del chi quadro\\}
+
+Essendo la procedura della media pesata equivalente ad una regressione, possiamo effettuare il test del chi quadro per verificare
+la correttezza del risultato ottenuto. Ripetendo la procedura già vista nelle sezioni precedenti calcoliamo
+
+\begin{equation}
+    \chi^2_{\text{oss}} = \sum_{i=1}^N \frac{(g_i - g_w)^2}{\delta g_i^2} = 8.0
+\end{equation}
+%
+dove $N = 10$ è il numero di valori $g_i$ calcolati e $\delta g_i$ è l'incertezza su tali valori. Non occorre trasferire
+l'errore poiché si tratta di una retta costante (e quindi parallela all'asse delle ascisse), pertanto il suo coefficiente ancgolare
+è nullo.
+
+\subsubsection{Secondo metodo: distribuzione dei valori}
 
 Il secondo metodo che utilizziamo è quello di considerare la distribuzione dei valori $g_i$, cioè calcolarne il valore medio $m^*[g_i]$ e lo scarto quadratico medio della distribuzione dei valori medi $\sigma[m^*[g_i]]$.
 
