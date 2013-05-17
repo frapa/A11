@@ -16,7 +16,8 @@
         che in questo caso si tratta di un plot $X = \log_{10} (\ell)$ versus $Y = \log_{10} (\mathcal{T})$, o, equivamentemente,
         gli assi sono in scala logaritmica. Le barre d'errore non sono mostrate poiché invisibili a questa scala.
         In questo grafico si nota la relazione lineare tra $X$ e $Y$, rappresentata dalla retta $Y = A + bX$, con $A$ e $b$ calcolati
-    mediante regressione. Notare che $X$ e $Y$ sono numeri puri poichè si fa il logaritmo dei soli valori numerici di $\ell$ e $\mathcal{T}$.}
+    mediante regressione. Notare che $X$ e $Y$ sono numeri puri poichè si fa il logaritmo dei soli valori numerici di $\ell$ e $\mathcal{T}$.
+    WARNING! Sono in scala $log_{10}$ o $log_{e}$ ?}
     \label{fig:lunghezza_periodo_log}
 \end{SCfigure}
 
@@ -26,7 +27,7 @@ Graficando i dati ottenuti nel paragrafo precedente, ci si accorge immediatament
 la figura \ref{fig:lunghezza_periodo}) che il periodo del pendolo dipende dalla lunghezza
 del suo filo, come correttamente previsto dalla teoria. Tuttavia la dipendenza è chiaramente non lineare.
 
-Dall'espressione per il periodo del pendolo semplice (\ref{eq:periodo_pendolo}), si sa che
+Dall'espressione (\ref{eq:periodo_pendolo}) per il periodo del pendolo semplice, si sa che
 il periodo vale
 
 \begin{equation}
@@ -41,10 +42,9 @@ Tuttavia qui assumiamo come ipotesi una dipendenza del tipo:
     \label{eq:ipotesi}
 \end{equation}
 %
-dove $a$ e $b$ sono due costanti\footnote{$b$ è adimensionale, mentre $a$ deve avere dimensioni [$\text{s}\,\text{m}^{-b}$]
-per far tornare le unità di misura l'equazione (\ref{eq:ipotesi})}.
+dove $a$ e $b$ sono due costanti\footnote{$b$ è adimensionale, mentre $a$ deve avere dimensioni [$\text{s}\,\text{m}^{-b}$] affinché le unità di misura l'equazione (\ref{eq:ipotesi}) siano corrette}.
 Dal grafico in figura \ref{fig:lunghezza_periodo} si può intuire una dipendenza di questo genere.
-Confrontando la (\ref{eq:periodo_pendolo}) con la (\ref{eq:ipotesi}) otteniamo che, secondo il modello
+Confrontando l'equazione (\ref{eq:periodo_pendolo}) con la (\ref{eq:ipotesi}) otteniamo che, secondo il modello
 del pendolo semplice, deve valere
 
 \begin{equation}
@@ -56,7 +56,7 @@ dove per il calcolo di $a$ abbiamo utilizzato il valore $g = \SI{9.806}{\meter\p
 Queste sono le predizioni teoriche del modello del pendolo semplice. Calcolando $a$ e $b$ dai dati sperimentali
 possiamo quindi verificare la correttezza della formula (\ref{eq:periodo_pendolo}).
 
-Vogliamo ora linearizzare la (\ref{eq:ipotesi}) per poter utilizzare la regressione e ricavare $a$ e $b$.
+Vogliamo ora linearizzare l'equazione (\ref{eq:ipotesi}) per poter utilizzare la regressione lineare e ricavare $a$ e $b$.
 Al tal fine, definiamo due nuove variabili\footnote{Da notare che $X$ e $Y$, e di conseguenza le loro incertezze,
 sono grandezze adimensionali poiché
 le funzioni trascendenti, come il logaritmo, hanno argomenti e valori adimensionali. Nella relazione viene sottinteso
@@ -68,7 +68,7 @@ che i valori $\ell$ e $\mathcal{T}$, quando sono argomento di logaritmi, indican
     \label{eq:vars}
 \end{equation}
 
-Le incertezze su $X$ e $Y$, calcolate con le solite regole di propagazione, sono
+Le incertezze su $X$ e $Y$, calcolate con la regola di propagazione, sono
 
 \begin{equation}
     \delta X = \frac{\log_{10}(e)}{\ell}\delta \ell
@@ -85,7 +85,7 @@ Anche $A$ è adimensionale.}
 \end{equation}
 %
 dove $A := \log_{10} a$ e dunque $a = 10^A$. La legge trovata è lineare, come mostrato dal grafico
-in figura \ref{fig:lunghezza_periodo_log}, e si può quindi utilizzare la consueta procedura di fit.
+in Figura \ref{fig:lunghezza_periodo_log}, e si può quindi utilizzare la consueta procedura di fit.
 
 %\begin{table}
 %    \centering

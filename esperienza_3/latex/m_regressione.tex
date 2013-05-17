@@ -4,7 +4,7 @@ Come prima operazione defiano la seguente funzione $f$
 	f \,:=\, A + B m 
 \end{equation}
 %
-dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo, $m$ la massa applicata al pendolo e A una costante che nel nostro caso particolare è il valore della media pesata dei periodi ($\mathcal{T}$).\\
+dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo, $m$ la massa applicata al pendolo e A una costante che nel nostro caso è il valore della media pesata dei periodi $\mathcal{T}$.\\
 
 \begin{SCfigure}
     \centering
@@ -23,7 +23,7 @@ Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pe
 Procediamo operativamente in questo modo per eseguire la regressione lieare:
 
 \begin{itemize}
-	\item{Grazie al grafico sopra riportato \ref{fig: periodo vs masse} diamo una stima preliminate dei due parametri A e B, in questo modo: al parametro A è stato associato il vlore del periodo ($\mathcal{T}$) trovato grazie alla media pesata, mentre per avere una stima del parametro B abbiamo deciso di calcolare il coefficiente angolare della retta che intercetta i dati, ovvero:
+	\item{Grazie al grafico sopra riportato (Figura \ref{fig: periodo vs masse}) diamo una stima preliminare dei due parametri A e B: al parametro A è stato associato il valore del periodo $\mathcal{T}$ trovato grazie alla media pesata, mentre per avere una stima del parametro B abbiamo deciso di calcolare il coefficiente angolare della retta che intercetta i dati, ovvero:
 			\begin{equation*}
 				A \,=\, \mathcal{T}; \quad \quad B \,=\, \frac{\mathcal{T}_4 - \mathcal{T}_1}{m_4 - m_1} \,=\, 0.017165
 			\end{equation*}
@@ -64,11 +64,13 @@ Procediamo operativamente in questo modo per eseguire la regressione lieare:
 		A \,\pm\, \delta A \,=\, (2.051 \,\, \pm \,\, 0.004) \,\,s \,\,\,\,\, e \,\,\,\,\,
 		B \,\pm\, \delta B \,=\, (0.018602 \,\, \pm \,\, 0.014691) \,\,
 	\end{equation*}
+	WARNING! servono davvero così tante cifre significative su B??? i don't think so... do ya?
+
 	%
-Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare essere compatibile con il periodo medio del pendolo calcolato grazie alla media pesata, mentre B deve risultare essere compatibile con lo 0 teorico. Pertanto posto a priori un fattore di copertura pari a tre ($k = 3$):
+Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare compatibile con il periodo medio del pendolo calcolato grazie alla media pesata, mentre B deve risultare compatibile con lo 0 teorico. Pertanto posto a priori un fattore di copertura pari a tre ($k = 3$):
 
 \begin{itemize}
-	\item{calcoliamo la disrepanza (R) tra $\mathcal{T}$ ed A, ottenendo:
+	\item{calcoliamo la discrepanza $R$ tra $\mathcal{T}$ ed A, ottenendo:
 			\begin{equation*}
 				R \,=\, \mathcal{T} - A \,=\, 0.005 \,s
 			\end{equation*}
@@ -76,16 +78,18 @@ Quindi non ci rimane altro che verificare se i due parametri così trovati risul
 			}
 	\item{verificiamo ora se $R \leq k\,\sigma[R]$, dove:
 			\begin{equation*}
-				\sigma[R] \,=\, \sqrt{(\delta \mathcal{T})^2 + (\delta A)} \,=\, 0.004 \, s
+				\sigma[R] \,=\, \sqrt{(\delta \mathcal{T})^2 + (\delta A)} \,=\, 0.004  \, s \bigotimes
 			\end{equation*}
 			%
 			pertanto otteniamo che:
 			\begin{equation*}
-				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.005 \, s \leq 0.013 \, s
+				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.005 \, s \leq 0.013 \, s \bigotimes
 			\end{equation*}
+WARNING! qualcosa non quadra nelle moltiplicazioni, sono giuste?			
+			
 			%
 			e quindi $\mathcal{T}$ risulta compatibile con A}
-	\item{troviamo ora la discrepanza (R) tra $B$ ed il valore teorico 0, ottenendo:
+	\item{troviamo ora la discrepanza $R$ tra $B$ ed il valore teorico 0, ottenendo:
 			\begin{equation*}
 				R \,=\, B - 0 \,=\, 0.0186
 			\end{equation*}
@@ -101,9 +105,9 @@ Quindi non ci rimane altro che verificare se i due parametri così trovati risul
 				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.0186 \leq 0.0441
 			\end{equation*}
 			%
-			e quindi B risulta compatibile con lo 0 teorico}			
+			e quindi $B$ risulta compatibile con lo 0 teorico}			
 \end{itemize}
-Quindi garzie a questa breve analisi abbiamo trovato che le ipotesi fatte inizialmente risultano essere corrette in quanto abbiamo verificato che il periodo del pendolo non dipende dalla massa applicata, restringendoci a considerare il nostro modello a quello di pendolo semplice e considerando le masse puntiformi.
+Quindi grazie a questa breve analisi abbiamo trovato che le ipotesi fatte inizialmente risultano essere corrette in quanto abbiamo verificato che il periodo del pendolo non dipende dalla massa applicata, restringendoci a considerare il nostro modello a quello di pendolo semplice e considerando le masse puntiformi.
 
 %A =  2.0510
 %B =  0.018602
