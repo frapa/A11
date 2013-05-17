@@ -10,7 +10,7 @@ poiché i nostri dati hanno un incertezza molto maggiore.
 \begin{center}
     \begin{tabular}{l c}
         \toprule
-        Latitudine [$^\circ$] & $g_e$ [m/s$^2$] \\
+        Latitudine [$^\circ$] & $g$ [m/s$^2$] \\
         \midrule
         40 & 9.80171 \\
         50 & 9.81071 \\
@@ -21,4 +21,9 @@ poiché i nostri dati hanno un incertezza molto maggiore.
 Poiché il laboratorio si trova circa ad una latitudine di 46$^\circ$, occorre interpolare linearmente i due valori
 riportati. Abbiamo eseguito l'interpolazione con la formula:
 
-\begin
+\begin{equation}
+    g_{46} = g_{40} + \frac{(g_{50} - g_{40})}{50 - 40} \cdot 6 \; \text{m/s}^2 = \frac{4\, g_{40} + 6\, g_{50}}{10} \; \text{m/s}^2 =
+    9.8071 \; \text{m/s}^2
+\end{equation}
+%
+dove $g_{40}$ e $g_{50}$ indicano i valori di $g$ riportati in tabella, rispettivamente per le latitudini 40$^\circ$ e 50$^\circ$.
