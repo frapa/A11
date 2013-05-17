@@ -114,18 +114,20 @@ ax2x.set_xticklabels(['0.15', '0.25', '0.35', '0.45', '0.55', '0.65', '0.75', '0
 ax2y.set_yticks([log10(l/100.0) for l in range(75, 250, 25)])
 ax2y.set_yticklabels([str(l/100.0) for l in range(75, 250, 25)])
 
-ax2.grid(True)
+#ax2.grid(True)
+ax2x.grid(True)
+ax2y.grid(True)
 
 #ax2.text(-0.03, -0.1, "0")
 
-ax2.legend((dots, fit2), ("Dati sperimentali", "Dipendenza lineare $Y = A + bX$"), 'upper left',
+ax2x.legend((dots, fit2), ("Dati sperimentali", "Dipendenza lineare $Y = A + bX$"), 'upper left',
         prop={'size': 12}, numpoints=1)
 
 f2.subplots_adjust(left=0.13, right=0.87, top=0.80, bottom=0.13)
 
 
-f3 = plt.figure(figsize=(8, 7))
-f3.suptitle("Discrepanza tra dati e regressione", y=0.97, fontsize=15)
+f3 = plt.figure(figsize=(8, 6))
+f3.suptitle("Discrepanza tra dati e regressione", y=0.93, fontsize=15)
 
 ax3 = f3.add_subplot(1, 1, 1)
 dots = ax3.errorbar(x=[log10(l) for l in L], y=[d * 1000 for d in dis],
@@ -152,18 +154,18 @@ ax3.set_xlim((-0.9, 0.1))
 ax3.set_ylim((-8, 8))
 ax3.grid(True)
 
-ax3y = ax3.twinx()
-ax3x = ax3.twiny()
+#ax3y = ax3.twinx()
+#ax3x = ax3.twiny()
 #ax3x.grid(True)
 
-ax3x.set_xlabel(u'Lunghezza del filo [m]', labelpad=12, fontsize=14)
-ax3y.set_ylabel(u'Discrepanza [s]', labelpad=12, fontsize=14)
+#ax3x.set_xlabel(u'Lunghezza del filo [m]', labelpad=12, fontsize=14)
+#ax3y.set_ylabel(u'Discrepanza [s]', labelpad=12, fontsize=14)
 
-ax3x.set_xlim((-0.9, 0.1))
-ax3y.set_ylim((-0.02, 0.02))
+#ax3x.set_xlim((-0.9, 0.1))
+#ax3y.set_ylim((-0.02, 0.02))
 
-ax3x.set_xticks([log10(l/100.0) for l in range(15, 125, 10)])
-ax3x.set_xticklabels(['0.15', '0.25', '0.35', '0.45', '0.55', '0.65', '0.75', '0.85', '0.95', '1.05', '1.15'], rotation=45)
+#ax3x.set_xticks([log10(l/100.0) for l in range(15, 125, 10)])
+#ax3x.set_xticklabels(['0.15', '0.25', '0.35', '0.45', '0.55', '0.65', '0.75', '0.85', '0.95', '1.05', '1.15'], rotation=45)
 
 #ax3y.set_yticks([log10(t/100.0) * 1000.0 for t in range(98, 102, 1)])
 
@@ -172,6 +174,6 @@ ax3x.set_xticklabels(['0.15', '0.25', '0.35', '0.45', '0.55', '0.65', '0.75', '0
 ax3.legend((dots, dots2, fit3), ("Dati con incertezze", "Incertezze corrette", "Retta di fit"), 'lower left',
         prop={'size': 12}, numpoints=1)
 
-f3.subplots_adjust(left=0.13, right=0.87, top=0.80, bottom=0.13)
+f3.subplots_adjust(left=0.13, right=0.93, top=0.85, bottom=0.13)
 
 plt.show()

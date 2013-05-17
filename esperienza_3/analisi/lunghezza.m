@@ -77,6 +77,9 @@ chi_2 = chi2(Y, X, delta_Y_tot, A, b)
 # rifacciamo i conti sulle incertezze
 p = chi_2 / 8
 w_corr = w ./ p;
+delta_Y_corr = w_corr .^ -0.5;
+delta_T_corr = 10 .^ Y ./ log10(e) .* delta_Y_corr;
+delta_T_corr' * 5
 
 [A, b, sigma_A, sigma_b] = fit(Y, X, w_corr)
 
@@ -86,3 +89,6 @@ chi_2_corr = chi2(Y, X, delta_Y_tot .* sqrt(p), A, b)
 # ricavo a (fattore)
 a = 10^A
 sigma_a = log(10) * a * sigma_A
+
+# errore sistematico pendolo fisico
+sqrt(1 + (0.05 ^ 2)./(4 .* Ls .^ 2) + (0.047 ^ 2) ./ (12 .* Ls .^ 2))'

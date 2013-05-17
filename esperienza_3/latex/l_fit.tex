@@ -20,6 +20,8 @@
     \label{fig:lunghezza_periodo_log}
 \end{SCfigure}
 
+\label{l_pred_teo}
+
 Graficando i dati ottenuti nel paragrafo precedente, ci si accorge immediatamente (si veda
 la figura \ref{fig:lunghezza_periodo}) che il periodo del pendolo dipende dalla lunghezza
 del suo filo, come correttamente previsto dalla teoria. Tuttavia la dipendenza è chiaramente non lineare.
@@ -39,19 +41,27 @@ Tuttavia qui assumiamo come ipotesi una dipendenza del tipo:
     \label{eq:ipotesi}
 \end{equation}
 %
-dove $a$ e $b$ sono due costanti. Dal grafico in figura \ref{fig:lunghezza_periodo} si può intuire una dipendenza di questo genere.
+dove $a$ e $b$ sono due costanti\footnote{$b$ è adimensionale, mentre $a$ deve avere dimensioni [$\text{s}\,\text{m}^{-b}$]
+per far tornare le unità di misura l'equazione (\ref{eq:ipotesi})}.
+Dal grafico in figura \ref{fig:lunghezza_periodo} si può intuire una dipendenza di questo genere.
 Confrontando la (\ref{eq:periodo_pendolo}) con la (\ref{eq:ipotesi}) otteniamo che, secondo il modello
 del pendolo semplice, deve valere
 
 \begin{equation}
-    a = \frac{2\pi}{\sqrt{g}} \; \frac{\text{s}}{\sqrt{\text{m}}} \qquad \qquad b = \frac{1}{2}
+    a = \frac{2\pi}{\sqrt{g}} \; \frac{\text{s}}{\sqrt{\text{m}}} = 2.006 \qquad \qquad b = \frac{1}{2}
 \end{equation}
+%
+dove per il calcolo di $a$ abbiamo utilizzato il valore $g = \SI{9.806}{\meter\per\square\second}$, di cui trascuriamo l'incertezza.
 
 Queste sono le predizioni teoriche del modello del pendolo semplice. Calcolando $a$ e $b$ dai dati sperimentali
 possiamo quindi verificare la correttezza della formula (\ref{eq:periodo_pendolo}).
 
 Vogliamo ora linearizzare la (\ref{eq:ipotesi}) per poter utilizzare la regressione e ricavare $a$ e $b$.
-Al tal fine, definiamo due nuove variabili:
+Al tal fine, definiamo due nuove variabili\footnote{Da notare che $X$ e $Y$, e di conseguenza le loro incertezze,
+sono grandezze adimensionali poiché
+le funzioni trascendenti, come il logaritmo, hanno argomenti e valori adimensionali. Nella relazione viene sottinteso
+che i valori $\ell$ e $\mathcal{T}$, quando sono argomento di logaritmi, indicano solo il valore numerico e non la grandezza fisica
+\emph{lunghezza del filo} o \emph{periodo del pendolo}.}:
 
 \begin{equation}
     X := \log_{10}{(\ell)} \qquad \qquad Y := \log_{10}{(\mathcal{T})}
@@ -67,7 +77,8 @@ Le incertezze su $X$ e $Y$, calcolate con le solite regole di propagazione, sono
     \label{eq:delta_XY}
 \end{equation}
 
-Quindi, applicando ad entrambi i membri della (\ref{eq:ipotesi}) il logaritmo, si ottiene
+Quindi, applicando ad entrambi i membri della (\ref{eq:ipotesi}) il logaritmo, si ottiene\footnote{
+Anche $A$ è adimensionale.}
 
 \begin{equation}
     Y = \log_{10} (\mathcal{T}) = \log_{10} (a) + b \log_{10} (\ell) = A + b X

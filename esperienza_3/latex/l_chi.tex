@@ -13,11 +13,32 @@ Utilizzando i valori $A$ e $b$ trovati precedentemente, calcoliamo l'espressione
 %
 che è chiaramente al di fuori dell'intervallo di confidenza.
 
-Probabilmente questa incompatibilità è dovuta al fatto che l'incertezza sui periodi è stata sottostimata.
+\begin{SCfigure}[][t]
+    \centering
+    \includegraphics[width=115mm]{immagini/l_discrepanza.pdf}
+    \caption{Il grafico mostra la discrepanza tra dati sperimentali e retta di fit, ottenuta con la formula $Y_i - A - bX_i$.
+        Le barre di errore blu mostrano il valore delle incertezze prima della correzione, mentre quelle verdi mostrano gli errori
+        corretti. Si nota che le barre d'errore prima della correzione erano piccole, e ciò ha causato un alto
+        valore del $\chi^2$, e che la correzione è abbastanza cospicua. Non sembra visibile alcun andamento residuo nei dati.
+        In entrambi gli assi sono riportati numeri puri.}
+    \label{fig:l_discrepanza}
+\end{SCfigure}
 
-[giustificazione del perché]
+A questo punto abbiamo controllato che non ci fossero punti sperimentali che contribuissero significativamente
+al chi quadro. Il grafico in figura \ref{fig:l_discrepanza} mostra la discrepanza tra dati e retta di fit,
+ovvero la differenza $Y_i - A - bX_i$. In questo modo si possono visualizzare le incertezze e si può verificare
+in maniera approssimata la stima del chi quadro. Non ci sono punti che influenzano da soli in modo significativo
+il valore del chi quadro (si osservino le barre d'errore blu), al contrario risulta chiaro che l'alto valore di $\chi^2$
+è dovuto a più punti.
 
-Aggiustiamo quindi le incertezze per far tornare il chi quadro. Poiché le incertezze sono diverse per ciascun punto,
+Segue che probabilmente questa incompatibilità è dovuta al fatto che l'incertezza sui periodi è stata sottostimata.
+Questo può essere dovuto a diversi fattori, primo fra tutti l'errore sistematico dovuto all'operatore. Dobbiamo
+far notare che le misure, in questo esperimento, sono state rilevate da un singolo operatore che può aver introdotto
+un errore sistematico. Supponiamo che
+l'errore dovuto allo sperimentatore sia la causa del valore eccessivo del chi quadro. Procederemo ora a correggere le incertezze,
+e successivamente verificheremo se la correzione eseguita è accettabile e convincente.
+
+Aggiustiamo quindi le incertezze per far tornare il chi quadro.  Poiché le incertezze sono diverse per ciascun punto,
 moltiplichiamo ogni incertezza $\delta Y_i^{\text{tot}}$ per un fattore $q$ e determiniamo per quale valore di $q$
 il chi quadro diventa uguale al suo valore atteso
 
@@ -33,19 +54,52 @@ Successivamente, mediante passaggi algebrici elementari, si arriva al seguente r
 \end{equation}
 
 Abbiamo quindi calcolato che, affinchè il chi quadro diventi uguale al suo valor atteso, è necessario moltiplicare
-le incertezze per un fattore $q \simeq 1.9$. Le incertezze vanno quindi aumentate del 90 \%.
+le incertezze per un fattore $q \simeq 1.9$. Le incertezze vanno quindi aumentate del 90 \% circa.
+
+L'aggiutamento da eseguire è quindi abbastanza elevato. La correzione si riferisce al valore $\delta Y_i^{\text{tot}}$.
+[Per verificare se è plausibile una correzione di questa entità, proviamo a risalire alla correzione da fare sul valore di lettura
+dello strumento.]
+Poiché sappiamo che $\mathcal{T} = 10^Y$, con la propagazione dell'incertezza otteniamo:
+
+\begin{equation}
+    \delta \mathcal{T} = \frac{10^Y}{\log_{10}(e)} \delta Y
+\end{equation}
 
 \subsubsection{Conclusione della regressione}
 
 Poiché sono state modificate le incertezze, prima di calcolare i valori definitivi di $a$ e $b$ e concludere l'esperimento,
 è necessario ripetere la procedura di fit per calcolare le nuove incertezze $\delta A$ e $\delta b$
 
-[intermezzo pubblicitario]
-
-Risaliamo ora al valore di a:
+Occorre quindi minimizzare la funzione
 
 \begin{equation}
-    a = 10^A = 2.006 \qquad \qquad \delta a = \ln(10) \cdot 10^A \cdot \delta A = 0.004
+    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(b\,\delta Y_i^{\text{tot}})^2}
+    \label{eq:l_min_quad_2}
+\end{equation}
+
+Dalla minimizzazione si ricavano i valori
+
+\begin{equation}
+    A = 0.3024 \qquad \qquad b = 0.499
+\end{equation}
+%
+che sono, correttamente, identici a quelli ricavati nel paragrafo \ref{l_regressione}.
+Infatti la funzione (\ref{eq:l_min_quad_2}) differisce da (\ref{eq:min_quad}) solo per una costante
+moltiplicativa e conserva inalterati il punto di minimo.
+
+Le incertezze su $A$ e $b$ calcolate partendo dai valori aggiustati degli errori $\delta Y_i^{\text{tot}}$
+valgono
+
+\begin{equation}
+    \delta A = 0.0009 \qquad \qquad \delta b = 0.004
+\end{equation}
+
+Le incertezze sono aumentate, e questi sono i valori definitivi.
+
+Risaliamo ora al valore di $a$:
+
+\begin{equation}
+    a = 10^A = 2.006 \; \text{s}\,\text{m}^{-b} \qquad \qquad \delta a = \ln(10) \cdot 10^A \cdot \delta A = 0.004 \; \text{s}\,\text{m}^{-b}
 \end{equation}
 %
 dove $\ln$ è il logaritmo naturale.
