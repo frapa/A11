@@ -1,40 +1,47 @@
-\begin{center}
-$\Uparrow\Uparrow$ --- TABELLA DATI --- $\Uparrow\Uparrow$
-\end{center}
-
-\begin{table}
+\begin{SCtable}
     \centering
     \begin{tabular}{c c c}
         \multicolumn{3}{c}{\textbf{Lunghezze, periodi e accelerazione ricavata}} \\
         \toprule
         Lunghezza [\si{\metre}] & Periodi [\si{\second}] & Accelerazione [\si{\metre\per\square\second}] \\ %di gravità
-        $\ell_i \pm \delta\ell$ & $\mathcal{T}_i \pm \delta\mathcal{T}$ & $g_i \pm \delta g_i$ \\
+        $\ell_i$ & $\mathcal{T}_i \pm \delta\mathcal{T}$ & $g_i \pm \delta g_i$ \\
         \midrule
-			1.0525 $\,\pm\,$ 0.0006 & 2.061 $\,\pm\,$ 0.006 & 9.78 $\,\pm\,$ 0.05 \\
-			0.9485 $\,\pm\,$ 0.0006 & 1.947 $\,\pm\,$ 0.004 & 9.87 $\,\pm\,$ 0.04 \\
-			0.8485 $\,\pm\,$ 0.0006 & 1.856 $\,\pm\,$ 0.003 & 9.72 $\,\pm\,$ 0.03 \\
-			0.7485 $\,\pm\,$ 0.0006 & 1.739 $\,\pm\,$ 0.003 & 9.77 $\,\pm\,$ 0.04 \\
-			0.6485 $\,\pm\,$ 0.0006 & 1.610 $\,\pm\,$ 0.003 & 9.88 $\,\pm\,$ 0.04 \\
-			0.5485 $\,\pm\,$ 0.0006 & 1.477 $\,\pm\,$ 0.005 & 9.93 $\,\pm\,$ 0.07 \\
-			0.4485 $\,\pm\,$ 0.0006 & 1.335 $\,\pm\,$ 0.004 & 9.94 $\,\pm\,$ 0.06 \\
-			0.3485 $\,\pm\,$ 0.0006 & 1.187 $\,\pm\,$ 0.004 & 9.77 $\,\pm\,$ 0.07 \\
-			0.2485 $\,\pm\,$ 0.0006 & 1.008 $\,\pm\,$ 0.004 & 9.65 $\,\pm\,$ 0.08 \\
-			0.1485 $\,\pm\,$ 0.0006 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
+			1.0525 & 2.061 $\,\pm\,$ 0.006 & 9.78 $\,\pm\,$ 0.05 \\
+			0.9485 & 1.947 $\,\pm\,$ 0.004 & 9.87 $\,\pm\,$ 0.04 \\
+			0.8485 & 1.856 $\,\pm\,$ 0.003 & 9.72 $\,\pm\,$ 0.03 \\
+			0.7485 & 1.739 $\,\pm\,$ 0.003 & 9.77 $\,\pm\,$ 0.04 \\
+			0.6485 & 1.610 $\,\pm\,$ 0.003 & 9.88 $\,\pm\,$ 0.04 \\
+			0.5485 & 1.477 $\,\pm\,$ 0.005 & 9.93 $\,\pm\,$ 0.07 \\
+			0.4485 & 1.335 $\,\pm\,$ 0.004 & 9.94 $\,\pm\,$ 0.06 \\
+			0.3485 & 1.187 $\,\pm\,$ 0.004 & 9.77 $\,\pm\,$ 0.07 \\
+			0.2485 & 1.008 $\,\pm\,$ 0.004 & 9.65 $\,\pm\,$ 0.08 \\
+			0.1485 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
         \bottomrule
     \end{tabular}
-    \caption{CAPTION!}
+    \caption{In questa tebella sono riportate nella prima colonna le misure della lunghezza del filo che sono tutte affette da un'incertezza di 0.0006 m ricavata nel paragrafo precedente al punto \ref{l_medie}. Nella seconda colonna sono riportati i valori del periodo di oscillazione del pendolo relativo a ciscuna lunghezza. Questi valori derivano dalla msura di un periodo di dieci oscillazioni, ed è per questo che l'incertezza che li affligge risulta essere minore della risoluzione dello strumento si un fattore 10. Infine nella terza colonna sono riportati i valori di $g_i$ derivanti dai dati grazie all'equazione (\ref{eq:g}) e (\ref{eq:delta_g})}
     \label{tab:calcolo_g}
-\end{table}
+\end{SCtable}
 
-Dai dati $\ell_i$ e $\mathcal{T}_i$ abbiamo calcolato l'incertezza $\delta g_i$ utilizzando la formula generale per la propagazione degli errori:
+Facendo riferimento ai valori sperimentali dell'allungamento, $\ell_i$, e del periodo, $\mathcal{T}_i$, riportati nella tabella \ref{tab:calcolo_g} vogliamo calcolare l'accelerazione di gravità, $g_i$, per ognuno di essi sfruttando la relazione (\ref{eq:g}). Inoltre sappiamo che il valore così rovato di $g$ non è assoluo ma è affetto da un incertezza ($\delta g_i$) che possiamo stimare sfruttando la formula generale per la propagazione degli errori, ovvero:
+
 \begin{equation*}
-(\delta g)^2 \,\, \simeq \,\, \left( \frac{\partial g}{\partial \ell} \right)^2 (\delta \ell)^2 \,\, + \,\, \left( \frac{\partial g}{\partial \mathcal{T}} \right)^2 (\delta \mathcal{T})^2 \,\, \simeq \,\, \left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2
+(\delta g)^2 \, \simeq \, \left( \frac{\partial g}{\partial \ell} \right)^2 (\delta \ell)^2 \, + \, \left( \frac{\partial g}{\partial \mathcal{T}} \right)^2 (\delta \mathcal{T})^2
 \end{equation*}
+%
+Pertanto sapendo che:
+
+\begin{equation*}
+(\delta g)^2 \, \simeq \, \left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \, + \, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2
+\end{equation*}
+%
+e quindi,possiamo riassumere che l'incertezza sul valote sperimentale dell'acelerazione di gravità relativo ad ogni singola misura è il seguente:
+
 \begin{equation} \label{eq:delta_g}
 \delta g \,\, \simeq \,\, \sqrt{\left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2}
 \end{equation}
-
-Osservando i valori riportati in tabella \ref{tab:calcolo_g}, si può notare che le incertezze $\delta\ell$ sono meno influenti delle incertezze $\delta\mathcal{T}$ nel determinare $\delta g_i$. Ciononostante, esaminando la formula (\ref{eq:delta_g}), si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
+%
+Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del calcolo dell'errore sull'accelerazione di gravità le inceretzze relative alla misura della lunghezza del pendolo sono meno influenti rispetto alle incertezze relative al periodo. Affermiamo questo perchè $\delta \ell$ risulta essere più piccolo di $\delta \mathcal{T}$ di un fattore dieci e sotto radice questa differenza si accentuerebbe e la loro differenza aumenterebbe di un fattore cento.
+%Ciononostante, esaminando la formula (\ref{eq:delta_g}), si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
 
 \begin{center}
 --- INSERIRE GRAFICO---
