@@ -1,17 +1,35 @@
-Al punto $\bigotimes$ la relazione tra periodo del pendolo e lunghezza era stata espressa nella formula
+Al punto \ref{l_pred_teo} la relazione tra periodo del pendolo e lunghezza era stata espressa nella formula
+
 \begin{equation*}
 \mathcal{T} \,\, = \,\, a\ell^b
 \end{equation*}
+%
 che confrontata con l'equazione (\ref{eq:periodo_pendolo}) permette di ricavare $a \, = \, \frac{2 \pi}{\sqrt{g}}$, da cui si ottiene:
-\begin{equation}
-g \,\, = \,\, \left( \frac{2 \pi}{a}\right)^2 \quad\quad e \quad\quad \delta g \,\, = \,\, \frac{\vert dg \vert}{\vert da\vert} \delta a = \frac{8 \pi^2}{a^3} \delta a
-\end{equation}
 
+\begin{equation*}
+g \,\, = \,\, \left( \frac{2 \pi}{a}\right)^2 \quad\quad e \quad\quad \delta g \,\, = \,\, \left| \frac{dg}{da} \right|  \delta a = \frac{8 \pi^2}{a^3} \delta a
+\end{equation*}
+%
 Quindi si ricava il valore:
+
 \begin{equation}
-g_f \pm \delta g_f \,\, = \,\, 9,81 \pm 0,04 \,\, ms^{-2}
+g_f \pm \delta g_f \,\, = \,\, 9.81 \pm 0.04 \,\, ms^{-2}
 \end{equation}
 
 \paragraph{Osservazioni sulla compatibilità dei valori ricavati dal grafico e dalla tabella}
 
-Fare osservazioni sulla compatibilità tra $g_w$, $g_s$ e $g_f$
+Anche in questo caso possiamo verificare che $g_f$ risulti compatibile con le altre due misure di accelerazione di gravità trovate nei due paragrafi precedenti. Ovvero ci basta verificare che $g_f$ sia compatibile con una sola delle due misusre di $g$ precedenti. Quindi procediamo col test della compatibilità:
+\begin{itemize}
+	\item{fissiamo a priori un fattore di copertura k = 3, e si può osservare che:
+	
+		\begin{equation*}
+			R \,\, = \,\, |g_f - g_w| \,\, = \,\, \SI{0.01}{\metre\per\square\second}
+		\end{equation*}
+		%
+		\begin{equation*}
+			k\,\sigma_R \,\, = \,\, \sqrt{(\delta g_e)^2 + (\delta g_w)^2} \,\, = \,\, \SI{0.15}{\metre\per\square\second}
+		\end{equation*}
+		%
+		}
+	\item{quindi abbiamo verificato che $R \leq k\,\sigma_R$ e pertanto sappiamo che le due misure dell'accelerazione di gravità risltano essere compatibili e quindi $g_f$, $g_w$ e $g_s$ risultano compatibili tra di loro.}
+\end{itemize}
