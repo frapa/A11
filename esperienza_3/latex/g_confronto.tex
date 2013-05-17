@@ -1,4 +1,24 @@
----
 %discutere se i valori sono compatibili o meno
 %se sono incompatibili usare la formula di propagazione delle incertezze per collegare l'errore sistematico di g agli errori sistematici di l e T. Ponendo prima l e poi T uguali a 0, discutere la plausibilità dell'altro errore sistematico
 %(dl=0 --> dT=?; dT=0 --> dl=?)
+
+La tabella seguente riporta le misure dell'accelerazione di gravità
+per varie latitudini al livello del mare. Tali dati hanno un incertezza molto bassa,
+che influisce sulla 6 cifra dopo la virgola, quindi in questa sede li considereremo valori esatti,
+poiché i nostri dati hanno un incertezza molto maggiore.
+
+\begin{center}
+    \begin{tabular}{l c}
+        \toprule
+        Latitudine [$^\circ$] & $g_e$ [m/s$^2$] \\
+        \midrule
+        40 & 9.80171 \\
+        50 & 9.81071 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Poiché il laboratorio si trova circa ad una latitudine di 46$^\circ$, occorre interpolare linearmente i due valori
+riportati. Abbiamo eseguito l'interpolazione con la formula:
+
+\begin

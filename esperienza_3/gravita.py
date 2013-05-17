@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from matplotlib import pyplot as plt
 
 L = (1.0525, 0.9485, 0.8485, 0.7485, 0.6485, 0.5485, 0.4485, 0.3485, 0.2485, 0.14855)
@@ -8,7 +10,7 @@ g1 = 9.8
 g3 = 9.81
 
 f1 = plt.figure(figsize=(8, 6))
-f1.suptitle("Dipendenza del periodo dalla lunghezza", y=0.93, fontsize=15)
+f1.suptitle(ur"Dipendenza dell'accelerazione di gravità dalla lunghezza", y=0.93, fontsize=15)
 
 ax = f1.add_subplot(1, 1, 1)
 dots = ax.errorbar(x=L, y=g,
@@ -16,7 +18,7 @@ dots = ax.errorbar(x=L, y=g,
     fmt='o', capsize=7)
 
 ax.set_xlabel(u'Lunghezza del filo [m]', labelpad=12, fontsize=14)
-ax.set_ylabel(u'Periodo [s]', labelpad=12, fontsize=14)
+ax.set_ylabel(u'Accelerazione di gravità (g) [m/s$^2$]', labelpad=12, fontsize=14)
 
 fit1 = ax.errorbar(x=(0, 1.2), y=(g1, g1))
 fit2 = ax.errorbar(x=(0, 1.2), y=(g3, g3))
