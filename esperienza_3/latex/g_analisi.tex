@@ -4,21 +4,21 @@
         \multicolumn{3}{c}{\textbf{Lunghezze, periodi e accelerazione ricavata}} \\
         \toprule
         Lunghezza [\si{\metre}] & Periodi [\si{\second}] & Accelerazione [\si{\metre\per\square\second}] \\ %di gravità
-        $\ell_i$ & $\mathcal{T}_i \pm \delta\mathcal{T}$ & $g_i \pm \delta g_i$ \\
+        $\ell_i$ & $\mathcal{T}_i \pm \delta\mathcal{T}_i$ & $g_i \pm \delta g_i$ \\
         \midrule
-			1.0525 & 2.061 $\,\pm\,$ 0.006 & 9.78 $\,\pm\,$ 0.05 \\
-			0.9485 & 1.947 $\,\pm\,$ 0.004 & 9.87 $\,\pm\,$ 0.04 \\
-			0.8485 & 1.856 $\,\pm\,$ 0.003 & 9.72 $\,\pm\,$ 0.03 \\
-			0.7485 & 1.739 $\,\pm\,$ 0.003 & 9.77 $\,\pm\,$ 0.04 \\
-			0.6485 & 1.610 $\,\pm\,$ 0.003 & 9.88 $\,\pm\,$ 0.04 \\
-			0.5485 & 1.477 $\,\pm\,$ 0.005 & 9.93 $\,\pm\,$ 0.07 \\
-			0.4485 & 1.335 $\,\pm\,$ 0.004 & 9.94 $\,\pm\,$ 0.06 \\
-			0.3485 & 1.187 $\,\pm\,$ 0.004 & 9.77 $\,\pm\,$ 0.07 \\
-			0.2485 & 1.008 $\,\pm\,$ 0.004 & 9.65 $\,\pm\,$ 0.08 \\
-			0.1485 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
+			1.052 & 2.061 $\,\pm\,$ 0.006 & 9.78 $\,\pm\,$ 0.05 \\
+			0.949 & 1.947 $\,\pm\,$ 0.004 & 9.87 $\,\pm\,$ 0.04 \\
+			0.849 & 1.856 $\,\pm\,$ 0.003 & 9.72 $\,\pm\,$ 0.03 \\
+			0.749 & 1.739 $\,\pm\,$ 0.003 & 9.77 $\,\pm\,$ 0.04 \\
+			0.649 & 1.610 $\,\pm\,$ 0.003 & 9.88 $\,\pm\,$ 0.04 \\
+			0.549 & 1.477 $\,\pm\,$ 0.005 & 9.93 $\,\pm\,$ 0.07 \\
+			0.449 & 1.335 $\,\pm\,$ 0.004 & 9.94 $\,\pm\,$ 0.06 \\
+			0.349 & 1.187 $\,\pm\,$ 0.004 & 9.77 $\,\pm\,$ 0.07 \\
+			0.249 & 1.008 $\,\pm\,$ 0.004 & 9.65 $\,\pm\,$ 0.08 \\
+			0.149 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
         \bottomrule
     \end{tabular}
-    \caption{In questa tebella sono riportate nella prima colonna le misure della lunghezza del filo che sono tutte affette da un'incertezza di 0.0006 m ricavata nel paragrafo precedente al punto \ref{l_medie}. Nella seconda colonna sono riportati i valori del periodo di oscillazione del pendolo relativo a ciscuna lunghezza. Questi valori derivano dalla msura di un periodo di dieci oscillazioni, ed è per questo che l'incertezza che li affligge risulta essere minore della risoluzione dello strumento si un fattore 10. Infine nella terza colonna sono riportati i valori di $g_i$ derivanti dai dati grazie all'equazione (\ref{eq:g}) e (\ref{eq:delta_g})}
+    \caption{In questa tebella sono riportate nella prima colonna le misure della lunghezza del filo che sono tutte affette da un'incertezza di 0.0006 m ricavata nel paragrafo precedente al punto \ref{l_medie}. Nella seconda colonna sono riportati i valori medi del periodo di oscillazione del pendolo relativo a ciascuna lunghezza. Infine nella terza colonna sono riportati i valori di $g_i$ derivanti dai dati grazie all'equazione (\ref{eq:g}) e (\ref{eq:delta_g}). Per maggiori informazioni sulle prime due colonne si faccia riferimento alla tabella \ref{tab:l_dati}, che commenta anche l'origine delle misure e la loro incertezza.}
     \label{tab:calcolo_g}
 \end{SCtable}
 
@@ -43,13 +43,11 @@ e quindi,possiamo riassumere che l'incertezza sul valote sperimentale dell'acele
 Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del calcolo dell'errore sull'accelerazione di gravità le inceretzze relative alla misura della lunghezza del pendolo sono meno influenti rispetto alle incertezze relative al periodo. Affermiamo questo perchè $\delta \ell$ risulta essere più piccolo di $\delta \mathcal{T}$ di un fattore dieci e sotto radice questa differenza si accentuerebbe e la loro differenza aumenterebbe di un fattore cento.
 %Ciononostante, esaminando la formula (\ref{eq:delta_g}), si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
 
-\begin{center}
---- INSERIRE GRAFICO---
-
-$g_i$ in funzione di $\ell_i$
-\end{center}
-
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=120mm]{immagini/}
+%\end{figure}
 % togliere le domande e inserire le risposte !!
-Nel grafico è evidente una dipendenza di g da l? Sono più affidabili i valori di g ricavati da $\ell$ grandi o $\ell$ piccoli?
 
-Basandosi sul modello di pendolo semplice (punto materiale, filo inestensibile e privo di massa) e di piccole oscillazioni si può osservare che i valori più attendibili di g sono quelli realizzati con $\ell$ grandi in quanto più vicini alle approssimazioni effettuate.
+Dai valori di $g_i$ ottenuti possiamo notare che questi risultano essere differenti tra di loro. Sicuramente una causa di questa diversitàsi può attribuire agli errori casuali, in quanto le misure del periodo di oscillazione del pendolo sono state effettuate tutte da uno stesso operatore, e quindi i dati sperimentali possono essere affetti da un errore casuale dovuto in parte alla prontezza di riflessi dell'operatore, che no è sempre costante. (In questo caso bisogna incolpare il nostro compagno davide Bazzanella per non essere riuscito a fare delle misure abbastana esatte del periodo da restituirci un valore di g spaccato con la predizione teorica!!! CATTIVO DAVIDE!!!). osservando il grafico \ref{fig:bho} non siamo in grado di affermare che i vari valori assunti da $g_i$ si possano attribuire ad un errore di natura sistematica, ad esempio da una dipendenza dalla lunghezza del filo o del periodo, in quanto questi non si può dire che vi sia un andamento residuo.\\
+Nonostante quanto detto sopra, ovvero che non si può osservare un andamento residuo dei dati dal grafico, possiamo dire che per il modello che abbiamo adottato nell'eseguire l'esperienza, ovvero quello di pendolo semlice dove il filo ha una massa trascurabile, e la massa applicata è concentrata in un solo punto, sarebbe necessario che la lunghezza del filo risultasse essere abbastanza maggiore rispetto all'altezza della massa appesa. Pertanto non ci sentiamo di escludere del tutto che le misure più accurate dell'accelerazione di gravità possano essere quelle prese per una lunghezza $\ell$ del filo relativamente maggiore rispetto alle dimensioni della massa applicata.
