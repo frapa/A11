@@ -106,10 +106,10 @@ La regressione si basa sulla minimizzazione della funzione
     \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(\delta Y_i^{\text{tot}})^2}
     \qquad \qquad \text{dove} \quad
     \delta Y_i^{\text{tot}} = \sqrt{\delta Y_i^2 + b^2 \delta X_i^2}
-    \label{eq:min_quad}
+    \label{eq:l_min_quad}
 \end{equation}
 
-Questa funzione misura la discrepanza tra legge lineare e dati sperimentali. Minimizzando la (\ref{eq:min_quad}) si ottengono
+Questa funzione misura la discrepanza tra legge lineare e dati sperimentali. Minimizzando la (\ref{eq:l_min_quad}) si ottengono
 i valori di $A$ e $b$, ovvero la retta, che interpretano in modo ``migliore'' i dati.
 
 Come prima cosa si è stimato il parametro b per trasferire l'incertezza dalle X alle Y.

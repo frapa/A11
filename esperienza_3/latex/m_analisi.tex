@@ -38,7 +38,7 @@ mentre nella tabella \ref{tab:masse_periodi} sono elencati tutti i periodi che a
 	        \toprule
 	        Peso Bianco & Peso Argenteo & Peso Ottone piccolo & Peso Ottone \\
 	        \midrule
-	        88.9 & 162.7 & 202.0 & 670.4 \\ 
+	        88.9 & 162.7 & 202.0 & 486.7 \\ 
 	        \bottomrule
 	\end{tabular}
 \end{center}
@@ -93,15 +93,15 @@ Procediamo ora calcolando la media dei periodi ($\mathcal{T}$) per le quattro ma
 abbiamo calcolato:
 
 \begin{equation*}
-	\mathcal{T} \,=\, m^*[t] \,=\, \frac{\sum_{i}^{N} t_i}{N}
+	\mathcal{T} \,=\, m^*[t] \,=\, \frac{\sum_{j}^{N} t_j}{N}
 \end{equation*}
 %
-dove $N = 15$ è il numero di misure per ogni massa e $t_i$ indica la misura $i$-esima di periodo
+dove $N = 15$ è il numero di misure per ogni massa e $t_j$ indica la misura $j$-esima di periodo
 relativa alla massa considerata. L'errore standard sulla media dei periodi risulta essere:
 
 \begin{equation*}
     \sigma (\mathcal{T}) = \sigma(m^*[t]) \,=\, \frac{1}{\sqrt{N}} \, \tilde\sigma (t) \quad \text{dove} \quad \tilde\sigma(t)
-    \,=\, \frac{1}{N-1} \sum_{i}^{N} (t_i - m^*[t])^2
+    \,=\, \frac{1}{N-1} \sum_{i}^{N} (t_j - m^*[t])^2
 \end{equation*}
 %
 mentre l'errore totale sulla media dei periodi, che include anche il contributo dell'errore di risoluzione, vale:

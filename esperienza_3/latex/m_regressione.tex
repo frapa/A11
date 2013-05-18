@@ -5,13 +5,15 @@ COMPATIBILI CON UN ANDAMENTO COSTANTE (CHE IMPLICA NON-DIPENDENZA DALLA MASSA). 
 B FOSSE 0. SOPRATTUTTO NON DOBBIAMO FARLO IN QUESTO PARAGRAFO QUI, PERCHÉ IL B LO STIAMO CALCOLANDO.
 SCRIVO QUESTO PERCHÉ HO NOTATO UNA CERTA CONFUSIONE SU QUESTO CONCETTO E QUESTO ERRORE LO HO TROVATO PIÙ VOLTE.
 
-Come prima operazione definiamo la seguente funzione $f$
+In questa sezione applicheremo il metodo dei minimi quadrati per ottenere un fit dei dati.
+Il nostro scopo è ottenere una retta
 
 \begin{equation}
-	f(m) \,:=\, A + B m 
+	\mathcal{T}(m) \,=\, A + B m 
 \end{equation}
 %
-dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo (?????????????????), $m$ la massa applicata al pendolo e A una costante che nel nostro caso è il valore della media pesata dei periodi $\mathcal{T}$.\\
+dove $A$ è l'intercetta, mentre $B$ rappresenta il coefficiente angolare della retta. Se il coefficiente angolare $B$ della 
+retta di fit risulterà compatibile con 0, sarà l'indicazione che la massa non influenza il periodo. 
 
 \begin{SCfigure}
     \centering
@@ -21,58 +23,64 @@ dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo (??
         è differente da misura a misure, mentre quella reativa alla massa è uguale per tutte, ed in particolare è
         l'incertezza tipo. La retta orizzontale verde rappresenta il valore (costante) della media pesata delle medie
         dei periodi ($\mathcal{T}_w$), mentre in rosso è rappresentata la retta derivante dalla regressione lineare,
-        ovvero la funzione $\mathcal{T} = A + B\,m$.}
-    \label{fig: periodo vs masse}
+        ovvero la funzione $\mathcal{T}(m) = A + B\,m$.}
+    \label{fig:masse_periodi}
 \end{SCfigure}
 
-Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pendolo non dipende linearmente dalla massa applicata. Ciononostante ora vogliamo controllare se effettivamente sia così e quindi abbiamo deciso di fare una regressione lineare sulla funzine $f$ in modo da dare una stima ai parametri A e B e verificare che A risulti compatibile con il periodo del pendolo $\mathcal{T}$ trovato grazie alla media pesata e che il valore di B sia compatibie con lo 0 teorico.\\
+%Finora abbiamo assunta veritiera l'ipotesi che il periodo di oscillazione del pendolo non dipende linearmente dalla massa applicata. Ciononostante ora vogliamo controllare se effettivamente sia così e quindi abbiamo deciso di fare una regressione lineare sulla funzine $f$ in modo da dare una stima ai parametri A e B e verificare che A risulti compatibile con il periodo del pendolo $\mathcal{T}$ trovato grazie alla media pesata e che il valore di B sia compatibie con lo 0 teorico.\\
 
 Procediamo operativamente in questo modo per eseguire la regressione lieare:
 
 \begin{itemize}
-	\item{Grazie al grafico sopra riportato (Figura \ref{fig: periodo vs masse}) diamo una stima preliminare dei due parametri A e B: al parametro A è stato associato il valore del periodo $\mathcal{T}$ trovato grazie alla media pesata, mentre per avere una stima del parametro B abbiamo deciso di calcolare il coefficiente angolare della retta che intercetta i dati, ovvero:
+	\item{Grazie al grafico sopra in figura \ref{fig:masse_periodi}, diamo una stima preliminare del parametro B, al fine di trasferire
+        l'incertezza dalle masse ai periodi. Per avere una stima del parametro B calcoliamo il coefficiente angolare della retta che
+        passa per il primo e ultimo punto, ovvero:
 			\begin{equation*}
-				A \,=\, \mathcal{T}; \quad \quad B \,=\, \frac{\mathcal{T}_4 - \mathcal{T}_1}{m_4 - m_1} \,=\, 0.017165
+				B' \,=\, \frac{\mathcal{T}_4 - \mathcal{T}_1}{m_4 - m_1} \,\simeq\, \SI{0.02}{\second\per\kilo\gram}
 			\end{equation*}
 			%
 			}
 	\item{La funzione da minimizzare che misura la discrepanza è:
 			\begin{equation}
-                \sum_{i=1}^{N} \frac{(\mathcal{T}_i - A - B m_i)}{(\delta \mathcal{T}_{tot})^2}	
-                \label{eq:min_quad}
+                \sum_{i=1}^{N} \frac{(\mathcal{T}_i - A - B m_i)}{(\delta \mathcal{T}_i^\text{tot})^2}	
+                \label{eq:m_min_quad}
 			\end{equation}
 			%
-            dove $\delta \mathcal{T}_{tot}$ è l'incertezza totale sulle misure del periodo, ottenuta sommando l'incertezza $\delta \mathcal{T}_i$ e l'errore trasferito dal peso, che risulta essere però trascurabile rispetto all'incertezza sul periodo poichè $\delta \mathcal{T}_i$ risulta essere dell'ordine di grandezza di $10^{-3}$ mentre l'incertezza trasferita dalla massa è dell'ordine di $10^{-6}$, e quindi quest'ultima risulta essere trascurabile rispetto all'incertezza sul periodo;}
-	\item{Quindi per quanto studiato in classe abbiamo che:
+            dove $\delta \mathcal{T}_i^\text{tot}$ viene ottenuta componendo
+            l'incertezza $\delta \mathcal{T}_i$ e l'errore trasferito dal peso $B'\delta m$. Tuttavia, l'incertezza
+            trasferita è trascurabile rispetto all'incertezza sul periodo poichè $\delta \mathcal{T}_i$ è dell'ordine di
+            grandezza di $10^{-3}$ s mentre l'incertezza trasferita dalla massa è dell'ordine di $10^{-6}$ s.
+            Quindi si ha che $\delta \mathcal{T}_i^\text{tot} = \delta \mathcal{T}_i$;}
+	\item{Per quanto studiato in classe si ha che la il minimo di (\ref{eq:m_min_quad}) si ottiene per:
 
 			\begin{equation*}
-				A \,=\, \frac{(\sum_i w_i m_i^2)(\sum_i w_i \mathcal{T}_i) - (\sum_i w_i m_i)(\sum_i w_i m_i \mathcal{T}_i)}{\Delta} \,=\, 2.0510 \,\, s
+				A \,=\, \frac{(\sum_i w_i m_i^2)(\sum_i w_i \mathcal{T}_i) - (\sum_i w_i m_i)(\sum_i w_i m_i \mathcal{T}_i)}{\Delta}
+                \,=\, \SI{2.051}{\second}
 			\end{equation*}
 			%
 			\begin{equation*}
-				B \,=\, \frac{(\sum_i w_i)(\sum_i w_i m_i \mathcal{T}_i) - (\sum_i w_i \mathcal{T}_i)(\sum_i w_i m_i)}{\Delta} \,=\, 0.01862
+				B \,=\, \frac{(\sum_i w_i)(\sum_i w_i m_i \mathcal{T}_i) - (\sum_i w_i \mathcal{T}_i)(\sum_i w_i m_i)}{\Delta}
+                \,=\, \SI{0.02}{\second\per\kilo\gram}
 			\end{equation*}
 			%
 			dove:
 			\begin{equation*}
-				\Delta \,=\, (\sum_i w_i)(\sum_i w_i m_i^2) - (\sum_i w_i m_i)^2 \,\,\,\,\,\,\, e \,\,\,\,\,\,\,
+				\Delta \,=\, (\sum_i w_i)(\sum_i w_i m_i^2) - (\sum_i w_i m_i)^2 \qquad \text{e} \qquad
 				w_i \,=\, \frac{1}{(\delta \mathcal{T}_i)^2}
 			\end{equation*}}
-	\item{Di conseguenza abbiamo che le incertezze relative su A e B sono:
+	\item{Inoltre abbiamo che le incertezze su A e B sono:
 
 			\begin{equation*}
-				(\delta A)^2 \,=\, \frac{\sum_i w_i m_i^2}{\Delta}  \,\,\,\,\, e \,\,\,\,\,
-				(\delta B)^2 \,=\, \frac{\sum_i w_i}{\Delta} 
+				\delta A \,=\, \sqrt{\frac{\sum_i w_i m_i^2}{\Delta}} = \SI{0.004}{\second}  \,\,\,\,\, e \,\,\,\,\,
+				\delta B \,=\, \sqrt{\frac{\sum_i w_i}{\Delta}} = \SI{0.01}{\second\per\kilo\gram}
 			\end{equation*}}
 	\end{itemize} 
 	Quindi possiamo riassumere i risultati di questa procedura in questo modo:
 
 	\begin{equation*}
-		A \,\pm\, \delta A \,=\, (2.051 \,\, \pm \,\, 0.004) \,\,s \,\,\,\,\, e \,\,\,\,\,
-		B \,\pm\, \delta B \,=\, (0.018602 \,\, \pm \,\, 0.014691) \,\,
+		A \,\pm\, \delta A \,=\, (2.051 \,\, \pm \,\, 0.004) \: \si{\second} \,\,\,\,\, e \,\,\,\,\,
+		B \,\pm\, \delta B \,=\, (0.02 \,\, \pm \,\, 0.01) \: \si{\second\per\kilo\gram}
 	\end{equation*}
-	WARNING! servono davvero così tante cifre significative su B??? i don't think so... do ya?
-
 	%
 Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare compatibile con il periodo medio del pendolo calcolato grazie alla media pesata, mentre B deve risultare compatibile con lo 0 teorico. Pertanto posto a priori un fattore di copertura pari a tre ($k = 3$):
 
