@@ -97,11 +97,17 @@ abbiamo calcolato:
 \end{equation*}
 %
 dove $N = 15$ è il numero di misure per ogni massa e $t_i$ indica la misura $i$-esima di periodo
-relativa alla massa considerata. L'errore sulla media dei periodi risulta essere:
+relativa alla massa considerata. L'errore standard sulla media dei periodi risulta essere:
 
 \begin{equation*}
-	\delta \mathcal{T} \,=\, \frac{1}{\sqrt{N}} \, \tilde\sigma[\mathcal{T}] \quad \text{dove} \quad \tilde\sigma[\mathcal{T}]
+    \sigma (\mathcal{T}) = \sigma(m^*[t]) \,=\, \frac{1}{\sqrt{N}} \, \tilde\sigma (t) \quad \text{dove} \quad \tilde\sigma(t)
     \,=\, \frac{1}{N-1} \sum_{i}^{N} (t_i - m^*[t])^2
+\end{equation*}
+%
+mentre l'errore totale sulla media dei periodi, che include anche il contributo dell'errore di risoluzione, vale:
+
+\begin{equation*}
+    \delta \mathcal{T} = \sqrt{\sigma (\mathcal{T})^2 + \delta t^2}
 \end{equation*}
 %
 Pertanto otteniamo i seguenti valori di periodo per le quattro masse applicate (riportati anche in tabella \ref{tab:masse_periodi}):

@@ -1,7 +1,7 @@
-Dopo aver calcolato la media pesata delle misure $\mathcal{T}_i$ sfruttiamo il test del chi quadro per verificare se
+Dopo aver calcolato la media pesata delle misure $\mathcal{T}_i\,$ sfruttiamo il test del chi quadro per verificare se
 è ammissibile che il periodo del pendolo non dipenda dalla massa. Tramite la procedura della media pesata (che è una regressione
 a tutti gli effetti) abbiamo ottenuto
-una retta orizzontale il cui valore costante è $\mathcal{T}$. Se il test del chi quadro sarà positivo questo indicherà
+una retta orizzontale il cui valore costante è $\mathcal{T}_w$. Se il test del chi quadro risulterà positivo questo indicherà
 che i periodi al variare della massa sono compatibili con un andamento costante, e quindi che il periodo non dipende dalla massa.
 
 %Per questo motivo defiano la seguente funzione $f$
@@ -15,13 +15,16 @@ che i periodi al variare della massa sono compatibili con un andamento costante,
 Calcoliamo quindi il chi quadro osservato:
 
 \begin{equation*}
-	\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{\mathcal{N}} (\mathcal{T}_i - \mathcal{T})^2}{(\delta \mathcal{T}_i)^2} \,=\, 1.6607
+	\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{\mathcal{N}} (\mathcal{T}_i - \mathcal{T}_w)^2}{(\delta \mathcal{T}_i)^2} \,=\, 1.66
 \end{equation*}
 %
 %è importante sottolineare che il $\delta \mathcal{T}$ non è altro che $\delta \mathcal{T}_i$ in quanto $B = 0$ per ipotesi.
-dove $\mathcal{T}_i$ rappresentano le quattro misure medie del periodo relative alle quattro massa considerate e $\mathcal{T}$ rappresenta il valore della media pesata trovato precedentemente. $\mathcal{N} = 4$ è il numero di masse.\\
+dove $\mathcal{T}_i$ rappresentano le quattro misure medie del periodo relative alle quattro massa considerate e $\mathcal{T}_w$ rappresenta il valore della media pesata trovato precedentemente. $\mathcal{N} = 4$ è il numero di masse.\\
 
-Sapendo che i gradi di libertà del nostro sistema sono 3 e che vogliamo una probabilità del $5\%$ che i dati da noi raccolti non siano in accordo con le ipotesi fatte finora, quindi abbiamo posto la probabilità di falso allarme al $5\%$, otteniamo che l'intervallo di accettazione del $\chi_{oss}^2$ va da 0 a 7.82. Pertanto dal momento che in nostro $\chi_{oss}^2$ ha valore di 1.66 e quindi ricade all'interno dell'intervallo di accettazione possiamo dire che le misure $\mathcal{T}_i$ del periodo risultano essere compatibili. Ovvero noi sappiamo che mediamente una volta su venti può accadere che il dato sperimentale raccolto risulti essere in contraddizione con le ipotesi fatte, in particolare con quella che nega una dipendenza del periodo dalla massa, visto che abbiamo posto $B = 0$.
+I gradi di libertà del nostro sistema sono 3 e che vogliamo una probabilità del $5\%$ che i dati da noi raccolti non siano in accordo con le ipotesi fatte finora, quindi abbiamo posto la probabilità di falso allarme al $5\%$, otteniamo che l'intervallo di accettazione del $\chi_{oss}^2$ va da 0 a 7.82.\\
+Siccome il $\chi_{oss}^2$ ha valore di 1.66, esso ricade all'interno dell'intervallo di confidenza. Quindi possiamo dire che il periodi rilevati
+al variare della massa sono compatibili con un andamento costante. I dati sperimentali indicano dunque che
+il periodo del pendolo non dipende dalla massa. Ovvero noi sappiamo che mediamente una volta su venti può accadere che il dato sperimentale raccolto risulti essere in contraddizione con le ipotesi fatte, in particolare con quella che nega una dipendenza del periodo dalla massa, visto che abbiamo posto $B = 0$ (?????????????? non lo abbiamo posto = 0 ????????????).\\
 Abbiamo ricavato i valori degli estremi di accettazione del chi quadro grazie ad un programma presente sul sito internet stattrek.com\footnote{
 \url{http://stattrek.com} è un sito dedicato alla statistica. La pagina che abbiamo utilizzato per calcolare la distribuzione del chi quadro
 è raggiungibile all'indirizzo \url{http://stattrek.com/online-calculator/chi-square.aspx}.
