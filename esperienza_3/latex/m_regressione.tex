@@ -4,6 +4,7 @@ NOI ABBIAMO FATTO LA MEDIA PESATA ED ABBIAMO VERIFICATO CHE I PUNTI SPERIMENTALI
 COMPATIBILI CON UN ANDAMENTO COSTANTE (CHE IMPLICA NON-DIPENDENZA DALLA MASSA). NON ABBIAMO ASSUNTO CHE
 B FOSSE 0. SOPRATTUTTO NON DOBBIAMO FARLO IN QUESTO PARAGRAFO QUI, PERCHÉ IL B LO STIAMO CALCOLANDO.
 SCRIVO QUESTO PERCHÉ HO NOTATO UNA CERTA CONFUSIONE SU QUESTO CONCETTO E QUESTO ERRORE LO HO TROVATO PIÙ VOLTE.
+INOLTRE CHI HA DETTO CHE A DEVE ESSERE UGUALE A T????
 
 In questa sezione applicheremo il metodo dei minimi quadrati per ottenere un fit dei dati.
 Il nostro scopo è ottenere una retta
@@ -42,7 +43,7 @@ Procediamo operativamente in questo modo per eseguire la regressione lieare:
 			}
 	\item{La funzione da minimizzare che misura la discrepanza è:
 			\begin{equation}
-                \sum_{i=1}^{N} \frac{(\mathcal{T}_i - A - B m_i)}{(\delta \mathcal{T}_i^\text{tot})^2}	
+                \sum_{i=1}^{\mathcal{N}} \frac{(\mathcal{T}_i - A - B m_i)}{(\delta \mathcal{T}_i^\text{tot})^2}	
                 \label{eq:m_min_quad}
 			\end{equation}
 			%
@@ -82,47 +83,74 @@ Procediamo operativamente in questo modo per eseguire la regressione lieare:
 		B \,\pm\, \delta B \,=\, (0.02 \,\, \pm \,\, 0.01) \: \si{\second\per\kilo\gram}
 	\end{equation*}
 	%
-Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare compatibile con il periodo medio del pendolo calcolato grazie alla media pesata, mentre B deve risultare compatibile con lo 0 teorico. Pertanto posto a priori un fattore di copertura pari a tre ($k = 3$):
+    Osserviamo che il valore stimato $B'$ è compatibile con il valore ricavato dalla regressione, perché i due valori
+    sono uguali entro l'incertezza. Non è quindi necessario reiterare la procedura di fit.
+    Il grafico in figura \ref{fig:masse_periodi} mostra la retta ottenuta dal fit.
+
+\subsubsection{Test del chi quadro per la regressione}
+
+Prima di verificare se il valore di $B$ ottenuto è compatibile con 0 e se risulta verificato che il periodo non dipende dalla massa,
+eseguiamo il test del chi quadro sulla regressione appena calcolata per verificare se le incertezze sono state stimate correttamente.\\
+%
+Come già fatto nella sezione \ref{m_chi_pesata}, prendiamo un intervallo di confidenza del 95 \%, per cui la probabilità di falso allarme
+è del 5 \%. In questo caso abbiamo 2 gradi di libertà, perché dai dati sono stati calcolati 2 parametri ($A$ e $B$). Calcolando l'intervallo
+di accettazione a partire dal livello di confidenza si ottiene che il risultato del test è positivo il $\chi^2$ è compreso tra 0 a 5.99. \\
+%
+Il valore calcolato dai dati del chi quadro è:
+
+\begin{equation*}
+	\chi_{oss}^2 \,=\, \frac{\sum_{i=0}^{\mathcal{N}} (\mathcal{T}_i - A - Bm_i)^2}{(\delta \mathcal{T}_i)^2} \,=\, 0.06
+\end{equation*}
+%
+Il chi quadro è molto basso, ma rientra nell'intervallo di valori ammissibili. Le incertezze sono quindi corrette.
+
+\subsubsection{Compatibilità della regressione}
+
+%Quindi non ci rimane altro che verificare se i due parametri così trovati risultano compatibili con quelli ipotizzati, ovvero A deve risultare compatibile con il periodo medio del pendolo calcolato grazie alla media pesata, mentre B deve risultare compatibile con lo 0 teorico. 
+
+Verifichiamo ora che il coefficiente angolare B sia compatibile con lo 0 teorico.
+Pertanto posto a priori un fattore di copertura $k = 3$:
 
 \begin{itemize}
-	\item{calcoliamo la discrepanza $R$ tra $\mathcal{T}$ ed A, ottenendo:
-			\begin{equation*}
-				R \,=\, \mathcal{T} - A \,=\, 0.005 \,s
-			\end{equation*}
+	%\item{calcoliamo la discrepanza $R$ tra $\mathcal{T}$ ed A, ottenendo:
+	%		\begin{equation*}
+	%			R \,=\, \mathcal{T} - A \,=\, 0.005 \,s
+	%		\end{equation*}
 			%
-			}
-	\item{verificiamo ora se $R \leq k\,\sigma[R]$, dove:
-			\begin{equation*}
-				\sigma[R] \,=\, \sqrt{(\delta \mathcal{T})^2 + (\delta A)} \,=\, 0.004  \, s \bigotimes
-			\end{equation*}
+	%		}
+	%\item{verificiamo ora se $R \leq k\,\sigma[R]$, dove:
+	%		\begin{equation*}
+	%			\sigma[R] \,=\, \sqrt{(\delta \mathcal{T})^2 + (\delta A)} \,=\, 0.004  \, s \bigotimes
+	%		\end{equation*}
 			%
-			pertanto otteniamo che:
-			\begin{equation*}
-				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.005 \, s \leq 0.013 \, s \bigotimes
-			\end{equation*}
-WARNING! qualcosa non quadra nelle moltiplicazioni, sono giuste?			
+	%		pertanto otteniamo che:
+	%		\begin{equation*}
+	%			R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.005 \, s \leq 0.013 \, s \bigotimes
+	%		\end{equation*}
+%WARNING! qualcosa non quadra nelle moltiplicazioni, sono giuste?			
 			
 			%
-			e quindi $\mathcal{T}$ risulta compatibile con A}
+	%		e quindi $\mathcal{T}$ risulta compatibile con A}
 	\item{troviamo ora la discrepanza $R$ tra $B$ ed il valore teorico 0, ottenendo:
 			\begin{equation*}
-				R \,=\, B - 0 \,=\, 0.0186
+				R \,=\, B - 0 \,=\, B \,=\, \SI{0.02}{\second\per\kilo\gram}
 			\end{equation*}
 			%
 			}
 	\item{controlliamo ora se $R \leq k\,\sigma[R]$, dove:
 			\begin{equation*}
-				\sigma[R] \,=\, \sqrt{(\delta A)^2} \,=\, 0.0147	
+				\sigma[R] \,=\, \delta B \,=\, \SI{0.01}{\second\per\kilo\gram}	
 			\end{equation*}
 			%
-			pertanto otteniamo che:
+			otteniamo che:
 			\begin{equation*}
-				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.0186 \leq 0.0441
+				R \leq k\,\sigma[R] \quad \text{in quanto} \quad 0.02 \leq 0.03
 			\end{equation*}
 			%
 			e quindi $B$ risulta compatibile con lo 0 teorico}			
 \end{itemize}
-Quindi grazie a questa breve analisi abbiamo trovato che le ipotesi fatte inizialmente risultano essere corrette in quanto abbiamo verificato che il periodo del pendolo non dipende dalla massa applicata, restringendoci a considerare il nostro modello a quello di pendolo semplice e considerando le masse puntiformi.
+Grazie a questa breve analisi abbiamo verificato per la seconda volta (la prima è stata fatta con il test del chi quadro nel caso della media
+pesata) che il periodo del pendolo non dipende dalla massa applicata.
 
 %A =  2.0510
 %B =  0.018602
