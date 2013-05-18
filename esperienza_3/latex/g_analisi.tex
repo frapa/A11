@@ -18,11 +18,11 @@
 			0.149 & 0.778 $\,\pm\,$ 0.004 & 9.68 $\,\pm\,$ 0.1 \\
         \bottomrule
     \end{tabular}
-    \caption{In questa tebella sono riportate nella prima colonna le misure della lunghezza del filo che sono tutte affette da un'incertezza di 0.0006 m ricavata nel paragrafo precedente al punto \ref{l_medie}. Nella seconda colonna sono riportati i valori medi del periodo di oscillazione del pendolo relativo a ciascuna lunghezza. Infine nella terza colonna sono riportati i valori di $g_i$ derivanti dai dati grazie all'equazione (\ref{eq:g}) e (\ref{eq:delta_g}). Per maggiori informazioni sulle prime due colonne si faccia riferimento alla tabella \ref{tab:l_dati}, che commenta anche l'origine delle misure e la loro incertezza.}
+    \caption{In questa tebella sono riportate nella prima colonna le misure della lunghezza del filo che sono tutte affette da un'incertezza di 0.0006 m ricavata nel paragrafo precedente al punto \ref{l_medie}. Nella seconda colonna sono riportati i valori medi del periodo di oscillazione del pendolo relativo a ciascuna lunghezza. Infine nella terza colonna sono riportati i valori di $g_i$ derivanti dai dati grazie alle equazioni (\ref{eq:g}) e (\ref{eq:delta_g}). Per maggiori informazioni sulle prime due colonne si faccia riferimento alla Tabella \ref{tab:l_dati}, che commenta anche l'origine delle misure e la loro incertezza.}
     \label{tab:calcolo_g}
 \end{SCtable}
 
-Facendo riferimento ai valori sperimentali dell'allungamento, $\ell_i$, e del periodo, $\mathcal{T}_i$, riportati nella tabella \ref{tab:calcolo_g} vogliamo calcolare l'accelerazione di gravità, $g_i$, per ognuno di essi sfruttando la relazione (\ref{eq:g}). Inoltre sappiamo che il valore così rovato di $g$ non è assoluo ma è affetto da un incertezza ($\delta g_i$) che possiamo stimare sfruttando la formula generale per la propagazione degli errori, ovvero:
+Facendo riferimento ai valori sperimentali dell'allungamento, $\ell_i$, e del periodo, $\mathcal{T}_i$, riportati nella tabella \ref{tab:calcolo_g} vogliamo calcolare l'accelerazione di gravità, $g_i$, per ognuno di essi sfruttando la relazione (\ref{eq:g}). Inoltre sappiamo che il valore così rovato di $g$ non è assoluo ma è affetto da un incertezza $\delta g_i$ che possiamo stimare sfruttando la formula generale per la propagazione degli errori, ovvero:
 
 \begin{equation*}
 (\delta g)^2 \, \simeq \, \left( \frac{\partial g}{\partial \ell} \right)^2 (\delta \ell)^2 \, + \, \left( \frac{\partial g}{\partial \mathcal{T}} \right)^2 (\delta \mathcal{T})^2
@@ -34,13 +34,15 @@ Pertanto sapendo che:
 (\delta g)^2 \, \simeq \, \left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \, + \, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2
 \end{equation*}
 %
-e quindi,possiamo riassumere che l'incertezza sul valote sperimentale dell'acelerazione di gravità relativo ad ogni singola misura è il seguente:
+e quindi, possiamo riassumere che l'incertezza sul valore sperimentale dell'accelerazione di gravità relativo ad ogni singola misura è il seguente:
 
 \begin{equation} \label{eq:delta_g}
 \delta g \,\, \simeq \,\, \sqrt{\left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2}
 \end{equation}
 %
 Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del calcolo dell'errore sull'accelerazione di gravità le inceretzze relative alla misura della lunghezza del pendolo sono meno influenti rispetto alle incertezze relative al periodo. Affermiamo questo perchè $\delta \ell$ risulta essere più piccolo di $\delta \mathcal{T}$ di un fattore dieci e sotto radice questa differenza si accentuerebbe e la loro differenza aumenterebbe di un fattore cento.
+
+WARNING! Controllare la correttezza della precedente affermazione $\bigotimes$
 %Ciononostante, esaminando la formula (\ref{eq:delta_g}), si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
 
 %\begin{figure}
@@ -49,5 +51,7 @@ Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del 
 %\end{figure}
 % togliere le domande e inserire le risposte !!
 
-Dai valori di $g_i$ ottenuti possiamo notare che questi risultano essere differenti tra di loro. Sicuramente una causa di questa diversità si può attribuire agli errori casuali, in quanto le misure del periodo di oscillazione del pendolo sono state effettuate tutte da uno stesso operatore, e quindi i dati sperimentali possono essere affetti da un errore casuale dovuto in parte alla prontezza di riflessi dell'operatore, che no è sempre costante. (In questo caso bisogna incolpare il nostro compagno davide Bazzanella per non essere riuscito a fare delle misure abbastana esatte del periodo da restituirci un valore di g spaccato con la predizione teorica!!! CATTIVO DAVIDE!!!). osservando il grafico \ref{fig:bho} non siamo in grado di affermare che i vari valori assunti da $g_i$ si possano attribuire ad un errore di natura sistematica, ad esempio da una dipendenza dalla lunghezza del filo o del periodo, in quanto questi non si può dire che vi sia un andamento residuo.\\
-Nonostante quanto detto sopra, ovvero che non si può osservare un andamento residuo dei dati dal grafico, possiamo dire che per il modello che abbiamo adottato nell'eseguire l'esperienza, ovvero quello di pendolo semlice dove il filo ha una massa trascurabile, e la massa applicata è concentrata in un solo punto, sarebbe necessario che la lunghezza del filo risultasse essere abbastanza maggiore rispetto all'altezza della massa appesa. Pertanto non ci sentiamo di escludere del tutto che le misure più accurate dell'accelerazione di gravità possano essere quelle prese per una lunghezza $\ell$ del filo relativamente maggiore rispetto alle dimensioni della massa applicata.
+Dai valori di $g_i$ ottenuti possiamo notare che questi risultano essere differenti tra di loro. Sicuramente una causa di questa diversità si può attribuire agli errori casuali, in quanto le misure del periodo di oscillazione del pendolo sono state effettuate tutte da uno stesso operatore, e quindi i dati sperimentali possono essere affetti da un errore casuale dovuto in parte alla prontezza di riflessi dell'operatore, che non è sempre costante. %(In questo caso bisogna incolpare il nostro compagno davide Bazzanella per non essere riuscito a fare delle misure abbastana esatte del periodo da restituirci un valore di g spaccato con la predizione teorica!!! CATTIVO DAVIDE!!!).
+% che simpaticoni xD LeL
+Osservando il grafico in Figura \ref{fig:bho} non siamo in grado di affermare che i vari valori assunti da $g_i$ si possano attribuire ad un errore di natura sistematica, ad esempio da una dipendenza dalla lunghezza del filo o del periodo, in quanto non si può dire che in questi vi sia un andamento residuo.\\
+Nonostante quanto detto sopra, ovvero che non si può osservare un andamento residuo dei dati dal grafico, possiamo dire che per il modello che abbiamo adottato nell'eseguire l'esperienza, ovvero quello di pendolo semplice dove il filo ha una massa trascurabile, e la massa applicata è concentrata in un solo punto, sarebbe necessario che la lunghezza del filo risultasse essere abbastanza maggiore rispetto all'altezza della massa appesa. Pertanto non ci sentiamo di escludere del tutto che le misure più accurate dell'accelerazione di gravità possano essere quelle prese per una lunghezza $\ell$ del filo relativamente maggiore rispetto alle dimensioni della massa applicata.

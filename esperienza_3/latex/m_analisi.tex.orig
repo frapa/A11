@@ -1,0 +1,140 @@
+\subsubsection{Considerazioni iniziali}
+In questa prima parte della relazione vogliamo verificare che il periodo di oscillazione del pendolo, a parità di lunghezza del filo, non dipende dalla massa applicatavi.
+Per fare questo abbiamo cronometrato il periodo di ocillazione del pendolo per tutte e quattro le masse a nostra disposizone.\\
+Poichè abbiamo utilizzato l'approssimazione di pendolo semplice, nel quale tutta la massa si considera applicata in un unico punto, è importante sottolineare che, quando è stata presa la misura del periodo relativo alla massa più piccola, abbiamo dovuto regolare la lunghezza del filo in modo che il baricentro della massa risultasse essere alla stessa distanza dal morsetto, a cui è applicato il filo, rispetto alle masse precedenti.\\
+Ricordiamo inoltre che per ottenere la lunghezza complessiva del filo si è seguita la seguente procedura: la lunghezza complessiva del filo è data da:
+
+\begin{equation}
+	l_{tot} \,=\, l_{filo} + \frac{h}{2} - l_{morsetto}
+\end{equation}
+%
+dove $l _{filo}$ è la lunghezza del filo misurata dall'estremo superiore del morsetto fino al punto di applicazione sulla massa, $l_{morsetto}$ è l'altezza del morsetto e $\frac{h}{2}$ è l'altezza che rappresenta il baricentro della massa.\\
+Pertanto l'errore sulla misura della lunghezza del filo sarà dato dalla propagazione dell'errore per la somma di misure indipendenti, ovvero:
+
+\begin{equation*}
+	\delta l_{tot} \,=\, \sqrt{(\sigma l_{filo})^2 + (\sigma \frac{h}{2})^2 + (\sigma l_{morsetto})^2}
+\end{equation*}
+%
+ricordando che le inceretzze relative alle varie misure sono le incertezze tipo ($\sigma l$), ovvero:
+
+\begin{equation*}
+	\sigma l \,=\, \frac{\Delta l}{\sqrt{12}}
+\end{equation*}
+%
+Le masse invece sono affette da un incertezza tipo pertanto ogni massa avrà la seguente incertezza:
+
+\begin{equation*}
+	\delta m \,=\, \frac{\Delta m}{\sqrt{12}} \,=\, 0.03 \,\, g
+\end{equation*}
+
+\subsubsection{Dati}
+
+Le masse che abbiamo applicato al filo da pesca sono quelle esposte nella seguente tabella,
+mentre nella tabella \ref{tab:masse_periodi} sono elencati tutti i periodi che abbiamo rilevato per ciascuna massa.
+
+\begin{center}
+	\begin{tabular}{c c c c}
+			\multicolumn{4}{c}{\textbf{Masse [g]}} \\
+	        \toprule
+	        Peso Bianco & Peso Argenteo & Peso Ottone piccolo & Peso Ottone \\
+	        \midrule
+	        88.9 & 162.7 & 202.0 & 670.4 \\ 
+	        \bottomrule
+	\end{tabular}
+\end{center}
+
+\begin{table}
+    \centering
+    \begin{tabular}{c c c c c c c}
+        \multicolumn{7}{c}{\textbf{Masse e periodi}} \\
+        \toprule
+        Massa [\si{\gram}] & \multicolumn{5}{c}{Periodi ($t$) [s]} & Media dei periodi ($\mathcal{T} \pm \delta \mathcal{T}$) [s] \\
+        \midrule
+            \multirow{2}{*}{88.9}	 & 2.018 & 2.076 & 2.020 & 2.058 & 2.048 &   \multirow{2}{*}{$2.053 \pm 0.006$} \\
+                                     & 2.072 & 2.068 & 2.090 & 2.048 & 2.040 & \\                     
+                                     & 2.062 & 2.076 & 2.022 & 2.046 & 2.054 & \\                    
+                        \midrule                                                                     
+            \multirow{2}{*}{162.7}	 & 2.052 & 2.058 & 2.080 & 2.062 & 2.070 &  \multirow{2}{*}{$2.053 \pm 0.004$} \\
+                                     & 2.042 & 2.076 & 2.048 & 2.040 & 2.036 & \\
+                                     & 2.040 & 2.032 & 2.046 & 2.070 & 2.048 & \\
+                        \midrule
+            \multirow{2}{*}{202.0}	 & 2.086 & 2.068 & 2.052 & 2.040 & 2.054 &   \multirow{2}{*}{$2.055 \pm 0.004$} \\
+                                     & 2.062 & 2.098 & 2.048 & 2.058 & 2.048 & \\
+                                     & 2.062 & 2.082 & 2.044 & 2.054 & 2.048 & \\
+                        \midrule
+            \multirow{2}{*}{486.7}	 & 2.040 & 2.058 & 2.032 & 2.062 & 2.068 &   \multirow{2}{*}{$2.060 \pm 0.004$} \\
+                                     & 2.068 & 2.056 & 2.032 & 2.072 & 2.092 & \\
+                                     & 2.048 & 2.062 & 2.056 & 2.050 & 2.034 & \\
+        \bottomrule
+    \end{tabular}
+<<<<<<< HEAD
+    \caption{La tabella riporta i periodi rilevati per ciascuna massa. I periodi elencati sono stati ottenuto dividendo per 5
+        i valori di lettura del cronometro, poiché abbiamo in realtà misurato 5 periodi alla volta per ridurre l'incertezza.
+        L'ultima colonna riporta i valor medi dei periodi con la loro incertezza, si veda il testo per maggiori informazioni.
+        L'incertezza tipo di risoluzione sui periodi vale \SI{6e-4}{\second}, mentre quella sulla massa vale \SI{0.03}{\gram}.
+        In entrambi i casi non si sono riportati le ultime cifre, nonostante l'incertezza sia di un ordine di grandezza inferiore,
+        poiché non porta informazione superare la risoluzione dello strumento.}
+    \label{tab:masse_periodi}
+\end{table}
+
+Dalle tabelle si può notare che il valore delle masse non presenta tante cifre significative come l'incertezza tipo che lo affligge,
+questo è dovuto al fatto che non avrebbe senso aggiungerne in quanto si andrebbe oltre la risoluzione della bilancia elettronica,
+fornendo così al lettore valori non coretti della misura.\\
+=======
+    \caption{CONTROLLARE PERIODI SE METTERLI GIA' DIVISI PER 5 O MENO E POI MEDIE... + COMMENTO TABELLA!!!}
+    \label{tab:masse_periodi}
+\end{table}
+
+Dalle tabelle si può notare che il valore delle masse non presenta tante cifre siglificative come l'incertezza tipo che lo affligge, questo è dovuto al fatto che non avrebbe senso aggiungerne in quanto andremmo oltre la risoluzione della bilancia elettronica, fornendo così al lettore valori non corretti della misura.\\
+>>>>>>> 589be695ee2a09bf0f9b1bb9dad6476c7b9a0f2f
+
+Ricordiamo che i valori di lettura da noi rilevati devono essere divise per un fattore 5 al fine di ottenere il valore del singolo periodo
+(che indicheremo con $t$, mentre riserveremo $\mathcal{T}$ per le medie dei periodi), poichè sono stati  cronometrati periodi di cinque oscillazioni. Per questo motivo l'errore tipo di risoluzione che affligge ogni singola misura di periodo sarà il seguente:
+
+\begin{equation*}
+	\delta t \,=\, \frac{1}{5} \, \frac{\Delta t}{\sqrt{12}} = \SI{6e-4}{\second}
+\end{equation*}
+%
+dove $\frac{\Delta t}{\sqrt{12}}$ rappresenta l'intervallo di incertezza tipo sulla misura del periodo singolo, mentre
+$\Delta t = \SI{0.01}{\second}$ indica la risoluzione di misura del cronometro.\\
+Procediamo ora calcolando la media dei periodi ($\mathcal{T}$) per le quattro masse da noi considerate. Per ogni massa
+abbiamo calcolato:
+
+\begin{equation*}
+	\mathcal{T} \,=\, m^*[t] \,=\, \frac{\sum_{i}^{N} t_i}{N}
+\end{equation*}
+%
+dove $N = 15$ è il numero di misure per ogni massa e $t_i$ indica la misura $i$-esima di periodo
+relativa alla massa considerata. L'errore sulla media dei periodi risulta essere:
+
+\begin{equation*}
+	\delta \mathcal{T} \,=\, \frac{1}{\sqrt{N}} \, \tilde\sigma[\mathcal{T}] \quad \text{dove} \quad \tilde\sigma[\mathcal{T}]
+    \,=\, \frac{1}{N-1} \sum_{i}^{N} (t_i - m^*[t])^2
+\end{equation*}
+%
+Pertanto otteniamo i seguenti valori di periodo per le quattro masse applicate (riportati anche in tabella \ref{tab:masse_periodi}):
+\begin{itemize}
+	\item{ massa da ($\,88.9 \pm 0.03\,$) g: $\mathcal{T}_1 \pm \delta\mathcal{T}_1 \,=\, (\,2.053  \pm 0.006\,)$ s}
+	\item{ massa da ($\,162.7 \pm 0.03\,$) g: $\mathcal{T}_2 \pm \delta\mathcal{T}_2 \,=\, (\,2.053 \pm 0.004\,)$ s}
+	\item{ massa da ($\,202.0 \pm 0.03\,$) g: $\mathcal{T}_3 \pm \delta\mathcal{T}_3 \,=\, (\,2.055 \pm 0.004\,)$ s}
+	\item{ massa da ($\,496.7 \pm 0.03\,$) g: $\mathcal{T}_4 \pm \delta\mathcal{T}_4 \,=\, (\,2.060 \pm 0.004\,)$ s}
+\end{itemize}
+
+%Periodi 2.0532   2.0533   2.0603   2.0553
+%Incertezza    0.0056621   0.0039637   0.0043496   0.0043487
+
+%Dal momento che lo scopo di questa prima analisi è quella di verificare se sussiste una dipendenza tra periodo di oscillazione del pendolo e massa applicatavi, procediamo con l'analizzare il \ref{grafico masse vs periodi}.\\
+%Come si può notare, non siamo in grado di individuare le rette di massima e minima pendenza in quanto le barre di errore risultano essere troppo piccole, anche rispetto alla rappresentazione puntiforme del dato nel grafico. Ciononostante osserviamo che la retta sembra essere una retta costante e pertanto possiamo ipotizzare che il valore del suo coefficiente angolare dovrebbe essere zero.\\
+%Questa ipotesi non semra essere così errata in quanto è stato provato ripetutamente che la legge del pendolo applicata ad un modello di pendolo semplice per piccole oscillazioni mostra che il periodo di ocsillazione non dipende dalla massa applicata al filo. 
+
+%Nonostante questo possiamo provare a calcolare il coefficiente angolare della retta per avere una minima %idea del valore che esso assume. Pertantio il coefficiente angolare della retta sarà ricavato come segue:
+
+%\begin{equation*}
+%	\text{k} \,=\, \frac{t_4 - t_1}{m_4 - m_1} 
+%\end{equation*}
+%
+%e l'errore che affligge questa misura si puòricavare nel seguente modo:
+
+%\begin{equation}
+%	\frac{(\delta k)^2}{k^2} \,=\, \frac{\delta}{•}
+%\end{equation}

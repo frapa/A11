@@ -4,7 +4,11 @@ Come prima operazione definiamo la seguente funzione $f$
 	f(m) \,:=\, A + B m 
 \end{equation}
 %
-dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo (?????????????????), $m$ la massa applicata al pendolo e A una costante che nel nostro caso è il valore della media pesata dei periodi $\mathcal{T}$.\\
+<<<<<<< HEAD
+dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo (????????), $m$ la massa applicata al pendolo e A una costante che nel nostro caso particolare è il valore della media pesata dei periodi ($\mathcal{T}$).\\
+=======
+dove B rappresenta il coefficiente angolare della retta, che assumiamo nullo, $m$ la massa applicata al pendolo e A una costante che nel nostro caso è il valore della media pesata dei periodi $\mathcal{T}$.\\
+>>>>>>> 589be695ee2a09bf0f9b1bb9dad6476c7b9a0f2f
 
 \begin{SCfigure}
     \centering
