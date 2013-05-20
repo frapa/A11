@@ -5,14 +5,14 @@ Poichè abbiamo utilizzato l'approssimazione di pendolo semplice, nel quale tutt
 Ricordiamo inoltre che per ottenere la lunghezza complessiva del filo si è seguita la seguente procedura: la lunghezza complessiva del filo è data da:
 
 \begin{equation}
-	l_{tot} \,=\, l_{filo} + \frac{h}{2} - l_{morsetto}
+	l\ped{tot} \,=\, l\ped{filo} + \frac{h}{2} - l\ped{mors}
 \end{equation}
 %
-dove $l _{filo}$ è la lunghezza del filo misurata dall'estremo superiore del morsetto fino al punto di applicazione sulla massa, $l_{morsetto}$ è l'altezza del morsetto e $\frac{h}{2}$ è l'altezza che rappresenta il baricentro della massa.\\
+dove $l\ped{filo}$ è la lunghezza del filo misurata dall'estremo superiore del morsetto fino al punto di applicazione sulla massa, $l\ped{mors}$ è l'altezza del morsetto e $\frac{h}{2}$ è l'altezza che rappresenta il baricentro della massa.\\
 Pertanto l'errore sulla misura della lunghezza del filo sarà dato dalla propagazione dell'errore per la somma di misure indipendenti, ovvero:
 
 \begin{equation*}
-	\delta l_{tot} \,=\, \sqrt{(\sigma l_{filo})^2 + (\sigma \frac{h}{2})^2 + (\sigma l_{morsetto})^2}
+	\delta l\ped{tot} \,=\, \sqrt{(\sigma l\ped{filo})^2 + (\sigma \frac{h}{2})^2 + (\sigma l\ped{mors})^2}
 \end{equation*}
 %
 ricordando che le inceretzze relative alle varie misure sono le incertezze tipo ($\sigma l$), ovvero:
@@ -58,13 +58,13 @@ mentre nella tabella \ref{tab:masse_periodi} sono elencati tutti i periodi che a
                                      & 2.042 & 2.076 & 2.048 & 2.040 & 2.036 & \\
                                      & 2.040 & 2.032 & 2.046 & 2.070 & 2.048 & \\
                         \midrule
-            \multirow{2}{*}{202.0}	 & 2.086 & 2.068 & 2.052 & 2.040 & 2.054 &   \multirow{2}{*}{$2.055 \pm 0.004$} \\
-                                     & 2.062 & 2.098 & 2.048 & 2.058 & 2.048 & \\
-                                     & 2.062 & 2.082 & 2.044 & 2.054 & 2.048 & \\
+            \multirow{2}{*}{202.0}	& 2.040 & 2.058 & 2.032 & 2.062 & 2.068 &     \multirow{2}{*}{$2.055 \pm 0.004$} \\
+                                     & 2.068 & 2.056 & 2.032 & 2.072 & 2.092 &  \\
+                                     & 2.048 & 2.062 & 2.056 & 2.050 & 2.034 &  \\
                         \midrule
-            \multirow{2}{*}{486.7}	 & 2.040 & 2.058 & 2.032 & 2.062 & 2.068 &   \multirow{2}{*}{$2.060 \pm 0.004$} \\
-                                     & 2.068 & 2.056 & 2.032 & 2.072 & 2.092 & \\
-                                     & 2.048 & 2.062 & 2.056 & 2.050 & 2.034 & \\
+            \multirow{2}{*}{486.7}& 2.086 & 2.068 & 2.052 & 2.040 & 2.054 &	   \multirow{2}{*}{$2.060 \pm 0.004$} \\
+                                  & 2.062 & 2.098 & 2.048 & 2.058 & 2.048 &   \\
+                                  & 2.062 & 2.082 & 2.044 & 2.054 & 2.048 &   \\
         \bottomrule
     \end{tabular}
     \caption{La tabella riporta i periodi rilevati per ciascuna massa. I periodi elencati sono stati ottenuto dividendo per 5

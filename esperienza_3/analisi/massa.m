@@ -57,6 +57,9 @@ chi2_T = chi2(T, masse, sigma_tot_T, media_T, 0)
 
 # non si fa il trasferimento incertezza poiché
 # il B stimato è 0
+stima_B = (T(4) - T(1))/(masse(4) - masse(1))
+stima_B * 3e-5
+#new_sigma_tot_T = sqrt(sigma_tot_T.^2 + (stima_b * sigma_res_m).^2)
 
 # regressione lineare
 [A, B, sigma_A, sigma_B] = fit(T, masse, w)
