@@ -5,21 +5,17 @@ Poichè abbiamo utilizzato l'approssimazione di pendolo semplice, nel quale tutt
 Ricordiamo inoltre che per ottenere la lunghezza complessiva del filo si è seguita la seguente procedura: la lunghezza complessiva del filo è data da:
 
 \begin{equation}
-	l\ped{tot} \,=\, l\ped{filo} + \frac{h}{2} - l\ped{mors}
+	l\ped{tot} \,=\, l\ped{filo} + \frac{h}{2} - l\ped{mors} = \SI{1.053}{\meter}
 \end{equation}
 %
 dove $l\ped{filo}$ è la lunghezza del filo misurata dall'estremo superiore del morsetto fino al punto di applicazione sulla massa, $l\ped{mors}$ è l'altezza del morsetto e $\frac{h}{2}$ è l'altezza che rappresenta il baricentro della massa.\\
 Pertanto l'errore sulla misura della lunghezza del filo sarà dato dalla propagazione dell'errore per la somma di misure indipendenti, ovvero:
 
 \begin{equation*}
-	\delta l\ped{tot} \,=\, \sqrt{\sigma (l\ped{filo})^2 + \sigma (\frac{h}{2})^2 + \sigma (l\ped{mors})^2}
+	\delta l\ped{tot} \,=\, \sqrt{\sigma (l\ped{filo})^2 + \sigma (\frac{h}{2})^2 + \sigma (l\ped{mors})^2} = \SI{6e-4}{\meter}
 \end{equation*}
 %
-ricordando che le inceretzze relative alle varie misure sono le incertezze tipo $\sigma (l)$, ovvero:
-
-\begin{equation*}
-	\sigma (l) \,=\, \frac{\Delta l}{\sqrt{12}} \,\, \simeq \,\, \SI{6e-4}{\meter}
-\end{equation*}
+Per maggiori informazioni su questi calcoli, si veda il paragrafo \ref{l_medie} dove sono trattati più approfonditamente.\\
 %
 Le masse invece sono affette da un incertezza tipo pertanto ogni massa avrà la seguente incertezza:
 
