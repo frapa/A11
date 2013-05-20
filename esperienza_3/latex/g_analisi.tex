@@ -1,4 +1,4 @@
-\begin{SCtable}
+\begin{SCtable}[][b]
     \centering
     \begin{tabular}{c c c}
         \multicolumn{3}{c}{\textbf{Lunghezze, periodi e accelerazione ricavata}} \\
@@ -40,18 +40,24 @@ e quindi, possiamo riassumere che l'incertezza sul valore sperimentale dell'acce
 \delta g \,\, \simeq \,\, \sqrt{\left( \frac{2 \pi}{\mathcal{T}} \right)^4 (\delta \ell)^2 \,\, + \,\, \left( \frac{8 \pi^2 \ell}{\mathcal{T}^3} \right)^2 (\delta \mathcal{T})^2}
 \end{equation}
 %
-Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del calcolo dell'errore sull'accelerazione di gravità le inceretzze relative alla misura della lunghezza del pendolo sono meno influenti rispetto alle incertezze relative al periodo. Affermiamo questo perchè $\delta \ell$ risulta essere più piccolo di $\delta \mathcal{T}$ di un fattore dieci e sotto radice questa differenza si accentuerebbe e la loro differenza aumenterebbe di un fattore cento.
+Sempre analizzando i dati da noi raccolti ci possiamo accorgere che al fine del calcolo dell'errore sull'accelerazione di gravità le inceretzze relative alla misura della lunghezza del pendolo sono meno influenti rispetto alle incertezze relative al periodo. 
+Infatti per $\ell$ piccoli si osserva che $\delta \ell$ ha una influenza maggiore di  $\delta \mathcal{T}$ nel calcolo di $d_g$, mentre per  $\ell$ grandi si osserva l'opposto.
+
+
+Affermiamo questo perchè $\delta \ell$ risulta essere più piccolo di $\delta \mathcal{T}$ di un fattore dieci e sotto radice questa differenza si accentuerebbe e la loro differenza aumenterebbe di un fattore cento.
 
 WARNING! Controllare la correttezza della precedente affermazione $\bigotimes$
 %Ciononostante, esaminando la formula (\ref{eq:delta_g}), si può notare come al decrescere del valore di $\ell_i$ diminusica l'influenza di $\delta\mathcal{T}$ e aumenti quella di $\delta\ell$.
 
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=120mm]{immagini/}
-%\end{figure}
-% togliere le domande e inserire le risposte !!
+\begin{SCfigure}
+	\centering
+	\includegraphics[width=120mm]{immagini/gravita.pdf}
+	\label{fig:gravita}
+	\caption{Il grafico rappresenta la dipendenza dell'accelerazione di gravità dalla lunghezza del pendolo, evidenziando le incertezze relative ad ogni valore. Si può notare come le incertezze relative a $\ell$ minori siano in genere più elevate rispetto a quelle relative a $\ell$ maggiori. Non è possibile osservare alcun andamento residuo, ad esclusione del celeberrimo andamento residuo a dinosauro}
+%Notiamo in noto andamento residuo a dinosaurola nota correlazione a dinosauro
+\end{SCfigure}
 
 Dai valori di $g_i$ ottenuti possiamo notare che questi risultano essere differenti tra di loro. Sicuramente una causa di questa diversità si può attribuire agli errori casuali, in quanto le misure del periodo di oscillazione del pendolo sono state effettuate tutte da uno stesso operatore, e quindi i dati sperimentali possono essere affetti da un errore casuale dovuto in parte alla prontezza di riflessi dell'operatore, che non è sempre costante. %(In questo caso bisogna incolpare il nostro compagno davide Bazzanella per non essere riuscito a fare delle misure abbastana esatte del periodo da restituirci un valore di g spaccato con la predizione teorica!!! CATTIVO DAVIDE!!!).
 % che simpaticoni xD LeL
-Osservando il grafico in Figura \ref{fig:bho} non siamo in grado di affermare che i vari valori assunti da $g_i$ si possano attribuire ad un errore di natura sistematica, ad esempio da una dipendenza dalla lunghezza del filo o del periodo, in quanto non si può dire che in questi vi sia un andamento residuo.\\
+Osservando il grafico in Figura \ref{fig:gravita} non siamo in grado di affermare che i vari valori assunti da $g_i$ si possano attribuire ad un errore di natura sistematica, ad esempio da una dipendenza dalla lunghezza del filo o del periodo, in quanto non si può dire che in questi vi sia un andamento residuo.\\
 Nonostante quanto detto sopra, ovvero che non si può osservare un andamento residuo dei dati dal grafico, possiamo dire che per il modello che abbiamo adottato nell'eseguire l'esperienza, ovvero quello di pendolo semplice dove il filo ha una massa trascurabile, e la massa applicata è concentrata in un solo punto, sarebbe necessario che la lunghezza del filo risultasse essere abbastanza maggiore rispetto all'altezza della massa appesa. Pertanto non ci sentiamo di escludere del tutto che le misure più accurate dell'accelerazione di gravità possano essere quelle prese per una lunghezza $\ell$ del filo relativamente maggiore rispetto alle dimensioni della massa applicata.
