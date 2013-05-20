@@ -69,7 +69,20 @@ Poiché sappiamo che $\mathcal{T} = 10^Y$, con la propagazione dell'incertezza o
 dove con $\delta \mathcal{T}\ped{corr}$ e $\delta Y\ped{corr}$ indichiamo rispettivamente le incertezze corrette sul periodo e sulle $Y$.
 Le nuove incertezze sul periodo $\delta \mathcal{T}\ped{corr}$ si riferiscono alle medie di dieci misure, per cui,
 per ottenere l'incertezza corretta per ogni misura occorre moltiplicare questa incertezza per $\sqrt{N}$ dove $N = 10$
-indica il numero di misure di periodi effettuate per ogni lunghezza.
+indica il numero di misure di periodi effettuate per ogni lunghezza. Inoltre ogni singola misura è stata ottenuta dividendo per 5 il valore
+di lettura del cronometro, per cui occorre moltiplicare per cinque l'errore. L'incertezza corretta sul valore di lettura del cronometro
+vale quindi
+
+\begin{equation}
+    \delta \mathcal{T}\ped{lettura} = 5\, \sqrt{10}\: \delta \mathcal{T}\ped{corr}
+\end{equation}
+
+Le incertezze così ottenute, riferite al valore di lettura del cronometro, variano da un minimo di circa \SI{0.08}{\second} ad un massimo
+di circa \SI{0.18}{\second}. Questi valori sono troppo alti per essere dovuti solamente all'operatore. Se sembra infatti convincente
+che un errore sistematico dovuto all'operatore possa avere un entità di qualche centesimo di secondo (fino ad un decimo), è
+molto più difficile che si arrivi ad un errore di \SI{0.18}{\second}. Dobbiamo quindi dedurre che abbiamo un errore sistematico
+sconosciuto di cui non sappiamo la causa. Tuttavia arrivati a questo punto proseguiamo comunque con il resto della relazione, dando
+per buone le incertezze a posteriori, tenendo comunque presente che c'è una causa di errore ignota.
 
 \subsubsection{Conclusione della regressione}
 
