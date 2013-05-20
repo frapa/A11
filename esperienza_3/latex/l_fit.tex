@@ -103,11 +103,13 @@ Procediamo ora con il calcolo dei parametri A e b tramite regressione lineare.
 La regressione si basa sulla minimizzazione della funzione
 
 \begin{equation}
-    \sum_{i=1}^N \frac{(Y_i - A - bX_i)^2}{(\delta Y_i^{\text{tot}})^2}
+    \sum_{i=1}^\mathcal{N} \frac{(Y_i - A - bX_i)^2}{(\delta Y_i^{\text{tot}})^2}
     \qquad \qquad \text{dove} \quad
     \delta Y_i^{\text{tot}} = \sqrt{\delta Y_i^2 + b^2 \delta X_i^2}
     \label{eq:min_quad}
 \end{equation}
+%
+dove $\mathcal{N} = 10$ indica il numero di lunghezze testare.
 
 Questa funzione misura la discrepanza tra legge lineare e dati sperimentali. Minimizzando la (\ref{eq:min_quad}) si ottengono
 i valori di $A$ e $b$, ovvero la retta, che interpretano in modo ``migliore'' i dati.
