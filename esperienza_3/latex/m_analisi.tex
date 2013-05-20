@@ -12,13 +12,13 @@ dove $l\ped{filo}$ è la lunghezza del filo misurata dall'estremo superiore del 
 Pertanto l'errore sulla misura della lunghezza del filo sarà dato dalla propagazione dell'errore per la somma di misure indipendenti, ovvero:
 
 \begin{equation*}
-	\delta l\ped{tot} \,=\, \sqrt{(\sigma l\ped{filo})^2 + (\sigma \frac{h}{2})^2 + (\sigma l\ped{mors})^2}
+	\delta l\ped{tot} \,=\, \sqrt{\sigma (l\ped{filo})^2 + \sigma (\frac{h}{2})^2 + \sigma (l\ped{mors})^2}
 \end{equation*}
 %
-ricordando che le inceretzze relative alle varie misure sono le incertezze tipo ($\sigma l$), ovvero:
+ricordando che le inceretzze relative alle varie misure sono le incertezze tipo $\sigma (l)$, ovvero:
 
 \begin{equation*}
-	\sigma l \,=\, \frac{\Delta l}{\sqrt{12}}
+	\sigma l \,=\, \frac{\Delta l}{\sqrt{12}} \,\, \simeq \,\, \SI{6e-4}{\meter}
 \end{equation*}
 %
 Le masse invece sono affette da un incertezza tipo pertanto ogni massa avrà la seguente incertezza:
@@ -89,7 +89,7 @@ Ricordiamo che i valori di lettura da noi rilevati devono essere divise per un f
 %
 dove $\frac{\Delta t}{\sqrt{12}}$ rappresenta l'intervallo di incertezza tipo sulla misura del periodo singolo, mentre
 $\Delta t = \SI{0.01}{\second}$ indica la risoluzione di misura del cronometro.\\
-Procediamo ora calcolando la media dei periodi ($\mathcal{T}$) per le quattro masse da noi considerate. Per ogni massa
+Procediamo ora calcolando la media dei periodi $\mathcal{T}$ per le quattro masse da noi considerate. Per ogni massa
 abbiamo calcolato:
 
 \begin{equation*}
