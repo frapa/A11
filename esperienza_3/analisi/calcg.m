@@ -1,4 +1,4 @@
-source("lunghezza.m")
+source("lunghezza.m");
 
 %  calcolo delta_g dalla tabella
 gi = (2*pi./ T).^2 .* Ls;
