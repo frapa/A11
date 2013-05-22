@@ -4,7 +4,9 @@ from matplotlib import pyplot as plt
 
 L = (1.0525, 0.9485, 0.8485, 0.7485, 0.6485, 0.5485, 0.4485, 0.3485, 0.2485, 0.14855)
 g = (9.7786, 9.8744, 9.7248, 9.7675, 9.8825, 9.9323, 9.9359, 9.7661, 9.6534, 9.6839)
-dg = (0.054950, 0.039160, 0.028675, 0.038304, 0.039992, 0.071028, 0.059261, 0.068663, 0.075449, 0.105184)
+#dg = (0.054950, 0.039160, 0.028675, 0.038304, 0.039992, 0.071028, 0.059261, 0.068663, 0.075449, 0.105184)
+
+dg = (0.105397, 0.075109, 0.054997, 0.073466, 0.076702, 0.136232, 0.113658, 0.131688, 0.144696, 0.201708)
 
 g1 = 9.8
 g3 = 9.81
@@ -17,7 +19,7 @@ dots = ax.errorbar(x=L, y=g,
     yerr=dg, #xerr=sigma_res_p, 
     fmt='o', capsize=7)
 
-ax.set_xlabel(u'Lunghezza del filo [m]', labelpad=12, fontsize=14)
+ax.set_xlabel(u'Lunghezza del pendolo [m]', labelpad=12, fontsize=14)
 ax.set_ylabel(u'Accelerazione di gravità (g) [m/s$^2$]', labelpad=12, fontsize=14)
 
 fit1 = ax.errorbar(x=(0, 1.2), y=(g1, g1))
