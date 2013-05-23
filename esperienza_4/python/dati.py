@@ -18,19 +18,38 @@ h0 = 0.98
 
 theta = temperature
 theta1 = temperature[:22]
+theta1g = theta1[:11]
+theta1s = theta1[11:]
 theta2 = temperature[22:]
+theta2g = theta2[:11]
+theta2s = theta2[11:]
 
 ris_theta = 0.01
 dtheta = ris_theta / sqrt(12)
 
 H = altezze
 H1 = altezze[:22]
+H1g = H1[:11]
+H1s = H1[11:]
 H2 = altezze[22:]
+H2g = H2[:11]
+H2s = H2[11:]
 
 h = [dato - h0 for dato in H]
 h1 = h[:22]
+h1g = h1[:11]
+h1s = h1[11:]
 h2 = h[22:]
+h2g = h2[:11]
+h2s = h2[11:]
 
 ris_h = 0.001
 dH = ris_h / sqrt(12)
 dh = dH * sqrt(2)
+
+# dati fit
+A_1 = -0.77568
+B_1 =  0.038037
+
+A_2 = -0.98683
+B_2 =  0.042153
