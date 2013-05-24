@@ -51,3 +51,6 @@ sigma_P = d * g * sigma_H;
 
 [A1, B1, dA1, dB1] = fit(P1, T1, ones(1, 22) * sigma_P .^ -2)
 [A2, B2, dA2, dB2] = fit(P2, T2, ones(1, 23) * sigma_P .^ -2)
+
+T0_1 = - A1 / B1
+T0_2 = - A2 / B2
