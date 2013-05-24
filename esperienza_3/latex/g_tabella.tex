@@ -28,12 +28,16 @@ dove $N = 10$ è il numero di valori $g_i$ calcolati e $\delta g_i$ è l'incerte
 l'errore poiché si tratta di una retta costante (e quindi parallela all'asse delle ascisse), pertanto il suo coefficiente angolare
 è nullo.
 
+Il valore teorico del chi quadro è uguale al numero di gradi di libertà $\nu$, che in questo caso sono  $\nu = 9$.
+L'incertezza sul chi teorico vale $\sqrt{2\,\nu} = \sqrt{18} \simeq 4$. Il chi quadro calcolato sopra è quindi compatibile entro
+un sigma con il chi quadro teorico.
+
 \subsubsection{Secondo metodo: distribuzione dei valori}
 
 Il secondo metodo che utilizziamo è quello di considerare la distribuzione dei valori $g_i$, cioè calcolarne il valore medio $m^*[g_i]$ e lo scarto quadratico medio della distribuzione dei valori medi $\sigma[m^*[g_i]]$.
 
 \begin{equation*}
-g_s \, = \, m^*[g_i] \, = \, \frac{\sum g_i}{N} \quad\quad \text{e} \quad\quad \delta g_s \, = \, \sigma[g_i] \,\, = \,\, \frac{1}{\sqrt{N}}\sqrt{\frac{\sum (g_i - m^*[g_i])^2}{N-1}}
+g_s \, = \, m^*[g_i] \, = \, \frac{\sum_i g_i}{N} \quad\quad \text{e} \quad\quad \delta g_s \, = \, \sigma[g_i] \,\, = \,\, \frac{1}{\sqrt{N}}\sqrt{\frac{\sum_i (g_i - m^*[g_i])^2}{N-1}}
 \end{equation*}
 %
 da cui si ricava il valore:

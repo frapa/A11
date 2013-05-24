@@ -1,56 +1,65 @@
-#	input dati
-%	0,11 discesa1 12,22 salita1 
-%	23,34 discesa2 35,35 salita2
+# input dati
+
+% 0,11 discesa1 12,22 salita1 
+% 23,34 discesa2 35,35 salita2
+
 dati = csvread("../dati/temp_vs_pos.csv");
 posizione = dati(:,1)';	% posizione in metri
 temperatura = dati(:,2)';	% temperatura in °C
+T1 = temperatura(1:22);
+T2 = temperatura(23:end);
 
-#	errori di risoluzione
-%	temperatura
+# errori di risoluzione
+
+% temperatura
 delta_T_ris = 0.01;
-sigma_T_ris = delta_T_ris / 2;
-sigma_T1 = sqrt(sigma_T_ris^2 + 0.2^2);
-sigma_T2 = sqrt(sigma_T_ris^2 + 0.25^2);
-%	posizione
-delta_pos_ris = 0.001;
-sigma_pos_ris = delta_pos_ris ./2;
+sigma_T_ris = delta_T_ris / sqrt(12);
+sigma_T1 = sigma_T_ris;
+sigma_T2 = sigma_T_ris;
 
-# ----------------------------------------------------------------------- #
+% posizione
+delta_pos_ris = 0.001;
+sigma_pos_ris = delta_pos_ris / sqrt(12);
+
 
 #	definizioni preliminari
 %	accelerazione di gravità
-g = 9.807;
+g = 9.806;
 %	densità dell'acqua
-%d = 1;	% kg * dm^(-3)
 d = 1000;	% kg * m^(-3)
 %	posizione iniziale
 pos0 = 0.980;
 %	pressione atmosferica ideale
-Pa = 0.97*10^5;%100000;
+Pa = 0.97*10^5; #??????????????????
 Pa1 = 0.96*10^5;
 Pa2 = 0.97*10^5;
 
-# ----------------------------------------------------------------------- #
 
-#	altezza h:
-%	valori
+# dislivello h:
 H = posizione .- pos0;
-%	errori
-sigma_H = sqrt(2) .* sigma_pos_ris;	% <-- sqrt(2*pos_sigma_ris^2)
-%	stimo l'errore trasferito
-[A1, B1, sA1, sB1] = fit(H(1:22),temperatura(1:22),ones(1,22).*sigma_H^(-2));
-sigma_H1 = sqrt(sigma_H^2 + B1^2 * sigma_T1^2)			% stima per il Io set di dati
-[A2, B2, sA2, sB2] = fit(H(23:45),temperatura(23:45),ones(1,23).*sigma_H^(-2));
-sigma_H2 = sqrt(sigma_H^2 + B2^2 * sigma_T2^2)			% stima per il IIo set di dati
+H1 = H(1:22); # primo giorno
+H2 = H(23:end); # secondo giorno
+% errori
+sigma_H = sqrt(2) .* sigma_pos_ris
+
+
+% stimo l'errore trasferito
+[A1, B1, sA1, sB1] = fit(H1, T1, ones(1, 22)*sigma_H^(-2));
+% stima per il Io set di dati
+sigma_H1_tot = sqrt(sigma_H^2 + B1^2 * sigma_T_ris^2)
+
+[A2, B2, sA2, sB2] = fit(H2, T2, ones(1, 23)*sigma_H^(-2));
+% stima per il IIo set di dati
+sigma_H2_tot = sqrt(sigma_H^2 + B2^2 * sigma_T_ris^2)
 
 # ----------------------------------------------------------------------- #
 
 #	regresione lineare
 %[A, B, sA, sB] = fit(H(1:45),temperatura(1:45),ones(1,45).*sigma_H^(-2))
 %" "
-[A_1, B_1, sA_1, sB_1] = fit(H(1:22),temperatura(1:22),ones(1,22).*sigma_H1^(-2))
+[A_1, B_1, sA_1, sB_1] = fit(H1, T1, ones(1, 22)*sigma_H1_tot^(-2))
 " "
-[A_2, B_2, sA_2, sB_2] = fit(H(23:45),temperatura(23:45),ones(1,23).*sigma_H2^(-2))
+[A_2, B_2, sA_2, sB_2] = fit(H2, T2, ones(1, 23)*sigma_H2_tot^(-2))
 " "
 %[A_d1, B_d1, sA_d1, sB_d1] = fit(posizione(1:11),temperatura(1:11),sigma_H^(-2))
 %[A_s1, B_s1, sA_s1, sB_s1] = fit(posizione(12:22),temperatura(12:22),sigma_H^(-2))
@@ -60,8 +69,8 @@ sigma_H2 = sqrt(sigma_H^2 + B2^2 * sigma_T2^2)			% stima per il IIo set di dati
 #	X^2
 %chi = chi2(H(1:45),temperatura(1:45),sigma_H,A,B)
 %" "
-chi_1 = chi2(H(1:22),temperatura(1:22),sigma_H1,A_1,B_1)
-chi_2 = chi2(H(23:45),temperatura(23:45),sigma_H2,A_2,B_2)
+chi_1 = chi2(H1, T1, sigma_H1, A_1, B_1)
+chi_2 = chi2(H2, T2, sigma_H2, A_2, B_2)
 " "
 %chi_d1 = chi2(H(1:11),temperatura(1:11),sigma_H,A_d1,B_d1)
 %chi_s1 = chi2(H(12:22),temperatura(12:22),sigma_H,A_s1,B_s1)
@@ -78,10 +87,3 @@ T0_2 = (Pa2 .+d*g*A_2)./(d*g*B_2)	%.*1.29315
 %T0_s1 = (Pa .+d*g*A_s1)./(d*g*B_s1)
 %T0_d2 = (Pa .+d*g*A_d2)./(d*g*B_d2)
 %T0_s2 = (Pa .+d*g*A_s2)./(d*g*B_s2)
-
-# ----------------------------------------------------------------------- #
-%	cagate
-
-%[A, B, sA, sB] = fit(temperatura(1:22),H(1:22),25.*ones(1,22))
-%chi = chi2(temperatura(1:22),H(1:22),0.2.*ones(1,22),A,B)
-%T0 = (Pa .+d*g./A)./(d*g./B)
