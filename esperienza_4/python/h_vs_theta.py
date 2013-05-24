@@ -56,10 +56,10 @@ serie2s = ax3.errorbar(x=theta2s, y=[a - A_2 - B_2*t for t, a in zip(theta2s, h2
 fit02 = ax3.errorbar(x=(0, 25), y=(0, 0))
 
 ax2.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
-ax2.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+ax2.set_ylabel(ur'Residuo [m]', fontsize=14)
 
 ax3.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
-ax3.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+ax3.set_ylabel(ur'Residuo [m]', fontsize=14)
 
 ax2.grid(True)
 ax3.grid(True)
@@ -67,33 +67,57 @@ ax3.grid(True)
 f2.subplots_adjust(left=0.10, bottom=0.15, top=0.85, right=0.95, wspace=0.25)
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-f3 = plt.figure(figsize=(12, 6))
+f4 = plt.figure(figsize=(8, 6))
 
-ax4 = f3.add_subplot(1, 2, 1)
-ax5 = f3.add_subplot(1, 2, 2)
+ax6 = f4.add_subplot(1, 1, 1)
 
 # dati primo pomeriggio
-serie1 = ax4.errorbar(x=theta1, y=[a - A_1 - B_1*t for t, a in zip(theta1, h1)],
-    xerr=dtheta, yerr=dh,
+serie41 = ax6.errorbar(x=theta1, y=p1,
     fmt='.')
 
-fit01 = ax4.errorbar(x=(0, 25), y=(0, 0))
+fit41 = ax6.errorbar(x=(0, 25), y=(88634, 88634 + 372.42*25))
 
-serie2 = ax5.errorbar(x=theta2, y=[a - A_2 - B_2*t for t, a in zip(theta2, h2)],
-    xerr=dtheta, yerr=dh,
+# dati secondo lunedì
+serie42 = ax6.errorbar(x=theta2, y=p2,
     fmt='.')
+    
+fit42 = ax6.errorbar(x=(0, 25), y=(87792, 87792 + 400.76*25))
 
-fit02 = ax5.errorbar(x=(0, 25), y=(0, 0))
+ax6.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
+ax6.set_ylabel(ur'Pressione $P$ [Pa]', fontsize=14)
 
-ax4.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
-ax4.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+ax6.grid(True)
 
-ax5.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
-ax5.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+f4.subplots_adjust(left=0.13, bottom=0.15, top=0.85, right=0.93)
 
-ax4.grid(True)
-ax5.grid(True)
-
-f3.subplots_adjust(left=0.13, bottom=0.15, top=0.85, right=0.93, wspace=0.2)
-
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+#f3 = plt.figure(figsize=(12, 6))
+#
+#ax4 = f3.add_subplot(1, 2, 1)
+#ax5 = f3.add_subplot(1, 2, 2)
+#
+## dati primo pomeriggio
+#serie1 = ax4.errorbar(x=theta1, y=[a - A_1 - B_1*t for t, a in zip(theta1, h1)],
+#    xerr=dtheta, yerr=dh,
+#    fmt='.')
+#
+#fit01 = ax4.errorbar(x=(0, 25), y=(0, 0))
+#
+#serie2 = ax5.errorbar(x=theta2, y=[a - A_2 - B_2*t for t, a in zip(theta2, h2)],
+#    xerr=dtheta, yerr=dh,
+#    fmt='.')
+#
+#fit02 = ax5.errorbar(x=(0, 25), y=(0, 0))
+#
+#ax4.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
+#ax4.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+#
+#ax5.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
+#ax5.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+#
+#ax4.grid(True)
+#ax5.grid(True)
+#
+#f3.subplots_adjust(left=0.13, bottom=0.15, top=0.85, right=0.93, wspace=0.2)
+#
 plt.show()
