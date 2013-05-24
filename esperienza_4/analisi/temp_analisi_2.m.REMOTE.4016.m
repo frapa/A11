@@ -6,8 +6,6 @@
 dati = csvread("../dati/temp_vs_pos.csv");
 posizione = dati(:,1)';	% posizione in metri
 temperatura = dati(:,2)';	% temperatura in °C
-T1 = temperatura(1:22);
-T2 = temperatura(23:end);
 
 T1 = temperatura(1:22);
 T1g = T1(1:11);
@@ -43,6 +41,7 @@ Pa2 = 0.97*10^5;
 
 # dislivello h:
 H = posizione .- pos0;
+
 H1 = H(1:22); # primo giorno
 H1g = H1(1:11);
 H1s = H1(12:end);
@@ -63,6 +62,7 @@ sigma_H1_tot = sqrt(sigma_H^2 + B1^2 * sigma_T_ris^2)
 % stima per il IIo set di dati
 sigma_H2_tot = sqrt(sigma_H^2 + B2^2 * sigma_T_ris^2)
 
+
 # regressione lineare
 display(" ");
 [A_1, B_1, sA_1, sB_1] = fit(H1, T1, ones(1, 22)*sigma_H1_tot^(-2))
@@ -76,11 +76,9 @@ display(" ");
 
 #	X^2
 %chi = chi2(H(1:45),temperatura(1:45),sigma_H,A,B)
-
 display(" ");
 chi_1 = chi2(H1, T1, sigma_H1, A_1, B_1)
 chi_2 = chi2(H2, T2, sigma_H2, A_2, B_2)
-
 %chi_d1 = chi2(H(1:11),temperatura(1:11),sigma_H,A_d1,B_d1)
 %chi_s1 = chi2(H(12:22),temperatura(12:22),sigma_H,A_s1,B_s1)
 %chi_d2 = chi2(H(23:34),temperatura(23:34),sigma_H,A_d2,B_d2)
