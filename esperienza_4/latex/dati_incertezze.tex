@@ -1,4 +1,70 @@
- \subsubsection{Studio delle incertezze ed elaborazione dei dati}
+\subsubsection{Studio delle incertezze ed elaborazione dei dati}
 
 \begin{table}
 \end{table}
+
+Iniziamo questa discussione analizzando le incertezze che affliggono le misure di lunghezza da noi fatte. Ricordiamo infatti che per trovare il dislivello tra una colonna d' acqua e l'altra del manometro abbiamo dovuto sottrarre all'altezza ($h_a$), fissata inizialmente e mantenuta costante, della colonna di acqua nel ramo relativo alla bottiglia, l'altezza ($h_c$) della colonna di acqua presente nel secondo ramo dello strumento.\\
+Pertanto il dislivello tra le due colonnine di liquido sarà il seguente:
+
+\begin{equation*}
+	d \,=\, h_a \,-\, h_c \,\,\quad \text{dove $h_a$ è stata posta a} \quad\,\, h_a \,=\, (98.0 \pm 0.03)\,\,cm 
+\end{equation*}
+%
+e quindi grazie alla regola per la propagazione delle incertezze sulla somma di misure ottengo che l'errore relativo al dislivello è dato da:
+
+\begin{equation*}
+	\delta d \,=\, \sqrt{(\sigma h_a)^2+(\sigma h_c)^2} \,=\,
+\end{equation*}
+%
+e notiamo che ha lo stesso valore per tutte le misure di dislivello effettuate. Ricordiamo per completezza che le misure dell'altezza della colonnina di acqua sono affette da un incertezza tipo che è standard per tutte queste e vale:
+
+\begin{equation*}
+	\sigma h \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
+\end{equation*}
+%
+dove $\Delta h$ rappresenta la risoluzione massima delo strumento, che trattandosi di un asta millimetrata e di 1 millimetro. Per concludere questa prima analisi possiamo oservare che i valori riportati in Tabella (\ref{tab:dati}) presentano un numero di cifre significative inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto se noi aggiungessimo cifre significative alle misure staremo dando delle informazioni non veritiere al lettore.\\
+
+Procediamo ora con l'analisi delle incertezze sulle misure di temperatura. Noi abbiamo usato un termometro digitale con risoluzione di misura ($\Delta \theta$) di 0.01$^\circ$C, pertanto l'errore che afflgge le misure di temperatura non è altro che quello dato dall'incertezze di risoluzione standard, ovvero:
+
+\begin{equation*}
+	\delta \theta \,=\, \frac{\Delta \theta}{\sqrt{12}} \,=\, \SI{0.003}{^\circ C}
+\end{equation*}
+%
+Per quanto riguarda la misura del volume della quantità di gas contenuta all'interno della bottiglia abbiamo deciso di calcolarlo nel modo seguente: a fine esperimento abbiamo posto la bottiglia di vetro sulla bilancia elettronica e abbiamo azzerato quest'ultima, successivamente abbiamo riempito di acqua la bottiglia e abbiamo rilevato quanto fosse la sua massa, quindi sfruttando la relazione:
+
+\begin{equation*}
+	V \,=\, \frac{\rho}{m}  
+\end{equation*}
+%
+dove ricordiamo che $m$ e la massa dell'acqua, $\rho$ è la densità dell'acqua, che abbiao assunto avere il seguente valore: $\rho \,=\, \SI{1000}{\,\,kg/m^3}$ e $V$ rappresenta il volume dell'acqua che nel nostro caso è anche quello della bottiglia.\\
+Quindi per calcolare l'incertezza sulla misura del volume dobbiamo usare la tecnia della propagazione delle incertezze per rapporti tra misure. In questo caso otteniamo che:
+
+\begin{equation*}
+	\sigma V \,=\, V \,\, \sqrt{\left(\frac{\sigma m}{m}\right)^2}  
+\end{equation*}
+%
+ricordando che l'incertezza sulla massa ($m$) non è altro che l'incertezza tipo sulla massa che vale:
+
+\begin{equation*}
+	\sigma m \,=\, \frac{\Delta m}{\sqrt{12}} \,=\, \SI{0.03}{g}
+\end{equation*}
+%
+dove $\Delta m$ e la risoluzione di misura della bilancia elettronica che vale 0.1 grammi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
