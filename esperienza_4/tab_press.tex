@@ -1,0 +1,61 @@
+\documentclass[11pt, twoside, a4paper]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{sidecap}
+\usepackage{siunitx}
+\usepackage[font=small]{caption}
+\usepackage[bookmarks, hidelinks]{hyperref}
+
+\begin{document}
+
+\begin{table}
+
+\begin{center}
+\begin{tabular}{c|c c c|c c c}
+\hline
+	\multicolumn{7}{c}{\emph{Valori ambientali di pressione, temperatura e umidità}} \\
+\hline
+\multirow{2}{*}{$\,$} & \multicolumn{3}{c|}{Primo giorno} & \multicolumn{3}{c}{Secondo giorno} \\
+ & \multicolumn{3}{c|}{29 Aprile 2013} & \multicolumn{3}{c}{6 Maggio 2013} \\
+\hline
+Ore & Pressione & Temperatura & Umidità & Pressione & Temperatura & Umidità \\
+%$\left[ \texttt{hh mm}\right]$ & [mbar] & [°C] & [\%] & [mbar] & [°C] & [\%] \\
+\hline
+\multirow{5}{*}{15:00} & $\,$ & $\,$ & $\,$ & 974.40 & 26 & 59 \\
+ & $\,$ & $\,$ & $\,$ & 973.60 & 26 & 59 \\
+ & $\,$ & $\,$ & $\,$ & 972.15 & 26 & 59 \\
+ & $\,$ & $\,$ & $\,$ & 973.40 & 26 & 58 \\
+ & $\,$ & $\,$ & $\,$ & 970.10 & 26 & 58 \\
+\hline
+\multirow{5}{*}{16:00} & 961.35 & 25 & 68 & 976.00 & 25 & 59 \\
+ & 961.70 & 25 & 68 & 976.20 & 25 & 59 \\
+ & 963.90 & 25 & 68 & 972.20 & 25 & 59 \\
+ & 963.20 & 25 & 68 & 973.70 & 25 & 59 \\
+ & 965.25 & 25 & 68 & 974.50 & 25 & 59 \\
+\hline
+\multirow{5}{*}{17:00} & 962.30 & 25 & 68 & 976.60 & 26 & 58 \\
+ & 963.00 & 26 & 58 & 975.95 & 25 & 68 \\
+ & 964.35 & 25 & 68 & 967.90 & 26 & 58\\
+ & 962.35 & 25 & 68 & 969.20 & 26 & 59\\
+ & 960.05 & 25 & 68 & 969.40 & 26 & 59 \\
+\hline
+\multirow{5}{*}{18:00} & 965.40 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+ & 960.15 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+ & 962.10 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+ & 960.75 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+ & 959.75 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+%\hline
+\end{tabular}
+\end{center}
+
+\label{tab:ptu}
+\caption{In questa tabella sono presentati i valori di pressione, temperatura e umidità relativi alle due giornate d'esperimento.}
+
+\end{table}
+\end{document}
