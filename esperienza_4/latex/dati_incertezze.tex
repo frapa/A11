@@ -13,13 +13,13 @@ Pertanto il dislivello tra le due colonnine di liquido sarà il seguente:
 e quindi grazie alla regola per la propagazione delle incertezze sulla somma di misure ottengo che l'errore relativo al dislivello è dato da:
 
 \begin{equation*}
-	\delta d \,=\, \sqrt{(\sigma h_a)^2+(\sigma h_c)^2} \,=\,
+	\delta d \,=\, \sqrt{(\sigma [h_a])^2+(\sigma [h_c])^2} \,=\,
 \end{equation*}
 %
 e notiamo che ha lo stesso valore per tutte le misure di dislivello effettuate. Ricordiamo per completezza che le misure dell'altezza della colonnina di acqua sono affette da un incertezza tipo che è standard per tutte queste e vale:
 
 \begin{equation*}
-	\sigma h \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
+	\sigma [h] \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
 \end{equation*}
 %
 dove $\Delta h$ rappresenta la risoluzione massima delo strumento, che trattandosi di un asta millimetrata e di 1 millimetro. Per concludere questa prima analisi possiamo oservare che i valori riportati in Tabella (\ref{tab:dati}) presentano un numero di cifre significative inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto se noi aggiungessimo cifre significative alle misure staremo dando delle informazioni non veritiere al lettore.\\
@@ -40,24 +40,50 @@ dove ricordiamo che $m$ e la massa dell'acqua, $\rho$ è la densità dell'acqua,
 Quindi per calcolare l'incertezza sulla misura del volume dobbiamo usare la tecnia della propagazione delle incertezze per rapporti tra misure. In questo caso otteniamo che:
 
 \begin{equation*}
-	\sigma V \,=\, V \,\, \sqrt{\left(\frac{\sigma m}{m}\right)^2}  
+	\sigma [V] \,=\, V \,\, \sqrt{\left(\frac{\sigma [m]}{m}\right)^2}  
 \end{equation*}
 %
 ricordando che l'incertezza sulla massa ($m$) non è altro che l'incertezza tipo sulla massa che vale:
 
 \begin{equation*}
-	\sigma m \,=\, \frac{\Delta m}{\sqrt{12}} \,=\, \SI{0.03}{g}
+	\sigma [m] \,=\, \frac{\Delta m}{\sqrt{12}} \,=\, \SI{0.03}{g}
 \end{equation*}
 %
-dove $\Delta m$ e la risoluzione di misura della bilancia elettronica che vale 0.1 grammi
+dove $\Delta m$ e la risoluzione di misura della bilancia elettronica che vale 0.1 grammi.\\
+Mentre per la stima del volume di gas presente sotto il tappo della bottiglia e nella parte di tubo non colma di liquido abbiamo deciso di procedere come segue: Abbiamo riempito le due parti con dell'acqua tramite una siringa graduata, in modo da poter stimare il volume di liquido necessario per tale operazione. In questo modo abbiamo anche una stima preliminare dell'incertezza che affligge queste due misure. In particolare abbiamo ottenuto che:
 
+\begin{itemize}
+	\item{il volume di gas presente sotto il tappo della bottiglia è: }
+	\item{il volume di gas presente nel tubicino e: }
+\end{itemize}
+%
+dove ricordiam che la siringa ha una risoluzione di 1 millilitro, pertanto in metri cubi sappiamo che qusto corrisponde a circa 1 centimetro cubo.\\
 
+[Parliamo della pressione???]\\
 
+Infine sapendo che nell'equazione (\ref{eq:legge_stato_gas}) entra in gioco anche la pressione interna del gas ($P_{int}$), ma sappiamo anche che per ricavare quest'ultima possiamo sfruttare la seguente legge che lega la pressione atmosferica ($P_a$) e la variazione di altezza della colonnina di acqua, ovvero:
 
+\begin{equation}
+	P_{int} \,=\, P_a \,+\, \rho \, g \, d
+	\label{eq:P_int}
+\end{equation}
+%
+dove $\rho$ è la densità dell'acqua, $g$ è l'accellerazione di gravità che assumiamo valga $\SI{9.807}{\,m/s^2}$ e $d$ è il dislivello tra le due colonne di liquido. Ed è grazie a questa equazione (\ref{eq:P_int}) che noi siamo stati in grado di calcolare la pressione interna del gas alle varie temperature che è riportata in Tabella (\ref{tab:dati}).\\
+Pertanto per calcolare l'errore che affligge questa stima della pressione interna del gas dobbiamo procedere nel seguente modo:
 
+\begin{equation*}
+	\delta P_{int} \,=\, \sqrt{(\sigma [P_a])^2 + (\rho\,g\,\delta d)^2}
+\end{equation*}
+%
+dove ricordiamo che $\sigma [P_a]$ è l'errore tipo sulle misure della pressione che sono state effettuate in classe mediante il barometro a nostra disposizione ed è uguale per tutte le misure di pressione che sono state prese, e sono riportate in Tabella (\ref{tab:pressione}). Ricordiamo che per ogni ora sono state prese cinque misure della pressione atmosferica, in modo indipendente le une dalle altre, pertanto poichè ogni ora siamo riusciti ad ottenere sette stati di equilibrio termodinamico del sistema. Abbiamo associato ad ognuno di questi grppi di sette dati la media dei cinque valori dela pressione relativa all'ora di misurazioni. Ovvero, per chiarire la descrizione operativa fatta precedentemente, analizzioamo quanto fatto:
 
-
-
+\begin{itemize}
+	\item{calcoliamo la media per ogni ora delle cinque misure di pressione effettuate:
+			
+			\begin{equation*}
+				m^*[P_ij] \,=\, \frac{\sum_{i=1}^{5} P_i}{5} 
+			\end{equation*}}
+\end{itemize}
 
 
 
