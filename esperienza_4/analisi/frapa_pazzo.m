@@ -6,6 +6,7 @@ pressione_atm = dati(:, 3)';
 
 Pa = pressione_atm;
 
+T = temperatura;
 T1 = temperatura(1:22);
 T1g = T1(1:11);
 T1s = T1(12:end);
@@ -43,14 +44,27 @@ H2s = H2(12:end);
 % errori
 sigma_H = sqrt(2) .* sigma_pos_ris;
 
-P = Pa + d * g * H;
+
+# calcola pressione parziale vapore acqua (ppva) in pascal
+# ad occhio!
+function p = ppva(t)
+	p = 611 .* 10.^((7.5 .* t)./(237.7 + t));
+endfunction
+
+P = Pa + d * g * H - ppva(T);
 P1 = P(1:22);
+P1g = P1(1:11);
+P1s = P1(12:end);
 P2 = P(23:end);
+P2g = P2(1:11);
+P2s = P2(12:end);
 
 sigma_P = d * g * sigma_H;
 
 [A1, B1, dA1, dB1] = fit(P1, T1, ones(1, 22) * sigma_P .^ -2)
 [A2, B2, dA2, dB2] = fit(P2, T2, ones(1, 23) * sigma_P .^ -2)
+
+#[A2, B2, dA2, dB2] = fit(P2g(6:11), T2g(6:11), ones(1, 6) * sigma_P .^ -2)
 
 T0_1 = - A1 / B1
 T0_2 = - A2 / B2
