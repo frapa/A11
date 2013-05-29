@@ -14,5 +14,5 @@ ora1 = dati1(:, 4);
 ora2 = dati2(:, 4);
 
 # media pressioni
-MP1 = [mean(press1(1:5)), mean(press1(6:10)), mean(press1(11:end))]
-MP2 = [mean(press2(1:5)), mean(press2(6:10)), mean(press2(11:end))]
+MP1 = [mean(press1(1:5)), mean(press1(6:10)), mean(press1(11:end))];
+MP2 = [mean(press2(1:5)), mean(press2(6:10)), mean(press2(11:end))];

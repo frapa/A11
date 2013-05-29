@@ -58,6 +58,9 @@ fit01 = ax2.errorbar(x=(-1, 22), y=(0, 0))
 fit01r1 = ax2.errorbar(x=(-1, 22), y=(A_1r1 - A_1 + (B_1r1 - B_1)*-1, A_1r1 - A_1 + (B_1r1 - B_1)*22))
 fit01r2 = ax2.errorbar(x=(-1, 22), y=(A_1r2 - A_1 + (B_1r1 - B_1)*-1, A_1r2 - A_1 + (B_1r2 - B_1)*22))
 
+smeno = ax2.errorbar(x=(-1, 22), y=(A_1r2_meno - A_1 - B_1r2_meno + B_1, A_1r2_meno - A_1 + (B_1r2_meno - B_1)*22))
+
+
 serie2g = ax3.errorbar(x=theta2g, y=[a - A_2 - B_2*t for t, a in zip(theta2g, h2g)],
     xerr=dtheta, yerr=dh,
     fmt='.', ecolor='r')

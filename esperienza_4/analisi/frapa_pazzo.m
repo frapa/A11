@@ -25,7 +25,7 @@ sigma_pos_ris = delta_pos_ris / sqrt(12);
 
 
 # accelerazione di gravità
-g = 9.806;
+g = 9.807;
 # densità dell'acqua
 d = 1000;	
 # posizione iniziale
@@ -51,7 +51,7 @@ function p = ppva(t)
 	p = 611 .* 10.^((7.5 .* t)./(237.7 + t));
 endfunction
 
-P = Pa + d * g * H - ppva(T);
+P = Pa + d*g*H;
 P1 = P(1:22);
 P1g = P1(1:11);
 P1s = P1(12:end);
@@ -66,5 +66,5 @@ sigma_P = d * g * sigma_H;
 
 #[A2, B2, dA2, dB2] = fit(P2g(6:11), T2g(6:11), ones(1, 6) * sigma_P .^ -2)
 
-T0_1 = - A1 / B1
-T0_2 = - A2 / B2
+T0_1 =  - A1 / B1
+T0_2 =  - A2 / B2

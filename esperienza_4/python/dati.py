@@ -91,6 +91,11 @@ B_2r2 =  0.038765
 sA_2r2 =  3.0893e-04
 sB_2r2 =  3.5466e-05
 
+A_1r2_meno = -0.77793
+B_1r2_meno =  0.038634
+sA_1r2_meno =  2.3117e-04
+sB_1r2_meno =  2.6506e-05
+
 # errori corretti
 dh1_corr = 0.0092390
 dh2_corr = 0.013388
