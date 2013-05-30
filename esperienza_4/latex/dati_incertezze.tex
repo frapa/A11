@@ -3,31 +3,32 @@
 \begin{table}
 \end{table}
 
-Iniziamo questa discussione analizzando le incertezze che affliggono le misure di lunghezza da noi fatte. Ricordiamo infatti che per trovare il dislivello tra una colonna d' acqua e l'altra del manometro abbiamo dovuto sottrarre all'altezza ($h_a$), fissata inizialmente e mantenuta costante, della colonna di acqua nel ramo relativo alla bottiglia, l'altezza ($h_c$) della colonna di acqua presente nel secondo ramo dello strumento.\\
+Iniziamo questa discussione analizzando le incertezze che affliggono le misure di lunghezza che abbiamo rilevato. Ricordiamo infatti che per trovare il dislivello tra una colonna d' acqua e l'altra del manometro abbiamo dovuto sottrarre all'altezza $h_a$ della colonna di acqua nel ramo relativo alla bottiglia, fissata inizialmente alla tacca dei \SI{98}{\centi\metre} e mantenuta costante, l'altezza $h_c$ della colonna di acqua presente nel secondo ramo dello strumento.\\
 Pertanto il dislivello tra le due colonnine di liquido sarà il seguente:
 
 \begin{equation*}
-	d \,=\, h_a \,-\, h_c \,\,\quad \text{dove $h_a$ è stata posta a} \quad\,\, h_a \,=\, (98.0 \pm 0.03)\,\,cm 
+    d \,=\, h_a \,-\, h_c \qquad \qquad \qquad \text{dove} \qquad h_a \,=\, 98.0 \pm 0.03 \; \si{\centi\metre} 
 \end{equation*}
 %
-e quindi grazie alla regola per la propagazione delle incertezze sulla somma di misure ottengo che l'errore relativo al dislivello è dato da:
+L'incertezza sul valore di $h_a$ è l'incertezza standard di risoluzione.
+Grazie alla regola per la propagazione delle incertezze sulla somma di misure si ottiene che l'errore relativo al dislivello è dato da:
 
 \begin{equation*}
-	\delta d \,=\, \sqrt{(\sigma [h_a])^2+(\sigma [h_c])^2} \,=\,
+    \delta d \,=\, \sqrt{(\sigma [h_a])^2+(\sigma [h_c])^2} \,=\, \SI{4e-4}{\metre}
 \end{equation*}
 %
-e notiamo che ha lo stesso valore per tutte le misure di dislivello effettuate. Ricordiamo per completezza che le misure dell'altezza della colonnina di acqua sono affette da un incertezza tipo che è standard per tutte queste e vale:
+e notiamo che ha lo stesso valore per tutte le misure di dislivello effettuate. Ricordiamo che le misure dell'altezza della colonnina di acqua sono affette da un incertezza tipo di risoluzione che è identica per tutte queste e vale:
 
 \begin{equation*}
-	\sigma [h] \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
+	\sigma [h] \,=\, \sigma [h_a] \,=\, \sigma [h_c] \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
 \end{equation*}
 %
-dove $\Delta h$ rappresenta la risoluzione massima delo strumento, che trattandosi di un asta millimetrata e di 1 millimetro. Per concludere questa prima analisi possiamo oservare che i valori riportati in Tabella (\ref{tab:dati}) presentano un numero di cifre significative inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto se noi aggiungessimo cifre significative alle misure staremo dando delle informazioni non veritiere al lettore.\\
+dove $\Delta h$ rappresenta la risoluzione dello strumento, che trattandosi di un asta millimetrata è di 1 millimetro. Per concludere questa prima analisi possiamo osservare che i valori riportati in Tabella \ref{tab:dati} presentano un numero di cifre decimali inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto altre cifre non porterebbero alcuna informazione.
 
-Procediamo ora con l'analisi delle incertezze sulle misure di temperatura. Noi abbiamo usato un termometro digitale con risoluzione di misura ($\Delta \theta$) di 0.01$^\circ$C, pertanto l'errore che afflgge le misure di temperatura non è altro che quello dato dall'incertezze di risoluzione standard, ovvero:
+Procediamo ora con l'analisi delle incertezze sulle misure di temperatura. Noi abbiamo usato un termometro digitale con risoluzione di misura $\Delta \theta = 0.01 ^\circ$C, pertanto l'errore che afflgge le misure di temperatura non è altro che quello dato dall'incertezze di risoluzione standard, ovvero:
 
 \begin{equation*}
-	\delta \theta \,=\, \frac{\Delta \theta}{\sqrt{12}} \,=\, \SI{0.003}{^\circ C}
+	\delta \theta \,=\, \frac{\Delta \theta}{\sqrt{12}} \,=\, \SI{0.003}{\celsius}
 \end{equation*}
 %
 Per quanto riguarda la misura del volume della quantità di gas contenuta all'interno della bottiglia abbiamo deciso di calcolarlo nel modo seguente: a fine esperimento abbiamo posto la bottiglia di vetro sulla bilancia elettronica e abbiamo azzerato quest'ultima, successivamente abbiamo riempito di acqua la bottiglia e abbiamo rilevato quanto fosse la sua massa, quindi sfruttando la relazione:
@@ -61,29 +62,31 @@ dove ricordiam che la siringa ha una risoluzione di 1 millilitro, pertanto in me
 
 [Parliamo della pressione???]\\
 
-Infine sapendo che nell'equazione (\ref{eq:legge_stato_gas}) entra in gioco anche la pressione interna del gas ($P_{int}$), ma sappiamo anche che per ricavare quest'ultima possiamo sfruttare la seguente legge che lega la pressione atmosferica ($P_a$) e la variazione di altezza della colonnina di acqua, ovvero:
+Nell'equazione (\ref{eq:legge_stato_gas}) entra in gioco anche la pressione interna $P\ped{int}$ del gas. Quest'ultima è uguale alla pressione atmosferica $P_a$ più la pressione dovuta al dislivello dell'acqua nel tubo:
 
 \begin{equation}
-	P_{int} \,=\, P_a \,+\, \rho \, g \, d
+	P\ped{int} \,=\, P_a \,+\, \rho  g  d
 	\label{eq:P_int}
 \end{equation}
 %
-dove $\rho$ è la densità dell'acqua, $g$ è l'accellerazione di gravità che assumiamo valga $\SI{9.807}{\,m/s^2}$ e $d$ è il dislivello tra le due colonne di liquido. Ed è grazie a questa equazione (\ref{eq:P_int}) che noi siamo stati in grado di calcolare la pressione interna del gas alle varie temperature che è riportata in Tabella (\ref{tab:dati}).\\
-Pertanto per calcolare l'errore che affligge questa stima della pressione interna del gas dobbiamo procedere nel seguente modo:
+dove $\rho = \SI{1000}{\kilo\gram\per\cubic\metre}$ è il valore di densità dell'acqua da noi assunto, $g = \SI{9.807}{\meter\per\square\second}$ è l'accelerazione di gravità locale del laboratorio e $d$ è il dislivello tra le due colonne di liquido. Grazie all'equazione (\ref{eq:P_int}) siamo stati in grado di calcolare la pressione interna del gas alle varie temperature che è riportata in Tabella \ref{tab:dati}.\\
+Per calcolare l'errore sulla stima della pressione interna del gas occorre procedere nel seguente modo:
 
-\begin{equation*}
-	\delta P_{int} \,=\, \sqrt{(\sigma [P_a])^2 + (\rho\,g\,\delta d)^2}
-\end{equation*}
+\begin{equation}
+	\delta P\ped{int} \,=\, \sqrt{(\sigma [P_a])^2 + (\rho\,g\,\delta d)^2}
+	\label{eq:sigma_P_int}
+\end{equation}
 %
-dove ricordiamo che $\sigma [P_a]$ è l'errore tipo sulle misure della pressione che sono state effettuate in classe mediante il barometro a nostra disposizione ed è uguale per tutte le misure di pressione che sono state prese, e sono riportate in Tabella (\ref{tab:pressione}). Ricordiamo che per ogni ora sono state prese cinque misure della pressione atmosferica, in modo indipendente le une dalle altre, pertanto poichè ogni ora siamo riusciti ad ottenere sette stati di equilibrio termodinamico del sistema. Abbiamo associato ad ognuno di questi grppi di sette dati la media dei cinque valori dela pressione relativa all'ora di misurazioni. Ovvero, per chiarire la descrizione operativa fatta precedentemente, analizzioamo quanto fatto:
+La pressione atmosferica esterna è stata misurata con il barometro a mercurio a nostra disposizione. Per ogni ora sono state prese cinque misure della pressione atmosferica $P\ped{ext}$, in modo indipendente le une dalle altre, ovvero ricalibrando il barometro ad ogni lettura. I dati di ogni ora sono poi stati trattati statisticamente per ricavare la media $P_a = m^*[P\ped{ext}]$ e la deviazione standard sulla media $\sigma [P_a] = \sigma[m^*[P\ped{ext}]]$. Abbiamo associato ad ogni punto sperimentale la media delle pressioni atmosferica $P_a$ dell'ora in cui è stato rilevato. I valori $P_a$ e $\sigma[P_a]$ sono stati utilizzati nelle formule (\ref{eq:P_int}) e (\ref{eq:sigma_P_int}) per calcolare la pressione
+interna e la sua deviazione. I dati ottenuti sono riportati in Tabella \ref{tab:dati}.
 
-\begin{itemize}
-	\item{calcoliamo la media per ogni ora delle cinque misure di pressione effettuate:
-			
-			\begin{equation*}
-				m^*[P_ij] \,=\, \frac{\sum_{i=1}^{5} P_i}{5} 
-			\end{equation*}}
-\end{itemize}
+%\begin{itemize}
+%	\item{calcoliamo la media per ogni ora delle cinque misure di pressione effettuate:
+%			
+%			\begin{equation*}
+%				m^*[P_ij] \,=\, \frac{\sum_{i=1}^{5} P_i}{5} 
+%			\end{equation*}}
+%\end{itemize}
 
 
 
