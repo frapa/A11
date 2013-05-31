@@ -1,1 +1,32 @@
 \section{Calcolo dello zero assoluto}
+
+Una volta ricavato l'andamento lineare di $h$ in funzione di $\theta$, proseguiamo nel determinare il valore dello zero assoluto. Sappiamo che 
+
+\begin{equation}
+	P \,\, = \,\, P_A + \rho g d \,\, = \,\, P_A + \rho g (A + B \theta) \,\, = \,\, f(\theta)
+\end{equation}
+
+\subsection{Utilizzo dei dati di pressione}
+
+
+
+\subsection{Confronto con il valore noto}
+
+Prima di confrontare con il valore noto i valori di $\theta_0$ delle diverse serie di dati, poniamo un fattore di copertura $k=3$. Sapendo che il valore noto é -273.15 il procedimento per il valore di ogni serie si compone di:
+
+\begin{itemize}
+\item Calcolare la discrepanza $R$ tra $\theta_{0,i}$ e il valore noto:
+\begin{equation*}
+	R \,\, = \,\, \theta_{0,i} - (-273.15)
+\end{equation*}
+\item controllare se:
+\begin{equation*}
+	R \,\, \leq \,\, k \sigma[\theta_{0,i}]
+\end{equation*}
+\end{itemize}
+
+Eseguendo tale procedura su i valori ricavati analizzando separatamente i valori di ognuna delle due serie si ottiene che entrambi i valori $\theta_{0,1}$ e $\theta_{0,2}$ non risultano essere compatibili con il valore noto.
+
+Ciò è probabilmente dovuto al fatto che il modello teorico non tiene in considerazione importanti fattori come la diversa termalizzazione del gas o la presenza di vapore nel gas che possono provocare anche consistenti errori sistematici.
+
+Per questo motivo abbiamo spezzato i dati ricavati in diverse sottoserie per ottenere dei fit migliori ed evidenziare gli errori sistematici.

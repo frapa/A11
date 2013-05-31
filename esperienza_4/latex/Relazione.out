@@ -6,5 +6,9 @@
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Studio delle incertezze ed elaborazione dei dati}{subsection.2.3}% 6
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Regressione}{subsection.2.3}% 7
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Test del chi quadro}{subsection.2.3}% 8
-\BOOKMARK [1][-]{section.3}{Calcolo dello zero assoluto}{}% 9
-\BOOKMARK [1][-]{section.4}{Conclusioni}{}% 10
+\BOOKMARK [2][-]{subsection.2.4}{Regressione residui}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Chi quardo residui}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{Calcolo dello zero assoluto}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Utilizzo dei dati di pressione}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.2}{Confronto con il valore noto}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Conclusioni}{}% 14
