@@ -77,23 +77,47 @@ Per calcolare l'errore sulla stima della pressione interna del gas occorre proce
 	\label{eq:sigma_P_int}
 \end{equation}
 %
-La pressione atmosferica esterna è stata misurata con il barometro a mercurio a nostra disposizione. Per ogni ora sono state prese cinque misure della pressione atmosferica $P\ped{ext}$, in modo indipendente le une dalle altre, ovvero ricalibrando il barometro ad ogni lettura. I dati di ogni ora sono poi stati trattati statisticamente per ricavare la media $P_a = m^*[P\ped{ext}]$ e la deviazione standard sulla media $\sigma [P_a] = \sigma[m^*[P\ped{ext}]]$. Abbiamo associato ad ogni punto sperimentale la media delle pressioni atmosferica $P_a$ dell'ora in cui è stato rilevato. I valori $P_a$ e $\sigma[P_a]$ sono stati utilizzati nelle formule (\ref{eq:P_int}) e (\ref{eq:sigma_P_int}) per calcolare la pressione
+La pressione atmosferica esterna è stata misurata con il barometro a mercurio a nostra disposizione. Per ogni ora sono state prese cinque misure della pressione atmosferica $P\ped{ext}$, in modo indipendente le une dalle altre, ovvero ricalibrando il barometro ad ogni lettura. I valori di pressione ottenuti sono elencati nella Tabella \ref{tab:ptu}. I dati di ogni ora sono poi stati trattati statisticamente per ricavare la media $P_a = m^*[P\ped{ext}]$ e la deviazione standard sulla media $\sigma [P_a] = \sigma[m^*[P\ped{ext}]]$. Abbiamo associato ad ogni punto sperimentale la media delle pressioni atmosferica $P_a$ dell'ora in cui è stato rilevato. I valori $P_a$ e $\sigma[P_a]$ sono stati utilizzati nelle formule (\ref{eq:P_int}) e (\ref{eq:sigma_P_int}) per calcolare la pressione
 interna e la sua deviazione. I dati ottenuti sono riportati in Tabella \ref{tab:dati}.
 
-%\begin{itemize}
-%	\item{calcoliamo la media per ogni ora delle cinque misure di pressione effettuate:
-%			
-%			\begin{equation*}
-%				m^*[P_ij] \,=\, \frac{\sum_{i=1}^{5} P_i}{5} 
-%			\end{equation*}}
-%\end{itemize}
+
+\begin{table}
+    \begin{tabular}{c | c c c | c c c}
+	    \multicolumn{7}{c}{\textbf{Valori ambientali di pressione, temperatura e umidità}} \\
+        \toprule
+        \multirow{2}{*}{$\,$} & \multicolumn{3}{c|}{Primo giorno} & \multicolumn{3}{c}{Secondo giorno} \\
+         & \multicolumn{3}{c|}{29 Aprile 2013} & \multicolumn{3}{c}{6 Maggio 2013} \\
+        \midrule
+        Ore & Pressione & Temperatura & Umidità & Pressione & Temperatura & Umidità \\
+         & [\si{\milli\bar}] & [\si{\celsius}] & [\%] & [\si{\milli\bar}] & [\si{\celsius}] & [\%] \\
+        \midrule
+        \multirow{5}{*}{15:00} & $\,$ & $\,$ & $\,$ & 974.40 & 26 & 59 \\
+         & $\,$ & $\,$ & $\,$ & 973.60 & 26 & 59 \\
+         & $\,$ & $\,$ & $\,$ & 972.15 & 26 & 59 \\
+         & $\,$ & $\,$ & $\,$ & 973.40 & 26 & 58 \\
+         & $\,$ & $\,$ & $\,$ & 970.10 & 26 & 58 \\
+        \midrule
+        \multirow{5}{*}{16:00} & 961.35 & 25 & 68 & 976.00 & 25 & 59 \\
+         & 961.70 & 25 & 68 & 976.20 & 25 & 59 \\
+         & 963.90 & 25 & 68 & 972.20 & 25 & 59 \\
+         & 963.20 & 25 & 68 & 973.70 & 25 & 59 \\
+         & 965.25 & 25 & 68 & 974.50 & 25 & 59 \\
+        \midrule
+        \multirow{5}{*}{17:00} & 962.30 & 25 & 68 & 976.60 & 26 & 58 \\
+         & 963.00 & 26 & 58 & 975.95 & 25 & 68 \\
+         & 964.35 & 25 & 68 & 967.90 & 26 & 58\\
+         & 962.35 & 25 & 68 & 969.20 & 26 & 59\\
+         & 960.05 & 25 & 68 & 969.40 & 26 & 59 \\
+        \midrule
+        \multirow{5}{*}{18:00} & 965.40 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+         & 960.15 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+         & 962.10 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+         & 960.75 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+         & 959.75 & 25 & 69 & $\,$ & $\,$ & $\,$ \\
+        \bottomrule
+    \end{tabular}
 
 
-
-
-
-
-
-
-
-
+    \caption{In questa tabella sono presentati i valori di pressione, temperatura e umidità relativi alle due giornate d'esperimento.}
+    \label{tab:ptu}
+\end{table}
