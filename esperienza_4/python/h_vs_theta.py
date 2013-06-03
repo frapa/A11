@@ -55,27 +55,27 @@ serie1s = ax2.errorbar(x=theta1s, y=[a - A_1 - B_1*t for t, a in zip(theta1s, h1
 #    yerr=dh1_corr, fmt=None, capsize=5)
 
 fit01 = ax2.errorbar(x=(-1, 22), y=(0, 0))
-fit01r1 = ax2.errorbar(x=(-1, 22), y=(A_1r1 - A_1 + (B_1r1 - B_1)*-1, A_1r1 - A_1 + (B_1r1 - B_1)*22))
+fit01r1 = ax2.errorbar(x=(-1, 22), y=(A_1r1 - A_1 + (B_1r1 - B_1)*-1, A_1r1 - A_1 + (B_1r1 - B_1)*22), color="#B5E332")
 #fit01r2 = ax2.errorbar(x=(-1, 22), y=(A_1r2 - A_1 + (B_1r1 - B_1)*-1, A_1r2 - A_1 + (B_1r2 - B_1)*22))
 
-smeno = ax2.errorbar(x=(-1, 22), y=(A_1r2_meno - A_1 - B_1r2_meno + B_1, A_1r2_meno - A_1 + (B_1r2_meno - B_1)*22))
+smeno = ax2.errorbar(x=(-1, 22), y=(A_1r2_meno - A_1 - B_1r2_meno + B_1, A_1r2_meno - A_1 + (B_1r2_meno - B_1)*22), color="#77CCFF")
 
 
 serie2g = ax3.errorbar(x=theta2g, y=[a - A_2 - B_2*t for t, a in zip(theta2g, h2g)],
     yerr=dh,
-    fmt='.')
+    fmt='.', capsize=5)
 
 
 serie2s = ax3.errorbar(x=theta2s, y=[a - A_2 - B_2*t for t, a in zip(theta2s, h2s)],
     yerr=dh,
-    fmt='.')
+    fmt='.', capsize=5)
 
 #serie2_corr = ax3.errorbar(x=theta2, y=[a - A_2 - B_2*t for t, a in zip(theta2, h2)],
 #    yerr=dh2_corr, fmt=None, capsize=5, ecolor='m')
 
 fit02 = ax3.errorbar(x=(0, 25), y=(0, 0))
-fit02r1 = ax3.errorbar(x=(0, 25), y=(A_2r1 - A_2, A_2r1 - A_2 + (B_2r1 - B_2)*25))
-fit02r2 = ax3.errorbar(x=(0, 25), y=(A_2r2 - A_2, A_2r2 - A_2 + (B_2r2 - B_2)*25))
+fit02r1 = ax3.errorbar(x=(0, 25), y=(A_2r1 - A_2, A_2r1 - A_2 + (B_2r1 - B_2)*25), color="#B5E332")
+fit02r2 = ax3.errorbar(x=(0, 25), y=(A_2r2 - A_2, A_2r2 - A_2 + (B_2r2 - B_2)*25), color="#77CCFF")
 
 ax2.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14)
 ax2.set_ylabel(ur'Residuo [m]', fontsize=14)

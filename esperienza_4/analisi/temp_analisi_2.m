@@ -59,9 +59,9 @@ H2 = H(23:end); # secondo giorno
 H2g = H2(1:11);
 H2s = H2(12:end);
 
-% serie 2 residuo 1
+% serie 1 residuo 1
 H1r1 = [H1(1:3), H1(19:end)];
-% serie 2 residuo 2
+% serie 1 residuo 2
 H1r2 = H1(4:18);
 % serie 2 residuo 1
 H2r1 = [H2(1:5), H2(18:end)];
@@ -229,6 +229,26 @@ dT1r2_corr_meno = sqrt(sigma_H1r2_tot_corr_meno ^ 2 - sigma_H1r2_tot_meno ^ 2) /
 display(" ");
 dT2r1_corr = sqrt(sigma_H2r1_tot_corr ^ 2 - sigma_H2r1_tot ^ 2) / B_2r1
 dT2r2_corr = sqrt(sigma_H2r2_tot_corr ^ 2 - sigma_H2r2_tot ^ 2) / B_2r2
+
+
+%
+%
+%
+% Aggiustamento incertezze A e B
+%
+%
+%
+display("\n\n### Aggiustamendo dA e dB ###");
+[A_1r1, B_1r1, sA_1r1, sB_1r1] = fit(H1r1, T1r1, ones(1, 7)*sigma_H1r1_tot_corr^(-2))
+display(" ");
+[A_1r2, B_1r2, sA_1r2, sB_1r2] = fit(H1r2, T1r2, ones(1, 15)*sigma_H1r2_tot_corr^(-2))
+display(" ");
+[A_1r2_meno, B_1r2_meno, sA_1r2_meno, sB_1r2_meno] = fit(H1r2_meno, T1r2_meno, ones(1, 14)*sigma_H1r2_tot_corr_meno^(-2))
+
+display(" ");
+[A_2r1, B_2r1, sA_2r1, sB_2r1] = fit(H2r1, T2r1, ones(1, 11)*sigma_H2r1_tot_corr^(-2))
+display(" ");
+[A_2r2, B_2r2, sA_2r2, sB_2r2] = fit(H2r2, T2r2, ones(1, 12)*sigma_H2r2_tot_corr^(-2))
 
 
 %

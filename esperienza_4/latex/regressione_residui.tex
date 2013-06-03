@@ -1,3 +1,23 @@
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit1.pdf}
+    \caption{Il grafico in figura mostra i residui del fit sulla prima serie di dati. Sono riportati in colori
+    diversi i dati presi abbassando (discesa) la temperatura e alzandola (salita). È evidente un andamento residuo nei dati,
+    indicato approssimativamente in figura, probabilmente dovuto alla condensazione del vapor acqueo nella bottiglia. L'andamento
+    residuo è formato da due rette che si incontrano attorno ai \SI{15}{\celsius}. L'ipotesi è che l'andamento residuo sia dovuto alla
+    formazione di condensa all'interno del vaso, che rimuovendo molecole di gas dal recipiente, ha fatto abbassare la pressione e modificato
+    la proporzionalità tra dislivello (pressione) e temperatura. C'è anche
+    un dato con un residuo molto alto, visibile a sinistra della legenda.}
+    \label{fig:fit1}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit2.pdf}
+    \caption{}
+    \label{fig:fit2}
+\end{figure}
+
 \subsubsection{Regressione residui}
 
 Nei paragrafi precedenti si sono riscontrati degli evidenti andamenti residui. Come conseguenza la legge lineare ottenuta
@@ -6,7 +26,34 @@ il valore del chi quadro risulti corretto. Certo, l'incertezza stimata inizialme
 è sicuramente sottostimata e va corretta, ma portare l'incertezza sulla temperatura sino a \SI{0.3}{\celsius} non è accettabile.
 Inoltre gli andamenti residui indicano che ci sono stati dei processi di cui non si è tenuto conto durante l'esecuzione dell'esperimento.
 
-Abbiamo perciò deciso di suddividere i dati in vari set in base agli andamenti residui, in modo da poter eseguire 
-la regressione lineare per ogni set di dati.
+Poiché gli andamenti residui sono ben rappresentati da rette spezzate, abbiamo pensato di ovviare a tutti questi problemi suddividendo i
+dati in vari gruppi in base agli andamenti residui, in modo da poter eseguire la regressione lineare per ogni gruppo di dati.
+Abbiamo fatto quanto segue:
 
+\begin{itemize}
+    \item{Innanzitutto abbiamo eliminato un dato nella prima serie di misure, in quanto era probabilmente il frutto di un
+        errore di misura. Questo dato, visibile in figura \ref{fig:fit1} a fianco della legenda,
+        contribuiva molto al valore del $\chi^2$, ed era completamente scollegato dal resto della serie.}
+    \item{Dalla prima serie di misure sono stati estratti due gruppi di dati, il primo formato da tutte le misure fatte
+        a temperatura superiore a \SI{15}{\celsius} e il secondo da tutte quelle fatte a temperatura inferiore, eccetto
+        il dato che è stato tolto.}
+    \item{Dalla seconda serie, abbiamo estratto altri due gruppi di dati, uno con i dati rilevati a temperature maggiori di
+        \SI{14}{\celsius} (si veda la tabella \ref{tab:dati} per identificare esattamente dati), e l'altro con i dati rimanenti.}
+\end{itemize}
 
+\begin{center}
+    \begin{tabular}{c c | c c c c}
+        \toprule
+        \multicolumn{2}{c|}{Fit preliminare} & \multicolumn{4}{c}{Regressione finale} \\
+        \midrule
+        $B'$ & $\delta B'$ & A & $\delta A$ & B & $\delta B$ \\
+        $[\si{\centi\meter\per\celsius}]$ & $[\si{\centi\meter\per\celsius}]$ &
+        [m] & [m] & $[\si{\centi\meter\per\celsius}]$ & [\si{\centi\metre\per\celsius}] \\
+        \midrule
+        3.353 & 0.007 & -0.695  & 0.001 & 3.353 & 0.007 \\
+        3.890 & 0.003 & -0.7815 & 0.0002 & 3.890 & 0.003 \\
+        4.550 & 0.004 & -1.0508 & 0.0008 & 4.550 & 0.004 \\
+        3.877 & 0.003 & -0.9607 & 0.0003 & 3.877 & 0.004 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
