@@ -5,14 +5,23 @@ Una volta ricavato l'andamento lineare di $h$ in funzione di $\theta$, proseguia
 \begin{equation}
 	P \,\, = \,\, P_A + \rho g d \,\, = \,\, P_A + \rho g (A + B \theta) \,\, = \,\, f(\theta)
 \end{equation}
+%
+che pone in relazione la pressione del gas con la temperatura da noi calcolata. Invertendo l'equazione si ottiene:
+
+\begin{equation}
+	\theta_0 \,\, = \,\, \frac{1}{B} \left( \frac{P - P_A}{pg} - A \right)
+\end{equation}
 
 \subsection{Utilizzo dei dati di pressione}
+cosa devo scrivere?
 
+\subsection{Utilizzo delle serie complete}
 
+inserire il calcolo di $\theta_0$ delle serie complete
 
-\subsection{Confronto con il valore noto}
-
-Prima di confrontare con il valore noto i valori di $\theta_0$ delle diverse serie di dati, poniamo un fattore di copertura $k=3$. Sapendo che il valore noto é -273.15 il procedimento per il valore di ogni serie si compone di:
+\subsection{Confronto dei dati delle serie con il valore noto}
+\label{confronto}
+Prima di verificare la compatibilià tra il valore noto e i valori di $\theta_0$ delle due serie di dati, poniamo un fattore di copertura $k=3$. Sapendo che il valore noto è -273.15, il procedimento per verificare la compatibilià si compone di:
 
 \begin{itemize}
 \item Calcolare la discrepanza $R$ tra $\theta_{0,i}$ e il valore noto:
@@ -25,8 +34,20 @@ Prima di confrontare con il valore noto i valori di $\theta_0$ delle diverse ser
 \end{equation*}
 \end{itemize}
 
-Eseguendo tale procedura su i valori ricavati analizzando separatamente i valori di ognuna delle due serie si ottiene che entrambi i valori $\theta_{0,1}$ e $\theta_{0,2}$ non risultano essere compatibili con il valore noto.
+Eseguendo tale procedura su i valori di ognuna delle due serie, si ottiene che entrambi i valori $\theta_{0,1}$ e $\theta_{0,2}$ non risultano essere compatibili con il valore noto.
 
 Ciò è probabilmente dovuto al fatto che il modello teorico non tiene in considerazione importanti fattori come la diversa termalizzazione del gas o la presenza di vapore nel gas che possono provocare anche consistenti errori sistematici.
+\bigskip
 
 Per questo motivo abbiamo spezzato i dati ricavati in diverse sottoserie per ottenere dei fit migliori ed evidenziare gli errori sistematici.
+
+\subsection{Utilizzo delle sottoserie}
+
+Con il fine di migliorare la stima dello zero assoluto, abbiamo suddiviso i dati in sottoserie (vedi sez. \ref{sottoserie} per chiarimenti). 
+
+\subsection{Confronto dei dati delle sottoserie con il valore noto}
+
+Utilizando lo stesso procedimento descritto al paragrafo \ref{confronto}, verifichiamo la compatibilità dei nuovi valori ottenuti per lo zero assoluto.
+Ricordiamo che il fattore di copertura utilizzato è $k=3$ e che il valore noto dello zero assoluto è -273.15.
+
+Osserviamo che i nuovi valori sono compatibili (speriamo!)
