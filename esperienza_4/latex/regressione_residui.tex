@@ -38,8 +38,56 @@ Abbiamo fatto quanto segue:
         a temperatura superiore a \SI{15}{\celsius} e il secondo da tutte quelle fatte a temperatura inferiore, eccetto
         il dato che è stato tolto.}
     \item{Dalla seconda serie, abbiamo estratto altri due gruppi di dati, uno con i dati rilevati a temperature maggiori di
-        \SI{14}{\celsius} (si veda la tabella \ref{tab:dati} per identificare esattamente dati), e l'altro con i dati rimanenti.}
+        \SI{14}{\celsius}, e l'altro con i dati rimanenti.}
 \end{itemize}
+
+La Tabella \ref{tab:gruppi}, estratta dalla Tabella \ref{tab:dati} riporta i vari gruppi in cui sono stati suddivisi i dati.
+
+\begin{SCtable}
+    \centering
+    \begin{tabular}{l  c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c}
+        \multicolumn{9}{c}{\textbf{Gruppi di dati}} \\
+        \toprule
+        & $\theta$ & $d$ & $\theta$ & $d$ & $\theta$ & $d$ & $\theta$ & $d$ \\ 
+        \midrule
+        & 20.81 &  0.000 & 13.77 & -0.253 & 23.20 &  0.000 & 13.27 & -0.449 \\
+        & 18.14 & -0.088 & 12.44 & -0.299 & 21.45 & -0.083 & 11.57 & -0.517 \\
+        & 16.05 & -0.155 & 10.29 & -0.381 & 19.73 & -0.166 &  9.38 & -0.603 \\
+        & 15.01 & -0.194 &  8.51 & -0.451 & 17.57 & -0.259 &  7.50 & -0.677 \\
+        & 17.03 & -0.123 &  6.70 & -0.526 & 15.58 & -0.348 &  5.76 & -0.738 \\
+        & 19.06 & -0.053 &  2.26 & -0.695 & 14.30 & -0.391 &  3.10 & -0.836 \\
+        & 21.03 &  0.011 &  0.05 & -0.771 & 16.24 & -0.307 &  2.50 & -0.864  \\
+        &       &        &  1.89 & -0.709 & 18.65 & -0.197 &  4.64 & -0.779 \\
+        &       &        &  3.62 & -0.636 & 20.50 & -0.112 &  6.48 & -0.713 \\
+        &       &        &  5.55 & -0.564 & 22.42 & -0.027 &  8.80 & -0.616 \\
+        &       &        &  7.68 & -0.475 & 23.95 &  0.050 & 10.56 & -0.545 \\
+        &       &        &  9.38 & -0.410 &       &        & 12.44 & -0.470 \\
+        &       &        & 11.35 & -0.335 &       &        &       &        \\
+        &       &        & 13.00 & -0.272 &       &        &       &        \\
+        \midrule
+        $N_j$ & \multicolumn{2}{c}{7} &  \multicolumn{2}{c}{14} & \multicolumn{2}{c}{11} & \multicolumn{2}{c}{12} \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:gruppi}
+\end{SCtable}
+
+Dopo aver suddiviso i dati in questo modo abbiamo calcolato la retta di fit per ogni gruppo di dati, in modo da ottenere
+4 rette. Come nei paragrafi precedenti abbiamo seguito la seguenti procedura:
+
+\begin{itemize}
+    \item{Per ogni set di dati $j$-esimo è stato eseguito un fit preliminare sui dati,
+            minimizzando la seguente funzione (metodo dei minimi quadrati)
+            \begin{equation}
+                \sum_{i=1}^{N_j} \frac{(d - A_j' - B_j'\theta)^2}{\delta d}
+            \end{equation}
+            dove $N_j$ indica il numero di dati nel gruppo $j$-esimo, $A_j'$ e $B_j'$ sono rispettivamente
+            le stime dell'intercetta e del coefficiente angolare della retta di fit, sempre per il gruppo $j$-esimo.
+            Per la stima preliminare si è usata soltanto l'incertezza $\delta d$.
+        }
+\end{itemize}
+
+I risultati del fit preliminare ed i risultati della regressione finale sono riportati nella seguente tabella.
 
 \begin{center}
     \begin{tabular}{c c | c c c c}
@@ -57,3 +105,6 @@ Abbiamo fatto quanto segue:
         \bottomrule
     \end{tabular}
 \end{center}
+
+È evidente la compatibilità di tutti i valori $B'$, ottenuti dalle regressioni preliminari, con i rispettivi valori $B$ ottenuti dai
+fit finali. I valori di $B'$ e $B$ sono infatti uguali entro l'incertezza in tutti e 4 i casi.
