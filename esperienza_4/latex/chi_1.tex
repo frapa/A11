@@ -1,1 +1,25 @@
 \subsubsection{Test del chi quadro}
+
+Sfruttiamo ora il test del $\chi^2$ per verificare se la regressione è corretta e se le incertezze sono accettabili.
+In questo esperimento $\chi^2$ è fondamentale, poiché le incertezze sui dati sono molto basse, e non molto realistiche;
+correggendole speriamo di ottenere delle incertezze credibili che poi possano essere utilizzate per i calcoli successivi.
+
+Non ci fidiamo molto delle incertezze calcolate nel paragrafo \ref{dati_incertezze}, poiché tengono conto solo degli errori
+di risoluzione. Durante l'esperimento abbiamo notato che, soprattutto alle temperature più basse, la temperatura dell'acqua
+variava (di qualche centesimo o anche decimo di grado) a seconda di dove era posizionata la sonda nel contenitore. Specialmente
+al di sotto dei 4 gradi (quando la densità dell'acqua ricomincia a diminuire) abbiamo notato stratificazioni, con strati di acqua
+più calda sul fondo del contenitore e più fredda in superficie, che faticavano a mescolarsi. Inoltre le temperature misurate
+si riferiscono all'acqua e non all'aria contenuta nel vaso immerso, che non avevamo modo di misurare direttamente. Erano anche
+presenti volumi di aria non termalizzati. Per tutti questi motivi sappiamo che l'incertezza sulla remperatura è sicuramente
+sottostimata e va aggiustata. L'incertezza sulla lunghezza dovrebbe invece essere più significativa, anche se non escludiamo
+che vada corretta anche quest'ultima. Tuttavia da qui in avanti la considereremo corretta e lavoreremo esclusivamente sulla temperatura.
+
+Ci aspettiamo quindi che il valore del chi quadro sia molto alto e che non sia compatibile con il suo valore teorico. Il valore teorico
+$\chi\ped{teo}^2$ è uguale al numero di gradi di libertà meno il numero di parametri calcolati con la regressione ed è diverso per 
+le due serie di dati. I due valori teorici sono quindi:
+
+\begin{equation}
+    \text{Serie 1:} \quad \chi\ped{teo,1}^2 = 20 \qquad \qquad \text{Serie 2:} \quad \chi\ped{teo,2}^2 = 21
+\end{equation}
+
+Premettiamo anche che adottiamo un fattore di copertura $k = 3$.

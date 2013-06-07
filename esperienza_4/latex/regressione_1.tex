@@ -3,7 +3,7 @@
 Procediamo ora con l'analisi del grafico del dislivello $d$ in funzione della temperatura $\theta$.
 In base ai dati da noi raccolti abbiamo ottenuto il seguente risultato, illustrato in figura (\ref{fig:dislivello_temperatura}).
 
-\begin{SCfigure}
+\begin{SCfigure}[][p]
     \centering
     \includegraphics[width=120mm]{immagini/dislivello_temperatura.pdf}
     \caption{Il seguente grafico rappresenta}
@@ -30,6 +30,8 @@ Per fare ciò occorre minimizzare la funzione
     \label{eq:min_quad}
 \end{equation}
 %
+dove $N$ indica il numero di dati della serie, che sono 22 nella prima serie e 23 nella seconda.
+
 Durante questa fase si è tenuto conto solamente dell'incertezza $\delta d$ sul dislivello. Per calcolare i minimi
 di (\ref{eq:min_quad}) si sono usate le formule:
 
@@ -44,26 +46,64 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     M^{-1}
     \left(
     \begin{array}{c}
-        \sum \frac{d}{\delta d} \\[2mm]
-        \sum \frac{\theta d}{\delta d}
+        \sum d/(\delta d)^2 \\[2mm]
+        \sum (\theta d)/(\delta d)^2
     \end{array} 
     \right)
-    \qquad \qquad
+    \qquad 
     \text{dove}
-    \qquad
+    \quad
     M =
-    \large
     \left(
     \begin{array}{c c}
-        \sum \frac{1}{\delta d^2} & \sum \frac{\theta}{\delta d^2} \\[2mm]
-        \sum \frac{\theta}{\delta d^2} & \sum \frac{\theta^2}{\delta d^2}
+        \sum 1/(\delta d)^2 & \sum \theta/(\delta d)^2 \\[2mm]
+        \sum \theta/(\delta d)^2 & \sum \theta^2/(\delta d)^2
     \end{array} 
     \right)
-    \label{eq:min_quad}
+    \label{eq:A_e_B}
 \end{equation}
 %
+dove tutte le sommatorie vanno da 1 a $N$ e non si è scritto l'indice per motivi di spazio. Mediante le regole
+di propagazione degli errori si può calcolare che le incertezze su $A'$ e $B'$ valgono
+
+\begin{equation}
+    \delta A' \,=\, \sqrt{\frac{\sum \theta^2/(\delta d)^2}{\det(M)}}
+    \qquad
+    \delta B' \,=\, \sqrt{\frac{\sum 1/(\delta d)^2}{\det(M)}}
+    \label{eq:dA_e_dB}
+\end{equation}
+
 Una volta calcolato $B'$ si è trasferito l'errore dalla temperatura al dislivello nel seguente modo
 
 \begin{equation}
     \delta d\ped{tot} = \sqrt{\delta d^2 + (B'\delta \theta)^2}
 \end{equation}
+%
+Infine si è minimizzata nuovamente la (\ref{eq:min_quad}), sempre tramite le formule (\ref{eq:A_e_B}) e (\ref{eq:dA_e_dB})
+dovutamente modificate, utilizzando però $\delta d\ped{tot}$ invece che $\delta d$.
+%
+Si sono così ricavati i valori definitivi $A$ e $B$. La procedura è stata applica ad entrambe le serie di dati.
+Le rette ottenute sono riportate nel grafico in figura \ref{fig:dislivello_temperatura}, assieme ai dati delle due serie.
+Nella seguente tabella sono riportati i risulatati di fit preliminari e finali per le due serie.
+
+\begin{center}
+    \small
+    \begin{tabular}{l c c c c c c c c c}
+        \toprule
+        & $A'$ & $B'$ & $\delta A'$ & $\delta B'$ &
+        $\delta d\ped{tot}$ & $A$ & $B$ & $\delta A$ & $\delta B$ \\
+        & [cm] & [\si{\centi\meter\per\celsius}] &  [cm] & [\si{\centi\meter\per\celsius}] &
+        [cm] & [cm] & [\si{\centi\meter\per\celsius}] & [cm] & [\si{\centi\meter\per\celsius}] \\
+        \midrule
+        Serie 1 & -77.57 & 3.804 & 0.02 & 0.001 & 0.04 & -77.57 & 3.804 & 0.02 & 0.001 \\
+        Serie 2  & -98.68 & 4.215 & 0.02 & 0.001 & 0.04 & -98.68 & 4.215 & 0.02 & 0.001 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Nella tabella è riportato anche il $\delta d\ped{tot}$ con l'aggiunta dell'incertezza trasferita. Chiaramente, l'incertezza trasferita è
+trascurabile poiché il valore $\delta d\ped{tot}$ è identico a $\delta d$. Anche le incertezze sui parametri $A'$, $B'$, $A$ e $B$
+non hanno subito variazioni tra i fit preliminari e le regressioni definitive.
+
+I valori ottenuti fit finali sono compatibili con quelli ricavati dalle regressioni preliminari; infatti tutti i parametri
+sono uguali entro l'incertezza per entrambe le serie di dati.
