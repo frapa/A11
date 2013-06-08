@@ -26,11 +26,13 @@ al fine di trasferire l'incertezza dalla temperatura al dislivello.
 Per fare ciò occorre minimizzare la funzione
 
 \begin{equation}
-    \sum_{i=1}^{N} \frac{(d - A' - B'\theta)^2}{(\delta d)^2}
+    \sum_{i=1}^{N} \frac{(d_i - A' - B'\theta_i)^2}{(\delta d)^2}
     \label{eq:min_quad}
 \end{equation}
 %
-dove $N$ indica il numero di dati della serie, che sono 22 nella prima serie e 23 nella seconda.
+dove $N$ indica il numero di dati della serie, che sono $N_1 = 22$ nella prima serie e $N_2 = 23$ nella seconda.
+I pedici $i$ stanno ad indicare il dato $i$-esimo della serie presa in esame. Le incertezze sul dislivello sono tutte uguali e
+quindi prive di pedice.
 
 Durante questa fase si è tenuto conto solamente dell'incertezza $\delta d$ sul dislivello. Per calcolare i minimi
 di (\ref{eq:min_quad}) si sono usate le formule:
@@ -46,8 +48,8 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     M^{-1}
     \left(
     \begin{array}{c}
-        \sum d/(\delta d)^2 \\[2mm]
-        \sum (\theta d)/(\delta d)^2
+        \sum_i d_i/(\delta d)^2 \\[2mm]
+        \sum_i (\theta_i d_i)/(\delta d)^2
     \end{array} 
     \right)
     \qquad 
@@ -56,20 +58,20 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     M =
     \left(
     \begin{array}{c c}
-        \sum 1/(\delta d)^2 & \sum \theta/(\delta d)^2 \\[2mm]
-        \sum \theta/(\delta d)^2 & \sum \theta^2/(\delta d)^2
+        \sum_i 1/(\delta d)^2 & \sum_i \theta_i/(\delta d)^2 \\[2mm]
+        \sum_i \theta_i/(\delta d)^2 & \sum_i \theta_i^2/(\delta d)^2
     \end{array} 
     \right)
     \label{eq:A_e_B}
 \end{equation}
 %
-dove tutte le sommatorie vanno da 1 a $N$ e non si è scritto l'indice per motivi di spazio. Mediante le regole
+dove tutte le sommatorie vanno da 1 a $N$ e non sono stati specificati gli estremi per motivi di spazio e chiarezza. Mediante le regole
 di propagazione degli errori si può calcolare che le incertezze su $A'$ e $B'$ valgono
 
 \begin{equation}
-    \delta A' \,=\, \sqrt{\frac{\sum \theta^2/(\delta d)^2}{\det(M)}}
+    \delta A' \,=\, \sqrt{\frac{\sum_i \theta_i^2/(\delta d)^2}{\det(M)}}
     \qquad
-    \delta B' \,=\, \sqrt{\frac{\sum 1/(\delta d)^2}{\det(M)}}
+    \delta B' \,=\, \sqrt{\frac{\sum_i 1/(\delta d)^2}{\det(M)}}
     \label{eq:dA_e_dB}
 \end{equation}
 
@@ -79,6 +81,9 @@ Una volta calcolato $B'$ si è trasferito l'errore dalla temperatura al dislivel
     \delta d\ped{tot} = \sqrt{\delta d^2 + (B'\delta \theta)^2}
 \end{equation}
 %
+Notare che, poiché $\delta d$ e $\delta \theta$ sono uguali per tutti i dati della seria,
+anche l'errore $\delta d\ped{tot}$ è in comune a tutti i dati.
+
 Infine si è minimizzata nuovamente la (\ref{eq:min_quad}), sempre tramite le formule (\ref{eq:A_e_B}) e (\ref{eq:dA_e_dB})
 dovutamente modificate, utilizzando però $\delta d\ped{tot}$ invece che $\delta d$.
 %
