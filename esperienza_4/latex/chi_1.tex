@@ -45,4 +45,44 @@ Evidentemente, come ci aspettavamo, il $\chi^2$ di entrambe le regressioni hanno
 i valori teorici. Questo indica una sottostima delle incertezze.
 
 Non ci resta che aggiustare le incertezze per verificare se le correzioni da apportare sono realistiche; in caso affermativo
-prenderemo come valide le incertezze corrette, altrimenti dovremo gettare a mare i risultati dei fit.
+prenderemo come valide le incertezze corrette, altrimenti dovremo ``gettare a mare'' i risultati dei fit.
+Consideriamo accettabile un incertezza di circa 0.10-0.15 \si{\celsius}, poiché abbiamo verificato che la temperatura dell'acqua
+variava, da una parte all'altra del contenitore, in questo ordine di grandezza. Un incertezza maggiore ci sembra improbabile.
+L'aggiustamento va eseguito sulle due serie di dati separatamente.
+
+Per aggiustare l'incertezza sulla temperatura, poiché è identica su tutte le misure, basta imporre:
+
+\begin{equation}
+    \nu = \sum_{i=1}^{N} \frac{(d_i - A - B\theta_i)^2}{(\delta d\ped{corr})^2}
+\end{equation}
+%
+Da cui si può ricavare
+
+\begin{equation}
+    \delta d\ped{corr} = \sqrt{\sum_{i=1}^{N} \frac{(d_i - A - B\theta_i)^2}{\nu}}
+\end{equation}
+%
+Questa formula ci permette di calcolare l'incertezza sul dislivello che occorrerebbe avere affinché il valore del $\chi^2$
+risulti uguale al suo valore teorico. Tuttavia, poiché crediamo che l'incertezza sottostimata sia quella sulla temperatura,
+dobbiamo calcolare l'errore sulla temperatura corrispondente. Invertiamo quindi la formula (\ref{eq:err_tras_1}):
+
+\begin{equation}
+    \delta \theta\ped{corr} = \frac{\sqrt{\delta d\ped{corr}^2 - \delta d^2}}{B}
+\end{equation}
+%
+dove B è il valore di pendenza ricavato dalla regressione e riferito alla serie di dati di cui stiamo correggendo l'incertezza.
+
+I risultati dell'aggiustamento sono i seguenti:
+
+\begin{equation}
+    \delta \theta\ped{corr,1} = \SI{0.24}{\celsius} \qquad \qquad \delta \theta\ped{corr,2} = \SI{0.32}{\celsius}
+\end{equation}
+%
+I valori ottenuti sono abbastanza elevati. Come premesso, consideriamo realistico un errore di 0.10-0.15 \si{\celsius}.
+Le incertezze corrette sono circa doppie e quindi ci sembrano troppo elevate per essere realistiche. In nessuna fase
+dell'esperimento abbiamo notato una differenza così cospicua di temperatura all'interno del recipiente, ne crediamo che
+il volume d'aria non termalizzato possa portare ad un incertezza di questo ordine di grandezza, in quanto molto minore
+del volume di gas realmente termalizzato.
+
+L'errore è da cercarsi altrove. In figura \ref{fig:fit1} e \ref{fig:fit2} sono riportati i residui delle due
+serie di dati. Si notano degli andamenti residui, disegnati nei grafici, che assumono approssimativamente la forma di linea spezzata.
