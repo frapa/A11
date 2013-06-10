@@ -42,10 +42,17 @@ I risultati dei calcoli sono:
 \end{equation}
 %
 Evidentemente, come ci aspettavamo, il $\chi^2$ di entrambe le regressioni hanno valori molto alti, chiaramente non compatibili con
-i valori teorici. Questo indica una sottostima delle incertezze.
+i valori teorici. Questo indica quantomeno una sottostima delle incertezze. In figura \ref{fig:fit1} e \ref{fig:fit2} sono
+graficate le discrepanza tra dati e rette di fit con le barre di incertezza, che come si vede sono molto piccole. Risulta ovvio il motivo del
+valore così alto del $\chi^2$.
+
+Tuttavia si possono vedere anche degli andamenti residui nei dati. Questo indica che non sono le incertezze l'unica
+causa del fallimento del test del chi quadro, ma che probabilmente ci sono dei processi non considerati (errori sistematici)
+che influenzano la dipendenza del dislivello dalla temperatura.
 
 Non ci resta che aggiustare le incertezze per verificare se le correzioni da apportare sono realistiche; in caso affermativo
-prenderemo come valide le incertezze corrette, altrimenti dovremo ``gettare a mare'' i risultati dei fit.
+prenderemo come valide le incertezze corrette, altrimenti dovremo ``gettare a mare'' i risultati dei fit e studiare gli
+andamenti residui.
 Consideriamo accettabile un incertezza di circa 0.10-0.15 \si{\celsius}, poiché abbiamo verificato che la temperatura dell'acqua
 variava, da una parte all'altra del contenitore, in questo ordine di grandezza. Un incertezza maggiore ci sembra improbabile.
 L'aggiustamento va eseguito sulle due serie di dati separatamente.
@@ -84,5 +91,29 @@ dell'esperimento abbiamo notato una differenza così cospicua di temperatura all
 il volume d'aria non termalizzato possa portare ad un incertezza di questo ordine di grandezza, in quanto molto minore
 del volume di gas realmente termalizzato.
 
-L'errore è da cercarsi altrove. In figura \ref{fig:fit1} e \ref{fig:fit2} sono riportati i residui delle due
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit1.pdf}
+    \caption{Il grafico in figura mostra i residui del fit sulla prima serie di dati. Sono riportati in colori
+    diversi i dati presi abbassando (discesa) la temperatura e alzandola (salita). È evidente un andamento residuo nei dati,
+    indicato approssimativamente in figura, probabilmente dovuto alla condensazione del vapor acqueo nella bottiglia. L'andamento
+    residuo è formato da due rette che si incontrano attorno ai \SI{15}{\celsius}. L'ipotesi è che l'andamento residuo sia dovuto alla
+    formazione di condensa all'interno del vaso, che rimuovendo molecole di gas dal recipiente, ha fatto abbassare la pressione e modificato
+    la proporzionalità tra dislivello (pressione) e temperatura. C'è anche
+    un dato con un residuo molto alto, visibile a sinistra della legenda.}
+    \label{fig:fit1}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit2.pdf}
+    \caption{}
+    \label{fig:fit2}
+\end{figure}
+
+Riteniamo quindi che l'errore vada cercato altrove. In figura \ref{fig:fit1} e \ref{fig:fit2} sono riportati i residui delle due
 serie di dati. Si notano degli andamenti residui, disegnati nei grafici, che assumono approssimativamente la forma di linea spezzata.
+Ci sono stati quindi dei processi, durante l'esecuzione dell'esperimento, che non abbiamo preso in considerazione.
+Questo spiega come mai il $\chi^2$ è così alto e perché le incertezze corrette non sono verosimili. I parametri calcolati con
+le regressioni precedenti sono privi di senso e anche le rette di fit in realtà sono prive di significato, poiché non
+descrivono completamente il fenomeno osservato.
