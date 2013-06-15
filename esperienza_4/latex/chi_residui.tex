@@ -1,1 +1,31 @@
 \subsection{Chi quadro residui}
+
+Come prima, usiamo nuovamente il test del $\chi^2$ per valutare le incertezze. Come già ripetuto più volte,
+le incertezze sono sottostimate e quindi vogliamo fare il test del chi quadro, il cui risultato non sarà compatibile con il valor atteso,
+e poi lo useremo per aggiustare gli errori.
+
+I valori attesi $\nu \equiv \chi\ped{teo}^2$, per ciascuna sottoserie di dati, sono uguali al numero di gradi di libertà,
+ovvero al numero di dati $N_j$ del gruppo $j$-esimo meno due, ovvero il numero di parametri calcolati con la regressione.
+L'incertezza $\delta \nu$ si calcola con la formula $\delta \nu = \sqrt{2\nu}$. Inoltre prendiamo un fattore di copertura
+$k = 3$.
+
+Dopodiché è stato calcolato il $\chi^2$ con la formula del paragrafo \ref{chi_1}.
+
+La seguente tabella riporta i valori attesi per ogni gruppo, con relative incertezze ed anche i corrispondenti valori del chi quadro.
+
+\begin{center}
+    \begin{tabular}{l c c c c}
+        \multicolumn{5}{c}{\textbf{Valori teorici del $\chi^2$}} \\
+        \toprule
+        & Gruppo 1 & Gruppo 2 & Gruppo 3 & Gruppo 4 \\
+        \midrule
+        $N_j$ & 7 & 14 & 11 & 12 \\
+        $\nu$ & 5 & 12 & 9 & 10 \\
+        $\delta \nu$ & 3 & 5 & 4 & 4 \\
+        $\chi^2$ & 159 & 1521 & 3587 & 1541 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+Osserviamo immediatamente che nessuno dei valori del chi quadro è compatibile con il suo valore teorico entro l'intervallo di confidenza.
+Come atteso, è necessario aggiustare le incertezze.

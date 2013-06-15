@@ -25,6 +25,41 @@ poiché la retta dovrebbe diventare meno pendente in presenza di meno gas, mentr
 Ipotizzando che la condensazione (e chiaramente anche l'evaporazione durante la salita) sia stata costante si può spiegare 
 l'andamento residuo. 
 
+\begin{SCtable}[][t]
+    \centering
+    \small
+    \begin{tabular}{c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c}
+        \multicolumn{8}{c}{\textbf{Gruppi di dati}} \\
+        \toprule
+        \multicolumn{2}{c}{Gruppo 1} & \multicolumn{2}{l}{Gruppo 2} &\multicolumn{2}{l}{Gruppo 3} & \multicolumn{2}{l}{Gruppo 4} \\
+        \midrule
+        $\theta$ [\si{\celsius}] & $d$ [\si{m}] & $\theta$ [\si{\celsius}] & $d$ [\si{m}] &
+        $\theta$ [\si{\celsius}] & $d$ [\si{m}] & $\theta$ [\si{\celsius}] & $d$ [\si{m}] \\ 
+        \midrule
+        20.81 &  0.000 & 13.77 & -0.253 & 23.20 &  0.000 & 13.27 & -0.449 \\
+        18.14 & -0.088 & 12.44 & -0.299 & 21.45 & -0.083 & 11.57 & -0.517 \\
+        16.05 & -0.155 & 10.29 & -0.381 & 19.73 & -0.166 &  9.38 & -0.603 \\
+        15.01 & -0.194 &  8.51 & -0.451 & 17.57 & -0.259 &  7.50 & -0.677 \\
+        17.03 & -0.123 &  6.70 & -0.526 & 15.58 & -0.348 &  5.76 & -0.738 \\
+        19.06 & -0.053 &  2.26 & -0.695 & 14.30 & -0.391 &  3.10 & -0.836 \\
+        21.03 &  0.011 &  0.05 & -0.771 & 16.24 & -0.307 &  2.50 & -0.864  \\
+              &        &  1.89 & -0.709 & 18.65 & -0.197 &  4.64 & -0.779 \\
+              &        &  3.62 & -0.636 & 20.50 & -0.112 &  6.48 & -0.713 \\
+              &        &  5.55 & -0.564 & 22.42 & -0.027 &  8.80 & -0.616 \\
+              &        &  7.68 & -0.475 & 23.95 &  0.050 & 10.56 & -0.545 \\
+              &        &  9.38 & -0.410 &       &        & 12.44 & -0.470 \\
+              &        & 11.35 & -0.335 &       &        &       &        \\
+              &        & 13.00 & -0.272 &       &        &       &        \\
+        \bottomrule
+    \end{tabular}
+    \caption{I dati sono stati divisi in quattro gruppi distinti in base agli andamenti residui. La tabella riporta i 
+    dati divisi tra i quattro gruppi. I gruppi 1 e 2 sono ricavati dalla prima serie di dati, metre gli altri due dalla
+    seconda. Il gruppo 1 comprende tutte le misure prese a temperatura maggiore di \SI{15}{\celsius},
+    il gruppo 2 raggruppa le restanti. Il gruppo 3 contiene i punti al di sopra di \SI{14}{\celsius}, e il gruppo 4 quelli al di sotto
+    di tale temperatura.}
+    \label{tab:gruppi}
+\end{SCtable}
+
 \subsubsection{Regressione residui}
 
 Poiché gli andamenti residui sono ben rappresentati da rette spezzate, abbiamo pensato di ovviare a tutti questi problemi suddividendo i
@@ -45,54 +80,23 @@ Abbiamo fatto quanto segue:
 
 La Tabella \ref{tab:gruppi}, estratta dalla Tabella \ref{tab:dati} riporta i vari gruppi in cui sono stati suddivisi i dati.
 
-\begin{SCtable}{}{b}
-    \centering
-    \begin{tabular}{l  c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c}
-        \multicolumn{9}{c}{\textbf{Gruppi di dati}} \\
-        \toprule
-        & $\theta$ & $d$ & $\theta$ & $d$ & $\theta$ & $d$ & $\theta$ & $d$ \\ 
-        \midrule
-        & 20.81 &  0.000 & 13.77 & -0.253 & 23.20 &  0.000 & 13.27 & -0.449 \\
-        & 18.14 & -0.088 & 12.44 & -0.299 & 21.45 & -0.083 & 11.57 & -0.517 \\
-        & 16.05 & -0.155 & 10.29 & -0.381 & 19.73 & -0.166 &  9.38 & -0.603 \\
-        & 15.01 & -0.194 &  8.51 & -0.451 & 17.57 & -0.259 &  7.50 & -0.677 \\
-        & 17.03 & -0.123 &  6.70 & -0.526 & 15.58 & -0.348 &  5.76 & -0.738 \\
-        & 19.06 & -0.053 &  2.26 & -0.695 & 14.30 & -0.391 &  3.10 & -0.836 \\
-        & 21.03 &  0.011 &  0.05 & -0.771 & 16.24 & -0.307 &  2.50 & -0.864  \\
-        &       &        &  1.89 & -0.709 & 18.65 & -0.197 &  4.64 & -0.779 \\
-        &       &        &  3.62 & -0.636 & 20.50 & -0.112 &  6.48 & -0.713 \\
-        &       &        &  5.55 & -0.564 & 22.42 & -0.027 &  8.80 & -0.616 \\
-        &       &        &  7.68 & -0.475 & 23.95 &  0.050 & 10.56 & -0.545 \\
-        &       &        &  9.38 & -0.410 &       &        & 12.44 & -0.470 \\
-        &       &        & 11.35 & -0.335 &       &        &       &        \\
-        &       &        & 13.00 & -0.272 &       &        &       &        \\
-        \midrule
-        $N_j$ & \multicolumn{2}{c}{7} &  \multicolumn{2}{c}{14} & \multicolumn{2}{c}{11} & \multicolumn{2}{c}{12} \\
-        \bottomrule
-    \end{tabular}
-    \caption{}
-    \label{tab:gruppi}
-\end{SCtable}
-
 Dopo aver suddiviso i dati in questo modo abbiamo calcolato la retta di fit per ogni gruppo di dati, in modo da ottenere
 4 rette. Come nei paragrafi precedenti abbiamo seguito la seguenti procedura:
 
 \begin{itemize}
-    \item{Per ogni set di dati $j$-esimo è stato eseguito un fit preliminare sui dati,
-            minimizzando la seguente funzione (metodo dei minimi quadrati)
-            \begin{equation}
-                \sum_{i=1}^{N_j} \frac{(d - A_j' - B_j'\theta)^2}{\delta d}
-            \end{equation}
-            dove $N_j$ indica il numero di dati nel gruppo $j$-esimo, $A_j'$ e $B_j'$ sono rispettivamente
-            le stime dell'intercetta e del coefficiente angolare della retta di fit, sempre per il gruppo $j$-esimo.
-            Per la stima preliminare si è usata soltanto l'incertezza $\delta d$.
-        }
+    \item{Si è eseguito un fit preliminare al fine di calcolare il parametro $B'$ e $\delta B'$ per trasferire l'incertezza.}
+    \item{È stato effettuato il trasferimento dell'incertezza dalla temperatura al dislivello.}
+    \item{Si è eseguito una nuova regressione con l'incertezza totale (dislivello più quella trasferita).}
 \end{itemize}
+
+Per ulteriori informazioni sui calcoli e sulle formule usate si veda il paragrafo \ref{reg_1} dove la procedura è spiegata
+nel dettaglio.
 
 I risultati del fit preliminare ed i risultati della regressione finale sono riportati nella seguente tabella.
 
 \begin{center}
     \begin{tabular}{c c | c c c c}
+        \multicolumn{6}{c}{\textbf{Parametri della regressione}} \\
         \toprule
         \multicolumn{2}{c|}{Fit preliminare} & \multicolumn{4}{c}{Regressione finale} \\
         \midrule
