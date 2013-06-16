@@ -25,6 +25,18 @@ poiché la retta dovrebbe diventare meno pendente in presenza di meno gas, mentr
 Ipotizzando che la condensazione (e chiaramente anche l'evaporazione durante la salita) sia stata costante si può spiegare 
 l'andamento residuo. 
 
+Nel caso della seconda serie di dati, notiamo che ai punti registrati durante la ``discesa'' verso temperature più basse
+corrispondono dislivelli maggiori (e quindi pressioni minori) che ai punti raccolti durante la salita. Pensiamo che quando
+la temperatura del vaso era bassa, e quindi la differenza di pressione tra esterno ed interno maggiore, si sia verificata una perdita d'aria
+che ha aumentato la quantità di aria presente nel contenitore. La salita è avvenuta dunque a pressioni maggiori, come
+ben evidenzia il grafico in figura \ref{fig:fit1}. Tuttavia questo non spiega la forma a V del residuo, ma soltanto perché i punti
+di salita/discesa sono così distaccati. Non abbiamo ipotesi che riescono a spiegare questo andamento. Alcune delle cause possibili
+includono nuovamente la condensazione dell'acqua e la formazione di bolle di aria non termalizzata all'interno della bottiglia.
+
+In entrambi i casi siamo costretti a dichiarare la nostra ignoranza sui fenomeni che hanno causato questi residui. L'unica cosa che
+possiamo fare è ipotizzare cos'è successo, in assenza di una risposta certa. Nel prossimo paragrafo raggrupperemo i dati
+in gruppi in base agli andamenti residui e procederemo ad analizzare ogni gruppo separatamente.
+
 \begin{SCtable}[][t]
     \centering
     \small
@@ -52,11 +64,11 @@ l'andamento residuo.
               &        & 13.00 & -0.272 &       &        &       &        \\
         \bottomrule
     \end{tabular}
-    \caption{I dati sono stati divisi in quattro gruppi distinti in base agli andamenti residui. La tabella riporta i 
-    dati divisi tra i quattro gruppi. I gruppi 1 e 2 sono ricavati dalla prima serie di dati, metre gli altri due dalla
+    \caption{I dati sono stati divisi in quattro gruppi distinti in base agli andamenti residui.
+    I gruppi 1 e 2 sono ricavati dalla prima serie di dati, metre gli altri due dalla
     seconda. Il gruppo 1 comprende tutte le misure prese a temperatura maggiore di \SI{15}{\celsius},
     il gruppo 2 raggruppa le restanti. Il gruppo 3 contiene i punti al di sopra di \SI{14}{\celsius}, e il gruppo 4 quelli al di sotto
-    di tale temperatura.}
+    di tale temperatura. Le cifre riportate ricalcano la risoluzione degli stumenti.}
     \label{tab:gruppi}
 \end{SCtable}
 
@@ -93,8 +105,10 @@ Per ulteriori informazioni sui calcoli e sulle formule usate si veda il paragraf
 nel dettaglio.
 
 I risultati del fit preliminare ed i risultati della regressione finale sono riportati nella seguente tabella.
+Ogni riga è riferita ad un gruppo, in ordine dal primo al quarto. I dati sono arrotondati alla prima cifra dell'incertezza.
 
 \begin{center}
+    \small
     \begin{tabular}{c c | c c c c}
         \multicolumn{6}{c}{\textbf{Parametri della regressione}} \\
         \toprule
@@ -102,12 +116,12 @@ I risultati del fit preliminare ed i risultati della regressione finale sono rip
         \midrule
         $B'$ & $\delta B'$ & A & $\delta A$ & B & $\delta B$ \\
         $[\si{\centi\meter\per\celsius}]$ & $[\si{\centi\meter\per\celsius}]$ &
-        [m] & [m] & $[\si{\centi\meter\per\celsius}]$ & [\si{\centi\metre\per\celsius}] \\
+        [cm] & [cm] & $[\si{\centi\meter\per\celsius}]$ & [\si{\centi\metre\per\celsius}] \\
         \midrule
-        3.353 & 0.007 & -0.695  & 0.001 & 3.353 & 0.007 \\
-        3.890 & 0.003 & -0.7815 & 0.0002 & 3.890 & 0.003 \\
-        4.550 & 0.004 & -1.0508 & 0.0008 & 4.550 & 0.004 \\
-        3.877 & 0.003 & -0.9607 & 0.0003 & 3.877 & 0.004 \\
+        3.353 & 0.007 & -69.5  & 0.1 & 3.353 & 0.007 \\
+        3.890 & 0.003 & -78.15  & 0.02 & 3.890 & 0.003 \\
+        4.550 & 0.004 & -105.08 & 0.08 & 4.550 & 0.004 \\
+        3.877 & 0.003 & -96.07  & 0.03 & 3.877 & 0.004 \\
         \bottomrule
     \end{tabular}
 \end{center}

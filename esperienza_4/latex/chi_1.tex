@@ -32,6 +32,7 @@ Per ciascuna serie, il chi quadro si calcola con la formula:
 
 \begin{equation}
     \chi^2 \equiv \chi\ped{oss}^2 = \sum_{i=1}^{N} \frac{(d_i - A - B\theta_i)^2}{(\delta d\ped{tot})^2}
+    \label{eq:chi2}
 \end{equation}
 %
 dove $N$ è il numero di dati nella rispettiva serie. 
@@ -68,6 +69,7 @@ Da cui si può ricavare
 
 \begin{equation}
     \delta d\ped{corr} = \sqrt{\sum_{i=1}^{N} \frac{(d_i - A - B\theta_i)^2}{\nu}}
+    \label{eq:corr_err}
 \end{equation}
 %
 Questa formula ci permette di calcolare l'incertezza sul dislivello che occorrerebbe avere affinché il valore del $\chi^2$
@@ -76,6 +78,7 @@ dobbiamo calcolare l'errore sulla temperatura corrispondente. Invertiamo quindi 
 
 \begin{equation}
     \delta \theta\ped{corr} = \frac{\sqrt{\delta d\ped{corr}^2 - \delta d^2}}{B}
+    \label{eq:corr_err_theta}
 \end{equation}
 %
 dove B è il valore di pendenza ricavato dalla regressione e riferito alla serie di dati di cui stiamo correggendo l'incertezza.
