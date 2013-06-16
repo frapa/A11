@@ -41,6 +41,7 @@ Svolgendo la procedura si ottengono le seguenti incertezze corrette sulla temper
         \toprule
         & Gruppo 1 & Gruppo 2 & Gruppo 3 & Gruppo 4 \\
         \midrule
+        $\delta d\ped{corr}$ [cm] & 0.2 & 0.5 & 0.9 & 0.5 \\
         $\delta \theta\ped{corr}$ [\si{\celsius}] & 0.07 & 0.12 & 0.19 & 0.14 \\
         \bottomrule
     \end{tabular}
@@ -51,7 +52,7 @@ gruppo 3, sono tutte attorno a \SI{0.10}{\celsius}. Notiamo anche che l'errore s
 Nella seconda serie di dati c'è infatti un errore sistematico per il quale le pressioni in salita sono minori di quelle in discesa.
 
 Nonostante la residua presenza di questo errore, abbiamo deciso di accettare le incertezze che abbiamo qui calcolato, in quanto
-sono abbastanza realistiche, in ogni caso sono sicuramente migliori delle incertezze di risoluzione accettate in origine.
+sono sicuramente migliori delle incertezze di risoluzione accettate in origine.
 
 Dopo aver corretto le incertezze occorre eseguire nuovamente i fit sui gruppi di dati, per ottenere le nuove incertezze sui parametri
 $A$ e $B$. Eseguendo nuovamente il metodo dei minimi quadrati con le nuove incertezze si ottengono i seguenti dati.
@@ -67,3 +68,32 @@ $A$ e $B$. Eseguendo nuovamente il metodo dei minimi quadrati con le nuove incer
         \bottomrule
     \end{tabular}
 \end{center}
+
+\begin{SCfigure}[][!b]
+    \centering
+    \includegraphics[width=120mm]{immagini/residui.pdf}
+    \caption{Il grafico riporta visivamente le quattro regressioni eseguite sui gruppi di dati.
+    Le rette di adattano ai dati in maniera sensibilmente migliore di quanto non succedesse prima
+    di creare le sottoserie. Le incertezze riportate sono gli errori sul dislivello corretti, diversi
+    da gruppo a gruppo. }
+    \label{fig:residui}
+\end{SCfigure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit1r.pdf}
+    \caption{Dettaglio dei residui della prima serie. Il grafico è analogo a quello in figura \ref{fig:fit1},
+    solo che qui sono evidenziati i gruppi 1 e 2, ricavati dalla prima serie, che sono
+    riportati con colori ed incertezze diverse. I colori sono uguali a quelli della figura \ref{fig:residui},
+    per facilitare il confronto, mentre le incertezze riportate sono le incertezze corrette sul dislivello.}
+    \label{fig:fit1r}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=130mm]{immagini/fit2r.pdf}
+    \caption{Analogamente all'immagine precedente, questo plot è simile a quello in figura \ref{fig:fit2},
+    tranne che sono graficati distintamente i punti dei gruppi 3 e 4. Le incertezze riportate sono le incertezze
+    corrette sul dislivello.}
+    \label{fig:fit2r}
+\end{figure}
