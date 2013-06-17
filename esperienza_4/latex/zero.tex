@@ -1,59 +1,131 @@
 \section{Calcolo dello zero assoluto}
 
-Una volta ricavati gli andamenti lineari di $d$ in funzione di $\theta$, proseguiamo nel determinare il valore dello zero assoluto. Sappiamo che 
+Una volta ricavati gli andamenti lineari di $d$ in funzione di $\theta$, proseguiamo nel determinare il valore dello zero assoluto.
+Data la pressione atmosferica $P_A$, e presi $g = \SI{9.807}{\meter\per\square\second}$ e
+$\rho = \SI{1000}{\kilo\gram\per\cubic\metre}$ parametri di qui ignoriamo l'incertezza, sappiamo che:
 
 \begin{equation}
 	P \,\, = \,\, P_A + \rho g d \,\, = \,\, P_A + \rho g (A + B \theta) \,\, = \,\, f(\theta)
 \end{equation}
 %
-che pone in relazione la pressione del gas con la temperatura da noi calcolata. Invertendo l'equazione si ottiene:
+che pone in relazione la pressione del gas con la temperatura da noi calcolata. Lo zero assoluto è la temperatura a cui la
+pressione $P$ esercitata dal gas va a zero. Invertendo l'equazione sopra e ponendo $P = 0$ si ottiene:
 
 \begin{equation}
-	\theta_0 \,\, = \,\, \frac{1}{B} \left( \frac{P - P_A}{pg} - A \right)
+	\theta_0 \,\, = \,\, - \frac{1}{B} \left( \frac{P_A}{pg} + A \right)
+    \label{eq:t0}
 \end{equation}
 %
 Utilizzando le regole di propagazione dell'incertezza si ottiene:
 
 \begin{equation}
-	\theta_0 \,\, = \,\, \frac{1}{B} \left( \frac{P - P_A}{pg} - A \right)
+    \delta \theta_0 \,\, = \,\, \sqrt{\left(\frac{1}{B \rho g}\right)^2 (\delta P_A)^2 +
+    \left(\frac{1}{B}\right)^2 (\delta A)^2 + \left(\frac{P_A + \rho g A}{B^2 \rho g} \right)^2 \delta B^2}
+    \label{eq:dt0}
 \end{equation}
 
+
 \subsection{Utilizzo dei dati di pressione}
-cosa devo scrivere?
+\label{press}
 
-\subsection{Utilizzo delle serie complete}
+Nelle formule (\ref{eq:t0}) e (\ref{eq:dt0}) si sono usati i valori $P_A$ e $\delta P_A$ che finora non sono stati calcolati.
+Essi indicano il valore della pressione atmosferica durante l'esperimento. La tabella \ref{tab:ptu} riporta i valori rilevati
+durante l'esperimento. Lo scopo di questo paragrafo è ricavare un unico valore, con incertezza della pressione atmosferica nelle
+due giornate. Abbiamo infatti deciso di ottenere un unica media per ogni giornata in quanto durante le due giornate il tempo metereologico e la
+pressione atmosferica sono rimasti approssimativamente costanti.
 
-inserire il calcolo di $\theta_0$ delle serie complete
+I calcoli che seguono sono stati eseguiti due volte per i dati delle due giornate.
 
-\subsection{Confronto dei dati delle serie con il valore noto}
-\label{confronto}
-Prima di verificare la compatibilià tra il valore noto e i valori di $\theta_0$ delle due serie di dati, poniamo un fattore di copertura $k=3$. Sapendo che il valore noto è -273.15, il procedimento per verificare la compatibilià si compone di:
+Come valore di $P_A$ si è presa la media aritmetica delle pressioni atmosferiche $P_{A,i}$ rilevate:
 
-\begin{itemize}
-\item Calcolare la discrepanza $R$ tra $\theta_{0,i}$ e il valore noto:
-\begin{equation*}
-	R \,\, = \,\, \theta_{0,i} - (-273.15)
-\end{equation*}
-\item controllare se:
-\begin{equation*}
-	R \,\, \leq \,\, k \sigma[\theta_{0,i}]
-\end{equation*}
-\end{itemize}
+\begin{equation}
+    P_A = m(P_{A,i}) = \frac{1}{N}\sum_{i=1}^N P_{A,i}
+\end{equation}
+%
+dove $N = 15$ è il numero di misure fatte. Mentre come stimatore della varianza abbiamo usato la deviazione standard sulla media
 
-Eseguendo tale procedura su i valori di ognuna delle due serie, si ottiene che entrambi i valori $\theta_{0,1}$ e $\theta_{0,2}$ non risultano essere compatibili con il valore noto.
+\begin{equation}
+    \delta P_A = \sigma(P_{A,i}) = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N (P_{A,i} - P_A)^2}
+\end{equation}
+%
+Otteniamo quindi due misure relative alle due serie:
 
-Ciò è probabilmente dovuto al fatto che il modello teorico non tiene in considerazione importanti fattori come la diversa termalizzazione del gas o la presenza di vapore nel gas che possono provocare anche consistenti errori sistematici.
-\bigskip
+\begin{equation}
+    P_{A1} \pm \delta P_{A1} = (96230 \pm 50) \; \si{\pascal} \qquad P_{A2} \pm P_{A2} = (97300 \pm 70) \; \si{\pascal}
+    \label{eq:pa}
+\end{equation}
+%
+dove le cifre significative sono state arrotondate all'ordine di grandezza dall'incertezza e gli zeri finali non sono significativi.
 
-Per questo motivo abbiamo spezzato i dati ricavati in diverse sottoserie per ottenere dei fit migliori ed evidenziare gli errori sistematici.
+%\subsection{Confronto dei dati delle serie con il valore noto}
+%\label{confronto}
+%Prima di verificare la compatibilià tra il valore noto e i valori di $\theta_0$ delle due serie di dati, poniamo un fattore di copertura $k=3$. Sapendo che il valore noto è -273.15, il procedimento per verificare la compatibilià si compone di:
+%
+%\begin{itemize}
+%\item Calcolare la discrepanza $R$ tra $\theta_{0,i}$ e il valore noto:
+%\begin{equation*}
+%	R \,\, = \,\, \theta_{0,i} - (-273.15)
+%\end{equation*}
+%\item controllare se:
+%\begin{equation*}
+%	R \,\, \leq \,\, k \sigma[\theta_{0,i}]
+%\end{equation*}
+%\end{itemize}
+%
+%Eseguendo tale procedura su i valori di ognuna delle due serie, si ottiene che entrambi i valori $\theta_{0,1}$ e $\theta_{0,2}$ non risultano essere compatibili con il valore noto.
+%
+%Ciò è probabilmente dovuto al fatto che il modello teorico non tiene in considerazione importanti fattori come la diversa termalizzazione del gas o la presenza di vapore nel gas che possono provocare anche consistenti errori sistematici.
+%\bigskip
+%
+%Per questo motivo abbiamo spezzato i dati ricavati in diverse sottoserie per ottenere dei fit migliori ed evidenziare gli errori sistematici.
 
-\subsection{Utilizzo delle sottoserie}
+\subsection{Calcolo dello zero dalle regressioni}
 
-Con il fine di migliorare la stima dello zero assoluto, abbiamo suddiviso i dati in sottoserie (vedi sez. \ref{sottoserie} per chiarimenti). 
+Nel paragrafo {\ref{sottoserie}} abbiamo ottenuto quattro diverse rette di fit. Per ciascuna retta abbiamo calcolato
+il rispettivo zero assoluto grazie alle formule (\ref{eq:t0}) e (\ref{eq:dt0}) e ai valori di pressione (\ref{eq:pa}). Si ottengono i seguenti
+valori:
 
+\begin{center}
+    \begin{tabular}{l c c c c}
+        \multicolumn{5}{c}{\textbf{Zero assoluto}} \\
+        \toprule
+        & Gruppo 1 & Gruppo 2 & Gruppo 3 & Gruppo 4 \\
+        \midrule
+        $\theta_0$ [\si{\celsius}] & -272 & -234 & -195 & -231 \\
+        $\delta \theta_0$ [\si{\celsius}] & 3 & 3 & 4 & 3 \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+La tabella mostra i valori dello zero assoluto calcolati partendo dalle regressioni sulle quattro sottoserie di dati.
+I dati sono riportati con precisione data dall'incertezza.
+  
 \subsection{Confronto dei dati delle sottoserie con il valore noto}
 
-Utilizando lo stesso procedimento descritto al paragrafo \ref{confronto}, verifichiamo la compatibilità dei nuovi valori ottenuti per lo zero assoluto.
-Ricordiamo che il fattore di copertura utilizzato è $k=3$ e che il valore noto dello zero assoluto è -273.15.
+Commentiamo brevemente i risultati e la loro compatibilità
+con il valore teorico $T_0 = \SI{-273.15}{\celsius}$. Per la compatibilità adottiamo un fattore di copertura $k = 3$.
 
-Osserviamo che i nuovi valori sono compatibili (speriamo!)
+\begin{itemize}
+    \item{\textbf{Gruppo 1.} Il valore ottenuto è molto vicino a quello teorico ed è compatibile con quello teorico
+        a meno di un sigma.}
+
+    \item{\textbf{Gruppo 2.} Il valore ottenuto non è compatibile con quello teorico, infatti
+        
+        \begin{equation}
+            R = |T_0 - \theta_0| \simeq \SI{39}{\celsius} \qquad \text{e} \qquad k\delta \theta_0 = \SI{9}{\celsius} < R
+        \end{equation}
+
+        Se prendiamo per certo il valore teorico (verificato sperimentalmente da fisici sperimentali senza dubbio migliori
+        di noi), questo è un ulteriore indizio che l'effetto residuo che ha scombinato i conti era presente solo nel gruppo 2.
+        Questa è una conferma dell'ipotesi della condensazione dell'acqua, che prevede, correttamente, effetti solo sulla serie 2.
+        Chiaramente non sono escluse altre ipotesi.}
+
+    \item{\textbf{Gruppo 3.} Il valore calcolato è molto lontano e non compatibile (si confronti con il precedente) con il valore
+        teorico. Sicuramente qui c'è qualche grosso errore nell'esecuzione dell'esperimento.}
+    
+    \item{\textbf{Gruppo 4.} In questo caso il discorso è analogo a quello fatto per il gruppo 2.}
+\end{itemize}
+
+Concludiamo dicendo che i valori sperimentali dello zero assoluto ottenuti non sono soddisfacenti in quanto tre su quattro
+non sono compatibili con il valore teorico, ma soprattutto non sono nemmeno compatibili tra di loro. Il motivo dovrebbe essere
+ovvio; i dati che abbiamo raccolto sono di di scarsa qualità poiché l'esperimento è stato affetto da errori sistematici.
