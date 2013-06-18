@@ -42,7 +42,8 @@ Come valore di $P_A$ si è presa la media aritmetica delle pressioni atmosferich
     P_A = m(P_{A,i}) = \frac{1}{N}\sum_{i=1}^N P_{A,i}
 \end{equation}
 %
-dove $N = 15$ è il numero di misure fatte. Mentre come stimatore della varianza abbiamo usato la deviazione standard sulla media
+dove $N = 15$ è il numero di misure fatte. Mentre come stimatore della varianza abbiamo usato la deviazione standard sulla media.
+Non è stato preso in considerazione l'errore di risoluzione in quanto esso è trascurabile rispetto all'errore statistico. 
 
 \begin{equation}
     \delta P_A = \sigma(P_{A,i}) = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N (P_{A,i} - P_A)^2}
