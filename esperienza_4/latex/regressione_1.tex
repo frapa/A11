@@ -2,7 +2,7 @@
 \label{reg_1}
 
 Procediamo ora con l'analisi del grafico del dislivello $d$ in funzione della temperatura $\theta$.
-In base ai dati da noi raccolti abbiamo ottenuto il seguente risultato, illustrato in figura (\ref{fig:dislivello_temperatura}).
+In base ai dati da noi raccolti abbiamo ottenuto il seguente risultato, illustrato in Figura (\ref{fig:dislivello_temperatura}).
 
 \begin{SCfigure}[][p]
     \centering
@@ -18,8 +18,8 @@ Si vede che esiste una correlazione tra la temperatura $\theta$ e dislivello $d$
 Con il metodo dei minimi quadrati, abbiamo quindi trovato la funzione lineare
 
 \begin{equation}
-	d \,=\, A + B\,\theta
-	\label{h_theta}
+d \,=\, A + B\,\theta
+\label{h_theta}
 \end{equation}
 %
 che meglio si adatta ai dati da noi raccolti. L'intera procedura qui descritta è stata
@@ -46,7 +46,7 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     \begin{array}{c}
         A' \\
         B'
-    \end{array} 
+    \end{array}
     \right)
     =
     M^{-1}
@@ -54,9 +54,9 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     \begin{array}{c}
         \sum_i d_i/(\delta d)^2 \\[2mm]
         \sum_i (\theta_i d_i)/(\delta d)^2
-    \end{array} 
+    \end{array}
     \right)
-    \qquad 
+    \qquad
     \text{dove}
     \quad
     M =
@@ -64,7 +64,7 @@ di (\ref{eq:min_quad}) si sono usate le formule:
     \begin{array}{c c}
         \sum_i 1/(\delta d)^2 & \sum_i \theta_i/(\delta d)^2 \\[2mm]
         \sum_i \theta_i/(\delta d)^2 & \sum_i \theta_i^2/(\delta d)^2
-    \end{array} 
+    \end{array}
     \right)
     \label{eq:A_e_B}
 \end{equation}
@@ -94,7 +94,7 @@ dovutamente modificate, utilizzando però $\delta d\ped{tot}$ invece che $\delta
 %
 Si sono così ricavati i valori definitivi $A$ e $B$. La procedura è stata applica ad entrambe le serie di dati.
 Le rette ottenute sono riportate nel grafico in Figura \ref{fig:dislivello_temperatura}, assieme ai dati delle due serie.
-Nella seguente tabella sono riportati i risulatati di fit preliminari e finali per le due serie.
+Nella seguente tabella sono riportati i risulatati dei fit preliminari e finali per le due serie.
 
 \begin{center}
     \small
@@ -103,11 +103,11 @@ Nella seguente tabella sono riportati i risulatati di fit preliminari e finali p
         \toprule
         & $A'$ & $B'$ & $\delta A'$ & $\delta B'$ &
         $\delta d\ped{tot}$ & $A$ & $B$ & $\delta A$ & $\delta B$ \\
-        & [cm] & [\si{\centi\meter\per\celsius}] &  [cm] & [\si{\centi\meter\per\celsius}] &
+        & [cm] & [\si{\centi\meter\per\celsius}] & [cm] & [\si{\centi\meter\per\celsius}] &
         [cm] & [cm] & [\si{\centi\meter\per\celsius}] & [cm] & [\si{\centi\meter\per\celsius}] \\
         \midrule
         Serie 1 & -77.57 & 3.804 & 0.02 & 0.001 & 0.04 & -77.57 & 3.804 & 0.02 & 0.001 \\
-        Serie 2  & -98.68 & 4.215 & 0.02 & 0.001 & 0.04 & -98.68 & 4.215 & 0.02 & 0.001 \\
+        Serie 2 & -98.68 & 4.215 & 0.02 & 0.001 & 0.04 & -98.68 & 4.215 & 0.02 & 0.001 \\
         \bottomrule
     \end{tabular}
 \end{center}
