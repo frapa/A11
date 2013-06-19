@@ -1,3 +1,5 @@
+source('utils.m');
+
 % input dati
 fixed_point_format(1);
 
@@ -262,16 +264,33 @@ display(" ");
 display("\n\n### 0 assoluto ###");
 source("pressioni.m")
 
-Pa1 = mean(press1);
-Pa2 = mean(press2);
+Pa1 = mean(press1)
+dPa1 = sigma(press1, Pa1)
+Pa2 = mean(press2)
+dPa2 = sigma(press2, Pa2)
 
 T0_1 = -(Pa1 .+ d*g*A_1)./(d*g*B_1)
 T0_1_meno = -(Pa1 .+ d*g*A_1_meno)./(d*g*B_1_meno)
 T0_2 = -(Pa2 .+ d*g*A_2)./(d*g*B_2)
 
 T0_1r1 = -(Pa1 .+ d*g*A_1r1)./(d*g*B_1r1)
+dT0_1r1 = sqrt((B_1r1*d*g)^-2 * dPa1^2 + B_1r1^-2 *
+	sA_1r1^2 + ((Pa1 + d*g*A1r1)/(d*g*B_1r1^2))^2 *
+	sB_1r1^2)
+	
 T0_1r2 = -(Pa1 .+ d*g*A_1r2)./(d*g*B_1r2)
+
 T0_1r2_meno = -(Pa1 .+ d*g*A_1r2_meno)./(d*g*B_1r2_meno)
+dT0_1r2_meno = sqrt((B_1r2*d*g)^-2 * dPa1^2 + B_1r2^-2 *
+	sA_1r2^2 + ((Pa1 + d*g*A1r2)/(d*g*B_1r2^2))^2 *
+	sB_1r2^2)
 
 T0_2r1 = -(Pa2 .+ d*g*A_2r1)./(d*g*B_2r1)
+dT0_2r1 = sqrt((B_2r1*d*g)^-2 * dPa2^2 + B_2r1^-2 *
+	sA_2r1^2 + ((Pa2 + d*g*A2r1)/(d*g*B_2r1^2))^2 *
+	sB_2r1^2)
+	
 T0_2r2 = -(Pa2 .+ d*g*A_2r2)./(d*g*B_2r2)
+dT0_2r2 = sqrt((B_2r2*d*g)^-2 * dPa2^2 + B_2r2^-2 *
+	sA_2r2^2 + ((Pa2 + d*g*A2r2)/(d*g*B_2r2^2))^2 *
+	sB_2r2^2)

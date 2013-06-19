@@ -28,7 +28,7 @@ fit2 = ax1.errorbar(x=(0, 25), y=(A_2, A_2 + B_2*25), color="#B5E332")
 
 f1.suptitle(u'Dislivello in funzione della temperatura', fontsize=15, y=0.94)
 ax1.set_xlabel(ur'Temperatura $\theta$ [°C]', fontsize=14, labelpad=14)
-ax1.set_ylabel(ur'Dislivello $h$ [m]', fontsize=14)
+ax1.set_ylabel(ur'Dislivello $d$ [m]', fontsize=14)
 
 ax1.grid(True)
 
