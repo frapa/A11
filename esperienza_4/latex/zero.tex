@@ -29,34 +29,34 @@ Utilizzando le regole di propagazione dell'incertezza si ottiene:
 \label{press}
 
 Nelle formule (\ref{eq:t0}) e (\ref{eq:dt0}) si sono usati i valori $P_A$ e $\delta P_A$ che finora non sono stati calcolati.
-Essi indicano il valore della pressione atmosferica durante l'esperimento. La Tabella \ref{tab:ptu} riporta i valori rilevati
-durante l'esperimento. Lo scopo di questo paragrafo è ricavare un unico valore, con incertezza della pressione atmosferica nelle
+Essi indicano il valore della pressione atmosferica durante l'esperimento. La Tabella \ref{tab:ptu} riporta i valori di pressione atmosferica
+$P_{A,i}$ rilevati durante l'esperimento. Poiché per ogni giorno sono stati presi 15 valori (cioè $i \in \{1, \dots, 15\}$)
+di pressione, lo scopo di questo paragrafo è ricavare due valori, con relativa incertezza, della pressione atmosferica nelle
 due giornate. Abbiamo infatti deciso di ottenere un unica media per ogni giornata in quanto durante le due giornate il tempo metereologico e la
-pressione atmosferica sono rimasti approssimativamente costanti.
+pressione atmosferica sono rimasti approssimativamente costanti e nella (\ref{eq:t0}) possiamo usare un solo valore $P_A$.
 
 I calcoli che seguono sono stati eseguiti due volte per i dati delle due giornate.
-
 Come valore di $P_A$ si è presa la media aritmetica delle pressioni atmosferiche $P_{A,i}$ rilevate:
 
 \begin{equation}
-    P_A = m(P_{A,i}) = \frac{1}{N}\sum_{i=1}^N P_{A,i}
+    P_A = m^*(P_{A,i}) = \frac{1}{N}\sum_{i=1}^N P_{A,i}
 \end{equation}
 %
 dove $N = 15$ è il numero di misure fatte. Mentre come stimatore della varianza abbiamo usato la deviazione standard sulla media.
 Non è stato preso in considerazione l'errore di risoluzione in quanto esso è trascurabile rispetto all'errore statistico. 
 
 \begin{equation}
-    \delta P_A = \sigma(P_{A}) = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N (P_{A,i} - P_A)^2}
+    \delta P_A = \sigma^*(P_{A}) = \sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N (P_{A,i} - P_A)^2}
 \end{equation}
 %
 Otteniamo quindi due misure relative alle due serie:
 
 \begin{equation}
-    P_{A1} \pm \delta P_{A1} = (96230 \pm 50) \; \si{\pascal} \qquad P_{A2} \pm P_{A2} = (97300 \pm 70) \; \si{\pascal}
+    P_{A1} \pm \delta P_{A1} = (96237 \pm 47) \; \si{\pascal} \qquad P_{A2} \pm P_{A2} = (97302 \pm 72) \; \si{\pascal}
     \label{eq:pa}
 \end{equation}
 %
-dove le cifre significative sono state arrotondate all'ordine di grandezza dall'incertezza e gli zeri finali non sono significativi.
+dove le cifre significative sono state arrotondate all'ordine di grandezza dall'incertezza.
 
 %\subsection{Confronto dei dati delle serie con il valore noto}
 %\label{confronto}
@@ -104,7 +104,7 @@ I dati sono riportati con precisione data dall'incertezza.
 \subsection{Confronto dei dati delle sottoserie con il valore noto}
 
 Commentiamo brevemente i risultati e la loro compatibilità
-con il valore teorico $T_0 = \SI{-273.15}{\celsius}$. Per la compatibilità adottiamo un fattore di copertura $k = 3$.
+con il valore noto $T_0 = \SI{-273.15}{\celsius}$. Per la compatibilità adottiamo un fattore di copertura $k = 3$.
 
 \begin{itemize}
     \item{\textbf{Gruppo 1.} Il valore ottenuto è molto vicino a quello teorico ed è compatibile con quello teorico
