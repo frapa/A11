@@ -2,7 +2,7 @@
 \label{chi_1}
 
 Sfruttiamo ora il test del $\chi^2$ per verificare se la regressione è corretta e se le incertezze sono accettabili.
-In questo esperimento $\chi^2$ è fondamentale, poiché le incertezze sui dati sono molto basse, e non molto realistiche;
+In questo esperimento il $\chi^2$ è fondamentale, poiché le incertezze sui dati sono molto basse, e non molto realistiche;
 correggendole speriamo di ottenere delle incertezze credibili che poi possano essere utilizzate per i calcoli successivi.
 
 Non ci fidiamo molto delle incertezze calcolate nel paragrafo \ref{dati_incertezze}, poiché tengono conto solo degli errori
@@ -10,7 +10,16 @@ di risoluzione. Durante l'esperimento abbiamo notato che, soprattutto alle tempe
 variava (di qualche centesimo o anche decimo di grado) a seconda di dove era posizionata la sonda nel contenitore. Specialmente
 al di sotto dei 4 gradi (quando la densità dell'acqua ricomincia a diminuire) abbiamo notato stratificazioni, con strati di acqua
 più calda sul fondo del contenitore e più fredda in superficie, che faticavano a mescolarsi. Inoltre le temperature misurate
-si riferiscono all'acqua e non all'aria contenuta nel vaso immerso, che non avevamo modo di misurare direttamente. Possiamo suppore che fossero anche presenti volumi di aria non termalizzati. Per tutti questi motivi sappiamo che l'incertezza sulla temperatura è sicuramente sottostimata e va corretta. L'incertezza sulla lunghezza dovrebbe invece essere più significativa, anche se non escludiamo che vada corretta anche quest'ultima. Tuttavia da qui in avanti la considereremo corretta e lavoreremo esclusivamente sulla temperatura.
+si riferiscono all'acqua e non all'aria contenuta nel vaso immerso, che non avevamo modo di misurare direttamente,
+e non tengono conto delle possibili differenze di temperatura dell'aria all'interno del recipiente.
+C'è quindi un errore sistematico dovuto alla difficoltà di definire le grandezze ``temperatura dell'acqua'' e ``temperatura dell'aria''
+nonché nelle misure indirette della temperatura. 
+
+Per tutti questi motivi sappiamo che
+l'incertezza sulla temperatura è sicuramente sottostimata e va corretta. L'incertezza sulla lunghezza dovrebbe invece
+essere più significativa, anche se non escludiamo che possa essere sottostimata anche quest'ultima. Tuttavia
+al fine di semplificare i calcoli, da qui in avanti la
+considereremo corretta e lavoreremo esclusivamente sulla temperatura.
 
 Ci aspettiamo quindi che il valore del chi quadro sia molto alto e che non sia compatibile con il suo valore teorico. Il valore teorico
 $\nu \equiv \chi\ped{teo}^2$ (utilizziamo $\nu$ per alleggerire la notazione) è uguale al numero di gradi di libertà meno
@@ -19,8 +28,8 @@ $\nu$ vale $\delta \nu \equiv \delta \chi\ped{teo}^2 = \sqrt{2\nu}$. I due valor
 
 \begin{equation}
     \begin{array}{l @{\hspace{0.8cm}} c}
-        \text{serie 1:} & \nu_1 \pm \delta \nu_1 = 20 \pm 6 \\[3mm]
-        \text{serie 2:} & \nu_2 \pm \delta \nu_2 = 21 \pm 6
+        \text{Serie 1:} & \nu_1 \pm \delta \nu_1 = 20 \pm 6 \\[3mm]
+        \text{Serie 2:} & \nu_2 \pm \delta \nu_2 = 21 \pm 6
     \end{array}
 \end{equation}
 %
@@ -41,7 +50,7 @@ I risultati dei calcoli sono:
 \end{equation}
 %
 \`E evidente che, come ci aspettavamo, entrambi i $\chi^2$ delle due regressioni hanno valori molto alti, chiaramente non compatibili con
-i valori teorici. Questo indica quantomeno una sottostima delle incertezze. In Figura (\ref{fig:fit1}) e (\ref{fig:fit2}) sono
+i valori teorici. Questo indica quantomeno una sottostima delle incertezze. In Figura \ref{fig:fit1} e \ref{fig:fit2} sono
 graficate le discrepanza tra dati e rette di fit con le barre di incertezza, che come si vede sono molto piccole. Risulta ovvio il motivo del
 valore così alto del $\chi^2$.
 
@@ -117,9 +126,9 @@ del volume di gas realmente termalizzato.
     \label{fig:fit2}
 \end{figure}
 
-Riteniamo quindi che l'errore vada cercato altrove. In Figura (\ref{fig:fit1}) e (\ref{fig:fit2}) sono riportati i residui delle due
+Riteniamo quindi che l'errore vada cercato altrove. In Figura \ref{fig:fit1} e \ref{fig:fit2} sono riportati i residui delle due
 serie di dati. Si notano degli andamenti residui, disegnati nei grafici, che assumono approssimativamente la forma di linea spezzata.
 Ci sono stati quindi dei processi, durante l'esecuzione dell'esperimento, che non abbiamo preso in considerazione.
-Questo spiega come mai il $\chi^2$ è così alto e perché le incertezze corrette non sono verosimili. I parametri calcolati con
+Questi errori sistematici spiegno come mai il $\chi^2$ è così alto e perché le incertezze corrette non sono verosimili. I parametri calcolati con
 le regressioni precedenti sono privi di senso e anche le rette di fit in realtà sono prive di significato, poiché non
 descrivono completamente il fenomeno osservato.

@@ -23,7 +23,7 @@ e notiamo che ha lo stesso valore per tutte le misure di dislivello effettuate. 
 	\sigma [h] \,=\, \sigma [h_a] \,=\, \sigma [h_c] \,=\, \frac{\Delta h}{\sqrt{12}} \,=\, \SI{0.0003}{m} 
 \end{equation*}
 %
-dove $\Delta h$ rappresenta la risoluzione dello strumento, che trattandosi di un asta millimetrata è di 1 millimetro. Per concludere questa prima analisi possiamo osservare che i valori riportati in Tabella \ref{tab:dati} presentano un numero di cifre decimali inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto altre cifre non porterebbero alcuna informazione.
+dove $\Delta h$ rappresenta la risoluzione dello strumento, che, trattandosi di un asta millimetrata, è di 1 millimetro. Per concludere questa prima analisi possiamo osservare che i valori riportati in Tabella \ref{tab:dati} presentano un numero di cifre decimali inferiore rispetto a quelle dell'errore che le affligge. Questo è dovuto al fatto che gli errori sono più piccoli della risoluzione dello strumento, pertanto altre cifre non porterebbero alcuna informazione.
 
 Procediamo ora con l'analisi delle incertezze sulle misure di temperatura. Noi abbiamo usato un termometro digitale con risoluzione di misura $\Delta \theta = 0.01 ^\circ$C, pertanto l'errore che afflgge le misure di temperatura non è altro che quello dato dall'incertezze di risoluzione standard, ovvero:
 
@@ -60,27 +60,29 @@ Procediamo ora con l'analisi delle incertezze sulle misure di temperatura. Noi a
 %
 %dove ricordiamo che la siringa ha una risoluzione di 1 millilitro, pertanto in metri cubi sappiamo che qusto corrisponde a circa 1 centimetro cubo.
 
-Nell'equazione (\ref{eq:legge_stato_gas}) entra in gioco anche la pressione interna $P\ped{int}$ del gas. Quest'ultima è uguale alla pressione atmosferica $P_a$ più la pressione dovuta al dislivello dell'acqua nel tubo:
-
-\begin{equation}
-	P\ped{int} \,=\, P_a \,+\, \rho  g  d
-	\label{eq:P_int}
-\end{equation}
+%Nell'equazione (\ref{eq:legge_stato_gas}) entra in gioco anche la pressione interna $P\ped{int}$ del gas. Quest'ultima è uguale alla pressione atmosferica $P_a$ più la pressione dovuta al dislivello dell'acqua nel tubo:
 %
-dove $\rho = \SI{1000}{\kilo\gram\per\cubic\metre}$ è il valore di densità dell'acqua da noi assunto, $g = \SI{9.807}{\meter\per\square\second}$ è l'accelerazione di gravità locale del laboratorio e $d$ è il dislivello tra le due colonne di liquido. Grazie all'equazione (\ref{eq:P_int}) siamo stati in grado di calcolare la pressione interna del gas alle varie temperature che è riportata in Tabella \ref{tab:dati}.\\
-Per calcolare l'errore sulla stima della pressione interna del gas occorre procedere nel seguente modo:
-
-\begin{equation}
-	\delta P\ped{int} \,=\, \sqrt{(\sigma [P_a])^2 + (\rho\,g\,\delta d)^2}
-	\label{eq:sigma_P_int}
-\end{equation}
+%\begin{equation}
+%	P\ped{int} \,=\, P_a \,+\, \rho  g  d
+%	\label{eq:P_int}
+%\end{equation}
+%%
+%dove $\rho = \SI{1000}{\kilo\gram\per\cubic\metre}$ è il valore di densità dell'acqua da noi assunto, $g = \SI{9.807}{\meter\per\square\second}$ è l'accelerazione di gravità locale del laboratorio e $d$ è il dislivello tra le due colonne di liquido. Grazie all'equazione (\ref{eq:P_int}) siamo stati in grado di calcolare la pressione interna del gas alle varie temperature che è riportata in Tabella \ref{tab:dati}.\\
+%Per calcolare l'errore sulla stima della pressione interna del gas occorre procedere nel seguente modo:
 %
-La pressione atmosferica esterna è stata misurata con il barometro a mercurio a nostra disposizione. Per ogni ora sono state prese cinque misure della pressione atmosferica $P\ped{ext}$, in modo indipendente le une dalle altre, ovvero ricalibrando il barometro ad ogni lettura. I valori di pressione ottenuti sono elencati nella Tabella \ref{tab:ptu}. I dati di ogni ora sono poi stati trattati statisticamente per ricavare la media $P_a = m^*[P\ped{ext}]$ e la deviazione standard sulla media $\sigma [P_a] = \sigma[m^*[P\ped{ext}]]$. Abbiamo associato ad ogni punto sperimentale la media delle pressioni atmosferica $P_a$ dell'ora in cui è stato rilevato. I valori $P_a$ e $\sigma[P_a]$ sono stati utilizzati nelle formule (\ref{eq:P_int}) e (\ref{eq:sigma_P_int}) per calcolare la pressione
-interna e la sua deviazione. I dati ottenuti sono riportati in Tabella \ref{tab:dati}.
+%\begin{equation}
+%	\delta P\ped{int} \,=\, \sqrt{(\sigma [P_a])^2 + (\rho\,g\,\delta d)^2}
+%	\label{eq:sigma_P_int}
+%\end{equation}
+%
+La pressione atmosferica esterna è stata misurata con il barometro a mercurio a nostra disposizione. Per ogni ora sono state prese cinque misure della pressione atmosferica $P_{A,i}$, in modo indipendente le une dalle altre, ovvero ricalibrando il barometro ad ogni lettura. I valori di pressione ottenuti sono elencati nella Tabella \ref{tab:ptu}.
+%I dati di ogni ora sono poi stati trattati statisticamente per ricavare la media $P_a = m^*[P\ped{ext}]$ e la deviazione standard sulla media $\sigma [P_a] = \sigma[m^*[P\ped{ext}]]$. Abbiamo associato ad ogni punto sperimentale la media delle pressioni atmosferica $P_a$ dell'ora in cui è stato rilevato. I valori $P_a$ e $\sigma[P_a]$ sono stati utilizzati nelle formule (\ref{eq:P_int}) e (\ref{eq:sigma_P_int}) per calcolare la pressione
+%interna e la sua deviazione. I dati ottenuti sono riportati in Tabella \ref{tab:dati}.
 
 
-\begin{SCtable}[][p]
+\begin{table}[p]
     \footnotesize
+    \centering
     \begin{tabular}{c | c c c | c c c}
 	    \multicolumn{7}{c}{\textbf{Valori ambientali di pressione, temperatura e umidità}} \\
         \toprule
@@ -117,7 +119,9 @@ interna e la sua deviazione. I dati ottenuti sono riportati in Tabella \ref{tab:
 
     \caption{In questa tabella sono presentati i valori di pressione, temperatura e umidità relativi alle due giornate d'esperimento.
     Ogni ora sono state prese 5 misure di pressione temperatura ed umidità dell'ambiente. Sono riportati i valori di lettura degli strumenti.
+    Le incertezze tipo di risoluzione sono \SI{0.015}{\milli\bar}, \SI{0.3}{\celsius} e 0.3 \% rispettivamente per pressione, temperatura ed
+    umidità.
     Nella prima giornata abbiamo iniziato tardi e quindi non sono presenti i dati delle 15:00, mentre la seconda giornata abbiamo iniziato
     presto e finito presto, per cui sono assenti i dati delle 18:00. Le ore riportate sono soltanto indicative.}
     \label{tab:ptu}
-\end{SCtable}
+\end{table}
