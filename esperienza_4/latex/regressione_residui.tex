@@ -7,8 +7,8 @@ il valore del chi quadro risulti corretto. Certo, l'incertezza stimata inizialme
 Inoltre gli andamenti residui indicano che ci sono stati dei processi di cui non si è tenuto conto durante l'esecuzione dell'esperimento.
 
 Ma quali sono i processi che hanno provocato tali andamenti? Dobbiamo fare qualche ipotesi e constatazione. Innanzitutto,
-facciamo notare che gli andamenti residui per le due serie di dati sono di diversa natura. Le Figure (\ref{fig:fit1}) e
-(\ref{fig:fit2}) mostrano residui opposti rispetto alle rette calcolate nel paragrafo \ref{reg_1}. Nel caso della prima
+facciamo notare che gli andamenti residui per le due serie di dati sono di diversa natura. Le Figure \ref{fig:fit1} e
+\ref{fig:fit2} mostrano residui opposti rispetto alle rette calcolate nel paragrafo \ref{reg_1}. Nel caso della prima
 serie di dati (Figura \ref{fig:fit1}), la pendenza dell'andamento residuo è minore a quella della retta di fit a
 temperature alte e maggiore a temperature basse, mentre nel caso della seconda serie di dati (Figura \ref{fig:fit2}) è
 vero il contrario.
@@ -30,17 +30,17 @@ corrispondono dislivelli maggiori (e quindi pressioni minori) che ai punti racco
 la temperatura del vaso era bassa, e quindi la differenza di pressione tra esterno ed interno maggiore, si sia verificata una perdita d'aria
 che ha aumentato la quantità di aria presente nel contenitore. La salita è avvenuta dunque a pressioni maggiori, come
 ben evidenzia il grafico in Figura \ref{fig:fit2}. Tuttavia questo non spiega la forma a V del residuo, ma soltanto perché i punti
-di salita/discesa sono così distaccati. Non abbiamo ipotesi che riescono a spiegare questo andamento. Alcune delle cause possibili
+di salita/discesa sono così distaccati. Non abbiamo ipotesi che riescono a spiegare l'andamento a V. Alcune delle cause possibili
 includono nuovamente la condensazione dell'acqua e la formazione di bolle di aria non termalizzata all'interno della bottiglia.
 
-In entrambi i casi non abbiamo le conoscenze sufficienti a discriminare con certezza i fenomeni che hanno causato questi residui. L'unica cosa che
-possiamo fare è ipotizzare cos'è successo, in assenza di una risposta certa. Nel prossimo paragrafo raggrupperemo i dati
+In entrambi i casi non abbiamo le conoscenze sufficienti a discriminare con certezza i fenomeni che hanno causato questi residui.
+L'unica cosa che possiamo fare è ipotizzare cos'è successo, in assenza di una risposta certa. Nel prossimo paragrafo raggrupperemo i dati
 in gruppi in base agli andamenti residui e procederemo ad analizzare ogni gruppo separatamente.
 
 \begin{SCtable}[][t]
     \centering
     \small
-    \begin{tabular}{c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c @{\hspace{0.8cm}} c c}
+    \begin{tabular}{c c @{\hspace{0.7cm}} c c @{\hspace{0.7cm}} c c @{\hspace{0.7cm}} c c}
         \multicolumn{8}{c}{\textbf{Gruppi di dati}} \\
         \toprule
         \multicolumn{2}{c}{Gruppo 1} & \multicolumn{2}{l}{Gruppo 2} &\multicolumn{2}{l}{Gruppo 3} & \multicolumn{2}{l}{Gruppo 4} \\
@@ -68,7 +68,8 @@ in gruppi in base agli andamenti residui e procederemo ad analizzare ogni gruppo
     I gruppi 1 e 2 sono ricavati dalla prima serie di dati, metre gli altri due dalla
     seconda. Il gruppo 1 comprende tutte le misure prese a temperatura maggiore di \SI{15}{\celsius},
     il gruppo 2 raggruppa le restanti. Il gruppo 3 contiene i punti al di sopra di \SI{14}{\celsius}, e il gruppo 4 quelli al di sotto
-    di tale temperatura. Le cifre riportate ricalcano la risoluzione degli stumenti.}
+    di tale temperatura. Per approfondimenti su cifre significative ed errori vedere la Tabella \ref{tab:dati}, da cui questa è
+    stata estratta.}
     \label{tab:gruppi}
 \end{SCtable}
 
@@ -108,22 +109,29 @@ I risultati del fit preliminare ed i risultati della regressione finale sono rip
 Ogni riga è riferita ad un gruppo, in ordine dal primo al quarto. I dati sono arrotondati alla prima cifra dell'incertezza.
 
 \begin{center}
-    \begin{tabular}{c c | c c c c}
-        \multicolumn{6}{c}{\textbf{Parametri della regressione}} \\
+    \begin{tabular}{l  c c | c c c c}
+        \multicolumn{7}{c}{\textbf{Parametri della regressione}} \\
         \toprule
-        \multicolumn{2}{c|}{Fit preliminare} & \multicolumn{4}{c}{Regressione finale} \\
+        \multirow{3}{5mm}{\rotatebox{90}{Gruppo\;}}
+            & \multicolumn{2}{c|}{Fit preliminare} & \multicolumn{4}{c}{Regressione finale} \\
+        \cmidrule(lr){2-7}
+        & $B'$ & $\delta B'$ & A & $\delta A$ & B & $\delta B$ \\
+        & $[\si{\centi\meter\per\celsius}]$ & $[\si{\centi\meter\per\celsius}]$ &
+            [cm] & [cm] & $[\si{\centi\meter\per\celsius}]$ & [\si{\centi\metre\per\celsius}] \\
         \midrule
-        $B'$ & $\delta B'$ & A & $\delta A$ & B & $\delta B$ \\
-        $[\si{\centi\meter\per\celsius}]$ & $[\si{\centi\meter\per\celsius}]$ &
-        [cm] & [cm] & $[\si{\centi\meter\per\celsius}]$ & [\si{\centi\metre\per\celsius}] \\
-        \midrule
-        3.353 & 0.007 & -69.5  & 0.1 & 3.353 & 0.007 \\
-        3.890 & 0.003 & -78.15  & 0.02 & 3.890 & 0.003 \\
-        4.550 & 0.004 & -105.08 & 0.08 & 4.550 & 0.004 \\
-        3.877 & 0.003 & -96.07  & 0.03 & 3.877 & 0.004 \\
+        1 & 3.353 & 0.007 & -69.5  & 0.1 & 3.353 & 0.007 \\
+        2 & 3.890 & 0.003 & -78.15  & 0.02 & 3.890 & 0.003 \\
+        3 & 4.550 & 0.004 & -105.08 & 0.08 & 4.550 & 0.004 \\
+        4 & 3.877 & 0.003 & -96.07  & 0.03 & 3.877 & 0.004 \\
         \bottomrule
     \end{tabular}
 \end{center}
 
 È evidente la compatibilità di tutti i valori $B'$, ottenuti dalle regressioni preliminari, con i rispettivi valori $B$ ottenuti dai
 fit finali. I valori di $B'$ e $B$ sono infatti uguali entro l'incertezza in tutti e quattro i casi.
+
+La Figura \ref{fig:residui} mostra le 4 rette ottenute assieme ai dati dei 4 gruppi, riportando anche incertezze che verranno
+corrette nel prossimo paragrafo. I grafici in Figura \ref{fig:fit1r} e \ref{fig:fit2r} mostrano invece il dettaglio dei fit, sempre
+% qui non ho messo figure maiuscolo perché è plurale e non è il nome di una figura
+con le incertezze corrette. Sono analoghi alle figure \ref{fig:fit1} e \ref{fig:fit}, cioè riportano la discrepanza
+tra dati e retta di fit su tutta la serie 1 (o la serie 2), solo che evidenziano meglio gli andamenti residui.

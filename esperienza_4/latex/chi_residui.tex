@@ -6,11 +6,10 @@ e poi lo useremo per aggiustare gli errori.
 
 I valori attesi $\nu \equiv \chi\ped{teo}^2$, per ciascuna sottoserie di dati, sono uguali al numero di gradi di libertà,
 ovvero al numero di dati $N_j$ del gruppo $j$-esimo meno due, che è il numero di parametri calcolati con la regressione.
-L'incertezza $\delta \nu$ si calcola con la formula $\delta \nu = \sqrt{2\nu}$. Inoltre prendiamo un fattore di copertura
+L'incertezza $\delta \nu$ si calcola con la formula $\delta \nu = \sqrt{2\nu}$. Anticipiamo inoltre che prendiamo un fattore di copertura
 $k = 3$.
 
-Dopodiché è stato calcolato il $\chi^2$ con la formula (\ref{eq:chi2}) del paragrafo \ref{chi_1}.
-
+Si è calcolato il $\chi^2$ con la formula (\ref{eq:chi2}) del paragrafo \ref{chi_1}.
 La seguente tabella riporta i valori attesi per ogni gruppo, con relative incertezze ed anche i corrispondenti valori del chi quadro.
 
 \begin{center}
@@ -33,7 +32,8 @@ quelli ottenuti prima di dividere i dati in sottoserie.
 
 L'aggiustamento delle incertezze si svolge come già spiegato nel paragrafo \ref{chi_1} con la formula (\ref{eq:corr_err}).
 Il calcolo dell'incertezza sulla temperatura si svolge come indicato nella formula (\ref{eq:corr_err_theta}).
-Svolgendo la procedura si ottengono le seguenti incertezze corrette sulla temperatura.
+Svolgendo la procedura si ottengono le seguenti incertezze corrette sulla temperatura. Sono riportate le incertezze corrette
+sul dislivello per completezza.
 
 \begin{center}
     \begin{tabular}{l c c c c}
@@ -48,7 +48,8 @@ Svolgendo la procedura si ottengono le seguenti incertezze corrette sulla temper
 \end{center}
 
 Ora queste incertezze ci sembrano molto più realistiche di quelle ricavate in precedenza, infatti, a parte l'incertezza del 
-gruppo 3, sono tutte attorno a \SI{0.10}{\celsius}. Notiamo anche che l'errore sui gruppi 3 e 4 sono più alti, come era possibile aspettarsi.
+gruppo 3 che è ancora piuttosto cospicua, sono tutte attorno a \SI{0.10}{\celsius}. Notiamo anche che
+l'errore sui gruppi 3 e 4 sono più alti, come era possibile aspettarsi.
 Nella seconda serie di dati c'è infatti un errore sistematico per il quale le pressioni in salita sono minori di quelle in discesa.
 
 Nonostante la presenza di questo errore, abbiamo deciso di accettare le incertezze che abbiamo qui calcolato, in quanto
@@ -69,13 +70,16 @@ $A$ e $B$. Eseguendo nuovamente il metodo dei minimi quadrati con le nuove incer
     \end{tabular}
 \end{center}
 
+Gli errori sono tutti circa un ordine di grandezza maggiore di quanto stimato in precedenza.
+
 \begin{SCfigure}[][!b]
     \centering
     \includegraphics[width=120mm]{immagini/residui.pdf}
     \caption{Il grafico riporta visivamente le quattro regressioni eseguite sui gruppi di dati.
     Le rette si adattano ai dati in maniera sensibilmente migliore di quanto non succedesse prima
     di creare le sottoserie. Le incertezze riportate sono gli errori sul dislivello corretti, diversi
-    da gruppo a gruppo. }
+    da gruppo a gruppo. I gruppi di dati e le relative rette sono indicati con colori simili per
+    aumentare la chiarezza del grafico.}
     \label{fig:residui}
 \end{SCfigure}
 
@@ -93,7 +97,7 @@ $A$ e $B$. Eseguendo nuovamente il metodo dei minimi quadrati con le nuove incer
     \centering
     \includegraphics[width=130mm]{immagini/fit2r.pdf}
     \caption{Analogamente all'immagine precedente, questo plot è simile a quello in Figura \ref{fig:fit2},
-    tranne che sono graficati distintamente i punti dei gruppi 3 e 4. Le incertezze riportate sono le incertezze
+    tranne che sono graficati distintamente i punti dei gruppi 3 e 4. Le barre d'errore indicano le incertezze
     corrette sul dislivello.}
     \label{fig:fit2r}
 \end{figure}
